@@ -1,0 +1,41 @@
+
+/* 
+-- arrow bouncing showing scroll direction
+
+.arrow {
+  animation: bounce 1s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+  animation-iteration-count: infinite;
+  position:absolute;
+  left:50px;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 9px;
+}
+.colorChange {
+  -moz-transition: 1s ease-out;
+  -o-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
+@keyframes bounce {
+  from { transform: translateX(0) rotate(135deg)    }
+  to   { transform: translateX(-20px) rotate(135deg)  }
+}
+
+*/
+
+/* 
+  -- div indicating scroll direction --
+
+  .scrollDiv {
+  transform: rotate(-90deg);
+  position: fixed;
+  top:80%;
+  color:white;
+  z-index: 1000;
+  transition: 2s ease;
+}
+
+*/

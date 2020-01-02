@@ -1,0 +1,8 @@
+export const POST_ACTIONS = {
+  FETCH_ALL: 'FETCH_POSTS',
+  FETCH: 'FETCH_POST'
+}
+
+export const COMMENT_ACTIONS = {
+  FETCH_ALL: 'FETCH_COMMENTS'
+}

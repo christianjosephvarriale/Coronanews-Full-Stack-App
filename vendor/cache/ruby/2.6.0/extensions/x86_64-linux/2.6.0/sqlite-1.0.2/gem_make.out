@@ -1,0 +1,325 @@
+current directory: /home/cjv/Documents/varritech/vendor/cache/ruby/2.6.0/gems/sqlite-1.0.2/ext/sqlite
+/usr/share/rvm/rubies/ruby-2.6.3/bin/ruby -I /usr/share/rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0 -r ./siteconf20191223-32125-1ytpcii.rb extconf.rb
+checking for malloc()... yes
+checking for free()... yes
+creating Makefile
+
+current directory: /home/cjv/Documents/varritech/vendor/cache/ruby/2.6.0/gems/sqlite-1.0.2/ext/sqlite
+make "DESTDIR=" clean
+
+current directory: /home/cjv/Documents/varritech/vendor/cache/ruby/2.6.0/gems/sqlite-1.0.2/ext/sqlite
+make "DESTDIR="
+compiling main.c
+compiling ruby_sqlite3.c
+ruby_sqlite3.c: In function ‘m_finalize’:
+ruby_sqlite3.c:271:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     connection* c = get_object(self);
+     ^
+ruby_sqlite3.c:274:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     statement* stmt;
+     ^
+ruby_sqlite3.c: In function ‘m_exec’:
+ruby_sqlite3.c:354:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     const char* zSQL = StringValuePtr(sql);
+     ^
+ruby_sqlite3.c: At top level:
+ruby_sqlite3.c:10:14: warning: ‘m_aborted’ declared ‘static’ but never defined [-Wunused-function]
+ static VALUE m_aborted(VALUE self);
+              ^
+cc1: warning: unrecognized command line option ‘-Wno-tautological-compare’
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+cc1: warning: unrecognized command line option ‘-Wno-cast-function-type’
+compiling ruby_sqlite3_stmt.c
+ruby_sqlite3_stmt.c: In function ‘make_sqlite3_stmt’:
+ruby_sqlite3_stmt.c:89:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     const char* zSQL = StringValuePtr(sql);
+     ^
+ruby_sqlite3_stmt.c:106:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     VALUE obj = Data_Wrap_Struct(cls, NULL, deallocator, stmt);
+     ^
+ruby_sqlite3_stmt.c: In function ‘m_column_type’:
+ruby_sqlite3_stmt.c:155:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     statement* stmt = get_object(self);
+     ^
+ruby_sqlite3_stmt.c: In function ‘m_column’:
+ruby_sqlite3_stmt.c:203:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     statement* stmt = get_object(self);
+     ^
+ruby_sqlite3_stmt.c:207:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int i = NUM2INT(ordinal);
+     ^
+ruby_sqlite3_stmt.c: In function ‘m_each’:
+ruby_sqlite3_stmt.c:218:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int cols = sqlite3_column_count(stmt->handle);
+     ^
+ruby_sqlite3_stmt.c: In function ‘m_keys’:
+ruby_sqlite3_stmt.c:237:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int cols = sqlite3_column_count(stmt->handle);
+     ^
+ruby_sqlite3_stmt.c: In function ‘m_column_text’:
+ruby_sqlite3_stmt.c:254:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     statement* stmt = get_object(self);
+     ^
+ruby_sqlite3_stmt.c:258:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int i = NUM2INT(ordinal);
+     ^
+ruby_sqlite3_stmt.c:268:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int type = sqlite3_column_type(stmt->handle, i);
+     ^
+ruby_sqlite3_stmt.c:268:9: warning: unused variable ‘type’ [-Wunused-variable]
+     int type = sqlite3_column_type(stmt->handle, i);
+         ^
+ruby_sqlite3_stmt.c: In function ‘m_column_blob’:
+ruby_sqlite3_stmt.c:278:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     statement* stmt = get_object(self);
+     ^
+ruby_sqlite3_stmt.c:282:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int i = NUM2INT(ordinal);
+     ^
+ruby_sqlite3_stmt.c:292:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int type = sqlite3_column_type(stmt->handle, i);
+     ^
+ruby_sqlite3_stmt.c:292:9: warning: unused variable ‘type’ [-Wunused-variable]
+     int type = sqlite3_column_type(stmt->handle, i);
+         ^
+ruby_sqlite3_stmt.c: In function ‘m_column_int’:
+ruby_sqlite3_stmt.c:302:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     statement* stmt = get_object(self);
+     ^
+ruby_sqlite3_stmt.c:306:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int i = NUM2INT(ordinal);
+     ^
+ruby_sqlite3_stmt.c:316:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int type = sqlite3_column_type(stmt->handle, i);
+     ^
+ruby_sqlite3_stmt.c:316:9: warning: unused variable ‘type’ [-Wunused-variable]
+     int type = sqlite3_column_type(stmt->handle, i);
+         ^
+ruby_sqlite3_stmt.c: In function ‘m_column_double’:
+ruby_sqlite3_stmt.c:325:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     statement* stmt = get_object(self);
+     ^
+ruby_sqlite3_stmt.c:329:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int i = NUM2INT(ordinal);
+     ^
+ruby_sqlite3_stmt.c:339:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int type = sqlite3_column_type(stmt->handle, i);
+     ^
+ruby_sqlite3_stmt.c:339:9: warning: unused variable ‘type’ [-Wunused-variable]
+     int type = sqlite3_column_type(stmt->handle, i);
+         ^
+ruby_sqlite3_stmt.c: At top level:
+ruby_sqlite3_stmt.c:151:7: warning: ‘m_column_type’ defined but not used [-Wunused-function]
+ VALUE m_column_type(VALUE self, VALUE ordinal)
+       ^
+cc1: warning: unrecognized command line option ‘-Wno-tautological-compare’
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+cc1: warning: unrecognized command line option ‘-Wno-cast-function-type’
+compiling sqlite3_dist.c
+sqlite3_dist.c:21469:11: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   { 0, 6, "second", 464269060800.0, 86400000.0/(24.0*60.0*60.0) },
+           ^
+sqlite3_dist.c:21470:11: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   { 0, 6, "minute", 7737817680.0,   86400000.0/(24.0*60.0)      },
+           ^
+sqlite3_dist.c:21471:11: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   { 0, 4, "hour",   128963628.0,    86400000.0/24.0             },
+           ^
+sqlite3_dist.c:21472:11: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   { 0, 3, "day",    5373485.0,      86400000.0                  },
+           ^
+sqlite3_dist.c:21473:11: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   { 1, 5, "month",  176546.0,       30.0*86400000.0             },
+           ^
+sqlite3_dist.c:21474:11: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   { 2, 4, "year",   14713.0,        365.0*86400000.0            },
+           ^
+sqlite3_dist.c: In function ‘sqlite3_str_vappendf’:
+sqlite3_dist.c:27644:17: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+           bufpt = "NaN";
+                 ^
+sqlite3_dist.c:27844:17: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+           bufpt = "";
+                 ^
+sqlite3_dist.c:27902:29: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+         if( isnull ) escarg = (xtype==etSQLESCAPE2 ? "NULL" : "(NULL)");
+                             ^
+sqlite3_dist.c: In function ‘unixLogErrorAtLine’:
+sqlite3_dist.c:33584:8: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   zErr = "";
+        ^
+sqlite3_dist.c: In function ‘displayP4’:
+sqlite3_dist.c:77642:13: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+         zP4 = "NULL";
+             ^
+sqlite3_dist.c:77645:13: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+         zP4 = "(blob)";
+             ^
+sqlite3_dist.c: In function ‘sqlite3AddPrimaryKey’:
+sqlite3_dist.c:107979:45: warning: passing argument 2 of ‘sqlite3ColumnType’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+    && sqlite3StrICmp(sqlite3ColumnType(pCol,""), "INTEGER")==0
+                                             ^
+sqlite3_dist.c:30167:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ SQLITE_PRIVATE char *sqlite3ColumnType(Column *pCol, char *zDflt){
+                      ^
+sqlite3_dist.c: In function ‘createTableStmt’:
+sqlite3_dist.c:108196:10: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     zSep = "";
+          ^
+sqlite3_dist.c:108197:11: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     zSep2 = ",";
+           ^
+sqlite3_dist.c:108198:10: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     zEnd = ")";
+          ^
+sqlite3_dist.c:108200:10: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     zSep = "\n  ";
+          ^
+sqlite3_dist.c:108201:11: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     zSep2 = ",\n  ";
+           ^
+sqlite3_dist.c:108202:10: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     zEnd = "\n)";
+          ^
+sqlite3_dist.c: In function ‘sqlite3EndTable’:
+sqlite3_dist.c:108627:13: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+       zType = "table";
+             ^
+sqlite3_dist.c:108628:14: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+       zType2 = "TABLE";
+              ^
+sqlite3_dist.c:108632:13: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+       zType = "view";
+             ^
+sqlite3_dist.c:108633:14: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+       zType2 = "VIEW";
+              ^
+sqlite3_dist.c: In function ‘sqlite3JournalModename’:
+sqlite3_dist.c:121167:5: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     "delete", "persist", "off", "truncate", "memory"
+     ^
+sqlite3_dist.c:121167:15: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     "delete", "persist", "off", "truncate", "memory"
+               ^
+sqlite3_dist.c:121167:26: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     "delete", "persist", "off", "truncate", "memory"
+                          ^
+sqlite3_dist.c:121167:33: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     "delete", "persist", "off", "truncate", "memory"
+                                 ^
+sqlite3_dist.c:121167:45: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     "delete", "persist", "off", "truncate", "memory"
+                                             ^
+sqlite3_dist.c:121169:8: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+      , "wal"
+        ^
+sqlite3_dist.c: In function ‘sqlite3Pragma’:
+sqlite3_dist.c:122020:39: warning: passing argument 2 of ‘sqlite3ColumnType’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+                sqlite3ColumnType(pCol,""),
+                                       ^
+sqlite3_dist.c:30167:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ SQLITE_PRIVATE char *sqlite3ColumnType(Column *pCol, char *zDflt){
+                      ^
+sqlite3_dist.c:122609:21: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+         aOp[2].p4.z = "ok";
+                     ^
+sqlite3_dist.c:122647:9: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+       { "UTF8",     SQLITE_UTF8        },
+         ^
+sqlite3_dist.c:122648:9: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+       { "UTF-8",    SQLITE_UTF8        },  /* Must be element [1] */
+         ^
+sqlite3_dist.c:122649:9: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+       { "UTF-16le", SQLITE_UTF16LE     },  /* Must be element [2] */
+         ^
+sqlite3_dist.c:122650:9: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+       { "UTF-16be", SQLITE_UTF16BE     },  /* Must be element [3] */
+         ^
+sqlite3_dist.c:122651:9: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+       { "UTF16le",  SQLITE_UTF16LE     },
+         ^
+sqlite3_dist.c:122652:9: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+       { "UTF16be",  SQLITE_UTF16BE     },
+         ^
+sqlite3_dist.c:122653:9: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+       { "UTF-16",   0                  }, /* SQLITE_UTF16NATIVE */
+         ^
+sqlite3_dist.c:122654:9: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+       { "UTF16",    0                  }, /* SQLITE_UTF16NATIVE */
+         ^
+sqlite3_dist.c: In function ‘selectOpName’:
+sqlite3_dist.c:125701:26: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     case TK_ALL:       z = "UNION ALL";   break;
+                          ^
+sqlite3_dist.c:125702:26: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     case TK_INTERSECT: z = "INTERSECT";   break;
+                          ^
+sqlite3_dist.c:125703:26: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     case TK_EXCEPT:    z = "EXCEPT";      break;
+                          ^
+sqlite3_dist.c:125704:26: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     default:           z = "UNION";       break;
+                          ^
+sqlite3_dist.c: In function ‘generateColumnNames’:
+sqlite3_dist.c:126222:14: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+         zCol = "rowid";
+              ^
+sqlite3_dist.c: In function ‘sqlite3ColumnsFromExprList’:
+sqlite3_dist.c:126311:15: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+         zName = iCol>=0 ? pTab->aCol[iCol].zName : "rowid";
+               ^
+sqlite3_dist.c: In function ‘vtabCallConstructor’:
+sqlite3_dist.c:134587:60: warning: passing argument 2 of ‘sqlite3ColumnType’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+         char *zType = sqlite3ColumnType(&pTab->aCol[iCol], "");
+                                                            ^
+sqlite3_dist.c:30167:22: note: expected ‘char *’ but argument is of type ‘const char *’
+ SQLITE_PRIVATE char *sqlite3ColumnType(Column *pCol, char *zDflt){
+                      ^
+sqlite3_dist.c: In function ‘constructAutomaticIndex’:
+sqlite3_dist.c:140458:15: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   pIdx->zName = "auto-index";
+               ^
+sqlite3_dist.c: In function ‘sqlite3_lock_event_handlers’:
+sqlite3_dist.c:155767:32: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   db->lockEventHandlers.busy   = xBusy; 
+                                ^
+sqlite3_dist.c:155768:32: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   db->lockEventHandlers.unlock = xUnlock; 
+                                ^
+sqlite3_dist.c: In function ‘sqlite3ParseUri’:
+sqlite3_dist.c:156575:21: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+           zModeType = "cache";
+                     ^
+sqlite3_dist.c:156590:21: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+           zModeType = "access";
+                     ^
+sqlite3_dist.c: In function ‘openDatabase’:
+sqlite3_dist.c:156860:23: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   db->aDb[0].zDbSName = "main";
+                       ^
+sqlite3_dist.c:156862:23: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   db->aDb[1].zDbSName = "temp";
+                       ^
+sqlite3_dist.c: At top level:
+sqlite3_dist.c:14306:20: warning: ‘sqlite3BtreeLockEventHandlers’ declared ‘static’ but never defined [-Wunused-function]
+ SQLITE_PRIVATE int sqlite3BtreeLockEventHandlers(Btree*,LockEventHandlers*);
+                    ^
+sqlite3_dist.c: In function ‘sqlite3_lock_event_handlers’:
+sqlite3_dist.c:155770:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+sqlite3_dist.c: At top level:
+cc1: warning: unrecognized command line option ‘-Wno-tautological-compare’
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+cc1: warning: unrecognized command line option ‘-Wno-cast-function-type’
+linking shared-object sqlite/sqlite.so
+
+current directory: /home/cjv/Documents/varritech/vendor/cache/ruby/2.6.0/gems/sqlite-1.0.2/ext/sqlite
+make "DESTDIR=" install
+/usr/bin/install -m 0755 sqlite.so ./.gem.20191223-32125-1iuf7fc/sqlite

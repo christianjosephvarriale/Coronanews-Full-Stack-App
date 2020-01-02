@@ -1,0 +1,33 @@
+current directory: /home/cjv/Documents/varritech/vendor/cache/ruby/2.6.0/gems/bootsnap-1.4.5/ext/bootsnap
+/usr/share/rvm/rubies/ruby-2.6.3/bin/ruby -I /usr/share/rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0 -r ./siteconf20191223-19308-1pd4an8.rb extconf.rb
+creating Makefile
+
+current directory: /home/cjv/Documents/varritech/vendor/cache/ruby/2.6.0/gems/bootsnap-1.4.5/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/cjv/Documents/varritech/vendor/cache/ruby/2.6.0/gems/bootsnap-1.4.5/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+bootsnap.c: In function ‘get_ruby_platform’:
+bootsnap.c:240:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   struct utsname utsname;
+   ^
+bootsnap.c: In function ‘bs_cache_path’:
+bootsnap.c:266:24: warning: format ‘%llx’ expects argument of type ‘long long unsigned int’, but argument 5 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+   sprintf(*cache_path, "%s/%02x/%014llx", cachedir, first_byte, remainder);
+                        ^
+bootsnap.c: In function ‘bs_rb_fetch’:
+bootsnap.c:307:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   char * cachedir = RSTRING_PTR(cachedir_v);
+   ^
+bootsnap.c: At top level:
+cc1: warning: unrecognized command line option ‘-Wno-tautological-compare’
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+cc1: warning: unrecognized command line option ‘-Wno-cast-function-type’
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/cjv/Documents/varritech/vendor/cache/ruby/2.6.0/gems/bootsnap-1.4.5/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -m 0755 bootsnap.so ./.gem.20191223-19308-uuz0tg/bootsnap

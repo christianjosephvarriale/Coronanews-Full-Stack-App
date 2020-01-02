@@ -1,0 +1,62 @@
+Deep drop down
+
+<li class="menu-has-children"><a href="">Drop</a>
+                            <ul>
+                                <li><a href="#">Drop Down 1</a></li>
+                                <li class="menu-has-children"><a href="#">Drop Down 2</a>
+                                <ul>
+                                    <li><a href="#">Deep Drop Down 1</a></li>
+                                    <li><a href="#">Deep Drop Down 2</a></li>
+                                    <li><a href="#">Deep Drop Down 3</a></li>
+                                    <li><a href="#">Deep Drop Down 4</a></li>
+                                    <li><a href="#">Deep Drop Down 5</a></li>
+                                </ul>
+                                </li>
+                                <li><a href="#">Drop Down 3</a></li>
+                                <li><a href="#">Drop Down 4</a></li>
+                                <li><a href="#">Drop Down 5</a></li>
+                            </ul>
+                            </li>
+                            
+NavBar
+<header role="navigation" id="header">
+                    <div class="container">
+                        <div id="logo" class="pull-left">
+                            <a aria-hidden="true" href="#intro">
+                                <img style={{ height: '40px' }} src={logo} alt="Varritech logo" title="Varritech" />
+                            </a> 
+                            <h1><a href="#intro" class="scrollto">Varritech</a></h1>
+                        </div>
+
+                        <nav id="nav-menu-container">
+                        <ul role="menubar" class="nav-menu">
+                            <li role="menuitem" class="menu-active"><a href="#intro">Home</a></li>
+                            <li role="menuitem"><a href="#about">About Us</a></li>
+                            <li role="menuitem"><a href="#features">Features</a></li>
+                            <li role="menuitem"><a href="#pricing">Pricing</a></li>
+                            <li role="menuitem"><a href="#team">Team</a></li>
+                            <li role="menuitem"><a href="#gallery">Gallery</a></li>
+                            <li role="menuitem"><a href="#contact">Contact Us</a></li>
+                        </ul>
+                        </nav>
+                    </div>
+                    </header>
+
+                search functionality
+                <div class="header__search-trigger">
+                    <a href="#">Search</a>
+                </div>
+                       
+                <div class="header__search">
+
+                    <form role="search" method="get" class="header__search-form" action="#">
+                        <label>
+                            <span class="hide-content">Search for:</span>
+                            <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off" />
+                        </label>
+                        <input type="submit" class="search-submit" value="Search" />
+                    </form>
+
+                    <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
+
+                </div> 
