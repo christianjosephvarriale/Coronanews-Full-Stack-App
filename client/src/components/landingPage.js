@@ -6,10 +6,16 @@ import '../lib/font-awesome/css/font-awesome.min.css';
 import '../lib/ionicons/css/ionicons.min.css';
 import '../lib/magnific-popup/magnific-popup.css';
 import '../css/style.css';
+import Button from './button'
 
 import dataVisualization from '../img/dataVisualization.png';
 import scraping from '../img/scraping.png';
 import hardware from '../img/hardware.png';
+
+import chip from '../img/chip.svg';
+import mining from '../img/mining.svg';
+import course from '../img/online-class.svg';
+import led from '../img/led.svg';
 
 import scraper from '../img/realTimeScraper.png';
 import computer from '../img/computer.png';
@@ -72,29 +78,30 @@ class LandingPage extends Component {
                     <div class='banner' />
 
                     <div class="intro-text">
-                        <h2>Welcome to Varritech</h2>
-                        <p>We provide awesome resources, and powerful tools for your business</p>
-                        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+                        <h2>Welcome to Tekblg</h2>
+                        <p>We provide powerful insights and tech products</p>
+                        <a href="#about"><Button label={'Get started'}/></a> 
+                        {/* <a href="#about" class="btn-get-started scrollto">Get Started</a> */}
                     </div>
 
-                    {/* <div class="product-screens">
+                    <div class="product-screens">
 
                         <div class="product-screen-1 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.6s">
                             <img src={dataVisualization} alt="Data Visualization"/>
-                            <p>Data Visualization</p>
+                            <p>Tech Insights</p>
                         </div>
 
                         <div class="product-screen-2 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.6s">
                             <img src={scraping} alt=""/>
-                            <p>Information Scraping</p>
+                            <p>Code Snippets</p>
                         </div>
 
                         <div class="product-screen-3 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="0.6s">
                             <img src={hardware} alt=""/>
-                            <p>Hardware Insights</p>
+                            <p>Hardware Designs</p>
                         </div>
 
-                    </div> */}
+                    </div>
 
                     </section>
 
@@ -116,12 +123,12 @@ class LandingPage extends Component {
 
                             <div class="col-lg-6 content wow fadeInRight">
                             <h2> Engineering. Insights. Knowledge </h2>
-                            <h3> Pickup an interesting new project or Build something great </h3>
+                            <h3> Pickup an interesting new project or build something great </h3>
 
                             <ul>
-                                <li><i class="ion-android-checkmark-circle"></i> No ads </li>
-                                <li><i class="ion-android-checkmark-circle"></i> Detailed technical posts </li>
-                                <li><i class="ion-android-checkmark-circle"></i> Hardware and Software insights </li>
+                                <li><i class="ion-android-checkmark-circle"></i> No ads. Allowing you to recieve quality content without distraction </li>
+                                <li><i class="ion-android-checkmark-circle"></i> Detailed technical posts outlining specific implementations that work right away </li>
+                                <li><i class="ion-android-checkmark-circle"></i> Awesome merchandise and applications to streamline portions of your project </li>
                             </ul>
 
                             </div>
@@ -129,7 +136,8 @@ class LandingPage extends Component {
 
                         </div>
                     </section>
-                    <section id="features">
+                    <div class="line" />
+                    {/* <section id="features">
                         <div class="container">
 
                         <div class="row">
@@ -177,10 +185,10 @@ class LandingPage extends Component {
 
                         </div>
 
-                    </section>
+                    </section> */}
                     <section id="advanced-features">
 
-                        <div class="features-row section-bg">
+                        {/* <div class="features-row section-bg">
                         <div class="container">
                             <div class="row">
                             <div class="col-12">
@@ -194,9 +202,9 @@ class LandingPage extends Component {
                             </div>
                             </div>
                         </div>
-                        </div>
+                        </div> */}
 
-                        <div class="features-row">
+                        {/* <div class="features-row">
                         <div class="container">
                             <div class="row">
                             <div class="col-12">
@@ -214,9 +222,9 @@ The advanced dataflow contains a set of opportunities for status tracking, impor
                             </div>
                             </div>
                         </div>
-                        </div>
+                        </div> */}
 
-                        <div class="features-row section-bg">
+                        {/* <div class="features-row section-bg">
                         <div class="container">
                             <div class="row">
                             <div class="col-12">
@@ -231,9 +239,10 @@ The advanced dataflow contains a set of opportunities for status tracking, impor
                             </div>
                             </div>
                         </div>
-                        </div>
+                        </div> */}
+
                     </section>
-                    <section id="call-to-action">
+                    {/* <section id="call-to-action">
                         <div class="container">
                         <div class="row">
                             <div class="col-lg-9 text-center text-lg-left">
@@ -246,56 +255,70 @@ The advanced dataflow contains a set of opportunities for status tracking, impor
                         </div>
 
                         </div>
-                    </section>
+                    </section> */}
                     <section id="more-features" class="section-bg">
                         <div class="container">
 
                         <div class="section-header">
-                            <h3 class="section-title">How businesses use data through web scraping</h3>
+                            <h3 class="section-title">How Tekblg provides you with great value</h3>
                             <span class="section-divider"></span>
-                            <p class="section-description">Web scraping enables businesses to take unstructured data on the world wide web and turn it into structured data so that it can be consumed by their applications, providing significant business value</p>
+                            <p class="section-description">Engineering is difficult but rewarding. Our products are elegantly designed so you don't have to struggle</p>
                         </div>
 
                         <div class="row">
 
                             <div class="col-lg-6">
                             <div class="box wow fadeInLeft">
-                                <div class="icon"><i class="ion-ios-stopwatch-outline"></i></div>
-                                <h4 class="title"><a href="">Stock Market and Financial Data</a></h4>
-                                <p class="description">Gather data about global financial markets, stock markets, trading, commodity and economic indicators. Enhance and augment the data available to analysts and internal financial models to make them perform better.</p>
-                            </div>
+                                <div class="icon"><img src={chip} /></div>
+                                <div>
+                                    <h4 class="title">Artifical Intelligence</h4>
+                                    <p class="description">Use some of our text recognition and predictive models for your company's chatbot or data driven operations</p>
+                                </div>
+                                </div>
                             </div>
 
                             <div class="col-lg-6">
                             <div class="box wow fadeInRight">
-                                <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
-                                <h4 class="title"><a href="">Product, Pricing and Review Data</a></h4>
-                                <p class="description">Scrape product prices, availability, reviews, inventory, prominence, reputation from eCommerce websites. Monitor your distribution chain, analyze customer reviews and improve your products and profits with this data.</p>
-                            </div>
+                                <div class="icon"><img src={mining} /></div>
+                                <div>
+                                    <h4 class="title">Data Mining tools</h4>
+                                    <p class="description">Scrape product prices, availability, reviews, inventory, prominence, reputation from eCommerce websites.</p>
+                                </div>
+                                </div>
                             </div>
 
                             <div class="col-lg-6">
                             <div class="box wow fadeInLeft">
-                                <div class="icon"><i class="ion-ios-heart-outline"></i></div>
-                                <h4 class="title"><a href="">Real Estate and Housing Data</a></h4>
-                                <p class="description">Scrape Real Estate listings, Agents, Brokers, Houses, Apartments, Mortgages, Foreclosures, MLS. Keep a watch on new data by setting up custom email alerts.</p>
-                            </div>
+                                <div class="icon"><img src={course} /></div>
+                                <div>
+                                    <h4 class="title">Learn Computer Engineering coursework</h4>
+                                    <p class="description">Courses in engineering are seldom taught well. Learn about low level concepts in programming and hardware design.</p>
+                                </div>
+                               </div>
                             </div>
 
                             <div class="col-lg-6">
                             <div class="box wow fadeInRight">
-                                <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
-                                <h4 class="title"><a href="">Data for Research and Journalism</a></h4>
-                                <p class="description">Power your next research project or news story with data from the web - Environmental Data, Third World Development Data, Crime Data, Local and Global trends etc.</p>
-                            </div>
+                                <div class="icon"><img src={led} /></div>
+                                <div>
+                                    <h4 class="title">Purchase well designed circuits</h4>
+                                    <p class="description">Powerful bluetooth speaker, home automation systems, and LED matrices which add to the authenticity of any tech space</p>
+                                </div>
+                              </div>
                             </div>
 
                         </div>
                         </div>
                     </section>
-                    <section id="clients">
+                    <div class="line" />
+                    {/* <section id="clients">
                         <div class="container">
 
+                        <div class="section-header">
+                            <h3 style={{textAlign:'center',fontWeight: 400,marginBottom: 15,fontSize: 28}}>Here are some of our happy customers</h3>
+                            <span class="section-divider"></span>
+                        </div>
+                        
                         <div class="row wow fadeInUp">
 
                             <div class="col-md-2">
@@ -324,8 +347,8 @@ The advanced dataflow contains a set of opportunities for status tracking, impor
 
                         </div>
                         </div>
-                    </section>
-                    <section id="pricing" class="section-bg">
+                    </section> */}
+                    {/* <section id="pricing" class="section-bg">
                         <div class="container">
 
                         <div class="section-header">
@@ -383,67 +406,40 @@ The advanced dataflow contains a set of opportunities for status tracking, impor
 
                         </div>
                         </div>
-                    </section>
+                    </section> */}
                     <section id="faq">
                         <div class="container">
 
                         <div class="section-header">
                             <h3 class="section-title">Frequently Asked Questions</h3>
                             <span class="section-divider"></span>
-                            <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                            <p class="section-description">Got some burning questions you want answered? We're listening</p>
                         </div>
 
                         <ul id="faq-list" class="wow fadeInUp">
                             <li>
-                            <a data-toggle="collapse" class="collapsed" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="ion-android-remove"></i></a>
+                            <a data-toggle="collapse" class="collapsed" href="#faq1">I've got some project ideas I want to see built, can you help? <i class="ion-android-remove"></i></a>
                             <div id="faq1" class="collapse" data-parent="#faq-list">
                                 <p>
-                                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                                    We listen to our readers. Any feedback you leave us will be incorperated into the next posts.
                                 </p>
                             </div>
                             </li>
 
                             <li>
-                            <a data-toggle="collapse" href="#faq2" class="collapsed">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="ion-android-remove"></i></a>
+                            <a data-toggle="collapse" href="#faq2" class="collapsed">I love your content, is there anyway we can help you develop more content? <i class="ion-android-remove"></i></a>
                             <div id="faq2" class="collapse" data-parent="#faq-list">
                                 <p>
-                                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                                    We are an entirely student initiative. Any donations provided are greatly appreciated and will help us to keep our content free.
                                 </p>
                             </div>
                             </li>
 
                             <li>
-                            <a data-toggle="collapse" href="#faq3" class="collapsed">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="ion-android-remove"></i></a>
+                            <a data-toggle="collapse" href="#faq3" class="collapsed">What makes your team qualified to teach engineering concepts? <i class="ion-android-remove"></i></a>
                             <div id="faq3" class="collapse" data-parent="#faq-list">
                                 <p>
-                                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                                </p>
-                            </div>
-                            </li>
-
-                            <li>
-                            <a data-toggle="collapse" href="#faq4" class="collapsed">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="ion-android-remove"></i></a>
-                            <div id="faq4" class="collapse" data-parent="#faq-list">
-                                <p>
-                                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                                </p>
-                            </div>
-                            </li>
-
-                            <li>
-                            <a data-toggle="collapse" href="#faq5" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="ion-android-remove"></i></a>
-                            <div id="faq5" class="collapse" data-parent="#faq-list">
-                                <p>
-                                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-                                </p>
-                            </div>
-                            </li>
-
-                            <li>
-                            <a data-toggle="collapse" href="#faq6" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="ion-android-remove"></i></a>
-                            <div id="faq6" class="collapse" data-parent="#faq-list">
-                                <p>
-                                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+                                    Our team consists of computer engineering students with real world experince from around the world. Our content comes straight from the classroom to you.
                                 </p>
                             </div>
                             </li>
@@ -452,7 +448,7 @@ The advanced dataflow contains a set of opportunities for status tracking, impor
 
                         </div>
                     </section>
-                    <section id="team" class="section-bg">
+                    {/* <section id="team" class="section-bg">
                         <div class="container">
                         <div class="section-header">
                             <h3 class="section-title">Our Team</h3>
@@ -476,8 +472,8 @@ The advanced dataflow contains a set of opportunities for status tracking, impor
                         </div>
 
                         </div>
-                    </section>
-                    <section id="gallery">
+                    </section> */}
+                    {/* <section id="gallery">
                         <div class="container-fluid">
                         <div class="section-header">
                             <h3 class="section-title">Gallery</h3>
@@ -538,7 +534,7 @@ The advanced dataflow contains a set of opportunities for status tracking, impor
                         </div>
 
                         </div>
-                    </section>
+                    </section> */}
               
 
                     </main>

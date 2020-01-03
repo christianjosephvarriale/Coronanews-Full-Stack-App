@@ -32,10 +32,10 @@ class NavBar extends Component {
                 <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
 
                 <div id="logo" class="pull-left">
-                        <Link to="/blog/page/1">
+                        <Link to="/">
                             <img style={{ height: '40px' }} src={logo} alt="Varritech logo" title="Varritech" />
                         </Link>    
-                        <h1>Varritech</h1>
+                        <h1>Tekblg</h1>
                 </div>
 
                 <nav class="header__nav-wrap">
@@ -44,7 +44,7 @@ class NavBar extends Component {
 
                 <ul class="header__nav">
                 
-                {/* <li role="menuitem"><a href="#contact">Our Values</a></li> */}
+                <li role="menuitem"><NavLink to="/blog/page/1" role="menuitem">Blog</NavLink></li>
                 <form id="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                     <input type="hidden" name="cmd" value="_s-xclick" />
                     <input type="hidden" name="hosted_button_id" value="KU96VMCNZELB6" />

@@ -184,6 +184,7 @@ h6 {
   margin-bottom: 20px;
   padding: 0 15px;
   font-size: 24px;
+  text-align: center;
 }
 
 #intro .btn-get-started {
@@ -479,18 +480,25 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 20px;
 }
 
+.line {
+  display: block;
+  width: 60%;
+  height: 1px;
+  background: #871f78;
+  margin: 0 auto;
+}
 /* Section with background
 --------------------------------*/
 
 .section-bg {
-  background: #eff5f5;
+  /* background: #eff5f5; */
 }
 
 /* About Us Section
 --------------------------------*/
 
 #about {
-  padding: 60px 0;
+  padding-bottom: 60px;
   overflow: hidden;
 }
 
@@ -585,6 +593,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-weight: 300;
   margin-bottom: 15px;
   font-size: 22px;
+  margin-top: 2rem;
 }
 
 #features .title a {
@@ -703,8 +712,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 
 #more-features {
-  padding: 60px 0 60px 0;
   overflow: hidden;
+  padding: 60px 0px;
 }
 
 #more-features .box {
@@ -713,10 +722,20 @@ body.mobile-nav-active #mobile-nav-toggle {
   box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
   background: #fff;
   transition: 0.4s;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  #more-features .box {
+    display: block;
+  }
 }
 
 #more-features .icon {
-  float: left;
+  width: 100%;
+  margin: auto;
+  margin-right: 35px;
 }
 
 #more-features .icon i {
@@ -734,10 +753,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #more-features h4 {
-  margin-left: 100px;
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
+  margin-top: 0px;
 }
 
 #more-features h4 a {
@@ -746,7 +765,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #more-features p {
   font-size: 14px;
-  margin-left: 100px;
   margin-bottom: 0;
   line-height: 24px;
 }
@@ -1244,6 +1262,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   #faq #faq-list i {
     top: 13px;
   }
+}
+
+.product-screen-1,
+.product-screen-2,
+.product-screen-3 {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
 }
 
 @media (max-width: 767px) {

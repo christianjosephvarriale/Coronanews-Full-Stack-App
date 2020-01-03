@@ -121,7 +121,7 @@ class Footer extends Component {
 
                                     <div class="col-lg-4 col-md-4">
                                     <div class="contact-about">
-                                        <h3>Varritech</h3>
+                                        <h3>Tekblg</h3>
                                         <p>A university of Waterloo Student Initiative. For any questions regarding custom integrations and projects, please write us a message. Our service team will promptly reply. Remember, you are what makes us awesome.</p>
                                         {/* <div class="social-links">
                                         <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
@@ -142,7 +142,7 @@ class Footer extends Component {
 
                                         <div>
                                         <i class="ion-ios-email-outline"></i>
-                                        <p>varritech@gmail.com</p>
+                                        <p>Tekblg@gmail.com</p>
                                         </div>
 
                                         <div>
@@ -170,7 +170,7 @@ class Footer extends Component {
                                         <div class="form-group">
                                             <Textfield helperText={(this.state.messageError) ? 'Please have a non-empty message' : ''} error={this.state.messageError} multiline name={'message'} value={this.state.message} handleChange={this.handleChange} />
                                         </div>
-                                            <div class="text-center"><Button handleClick={this.handleSubmit} label={'Contact Varritech'}/></div>
+                                            <div class="text-center"><Button handleClick={this.handleSubmit} label={'Contact Tekblg'}/></div>
                                         </form>
                                     </div>
                                     </div>
@@ -184,7 +184,7 @@ class Footer extends Component {
                                     <div class="row">
                                     <div class="col-lg-6 text-lg-left text-center">
                                         <div class="copyright">
-                                        &copy; Copyright <strong>Varritech {year}</strong>. All Rights Reserved
+                                        &copy; Copyright <strong>Tekblg {year}</strong>. All Rights Reserved
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
