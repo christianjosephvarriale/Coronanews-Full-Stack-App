@@ -22,7 +22,7 @@ class App extends Component {
               <NavBar />
               <Router forceRefresh="true">
                 <Switch>
-                  <Route exact path='' component={LandingPage} />
+                  <Route exact path='/' component={LandingPage} />
                   <Route exact path='/amazonTool' component={AmazonScraper} />
                   <Route path='/blog/page/:pageId' component={Blog} />
                   <Route path="/blog/post/:blogId" component={BlogPage} />

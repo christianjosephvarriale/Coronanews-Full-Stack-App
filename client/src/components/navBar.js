@@ -32,7 +32,7 @@ class NavBar extends Component {
                 <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
 
                 <div id="logo" class="pull-left">
-                        <Link to="">
+                        <Link to="/">
                             <img style={{ height: '40px' }} src={logo} alt="Varritech logo" title="Varritech" />
                         </Link>    
                         <h1>Tekblg</h1>
