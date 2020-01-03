@@ -2,8 +2,8 @@
   "name": "application",
   "license": "MIT",
   "engines": {
-    "node": "10.16.0",
-    "yarn": "1.17.3"
+    "node": "12.11.1",
+    "yarn": "1.21.1"
   },
   "scripts": {
     "build": "yarn --cwd client install && yarn --cwd client build",
