@@ -82,26 +82,29 @@ class BlogPage extends Component {
             const codeLst = document.getElementsByTagName("code");
             const body = document.getElementById('body');
 
-            // insert a pre tag before the start of the code
-            let pre = document.createElement('pre');
-            let code = document.createElement('code');
-            pre.setAttribute('class', 'prettyprint');
-            body.insertBefore(pre,codeLst[0].parentNode);
-            pre.appendChild(code)
+            if (codeLst.length > 0) {
 
-            let textContent = ''
+                // insert a pre tag before the start of the code
+                let pre = document.createElement('pre');
+                let code = document.createElement('code');
+                pre.setAttribute('class', 'prettyprint');
+                body.insertBefore(pre,codeLst[0].parentNode);
+                pre.appendChild(code)
 
-            for (let i=0; i < codeLst.length; i++) {
-                textContent += codeLst[i].textContent;
-                textContent += '\n'
-            }
+                let textContent = ''
 
-            const textNode = document.createTextNode(textContent)
-            code.appendChild(textNode);
+                for (let i=0; i < codeLst.length; i++) {
+                    textContent += codeLst[i].textContent;
+                    textContent += '\n'
+                }
 
-            const removeLst = document.querySelectorAll('p code')
-            for (let i=0; i < removeLst.length; i++) {
-                body.removeChild(removeLst[i].parentNode)
+                const textNode = document.createTextNode(textContent)
+                code.appendChild(textNode);
+
+                const removeLst = document.querySelectorAll('p code')
+                for (let i=0; i < removeLst.length; i++) {
+                    body.removeChild(removeLst[i].parentNode)
+                }
             }
 
         }, 500);
@@ -306,12 +309,12 @@ class BlogPage extends Component {
                                 <div className={styles.entryAuthorAbout}>
                                     <h5 className={styles.entryAuthorName}>
                                         <span>Posted by</span>
-                                        <h2 style={{marginTop:0}}>Varritech</h2>
+                                        <h2 style={{marginTop:0}}>Tekblg</h2>
                                     </h5>
     
                                     <div className={styles.entryAuthorDesc}>
                                         <p>
-                                        Varritech's team of engineers and writers provide you with
+                                        Tekblg's team of engineers and writers provide you with
                                         high quality content in many different catagories relating 
                                         to the tech space ranging from instructional to motivational.
                                         Tell us what you thought about this post. 
