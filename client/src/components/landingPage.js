@@ -117,11 +117,11 @@ class LandingPage extends Component {
                         </div>
 
                         <div class="row">
-                            <div class="col-lg-6 about-img wow fadeInLeft">
+                            <div style={{padding:20}} class="col-lg-6 about-img wow fadeInLeft">
                             <img src={scraper} alt="" />
                             </div>
 
-                            <div class="col-lg-6 content wow fadeInRight">
+                            <div style={{padding:20}} class="col-lg-6 content wow fadeInRight">
                             <h2> Engineering. Insights. Knowledge </h2>
                             <h3> Pickup an interesting new project or build something great </h3>
 
@@ -267,7 +267,7 @@ The advanced dataflow contains a set of opportunities for status tracking, impor
 
                         <div class="row">
 
-                            <div class="col-lg-6">
+                            <div style={{padding:'20px 20px 0 20px'}} class="col-lg-6">
                             <div class="box wow fadeInLeft">
                                 <div class="icon"><img src={chip} /></div>
                                 <div>
@@ -277,7 +277,7 @@ The advanced dataflow contains a set of opportunities for status tracking, impor
                                 </div>
                             </div>
 
-                            <div class="col-lg-6">
+                            <div style={{padding:'20px 20px 0 20px'}} class="col-lg-6">
                             <div class="box wow fadeInRight">
                                 <div class="icon"><img src={mining} /></div>
                                 <div>
@@ -287,7 +287,7 @@ The advanced dataflow contains a set of opportunities for status tracking, impor
                                 </div>
                             </div>
 
-                            <div class="col-lg-6">
+                            <div style={{padding:'20px 20px 0 20px'}} class="col-lg-6">
                             <div class="box wow fadeInLeft">
                                 <div class="icon"><img src={course} /></div>
                                 <div>
@@ -297,7 +297,7 @@ The advanced dataflow contains a set of opportunities for status tracking, impor
                                </div>
                             </div>
 
-                            <div class="col-lg-6">
+                            <div style={{padding:'20px 20px 0 20px'}} class="col-lg-6">
                             <div class="box wow fadeInRight">
                                 <div class="icon"><img src={led} /></div>
                                 <div>

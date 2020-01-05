@@ -263,7 +263,7 @@ class BlogPage extends Component {
                     <Snackbar handleClose={this.handleClose} open={this.state.openSuccess} variant={'success'} message={"Thanks for posting the comment"} />
                     <Snackbar handleClose={this.handleClose} open={this.state.openError} variant={'error'} message={"You've got some errors on the comment form"} />
 
-                    <article style={{width:'80%'}}className={[styles.row,styles.entry,styles.formatStandard].join(" ")}>
+                    <article className={[styles.row,styles.entry,styles.formatStandard].join(" ")}>
                         <div className={[styles.entryMedia,styles.colFull].join(" ")}>
                             <div className={styles.entryPostThumb}>
                                 <img src={post.headerImg} alt="" />
@@ -349,7 +349,7 @@ class BlogPage extends Component {
                         </div> 
                     </div> 
     
-                <div className={[styles.row,styles.commentRespond].join(" ")}>
+                <div style={{padding:0}} className={[styles.row,styles.commentRespond].join(" ")}>
                     <div id="respond" className={styles.colFull}>
                         <h3 className={styles.h2}>Add Comment <span>Your email address will not be published</span></h3>
     

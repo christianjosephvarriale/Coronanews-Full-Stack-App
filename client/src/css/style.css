@@ -717,7 +717,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #more-features .box {
-  padding: 40px;
+  padding: 20px;
   margin-bottom: 30px;
   box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
   background: #fff;
@@ -733,7 +733,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #more-features .icon {
-  width: 100%;
+  width: 70%;
   margin: auto;
   margin-right: 35px;
 }
@@ -1298,7 +1298,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   #more-features .icon {
     float: none;
     text-align: center;
-    padding-bottom: 15px;
+    padding-bottom: 45px;
+    margin:auto;
   }
 
   #more-features h4,

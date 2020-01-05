@@ -46,6 +46,10 @@
    -ms-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
  }
+
+ p {
+   min-height: 40px;
+ }
  
  body {
    margin: 0;
@@ -77,6 +81,7 @@
  pre {
    font-family: monospace, monospace;
    font-size: 1em;
+   margin-top: 20px;
  }
  
  a {
@@ -1278,7 +1283,8 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
     padding: 2.4rem 3rem 3rem !important;
     background: #E5E5E5;
     overflow-x: auto;
-    border: none !important
+    border: none !important;
+    margin-top: 40px;
   }
   
   code {
