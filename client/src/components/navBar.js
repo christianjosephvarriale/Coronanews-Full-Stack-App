@@ -22,8 +22,8 @@ class NavBar extends Component {
     componentDidMount() {
         require("../js/navbar.js");
         
-        // if the cookie is not set then show subscribe modal
-        if (!document.cookie) {
+        // if the proper cookie tag is not set then show subscribe modal
+        if (!document.cookie.includes('subscribed=true')) {
             this.props.toggleSubscriptionState();
         }
     }

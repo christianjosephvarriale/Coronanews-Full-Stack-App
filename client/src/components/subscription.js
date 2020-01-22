@@ -24,6 +24,21 @@ export class Subscription extends Component {
             emailError: false,
           };
     }
+    /**
+     * Des: sets the cookie to have subscribed=true; 
+     * @param none
+     * @return none
+    */
+    setCookie = () => {
+        // Build the expiration date string:
+        var expiration_date = new Date();
+        var cookie_string = '';
+        expiration_date.setFullYear(expiration_date.getFullYear() + 1);
+        // Build the set-cookie string:
+        cookie_string = "subscribed=true; path=/; expires=" + expiration_date.toUTCString();
+        // Create or update the cookie:
+        document.cookie = cookie_string;
+    }
 
     handleSubmit = e => {
         console.log('called submit form')
@@ -61,6 +76,9 @@ export class Subscription extends Component {
 
                 // toggle the state of the dialog
                 this.props.toggleSubscriptionState()
+
+                // add cookie
+                this.setCookie()
             })
             .catch(error => console.log(error))
         }
