@@ -28,7 +28,7 @@ class BlogPost extends Component {
                         <div className={styles.itemEntryCat}>
                             <NavLink to={'/blog/post/' + props.id}>{props.catagory}</NavLink>
                         </div>
-                        <h1 className={styles.itemEntryTitle}><NavLink to={'/blog/' + props.id}>{props.title}</NavLink></h1>
+                        <h1 className={styles.itemEntryTitle}><NavLink to={'/blog/post/' + props.id}>{props.title}</NavLink></h1>
                         <div className={styles.itemEntryDate}>
                             <NavLink to={'/blog/post/' + props.id} role="menuitem">{props.date}</NavLink>
                         </div>

@@ -7,7 +7,9 @@ import '../css/main.css';
 import Button from './button';
 import { NavLink, Link, BrowserRouter as Router } from "react-router-dom"; 
 
-
+import Subscription from './subscription';
+import { connect } from 'react-redux';
+import { toggleSubscriptionState } from '../actions/pageActions';
 
 class NavBar extends Component {
     constructor(props){
@@ -16,8 +18,20 @@ class NavBar extends Component {
         };
         // bindings
     }
+
     componentDidMount() {
         require("../js/navbar.js");
+        
+        // if the cookie is not set then show subscribe modal
+        if (!document.cookie) {
+            this.props.toggleSubscriptionState();
+        }
+    }
+    
+    componentDidUpdate(prevProps) {
+        if (prevProps.state.open !== this.props.state.open) {
+          this.forceUpdate();
+        }
     }
 
     handleSubmit = () => {
@@ -27,8 +41,10 @@ class NavBar extends Component {
     render(){
         return (
             <Router forceRefresh="true">
-                <header id="header" class="s-header header">
 
+                <Subscription />
+                
+                <header id="header" class="s-header header">
                 <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
 
                 <div id="logo" class="pull-left">
@@ -44,6 +60,7 @@ class NavBar extends Component {
 
                 <ul class="header__nav">
                 
+                <li role="menuitem"><a href="#" onClick={(e) => this.props.toggleSubscriptionState()}>Subscribe</a></li>
                 <li role="menuitem"><NavLink to="/blog/page/1" role="menuitem">Blog</NavLink></li>
                 <form id="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                     <input type="hidden" name="cmd" value="_s-xclick" />
@@ -77,4 +94,9 @@ class NavBar extends Component {
         );
     }
 }
-export default NavBar;
+
+const mapStateToProps = state => (
+    { state: state.PageReducer }
+)
+
+export default connect(mapStateToProps, { toggleSubscriptionState })(NavBar);

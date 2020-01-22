@@ -6,7 +6,8 @@ import '../lib/font-awesome/css/font-awesome.min.css';
 import '../lib/ionicons/css/ionicons.min.css';
 import '../lib/magnific-popup/magnific-popup.css';
 import '../css/style.css';
-import Button from './button'
+import Button from './button';
+import Subscription from './subscription';
 
 import dataVisualization from '../img/dataVisualization.png';
 import scraping from '../img/scraping.png';
@@ -47,6 +48,9 @@ import advancedFeature1 from '../img/advanced-feature-1.jpg';
 import advancedFeature2 from '../img/advanced-feature-2.jpg';
 import advancedFeature3 from '../img/advanced-feature-3.jpg';
 
+import { connect } from 'react-redux';
+import { toggleSubscriptionState } from '../actions/pageActions';
+
 // define jQuery as part of the window
 window.jQuery = jquery;
 
@@ -73,14 +77,13 @@ class LandingPage extends Component {
     render() {
         return (
             <div>
-                    <section id="intro">
-
+                <section id="intro">
                     <div class='banner' />
 
                     <div class="intro-text">
                         <h2>Welcome to Tekblg</h2>
                         <p>We provide powerful insights and tech products</p>
-                        <a href="#about"><Button label={'Get started'}/></a> 
+                        <Button handleClick={(e) => this.props.toggleSubscriptionState()} label={'Subscribe'}/> 
                         {/* <a href="#about" class="btn-get-started scrollto">Get Started</a> */}
                     </div>
 
@@ -545,4 +548,9 @@ The advanced dataflow contains a set of opportunities for status tracking, impor
         )
     }
 }    
-export default LandingPage;
+
+const mapStateToProps = state => (
+    { state: state.PageReducer }
+)
+
+export default connect(mapStateToProps, { toggleSubscriptionState })(LandingPage);

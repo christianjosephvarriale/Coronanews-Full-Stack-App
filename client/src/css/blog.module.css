@@ -1285,6 +1285,7 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
     overflow-x: auto;
     border: none !important;
     margin-top: 40px;
+    margin-bottom: 40px;
   }
   
   code {

@@ -75,32 +75,64 @@ class BlogPage extends Component {
         // apply custom styles to all code blocks
 
         setTimeout(() => {
+
+            // add the code formatting script using JS hack
             var addScript = document.createElement('script');
             addScript.setAttribute('src', 'https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js');
             document.body.appendChild(addScript);
 
-            const codeLst = document.getElementsByTagName("code");
+            let codeLst = document.getElementsByTagName("code");
             const body = document.getElementById('body');
+            codeLst = [].slice.call(codeLst);
 
             if (codeLst.length > 0) {
 
-                // insert a pre tag before the start of the code
-                let pre = document.createElement('pre');
-                let code = document.createElement('code');
-                pre.setAttribute('class', 'prettyprint');
-                body.insertBefore(pre,codeLst[0].parentNode);
-                pre.appendChild(code)
+                // create obj with array's of DOM nodes
+                const codeGroupObj = {}
 
-                let textContent = ''
+                console.log(codeLst)
 
-                for (let i=0; i < codeLst.length; i++) {
-                    textContent += codeLst[i].textContent;
-                    textContent += '\n'
+                // slice the array and feed into Groups
+                let groupNum = 0;
+                let startingIndex = 0;
+                for (let i = 0; i < codeLst.length; i++) {
+
+                    console.log(codeLst[i].textContent)
+
+                    // if textContent is EOC then we have reached end 
+                    // of code group
+                    if (codeLst[i].textContent === 'EOC') {
+                        console.log(codeLst.slice(startingIndex, i + 1));
+                        codeGroupObj[`Group ${groupNum}`] = codeLst.slice(startingIndex, i);
+                        groupNum++;
+                        startingIndex = i + 1;
+                    } 
                 }
 
-                const textNode = document.createTextNode(textContent)
-                code.appendChild(textNode);
+                // iterate over groups and format them
+                for (const key of Object.keys(codeGroupObj)) {
 
+                    console.log(codeGroupObj[key][0].parentNode)
+
+                    // insert a pre tag before the start of the code
+                    let pre = document.createElement('pre');
+                    let code = document.createElement('code');
+                    pre.setAttribute('class', 'prettyprint');
+                    body.insertBefore(pre,codeGroupObj[key][0].parentNode);
+                    pre.appendChild(code)
+
+                    let textContent = ''
+
+                    for (let i=0; i < codeGroupObj[key].length; i++) {
+                        textContent += codeGroupObj[key][i].textContent;
+                        textContent += '\n'
+                    }
+
+                    const textNode = document.createTextNode(textContent)
+                    code.appendChild(textNode);
+                }
+
+                // now remove all the junk
                 const removeLst = document.querySelectorAll('p code')
                 for (let i=0; i < removeLst.length; i++) {
                     body.removeChild(removeLst[i].parentNode)

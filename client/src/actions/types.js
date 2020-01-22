@@ -6,3 +6,7 @@ export const POST_ACTIONS = {
 export const COMMENT_ACTIONS = {
   FETCH_ALL: 'FETCH_COMMENTS'
 }
+
+export const SUBSCRIPTION_ACTIONS = {
+  TOGGLE_OPEN: 'TOGGLE_OPEN'
+}

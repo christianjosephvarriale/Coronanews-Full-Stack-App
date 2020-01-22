@@ -55,7 +55,7 @@ export const fetchPost = id => dispatch => {
             let options = {
                 renderNode: {
                   'embedded-asset-block': (node) =>
-                    `<img src="${node.data.target.fields.file.url}"/>`,
+                    `<img style="width:100%" src="${node.data.target.fields.file.url}"/>`,
                    [BLOCKS.PARAGRAPH]: (node, next) =>
                     `<p>${next(node.content)}</p>`
                 },
