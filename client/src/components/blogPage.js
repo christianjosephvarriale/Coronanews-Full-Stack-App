@@ -124,7 +124,7 @@ class BlogPage extends Component {
                     let textContent = ''
 
                     for (let i=0; i < codeGroupObj[key].length; i++) {
-                        textContent += codeGroupObj[key][i].textContent;
+                        textContent += codeGroupObj[key][i].textContent.replace(/\$tab/g,'    ');
                         textContent += '\n'
                     }
 
@@ -135,7 +135,11 @@ class BlogPage extends Component {
                 // now remove all the junk
                 const removeLst = document.querySelectorAll('p code')
                 for (let i=0; i < removeLst.length; i++) {
-                    body.removeChild(removeLst[i].parentNode)
+                    try {
+                        body.removeChild(removeLst[i].parentNode)
+                    } catch {
+                        console.log('whoops');
+                    }
                 }
             }
 

@@ -34,6 +34,9 @@ class Blog extends Component {
         const props = this.props;
         var featPosts = props.state.featPosts
         var posts = props.state.posts;
+
+        console.log(`Here are the posts: ${JSON.stringify(posts)}`)
+
         posts = posts.concat(featPosts);
 
         // sort the posts by datetime
@@ -43,10 +46,13 @@ class Blog extends Component {
 
         var length = posts.length;
 
+        console.log(`Here are the posts: ${JSON.stringify(posts)}`)
+
         if (posts && featPosts) {
             
-            featPosts = featPosts.map((featPost) => 
-                <FeaturedBlogPost id={featPost.id} title={featPost.title}  />
+            featPosts = featPosts.map((post) => 
+                <FeaturedBlogPost title={post.title} headerImg={post.headerImg} id={post.id} 
+                catagory={post.catagory} date={post.date} author={post.author}  />
             );
 
             const url = props.location.pathname;
@@ -55,8 +61,12 @@ class Blog extends Component {
             // load only up to 12 posts
             const slcdPostLst = posts.slice( (page-1) * 12, page * 12 );
 
+            console.log(`Here are the sliced posts: ${JSON.stringify(slcdPostLst)}`)
+
             posts = slcdPostLst.map((post) =>  
-                <BlogPost id={post.id} /> 
+                <BlogPost title={post.title} headerImg={post.headerImg} id={post.id} 
+                            catagory={post.catagory} date={post.date} 
+                /> 
             );
         }
 

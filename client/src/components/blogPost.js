@@ -6,16 +6,10 @@ import '../css/vendor.css'
 
 import { NavLink } from 'react-router-dom';
 
-import { connect } from 'react-redux';
-import { fetchPost } from '../actions/postActions';
-
 class BlogPost extends Component {
 
-    componentDidMount() {
-        this.props.fetchPost(this.props.id)
-    }
     render() {
-        const props = this.props.state.currPost;
+        const props = this.props;
         return (
             <article className={styles.colBlock}>  
                 <div className={styles.itemEntry} data-aos="zoom-in">
@@ -39,8 +33,4 @@ class BlogPost extends Component {
     }
 }
 
-const mapStateToProps = state => (
-    { state: state.BlogReducer }
-)
-
-export default connect(mapStateToProps, { fetchPost })(BlogPost);
+export default BlogPost;
