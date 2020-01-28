@@ -16,12 +16,8 @@ const colorArray = ['#283593','#c62828', '#0277BD', '#00695C', '#558B2F', '#F9A8
 const generateColor = () => { return colorArray [ Math.round(Math.random() * (colorArray.length - 1)) ] }
 
 class FeaturedBlogPost extends Component {
-    componentDidMount() {
-        this.props.fetchPost(this.props.id)
-    }
     render() {
-        const props = this.props;
-        const state = props.state;
+        const state = this.props;
 
         // data hasn't arrived
         if (Object.keys(state).length === 0 && state.constructor === Object) {

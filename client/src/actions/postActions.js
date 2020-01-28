@@ -27,7 +27,15 @@ export const fetchAllPosts = () => dispatch => {
             // update the state of the app with the blog entries
             for (let i=0; i < prevPosts.length; i++) {
                 let entry = {
-                   'id': prevPosts[i].fields.id,
+                    'id': prevPosts[i].fields.id,
+                    'author':prevPosts[i].fields.author,
+                    'body':prevPosts[i].fields.body,
+                    'date':prevPosts[i].fields.date,
+                    'headerImg':prevPosts[i].fields.headerImage.fields.file.url,
+                    'catagory': prevPosts[i].fields.catagory,
+                    'title':prevPosts[i].fields.title,
+                    'id':prevPosts[i].fields.id,
+                    'tags':prevPosts[i].fields.tags,
                 }
 
                  // this is a featured post
@@ -47,7 +55,7 @@ export const fetchAllPosts = () => dispatch => {
 export const fetchPost = id => dispatch => {
     client.getEntry(id)
         .then((post) => {
-            console.log(post)
+            console.log(`Here is the returned val ${JSON.stringify(post)} based on id: ${id}`);
 
             const rawRichTextField = post.fields.body;
             console.log(rawRichTextField)
