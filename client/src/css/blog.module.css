@@ -4080,12 +4080,12 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
     font-family: "Nunito Sans", sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
-    color: rgba(0, 0, 0, 0.5);
+    color: #871f78;
     margin-right: 3px;
   }
   
   .entryTaxList a:hover, .entryTaxList a:focus {
-    color: #000000;
+    color: #871f78;
   }
   
   .entryTaxList a::after {
@@ -4103,7 +4103,8 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   .entryTaxListPill a {
     font-size: 1.4rem;
     line-height: 1.714;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid #871f78;
+    color: #871f78 !important;
     border-radius: 3px;
     margin-right: 6px;
     margin-bottom: 6px;
@@ -4115,9 +4116,9 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   }
   
   .entryTaxListPill a:hover, .entryTaxListPill a:focus {
-    background-color: #000000;
-    border-color: #000000;
-    color: #FFFFFF;
+    background-color: #871f78 !important;
+    border-color: #871f78 !important;
+    color: #FFFFFF !important;
   }
   
   /* 
