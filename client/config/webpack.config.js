@@ -21,6 +21,7 @@ const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
 const paths = require('./paths');
 const modules = require('./modules');
+const CompressionPlugin = require("compression-webpack-plugin"); 
 const getClientEnvironment = require('./env');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
@@ -177,6 +178,28 @@ module.exports = function(webpackEnv) {
     },
     optimization: {
       minimize: isEnvProduction,
+      splitChunks: {
+        chunks: 'async',
+        minSize: 30000,
+        minRemainingSize: 0,
+        maxSize: 0,
+        minChunks: 1,
+        maxAsyncRequests: 6,
+        maxInitialRequests: 4,
+        automaticNameDelimiter: '~',
+        automaticNameMaxLength: 30,
+        cacheGroups: {
+          defaultVendors: {
+            test: /[\\/]node_modules[\\/]/,
+            priority: -10
+          },
+          default: {
+            minChunks: 2,
+            priority: -20,
+            reuseExistingChunk: true
+          }
+        }
+      },
       minimizer: [
         // This is only used in production mode
         new TerserPlugin({
@@ -476,6 +499,33 @@ module.exports = function(webpackEnv) {
     },
     plugins: [
       // Generates an `index.html` file with the <script> injected.
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': '"production"'
+      }),
+      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.UglifyJsPlugin({
+        mangle: true,
+        compress: {
+          warnings: false, // Suppress uglification warnings
+          pure_getters: true,
+          unsafe: true,
+          unsafe_comps: true,
+          screw_ie8: true
+        },
+        output: {
+          comments: false,
+        },
+        exclude: [/\.min\.js$/gi] // skip pre-minified libs
+      }),
+      new webpack.IgnorePlugin(/^\.\/locale$/, [/moment$/]),
+      new webpack.NoErrorsPlugin(),
+      new CompressionPlugin({
+        asset: "[path].gz[query]",
+        algorithm: "gzip",
+        test: /\.js$|\.css$|\.html$/,
+        threshold: 10240,
+        minRatio: 0
+      }),
       new HtmlWebpackPlugin(
         Object.assign(
           {},
