@@ -117,7 +117,7 @@ module Sprockets
 
     config.assets.version     = ""
     config.assets.debug       = false
-    config.assets.compile     = true
+    config.assets.compile     = false
     config.assets.digest      = true
     config.assets.cache_limit = 50.megabytes
     config.assets.gzip        = true

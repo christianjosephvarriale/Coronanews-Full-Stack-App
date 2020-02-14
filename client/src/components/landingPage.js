@@ -3,7 +3,7 @@ import jquery from 'jquery';
 import '../lib/bootstrap/css/bootstrap.min.css';
 import '../lib/animate/animate.min.css';
 import '../lib/font-awesome/css/font-awesome.min.css';
-import '../lib/ionicons/css/ionicons.min.css';
+// import '../lib/ionicons/css/ionicons.min.css';
 import '../lib/magnific-popup/magnific-popup.css';
 import '../css/style.css';
 import Button from './button';
