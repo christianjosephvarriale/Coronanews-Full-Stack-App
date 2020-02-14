@@ -7,7 +7,6 @@ import '../lib/ionicons/css/ionicons.min.css';
 import '../lib/magnific-popup/magnific-popup.css';
 import '../css/style.css';
 import Button from './button';
-import Subscription from './subscription';
 
 import dataVisualization from '../img/dataVisualization.png';
 import scraping from '../img/scraping.png';
@@ -19,34 +18,6 @@ import course from '../img/online-class.svg';
 import led from '../img/led.svg';
 
 import scraper from '../img/realTimeScraper.png';
-import computer from '../img/computer.png';
-import team from '../img/team.jpg';
-import photo from '../img/photo.jpg';
-
-import client1 from '../img/clients/client-1.png'
-import client2 from '../img/clients/client-2.png'
-import client3 from '../img/clients/client-3.png'
-import client4 from '../img/clients/client-4.png'
-import client5 from '../img/clients/client-5.png'
-import client6 from '../img/clients/client-6.png'
-
-import team1 from '../img/team/team-1.jpg'
-import team2 from '../img/team/team-2.jpg'
-import team3 from '../img/team/team-3.jpg'
-import team4 from '../img/team/team-4.jpg'
-
-import gallery1 from '../img/gallery/gallery-1.jpg'
-import gallery2 from '../img/gallery/gallery-2.jpg'
-import gallery3 from '../img/gallery/gallery-3.jpg'
-import gallery4 from '../img/gallery/gallery-4.jpg'
-import gallery5 from '../img/gallery/gallery-5.jpg'
-import gallery6 from '../img/gallery/gallery-6.jpg'
-
-import about from '../img/about-img.jpg'
-import features from '../img/product-features.png'
-import advancedFeature1 from '../img/advanced-feature-1.jpg';
-import advancedFeature2 from '../img/advanced-feature-2.jpg';
-import advancedFeature3 from '../img/advanced-feature-3.jpg';
 
 import { connect } from 'react-redux';
 import { toggleSubscriptionState } from '../actions/pageActions';

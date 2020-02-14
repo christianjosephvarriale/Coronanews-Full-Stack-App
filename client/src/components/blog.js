@@ -3,10 +3,6 @@ import React, { Component } from 'react';
 import styles from '../css/blog.module.css';
 import '../css/slick-slider.css';
 
-import guitarman from '../img/thumbs/featured/featured-guitarman.jpg'
-import watch from '../img/thumbs/featured/featured-watch.jpg';
-import beetle from '../img/thumbs/featured/featured-beetle.jpg';
-
 import FeaturedBlogPost from './featuredBlogPost';
 import BlogPost from './blogPost';
 import { connect } from 'react-redux';
@@ -14,8 +10,6 @@ import { fetchAllPosts } from '../actions/postActions';
 
 import Pagniation from './pagination';
 import Loader from './loader';
-
-const contentful = require('contentful');
 
 class Blog extends Component {
 
