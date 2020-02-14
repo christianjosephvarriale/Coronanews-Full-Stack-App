@@ -503,7 +503,6 @@ module.exports = function(webpackEnv) {
         'process.env.NODE_ENV': '"production"'
       }),
       new CompressionPlugin({
-        asset: "[path].gz[query]",
         algorithm: "gzip",
         test: /\.js$|\.css$|\.html$/,
         threshold: 10240,
