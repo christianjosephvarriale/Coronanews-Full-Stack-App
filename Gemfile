@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
-ruby '2.5.7'
+ruby '2.6.3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 gem 'sprockets', '~>3.0'
@@ -56,4 +56,5 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'rubyzip', '>= 1.0.0' # will load new rubyzip version
 gem 'zip-zip' # will load compatibility for old rubyzip API.
 
+gem 'sass-rails'
 gem 'dotenv-rails'

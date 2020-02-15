@@ -35,6 +35,8 @@ module ListOfIngredients
     config.api_only = true
     config.action_controller.forgery_protection_origin_check = false
     config.app_generators.scaffold_controller = :scaffold_controller
+    config.assets.css_compressor = :yui
+    config.assets.js_compressor = :uglifier
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
