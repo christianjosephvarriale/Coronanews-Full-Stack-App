@@ -2,13 +2,12 @@
   "name": "application",
   "license": "MIT",
   "engines": {
-    "node": "12.11.1",
-    "yarn": "1.21.1"
+    "node": "12.11.1"
   },
   "scripts": {
     "build": "npm --cwd client install && npm --cwd client build",
     "deploy": "cp -a client/build/. public/",
-    "heroku-postbuild": "npm build && npm deploy && rm -r node_modules"
+    "heroku-postbuild": "npm build && del-cli ./node_modules/* && npm deploy"
   },
   "devDependencies": {
     "cross-env": "^5.2.0"
