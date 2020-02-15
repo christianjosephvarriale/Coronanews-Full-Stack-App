@@ -122,6 +122,7 @@ class LandingPage extends Component {
                                 <span class="section-divider"></span>
                             </div>
                             </div>
+                            
 
                             <div style={{display:'flex',alignItems:'center'}} class="col-lg-4 col-md-5 features-img">
                             <img src={computer} alt="" class="wow fadeInLeft"/>
