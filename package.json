@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm --cwd client install && npm --cwd client build",
     "deploy": "cp -a client/build/. public/",
-    "heroku-postbuild": "npm build && del-cli ./node_modules/* && npm deploy"
+    "heroku-postbuild": "npm build && npm deploy"
   },
   "devDependencies": {
     "cross-env": "^5.2.0"
