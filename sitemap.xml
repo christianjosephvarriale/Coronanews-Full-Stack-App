@@ -4,13 +4,30 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://tekblg.com/</loc>
   <lastmod>2020-02-13T15:41:47+00:00</lastmod>
 </url>
 
+<url>
+  <loc>https://tekblg.com/blog/page/1</loc>
+  <lastmod>2020-02-15T13:37:54+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://tekblg.com/blog/post/XCkXFEZ5ubF8mOuev3aJ2</loc>
+  <lastmod>2020-02-13T15:41:47+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://tekblg.com/blog/post/4qNeWVG2g2inCmAkwdo6WS</loc>
+  <lastmod>2020-01-22T06:31-05:00</lastmod>
+</url>
+
+<url>
+  <loc>https://tekblg.com/blog/post/5gi9YliuQUYHwhZRm6Opej</loc>
+  <lastmod>2020-01-28T16:09+02:00</lastmod>
+</url>
 
 </urlset>

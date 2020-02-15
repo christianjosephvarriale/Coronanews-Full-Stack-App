@@ -1,6 +1,0 @@
-User-Agent: *
-Disallow: 
-Allow: /blog/
-Disallow: /
-
-Sitemap: https://tekblg.com/robots.txt
