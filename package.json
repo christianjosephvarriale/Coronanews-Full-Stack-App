@@ -5,9 +5,7 @@
     "node": "12.11.1"
   },
   "scripts": {
-    "build": "cd client && npm run build",
-    "deploy": "cp -a /build/. public/",
-    "heroku-postbuild": "npm run deploy"
+    "deploy": "cd client && npm run deploy"
   },
   "devDependencies": {
     "cross-env": "^5.2.0"
