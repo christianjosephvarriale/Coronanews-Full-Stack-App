@@ -6,9 +6,9 @@
     "yarn": "1.21.1"
   },
   "scripts": {
-    "build": "yarn --cwd client build",
+    "build": "yarn --cwd client install && yarn --cwd client build",
     "deploy": "cp -a client/build/. public/",
-    "heroku-postbuild": "yarn build && yarn deploy"
+    "heroku-postbuild": "yarn build && rmdir node_modules && yarn deploy"
   },
   "devDependencies": {
     "cross-env": "^5.2.0"
