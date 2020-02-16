@@ -80,6 +80,7 @@ export const fetchPost = id => dispatch => {
                 'title':post.fields.title,
                 'id':post.fields.id,
                 'tags':post.fields.tags,
+                'meta':post.fields.meta
             }
             console.log(entry);
             dispatch({

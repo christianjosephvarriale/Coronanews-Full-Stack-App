@@ -217,6 +217,7 @@ class BlogPage extends Component {
         setTimeout(() => {
             this.props.fetchComments(id);
             this.props.fetchPost(id)
+
         }, 500);
 
         setTimeout(() => {
@@ -233,7 +234,7 @@ class BlogPage extends Component {
 
     render() {
         var commentsLst = this.props.state.comments;
-        var post = this.props.state.currPost
+        var post = this.props.state.currPost;
 
         if (Object.keys(post).length === 0 && post.constructor === Object) { 
             return ( <div id="preloader">
@@ -244,6 +245,13 @@ class BlogPage extends Component {
                         </div>
                     </div> )
         } else {
+
+            // change the title and the meta on the page
+            const { meta } = post;
+            const { title } = post;
+            document.getElementById("metaDes").setAttribute("content", meta);
+            document.querySelector('title').text = title;
+
             var tags = post.tags.map((tag) => {
                 return <a>{tag}</a>
             });

@@ -20,8 +20,12 @@ class Blog extends Component {
         // wait until state is changed before loading javascript
         setTimeout(() => {
             require("../js/blog.js");
-        }, 500);
 
+            console.log(document.getElementById("metaDes"));
+            // change the title and meta
+            document.getElementById("metaDes").setAttribute("content", "Here you'll find blog posts ranging from general tutorials to algorithms to insights. Enjoy");
+            document.querySelector('title').text = "Blog Posts - In Depth Design";
+        }, 500);
     }
 
     render(){
