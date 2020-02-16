@@ -2,10 +2,13 @@
   "name": "application",
   "license": "MIT",
   "engines": {
-    "node": "12.11.1"
+    "node": "12.11.1",
+    "yarn": "1.21.1"
   },
   "scripts": {
-    "deploy": "cd client && npm run build && npm run deploy"
+    "build": "yarn --cwd client build",
+    "deploy": "cp -a client/build/. public/",
+    "heroku-postbuild": "yarn build && yarn deploy"
   },
   "devDependencies": {
     "cross-env": "^5.2.0"
