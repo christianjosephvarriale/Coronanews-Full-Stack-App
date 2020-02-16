@@ -1,15 +1,13 @@
 {
-  "name": "application",
+  "name": "list-of-ingredients",
   "license": "MIT",
   "engines": {
-    "node": "12.11.1"
+    "node": "10.15.3",
+    "yarn": "1.15.2"
   },
   "scripts": {
-    "build": "cd client && npm install && npm run build",
-    "deploy": "cp -a /build/. public/",
-    "heroku-postbuild": "cd .. & npm run build && rmdir client/node_modules && npm run deploy"
-  },
-  "devDependencies": {
-    "cross-env": "^5.2.0"
+    "build": "yarn --cwd client install && yarn --cwd client build",
+    "deploy": "cp -a client/build/. public/",
+    "heroku-postbuild": "yarn build && yarn deploy"
   }
 }
