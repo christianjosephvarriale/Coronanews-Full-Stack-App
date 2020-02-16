@@ -12,5 +12,5 @@
   },
   "devDependencies": {
     "cross-env": "^5.2.0"
-  },
+  }
 }
