@@ -6,10 +6,12 @@ import logo from '../img/logo/companyLogoV2.png';
 import '../css/main.css';
 import Button from './button';
 import { NavLink, Link, BrowserRouter as Router } from "react-router-dom"; 
+import { createBrowserHistory } from "history";
 
 import Subscription from './subscription';
 import { connect } from 'react-redux';
 import { toggleSubscriptionState } from '../actions/pageActions';
+import LegoLoader from './legoLoader';
 
 class NavBar extends Component {
     constructor(props){
@@ -18,9 +20,27 @@ class NavBar extends Component {
         };
         // bindings
     }
+    
+    componentWillUnmount() {
+        // Unbind listener
+        this.backListener();
+    }
 
     componentDidMount() {
-        require("../js/navbar.js");
+
+        const history = createBrowserHistory();
+
+        this.buttonsListener = history.listen(location => {
+            if (history.action === 'POP') {
+                window.location.reload();
+            }
+        });
+
+        setTimeout(() => {
+            // wait for loader to finish
+            require("../js/navbar.js");
+        }, 6000);
+        
         
         // if the proper cookie tag is not set then show subscribe modal
         if (!document.cookie.includes('subscribed=true')) {
@@ -29,9 +49,13 @@ class NavBar extends Component {
     }
     
     componentDidUpdate(prevProps) {
-        if (prevProps.state.open !== this.props.state.open) {
+        if (prevProps.state.PageReducer.open !== this.props.state.PageReducer.open) {
           this.forceUpdate();
         }
+
+        if (prevProps.state.AppReducer.loading !== this.props.state.AppReducer.loading) {
+            this.forceUpdate();
+          }
     }
 
     handleSubmit = () => {
@@ -39,6 +63,15 @@ class NavBar extends Component {
     }
 
     render(){
+        const { loading } = this.props.state.AppReducer;
+
+        console.log(`Here's the props ${JSON.stringify(this.props)}`)
+        console.log(`Here's the loader ${loading}`)
+        if (loading) {
+            return (
+                <LegoLoader />
+            )
+        } else {
         return (
             <Router forceRefresh="true">
 
@@ -58,15 +91,17 @@ class NavBar extends Component {
 
                 <h2 class="header__nav-heading h6">Navigate to</h2>
 
-                <ul class="header__nav">
+                <ul style={{display: 'flex',justifyContent: 'space-around',borderTop: '1px solid rgba(0, 0, 0, 0.1)'}}class="header__nav">
                 
-                <li role="menuitem"><a href="#" onClick={(e) => this.props.toggleSubscriptionState()}>Subscribe</a></li>
-                <li role="menuitem"><NavLink to="/blog/page/1" role="menuitem">Blog</NavLink></li>
-                <form id="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_s-xclick" />
-                    <input type="hidden" name="hosted_button_id" value="KU96VMCNZELB6" />
-                    <Button handleClick={this.handleSubmit} label={'Donate'}/>
-                </form>
+                <li style={{borderTop: 'none',height: 80,justifyContent: 'center',display: 'flex',alignItems: 'center'}} role="menuitem"><a href="#" onClick={(e) => this.props.toggleSubscriptionState()}>Subscribe</a></li>
+                <li style={{borderTop: 'none',height: 80,justifyContent: 'center',display: 'flex',alignItems: 'center'}} role="menuitem"><NavLink to="/blog/page/1" role="menuitem">Blog</NavLink></li>
+                <li style={{borderTop: 'none',height: 80,justifyContent: 'center',display: 'flex',alignItems: 'center'}} role="menuitem">
+                    <form id="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick" />
+                        <input type="hidden" name="hosted_button_id" value="KU96VMCNZELB6" />
+                        <Button handleClick={this.handleSubmit} label={'Donate'}/>
+                    </form>
+                </li>
 
                 {/* <li role="menuitem"><a href="#about">About</a></li>
                 <li role="menuitem"><a href="#features">Features</a></li>
@@ -89,14 +124,14 @@ class NavBar extends Component {
 
                 </nav> 
                 </header>
-            </Router>
-                
-        );
+            </Router>    
+            );
+        }
     }
 }
 
 const mapStateToProps = state => (
-    { state: state.PageReducer }
+    { state: state }
 )
 
 export default connect(mapStateToProps, { toggleSubscriptionState })(NavBar);

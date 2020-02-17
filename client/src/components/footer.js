@@ -3,6 +3,8 @@ import Button from './button'
 import Snackbar from './snackbar';
 import Textfield from './textInput';
 import axios from 'axios';
+import { connect } from 'react-redux';
+import { toggleLoader } from '../actions/appActions';
 
 let year = new Date().getFullYear();
 
@@ -109,7 +111,11 @@ class Footer extends Component {
       }
 
     render() {
-        console.log(this.state)
+        
+        const { loading } = this.props.state;
+        if (loading) {
+            return ( null )
+        } else {
         return (      
             <div>
                 <Snackbar handleClose={this.handleClose} open={this.state.openSuccess} variant={'success'} message={"Thanks for getting in contact! We'll reach out soon"} />
@@ -200,9 +206,14 @@ class Footer extends Component {
                             </footer>
             </div>
            
-        )
+            )
+        }
     }
 }
 
 
-export default Footer;
+const mapStateToProps = state => (
+    { state: state.AppReducer }
+)
+
+export default connect(mapStateToProps, { toggleLoader })(Footer);

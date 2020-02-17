@@ -1,0 +1,3 @@
+.grow:hover div {
+    transform: scale(1.5);
+}

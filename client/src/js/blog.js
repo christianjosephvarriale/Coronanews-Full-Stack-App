@@ -29,19 +29,19 @@ doc.setAttribute('data-useragent', navigator.userAgent);
 
 console.log('called')
 
-var clPreloader = function() {
+// var clPreloader = function() {
       
-    $("html").addClass('ss-preload');
+//     $("html").addClass('ss-preload');
 
-    //force page scroll position to top at page refresh
-    $('html, body').animate({ scrollTop: 0 }, 'normal');
+//     //force page scroll position to top at page refresh
+//     $('html, body').animate({ scrollTop: 0 }, 'normal');
 
-    // will first fade out the loading animation 
-    $("#loader").fadeOut("slow", function() {
-        // will fade out the whole DIV that covers the website.
-        $("#preloader").delay(300).fadeOut("slow");
-    }); 
-};
+//     // will first fade out the loading animation 
+//     $("#loader").fadeOut("slow", function() {
+//         // will fade out the whole DIV that covers the website.
+//         $("#preloader").delay(300).fadeOut("slow");
+//     }); 
+// };
 
 var clSlickSlider = function() {
     
@@ -459,5 +459,5 @@ var clGoogleMap = function() {
     clAjaxChimp();
     clBackToTop();
     clGoogleMap();
-    clPreloader();
+    // clPreloader();
   }) ();

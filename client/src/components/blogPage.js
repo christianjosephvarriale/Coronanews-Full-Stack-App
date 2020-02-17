@@ -6,6 +6,7 @@ import '../css/slick-slider.css';
 import Avatar from '@material-ui/core/Avatar';
 import { connect } from 'react-redux';
 import { fetchPost, fetchComments } from '../actions/postActions';
+import { toggleLoader } from '../actions/appActions';
 import Textfield from './textInput';
 import Loader from './loader';
 import Snackbar from './snackbar';
@@ -77,10 +78,6 @@ class BlogPage extends Component {
         setTimeout(() => {
 
             // add the code formatting script using JS hack
-            var addScript = document.createElement('script');
-            addScript.setAttribute('src', 'https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js');
-            document.body.appendChild(addScript);
-
             let codeLst = document.getElementsByTagName("code");
             const body = document.getElementById('body');
             codeLst = [].slice.call(codeLst);
@@ -142,6 +139,10 @@ class BlogPage extends Component {
                     }
                 }
             }
+
+            var addScript = document.createElement('script');
+            addScript.setAttribute('src', 'https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js');
+            document.body.appendChild(addScript);
 
         }, 500);
     }
@@ -221,8 +222,10 @@ class BlogPage extends Component {
         }, 500);
 
         setTimeout(() => {
+            // turn off the loader;
+            this.props.toggleLoader();
             require("../js/blog.js");
-        }, 500);
+        }, 5000);
     }
 
     handleChange = name => event => {
@@ -235,15 +238,10 @@ class BlogPage extends Component {
     render() {
         var commentsLst = this.props.state.comments;
         var post = this.props.state.currPost;
+        const loading = this.props.loading;
 
-        if (Object.keys(post).length === 0 && post.constructor === Object) { 
-            return ( <div id="preloader">
-                        <div id="loader" className={styles.dotsFade}>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div> )
+        if (loading) { 
+            return ( null )
         } else {
 
             // change the title and the meta on the page
@@ -428,7 +426,10 @@ class BlogPage extends Component {
 }
 
 const mapStateToProps = state => (
-    { state: state.BlogReducer }
+    { 
+        state: state.BlogReducer,
+        loading: state.AppReducer.loading
+    }
 )
 
-export default connect(mapStateToProps, { fetchPost, fetchComments })(BlogPage);
+export default connect(mapStateToProps, { fetchPost, fetchComments, toggleLoader })(BlogPage);

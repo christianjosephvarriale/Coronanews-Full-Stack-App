@@ -1299,10 +1299,11 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   
   pre > code {
     display: block;
-    white-space: pre;
+    white-space: pre-wrap;
     line-height: 2;
     padding: 0;
     margin: 0;
+    font-size: 13px;
   }
   
   pre.prettyprint > code {

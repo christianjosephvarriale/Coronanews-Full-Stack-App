@@ -7,31 +7,38 @@ import FeaturedBlogPost from './featuredBlogPost';
 import BlogPost from './blogPost';
 import { connect } from 'react-redux';
 import { fetchAllPosts } from '../actions/postActions';
+import { toggleLoader } from '../actions/appActions';
 
 import Pagniation from './pagination';
-import Loader from './loader';
 
 class Blog extends Component {
 
     componentDidMount() {
 
-        this.props.fetchAllPosts()        
+        this.props.fetchAllPosts() 
 
         // wait until state is changed before loading javascript
         setTimeout(() => {
-            require("../js/blog.js");
 
             console.log(document.getElementById("metaDes"));
             // change the title and meta
             document.getElementById("metaDes").setAttribute("content", "Here you'll find blog posts ranging from general tutorials to algorithms to insights. Enjoy");
             document.querySelector('title').text = "Blog Posts - In Depth Design";
         }, 500);
+
+
+        setTimeout(() => {
+            // turn off the loader;
+            this.props.toggleLoader();
+            require("../js/blog.js");
+        }, 5000)
     }
 
     render(){
         const props = this.props;
         var featPosts = props.state.featPosts
         var posts = props.state.posts;
+        let loading = props.loading;
 
         console.log(`Here are the posts: ${JSON.stringify(posts)}`)
 
@@ -68,16 +75,16 @@ class Blog extends Component {
             );
         }
 
-        if (posts && featPosts) {
+        if (!loading) {
                 return (
                 <div id="top">
-                        <div id="preloader">
+                        {/* <div id="preloader">
                             <div id="loader" className={styles.dotsFade}>
                                 <div></div>
                                 <div></div>
                                 <div></div>
                             </div>
-                        </div>
+                        </div> */}
 
                         <section className={'s-featured'}>
                             <div className={styles.row}>
@@ -291,18 +298,14 @@ class Blog extends Component {
                 </div>
             )
         } else {
-            return (
-                <div style={{margin:'auto', marginTop:'150px 0', width:'90%'}}>
-                  <p> We are Loading Some awesome data for you </p>
-                  <Loader />
-                </div> 
-            )
+            return ( null )
         }
     }
 }
 
 const mapStateToProps = state => ({
-    state: state.BlogReducer
+    state: state.BlogReducer,
+    loading: state.AppReducer.loading
 })
 
-export default connect(mapStateToProps, { fetchAllPosts })(Blog);
+export default connect(mapStateToProps, { fetchAllPosts, toggleLoader })(Blog);

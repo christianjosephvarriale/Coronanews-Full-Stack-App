@@ -20,7 +20,7 @@ import led from '../img/led.svg';
 import scraper from '../img/realTimeScraper.png';
 
 import { connect } from 'react-redux';
-import { toggleSubscriptionState } from '../actions/pageActions';
+import { toggleLoader } from '../actions/appActions';
 
 // define jQuery as part of the window
 window.jQuery = jquery;
@@ -39,15 +39,26 @@ require("../js/main.js");
 class LandingPage extends Component {
     constructor(props) {
       super(props);
-      this.state = { 
-      };
-      // bindings
-      //
+      this.state = { };
+    }
+
+    componentDidMount() {
+
+        setTimeout(() => {
+            // turn off the loader
+            this.props.toggleLoader();;
+        }, 5000)
+        
     }
 
     render() {
-        return (
-            <div>
+
+        const { loading } = this.props.state;
+        if (loading) {
+            return ( null )
+        } else {
+            return (
+                <div>
                 <section id="intro">
                     <div class='banner' />
 
@@ -517,12 +528,14 @@ The advanced dataflow contains a set of opportunities for status tracking, impor
 
                     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
             </div>
-        )
+         
+            )
+        }
     }
 }    
 
 const mapStateToProps = state => (
-    { state: state.PageReducer }
+    { state: state.AppReducer }
 )
 
-export default connect(mapStateToProps, { toggleSubscriptionState })(LandingPage);
+export default connect(mapStateToProps, { toggleLoader })(LandingPage);

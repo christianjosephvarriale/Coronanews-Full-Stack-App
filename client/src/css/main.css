@@ -1332,7 +1332,7 @@ body.search-is-visible {
 }
 
 .header__nav-wrap .header__nav-heading {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
   line-height: 1.2;
@@ -1595,7 +1595,7 @@ body.search-is-visible {
 
   .header__nav {
     margin: 6rem 7rem 3rem 7rem;
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 18px;
     text-transform: none;

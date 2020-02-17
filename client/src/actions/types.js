@@ -10,3 +10,7 @@ export const COMMENT_ACTIONS = {
 export const SUBSCRIPTION_ACTIONS = {
   TOGGLE_OPEN: 'TOGGLE_OPEN'
 }
+
+export const APP_ACTIONS = {
+  TOGGLE_LOAD: 'TOGGLE_LOAD'
+}

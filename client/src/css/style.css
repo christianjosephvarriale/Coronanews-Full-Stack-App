@@ -9,10 +9,16 @@
 # General
 --------------------------------------------------------------*/
 
+#animationWindow {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
 body {
   background: #fff;
+  font-family: "Montserrat", sans-serif;
   color: #666666;
-  font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
 }
 
