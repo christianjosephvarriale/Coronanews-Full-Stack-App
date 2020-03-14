@@ -26,10 +26,9 @@ class Blog extends Component {
             document.querySelector('title').text = "Blog Posts - In Depth Design";
         }, 500);
 
-
+        this.props.toggleLoader('ON');
         setTimeout(() => {
-            // turn off the loader;
-            this.props.toggleLoader();
+            this.props.toggleLoader('OFF');
             require("../js/blog.js");
         }, 5000)
     }

@@ -8,6 +8,9 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+.opacity {
+  opacity: 30%;
+}
 
 #animationWindow {
   width: 100%;
@@ -142,28 +145,22 @@ h6 {
 }
 
 .banner {
-  background: url('../img/background.png') center top no-repeat;
+  background: url('../img/personCoding.png') center top no-repeat;
   background-size: cover;
   position: absolute;
   height: 100vh;
-  width: 100vw;
-  opacity: .6;
+  width: 100%;
 }
 
 #intro .intro-text {
-  position: absolute;
-  left: 0;
-  top: 60px;
-  right: 0;
-  height: calc(50% - 60px);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: flex-end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -177,9 +174,10 @@ h6 {
 }
 
 #intro h2 {
+  text-align: right;
   margin: 30px 0 10px 0;
   padding: 0 15px;
-  font-size: 48px;
+  font-size: 35px;
   font-weight: 500;
   line-height: 56px;
   color: #871f78;;
@@ -189,8 +187,9 @@ h6 {
   color: #871f78;
   margin-bottom: 20px;
   padding: 0 15px;
-  font-size: 24px;
-  text-align: center;
+  font-size: 17px;
+  text-align: right;
+  max-width: 400px;
 }
 
 #intro .btn-get-started {
@@ -210,6 +209,17 @@ h6 {
 #intro .btn-get-started:hover {
   color: white;
   background: #871f78;
+}
+
+.codeHeader {
+  background: #a7a9ac;
+    font-size: 14px;
+    padding: 3px;
+}
+
+.codeBox {
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 #intro .product-screens {
@@ -506,6 +516,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #about {
   padding-bottom: 60px;
   overflow: hidden;
+  padding-top: 60px;
 }
 
 #about .about-img {
@@ -553,6 +564,18 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about .content ul li {
   padding-bottom: 10px;
+}
+
+/* Products Section */
+#products {
+  overflow: hidden;
+  padding: 60px 0px;
+}
+
+/* Vision Section */
+#vision {
+  overflow: hidden;
+  padding: 60px 0px;
 }
 
 /* Product Featuress Section
@@ -763,6 +786,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 15px;
   font-size: 18px;
   margin-top: 0px;
+  padding: 0px;
 }
 
 #more-features h4 a {

@@ -10,6 +10,7 @@ import { toggleLoader } from '../actions/appActions';
 import Textfield from './textInput';
 import Loader from './loader';
 import Snackbar from './snackbar';
+import '../css/code.css'
 
 import Img from './avatar';
 
@@ -21,6 +22,7 @@ import CardContent from '@material-ui/core/CardContent';
 
 import Button from './button'
 import axios from 'axios';
+import SideNav from './sideNav.js'
 
 const colorArray = ['#283593','#c62828', '#0277BD', '#00695C', '#558B2F', '#F9A825', '#EF6C00', '#4E342E', '#37474F'];
 
@@ -47,7 +49,9 @@ class BlogPage extends Component {
             openError: false,
             emailError:false,
             nameError: false,
-            messageError: false
+            messageError: false,
+            sectionIds: {}, /* holds the IDs of the h tags */
+            sectionsExist: false
         };
         // bindings
     }
@@ -69,6 +73,18 @@ class BlogPage extends Component {
         setTimeout(() => {
             var wrapper = document.getElementById('body');
             wrapper.innerHTML= post.body;
+        }, 0);
+    }
+
+    getTitles = () => { /* sets the state for all title tags */
+
+        setTimeout(() => {
+            const titles = document.getElementsByClassName('blog-heading');
+            const sectionIds = {};
+            for ( let i=0; i < titles.length; i++ ) { /* setState */ 
+                sectionIds[`${titles[i].id}`] = titles[i].id;
+            }
+            this.setState({ sectionIds });
         }, 500);
     }
 
@@ -77,74 +93,11 @@ class BlogPage extends Component {
 
         setTimeout(() => {
 
-            // add the code formatting script using JS hack
-            let codeLst = document.getElementsByTagName("code");
-            const body = document.getElementById('body');
-            codeLst = [].slice.call(codeLst);
-
-            if (codeLst.length > 0) {
-
-                // create obj with array's of DOM nodes
-                const codeGroupObj = {}
-
-                console.log(codeLst)
-
-                // slice the array and feed into Groups
-                let groupNum = 0;
-                let startingIndex = 0;
-                for (let i = 0; i < codeLst.length; i++) {
-
-                    console.log(codeLst[i].textContent)
-
-                    // if textContent is EOC then we have reached end 
-                    // of code group
-                    if (codeLst[i].textContent === 'EOC') {
-                        console.log(codeLst.slice(startingIndex, i + 1));
-                        codeGroupObj[`Group ${groupNum}`] = codeLst.slice(startingIndex, i);
-                        groupNum++;
-                        startingIndex = i + 1;
-                    } 
-                }
-
-                // iterate over groups and format them
-                for (const key of Object.keys(codeGroupObj)) {
-
-                    console.log(codeGroupObj[key][0].parentNode)
-
-                    // insert a pre tag before the start of the code
-                    let pre = document.createElement('pre');
-                    let code = document.createElement('code');
-                    pre.setAttribute('class', 'prettyprint');
-                    body.insertBefore(pre,codeGroupObj[key][0].parentNode);
-                    pre.appendChild(code)
-
-                    let textContent = ''
-
-                    for (let i=0; i < codeGroupObj[key].length; i++) {
-                        textContent += codeGroupObj[key][i].textContent.replace(/\$tab/g,'    ');
-                        textContent += '\n'
-                    }
-
-                    const textNode = document.createTextNode(textContent)
-                    code.appendChild(textNode);
-                }
-
-                // now remove all the junk
-                const removeLst = document.querySelectorAll('p code')
-                for (let i=0; i < removeLst.length; i++) {
-                    try {
-                        body.removeChild(removeLst[i].parentNode)
-                    } catch {
-                        console.log('whoops');
-                    }
-                }
-            }
-
             var addScript = document.createElement('script');
             addScript.setAttribute('src', 'https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js');
             document.body.appendChild(addScript);
 
-        }, 500);
+        }, 100);
     }
 
     handleSubmit = e => {
@@ -210,22 +163,21 @@ class BlogPage extends Component {
 
     componentDidMount() {
 
-        
         const url = this.props.location.pathname;
         const id = url.slice(url.lastIndexOf('/')+1);
 
         // fetch the post information based on location
         setTimeout(() => {
             this.props.fetchComments(id);
-            this.props.fetchPost(id)
-
+            this.props.fetchPost(id);
         }, 500);
 
+        this.props.toggleLoader('ON');
         setTimeout(() => {
-            // turn off the loader;
-            this.props.toggleLoader();
+            this.props.toggleLoader('OFF');
             require("../js/blog.js");
-        }, 5000);
+            this.getTitles();
+        }, 5000)
     }
 
     handleChange = name => event => {
@@ -239,6 +191,12 @@ class BlogPage extends Component {
         var commentsLst = this.props.state.comments;
         var post = this.props.state.currPost;
         const loading = this.props.loading;
+        const { mobile } = this.props;
+
+        let sideNav;
+        if ( !mobile && Object.keys(this.state.sectionIds).length > 0 ) {
+            sideNav = <SideNav sectionIds={this.state.sectionIds} />
+        }
 
         if (loading) { 
             return ( null )
@@ -301,6 +259,8 @@ class BlogPage extends Component {
         } return (
             
                 <section className={[styles.sContent,styles.sContentTopPadding,styles.sContentNarrow].join(" ")}>
+
+                    {sideNav}
 
                     <Snackbar handleClose={this.handleClose} open={this.state.openSuccess} variant={'success'} message={"Thanks for posting the comment"} />
                     <Snackbar handleClose={this.handleClose} open={this.state.openError} variant={'error'} message={"You've got some errors on the comment form"} />
@@ -428,7 +388,8 @@ class BlogPage extends Component {
 const mapStateToProps = state => (
     { 
         state: state.BlogReducer,
-        loading: state.AppReducer.loading
+        loading: state.AppReducer.loading,
+        mobile: state.AppReducer.mobile
     }
 )
 

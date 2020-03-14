@@ -18,7 +18,6 @@ export const fetchAllPosts = () => dispatch => {
     })
         .then((res) => {
 
-            console.log(res.items)
             var prevPosts = res.items;
 
             var featPosts = [];    
@@ -47,7 +46,6 @@ export const fetchAllPosts = () => dispatch => {
                 type: POST_ACTIONS.FETCH_ALL,
                 payload: { posts, featPosts }
             })
-            console.log('dispatched');
         })
         .catch(console.error)
 }
@@ -55,22 +53,28 @@ export const fetchAllPosts = () => dispatch => {
 export const fetchPost = id => dispatch => {
     client.getEntry(id)
         .then((post) => {
-            console.log(`Here is the returned val ${JSON.stringify(post)} based on id: ${id}`);
 
             const rawRichTextField = post.fields.body;
-            console.log(rawRichTextField)
 
             let options = {
                 renderNode: {
                   'embedded-asset-block': (node) =>
                     `<img style="width:100%" src="${node.data.target.fields.file.url}"/>`,
-                   [BLOCKS.PARAGRAPH]: (node, next) =>
-                    `<p>${next(node.content)}</p>`
-                },
+                   [BLOCKS.PARAGRAPH]: (node, next) => {
+                       if ( ( node.content[0].marks.length > 0 ) && ( node.content[0].marks[0].type === 'code' ) ) {
+                            return ( `<pre class="prettyprint">${next(node.content)}</pre>` )
+                       } else {
+                           return ( `<p>${next(node.content)}</p>` )
+                       }
+                   },
+                   [BLOCKS.HEADING_3]: (node, _) => 
+                    `<h3 class="blog-heading" id="${node.content[0].value.trim()}">${node.content[0].value}</h3>`,
+                   [BLOCKS.HEADING_1]: (node, _) => 
+                    `<h1 class="blog-heading" id="${node.content[0].value.trim()}">${node.content[0].value}</h1>`,
+                }
             }
 
             const body = documentToHtmlString(rawRichTextField, options);
-            console.log(body)
             let entry = {
                 'author':post.fields.author,
                 'body':body,
@@ -82,7 +86,6 @@ export const fetchPost = id => dispatch => {
                 'tags':post.fields.tags,
                 'meta':post.fields.meta
             }
-            console.log(entry);
             dispatch({
                 type: POST_ACTIONS.FETCH,
                 payload: entry

@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
-import '../styles/dots.css';
+import '../css/sideNav.css';
+
+const CustomTooltip = withStyles(theme => ({
+    tooltip: {
+      fontSize: 15,
+      fontFamily: 'Montserrat'
+    },
+  }))(Tooltip);
 
 const styles = () => ({
     container: {
         top: '50%',
-        right: '1%',
+        left: 30,
+        flexDirection: 'column',
         display: 'flex',
-        transform: 'rotate(90deg)',
         alignItems: 'center',
         position:'fixed',
         zIndex: 1000
@@ -16,29 +23,28 @@ const styles = () => ({
     dotContainer: {
         display: 'block',
         position: 'relative',
-        width: 20,
-        height: 20
+        width: 30,
+        height: 30
     },
     dot: {
         position:'absolute',
-        left: 8,
-        top: 8,
-        width: 4,
-        height: 4,
-        borderRadius: 4,
-        backgroundColor: 'white',
+        left: 12,
+        top: 3,
+        width: 6,
+        height: 6,
+        backgroundColor: 'black',
         borderRadius: '50%',
         transition: '.2s ease-out',
     },
 });
 
-class Dots extends Component {
+class SideNav extends Component {
     constructor(props) {
         super(props); 
         this.state = {
-            currentDot: 0,
+            type: 'Dot', /* Either Dot or Text */
+            currentSec: 0,
             posArray: [],
-            secArray: []
         };
     }
 
@@ -47,39 +53,40 @@ class Dots extends Component {
         let scroll = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
         
         const { posArray } = this.state;
-        currentDot;
+        let currentSec;
         for (let i = 0; i < posArray.length; i++) { 
             /* parse the dot pos lst to determine grow state */
             
+            if ( scroll < posArray[0] ) {
+                currentSec = 0;
+                break;
+            }
+
             if (i === posArray.length - 1) { 
                 /* we've reached the end */
-                currentDot = i;
+                currentSec = i;
+                break;
             } 
             if ( (scroll >= posArray[i]) && scroll < posArray[i+1] ) {
-                currentDot = i;
+                currentSec = i;
                 break;
             }
         }
-
-        this.setState({
-            currentDot: currentDot
-        })
+        this.setState({ currentSec });
     }
 
     componentDidMount() {
 
         // calculate the distance to the top for all dots
-        const { sectionIds } = this.props;
-        posArray = [];
+        let { sectionIds } = this.props;
+        sectionIds = Object.values(sectionIds);
+        const posArray = [];
         for (let i=0; i<sectionIds.length; i++){
-            const el = document.getElementById(section)
+            const el = document.getElementById(sectionIds[i])
             const distance = window.pageYOffset + el.getBoundingClientRect().top
             posArray.push(distance);
         }
-
-        this.setState({
-            posArray: posArray
-        })
+        this.setState({ posArray })
 
         window.addEventListener('scroll', this.handleScroll);
     }
@@ -90,21 +97,23 @@ class Dots extends Component {
 
     render() {
         const { classes } = this.props;
-        
-        posArray = [];
-        const dotsHTML = sectionIds.map((section, index) => {
-            <Tooltip title={section} placement="bottom">
-                <a href={`#${section}`}>
-                    <div id={`dot${index}`} className={`dot ${this.state.currentDot === index ? 'grow' : ''}`} />
-                </a>
-            </Tooltip>
-        })
+        let sectionsHTML;
 
+        if ( this.state.type === 'Dot' ) {
+            sectionsHTML = Object.keys(this.props.sectionIds).map((key, i) => {
+                return ( <CustomTooltip title={key} arrow placement="right">
+                    <a href={`#${this.props.sectionIds[key]}`} className={classes.dotContainer}>
+                        <div id={`dot${i}`} className={`${classes.dot} ${this.state.currentSec === i ? 'grow' : ''}`} />
+                    </a>
+                </CustomTooltip> );
+            });
+        }
+        
         return (
             <div className={classes.container}>
-                {dotsHTML} 
+                {sectionsHTML} 
             </div>
           )
       } 
 }
-export default withStyles(styles)(Dots);
+export default withStyles(styles)(SideNav);

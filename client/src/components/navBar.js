@@ -6,12 +6,13 @@ import logo from '../img/logo/companyLogoV2.png';
 import '../css/main.css';
 import Button from './button';
 import { NavLink, Link, BrowserRouter as Router } from "react-router-dom"; 
-import { createBrowserHistory } from "history";
+// import { createBrowserHistory } from "history";
 
 import Subscription from './subscription';
 import { connect } from 'react-redux';
 import { toggleSubscriptionState } from '../actions/pageActions';
 import LegoLoader from './legoLoader';
+import ComingSoon from './comingSoon';
 
 class NavBar extends Component {
     constructor(props){
@@ -28,13 +29,14 @@ class NavBar extends Component {
 
     componentDidMount() {
 
-        const history = createBrowserHistory();
+        // const history = createBrowserHistory();
 
-        this.buttonsListener = history.listen(location => {
-            if (history.action === 'POP') {
-                window.location.reload();
-            }
-        });
+        // this.buttonsListener = history.listen(location => {
+        //     console.log(history)
+        //     if (history.action === 'POP') {
+        //         // window.location.reload();
+        //     }
+        // });
 
         setTimeout(() => {
             // wait for loader to finish
@@ -91,11 +93,19 @@ class NavBar extends Component {
 
                 <h2 class="header__nav-heading h6">Navigate to</h2>
 
-                <ul style={{display: 'flex',justifyContent: 'space-around',borderTop: '1px solid rgba(0, 0, 0, 0.1)'}}class="header__nav">
+                <ul class="header__nav">
                 
-                <li style={{borderTop: 'none',height: 80,justifyContent: 'center',display: 'flex',alignItems: 'center'}} role="menuitem"><a href="#" onClick={(e) => this.props.toggleSubscriptionState()}>Subscribe</a></li>
-                <li style={{borderTop: 'none',height: 80,justifyContent: 'center',display: 'flex',alignItems: 'center'}} role="menuitem"><NavLink to="/blog/page/1" role="menuitem">Blog</NavLink></li>
-                <li style={{borderTop: 'none',height: 80,justifyContent: 'center',display: 'flex',alignItems: 'center'}} role="menuitem">
+                <li role="menuitem"><a href="#" onClick={(e) => this.props.toggleSubscriptionState()}>Subscribe</a></li>
+                <li role="menuitem"><NavLink to="/blog/page/1" role="menuitem">Blog</NavLink></li>
+                
+                <li class="has-children">
+                    <a href="#0" title="">Products</a>
+                    <ul class="sub-menu">       
+                        <ComingSoon size={13}><li role="menuitem"><a style={{pointerEvents: 'none'}} href="">Tools</a></li></ComingSoon>    
+                        <ComingSoon size={13}><li role="menuitem"><a style={{pointerEvents: 'none'}} href="">Code Gallery</a></li></ComingSoon>
+                    </ul>
+                </li>
+                <li role="menuitem">
                     <form id="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                         <input type="hidden" name="cmd" value="_s-xclick" />
                         <input type="hidden" name="hosted_button_id" value="KU96VMCNZELB6" />

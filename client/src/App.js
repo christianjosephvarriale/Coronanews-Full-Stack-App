@@ -7,6 +7,8 @@ import AmazonScraper from '../src/components/amazonScraper.js';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Footer from '../src/components/footer'
 import './App.css';
+import { toggleMobile } from './actions/appActions.js'
+import { connect } from 'react-redux';
 
 class App extends Component {
   constructor(props) {
@@ -14,6 +16,31 @@ class App extends Component {
     this.state = { };
   }
 
+  componentDidMount() {
+    // event listeners
+    window.addEventListener('resize', this.checkWindowDimensions);
+
+    if ( window.innerWidth < 901 && !this.props.mobile ){
+      this.props.toggleMobile('ON');
+    } else if ( window.innerWidth >= 901 && this.props.mobile ){
+      console.log(`called update`);
+      this.props.toggleMobile('OFF');
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.checkWindowDimensions);
+  }
+
+  checkWindowDimensions = () => {
+    // call a re-render upon resizing
+    if ( window.innerWidth < 901 && !this.props.mobile ){
+      this.props.toggleMobile('ON');
+    } else if ( window.innerWidth >= 901 && this.props.mobile ){
+      console.log(`called update`);
+      this.props.toggleMobile('OFF');
+    }
+  }
 
   render() {
 
@@ -35,4 +62,8 @@ class App extends Component {
     }
 }
 
-export default App;
+const mapStateToProps = state => (
+  { mobile: state.AppReducer.mobile }
+)
+
+export default connect(mapStateToProps, { toggleMobile })(App);

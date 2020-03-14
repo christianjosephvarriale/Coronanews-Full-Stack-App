@@ -1,0 +1,117 @@
+.imgContainer {
+    position: relative;
+    width:100%;
+}
+  
+.imgTextDiv {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    bottom: 10%;
+    width:100%;
+    margin:0px;
+  }
+
+.imgContainer:hover .descriptionImg {
+    opacity: 0.1;
+  }
+  
+
+@media only screen and (max-width: 901px) {
+    /* For mobile phones: */
+    .descriptionImg {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      transition: .5s ease;
+      backface-visibility: hidden;
+      background-repeat:no-repeat;
+      background-position:center;
+      background-size:cover;
+      height:100%;
+      transition:.5s ease;
+      backface-visibility: hidden;
+      height:60vh;
+    }
+
+    .imgTitle {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 10%;
+      width: 100%;
+      text-align: center;
+      font-size: 32px;
+      margin:0px;
+      font-weight: 500;
+    }
+
+    .imgText {
+      text-align: center;
+      font-size: 21px;
+      font-weight: 300;
+      color: #7f7f7f;
+      margin: 3px;
+    }
+
+    .imgContainer:hover .imgTitle {
+      transform: translate(0%, 10vh);
+      -ms-transform: translate(0%, 10vh);
+      opacity: 1;
+    }
+
+    .imgContainer:hover .imgTextDiv {
+      transform: translate(0%, -10vh);
+      -ms-transform: translate(0%, -10vh);
+      opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 901px) {
+    /* For destops */
+    .descriptionImg {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: .5s ease;
+      backface-visibility: hidden;
+      background-repeat:no-repeat;
+      background-position:center;
+      background-size:cover;
+      transition:.5s ease;
+      backface-visibility: hidden;
+    }
+
+    .imgTitle {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 10%;
+      width: 100%;
+      text-align: center;
+      font-size: 40px;
+      margin:0px;
+      font-weight: 500;
+    }
+
+    .imgText {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 300;
+      color: #7f7f7f;
+      margin: 3px;
+    }
+
+    .imgContainer:hover .imgTitle {
+      transform: translate(0%, 25vh);
+      -ms-transform: translate(0%, 25vh);
+      opacity: 1;
+    }
+
+    .imgContainer:hover .imgTextDiv {
+      transform: translate(0%, -20vh);
+      -ms-transform: translate(0%, -20vh);
+      opacity: 1;
+    }
+  }

@@ -11,16 +11,29 @@ import Button from './button';
 import dataVisualization from '../img/dataVisualization.png';
 import scraping from '../img/scraping.png';
 import hardware from '../img/hardware.png';
+import tech from '../img/tech.jpg'
+import FancyDisplay from './fancyDisplay'
+
 
 import chip from '../img/chip.svg';
 import mining from '../img/mining.svg';
 import course from '../img/online-class.svg';
 import led from '../img/led.svg';
+import algorithm from '../img/algorithm.svg';
+import database from '../img/algorithm.svg';
+import integration from '../img/integration.svg';
+
+import screens from '../img/google-pixel-2.png';
 
 import scraper from '../img/realTimeScraper.png';
 
 import { connect } from 'react-redux';
 import { toggleLoader } from '../actions/appActions';
+import { toggleSubscriptionState } from '../actions/pageActions';
+import ComingSoon from './comingSoon.js';
+import SideNav from './sideNav';
+import CoolCard from './coolCard.js';
+import person from '../img/personCoding.png'
 
 // define jQuery as part of the window
 window.jQuery = jquery;
@@ -44,14 +57,39 @@ class LandingPage extends Component {
 
     componentDidMount() {
 
+        this.props.toggleLoader('ON');
         setTimeout(() => {
-            // turn off the loader
-            this.props.toggleLoader();;
+            this.props.toggleLoader('OFF');
+
+            // add animation script
+            require("../js/animation.js")
+
+            setTimeout(() => {
+
+                var addScript = document.createElement('script');
+                addScript.setAttribute('src', 'https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js');
+                document.body.appendChild(addScript);
+    
+            }, 100);
+
         }, 5000)
         
     }
 
     render() {
+
+        const sections = {
+            "About Tekblg" : "about",
+            "Products" : "products",
+            "Blog Catagories": "more-features",
+            "FAQ":"faq"
+        }
+
+        const { mobile } = this.props.state;
+        let sideNav;
+        if ( !mobile ) {
+            sideNav = <SideNav sectionIds={sections} />
+        }
 
         const { loading } = this.props.state;
         if (loading) {
@@ -59,17 +97,25 @@ class LandingPage extends Component {
         } else {
             return (
                 <div>
+
+                {sideNav}
                 <section id="intro">
                     <div class='banner' />
 
-                    <div class="intro-text">
-                        <h2>Welcome to Tekblg</h2>
-                        <p>We provide powerful insights and tech products</p>
-                        <Button handleClick={(e) => this.props.toggleSubscriptionState()} label={'Subscribe'}/> 
-                        {/* <a href="#about" class="btn-get-started scrollto">Get Started</a> */}
+                    <div class="col-lg-6" />
+
+                    <div style={{height: '100%', display: 'flex', alignItems: 'center'}} className="col-lg-6">
+                        <div className={'box wow fadeInRight'}>
+                            <div class="intro-text">
+                                <h2>Modern Tech perfect for the modern developer</h2>
+                                <p>Tekblg is a one stop shop for quality blog posts, and all things computer engineering</p>
+                                {/* <Button handleClick={(e) => this.props.toggleSubscriptionState()} label={'Subscribe'}/>  */}
+                                <a href="#about" class="btn-get-started scrollto">Get Started</a> 
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="product-screens">
+                    {/* <div class="product-screens">
 
                         <div class="product-screen-1 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.6s">
                             <img src={dataVisualization} alt="Data Visualization"/>
@@ -83,192 +129,100 @@ class LandingPage extends Component {
 
                         <div class="product-screen-3 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="0.6s">
                             <img src={hardware} alt=""/>
-                            <p>Hardware Designs</p>
+                            <p>Awesome Designs</p>
                         </div>
 
-                    </div>
+                    </div> */}
 
                     </section>
 
                     <main id="main">
+                    <CoolCard image={'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2000px-Git_icon.svg.png'}/>
                     <section id="about" class="section-bg">
                         <div class="container-fluid">
                         <div class="section-header">
-                            <h3 class="section-title">About Us</h3>
+                            <h3 class="section-title">About Us & Our Vision</h3>
                             <span class="section-divider"></span>
                             <p class="section-description">
-                                We are committed to quality content <br/>
+                                We believe tech can be simple but beautiful <br/>
                             </p>
                         </div>
 
                         <div class="row">
-                            <div style={{padding:20}} class="col-lg-6 about-img wow fadeInLeft">
-                            <img src={scraper} alt="" />
-                            </div>
-
-                            <div style={{padding:20}} class="col-lg-6 content wow fadeInRight">
-                            <h2> Engineering. Insights. Knowledge </h2>
-                            <h3> Pickup an interesting new project or build something great </h3>
-
-                            <ul>
-                                <li><i class="ion-android-checkmark-circle"></i> No ads. Allowing you to recieve quality content without distraction </li>
-                                <li><i class="ion-android-checkmark-circle"></i> Detailed technical posts outlining specific implementations that work right away </li>
-                                <li><i class="ion-android-checkmark-circle"></i> Awesome merchandise and applications to streamline portions of your project </li>
-                            </ul>
-
+                                <div style={{padding:20}} class="col-lg-6 about-img wow fadeInLeft">
+                                    <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}id="animation" />
+                                </div>
+                                <div style={{padding:20}} class="col-lg-6 content wow fadeInRight">
+                                <div className="codeBox">
+                                    <div className="codeHeader">
+                                        <p style={{padding: '3px 5px',marginTop:3,textAlign: 'center',color: 'black', fontWeight:500}}>
+                                            Terminal
+                                            <span style={{float: 'right',fontSize: 54,color: '#fff',marginTop: -10,marginRight: 4}}>
+                                            •
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <pre className="prettyprint" style={{width:'100%',margin:0,borderRadius:0}}>
+                                        <code>
+                                        $ Your one stop-stop for all things Computer Engineering <br />
+                                        $ Pickup an interesting new project, learn a new skill, or build something great <br/>
+                                        &lt;script&gt; <br /> 
+                                            for (let content&#59; content &#60; Tekblg&#46;Content&#59; ) &#123; <br />
+                                                noAds(); // Allowing you to recieve quality content without distraction <br />
+                                                detailedTechnicalPosts(); // outlining specific implementations that work right away <br />
+                                                awesomeMerchandiseAndApps // to streamline portions of your project <br />
+                                            &#125; <br />
+                                        &lt;/script&gt; <br />
+                                        </code>
+                                    </pre>
+                                </div>
                             </div>
                         </div>
-
                         </div>
                     </section>
-                    <div class="line" />
-                    {/* <section id="features">
-                        <div class="container">
 
-                        <div class="row">
-
-                            <div class="col-lg-8 offset-lg-4">
-                            <div class="section-header wow fadeIn" data-wow-duration="1s">
-                                <h3 class="section-title">Product Features</h3>
-                                <span class="section-divider"></span>
-                            </div>
-                            </div>
-                            
-
-                            <div style={{display:'flex',alignItems:'center'}} class="col-lg-4 col-md-5 features-img">
-                            <img src={computer} alt="" class="wow fadeInLeft"/>
-                            </div>
-
-                            <div class="col-lg-8 col-md-7 ">
-
-                            <div class="row">
-
-                                <div class="col-lg-6 col-md-6 box wow fadeInRight">
-                                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-                                <h4 class="title"><a href="">Business Intelligence</a></h4>
-                                <p class="description">Gather any data about your business, competition, industry, products, people or location</p>
-                                </div>
-                                <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.1s">
-                                <div class="icon"><i class="ion-ios-flask-outline"></i></div>
-                                <h4 class="title"><a href="">Alternative Data</a></h4>
-                                <p class="description">We collect and build custom alternative data models for Investors, Hedge Funds and Market Analysts</p>
-                                </div>
-                                <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.2s">
-                                <div class="icon"><i class="ion-social-buffer-outline"></i></div>
-                                <h4 class="title"><a href="">Robotic Process Automation</a></h4>
-                                <p class="description">Automate and build complex workflows to integrate data from websites that don’t have an interface, combine the data</p>
-                                </div>
-                                <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.3s">
-                                <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
-                                <h4 class="title"><a href="">Export data in CSV</a></h4>
-                                <p class="description">Build scrapers, scrape sites and export data in CSV format directly from your browser. Use Cloud Web Scraper to access scraped data via API, webhooks or get it exported via Dropbox</p>
-                                </div>
-                            </div>
-
-                            </div>
-
+                    <div className="line" />
+                 
+                    <section id="products" className="section-bg">
+                        <div class="section-header">
+                            <h3 class="section-title">Products & Services</h3>
+                            <span class="section-divider"></span>
+                            <p class="section-description">
+                                Check out the awesome things we've built <br/>
+                            </p>
                         </div>
-
-                        </div>
-
-                    </section> */}
-                    <section id="advanced-features">
-
-                        {/* <div class="features-row section-bg">
-                        <div class="container">
-                            <div class="row">
-                            <div class="col-12">
-                                <img class="advanced-feature-img-right wow fadeInRight" src={advancedFeature1} alt=""/>
-                                <div class="wow fadeInLeft">
-                                <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
-                                <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                                <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        </div> */}
-
-                        {/* <div class="features-row">
-                        <div class="container">
-                            <div class="row">
-                            <div class="col-12">
-                                <img style={{maxHeight:401}} class="advanced-feature-img-left" src={team} alt=""/>
-                                <div class="wow fadeInRight">
-                                <h2>Fully managed enterprise-grade web scraping service</h2>
-                                <i class="ion-ios-paper-outline" class="wow fadeInRight" data-wow-duration="0.5s"></i>
-                                <p class="wow fadeInRight" data-wow-duration="0.5s">The Data Extraction Engine is designed for the high performance of mass data extraction. Parallelized algorithms allows to run multiple simulations through a proxy-rotating platform.</p>
-                                <i class="ion-ios-color-filter-outline wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s"></i>
-                                <p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s">Each package is tailored to your needs.
-The advanced dataflow contains a set of opportunities for status tracking, importing, cleaning and preparing data for analysis so it can be easily and properly queried and analyzed in the analytics tools.</p>
-                                <i class="ion-ios-barcode-outline wow fadeInRight" data-wow-delay="0.4" data-wow-duration="0.5s"></i>
-                                <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s">Our platform deploys quickly and scales easily. Integrate Data Extraction platform with your enterprise systems, while satisfying stringent data security and privacy. We offer flexible Private Deployments that can run in private cloud or on-premise. We can give your developers the utmost flexibility in automating sophisticated data flows end-to-end via API plus rich XML configuration.</p>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        </div> */}
-
-                        {/* <div class="features-row section-bg">
-                        <div class="container">
-                            <div class="row">
-                            <div class="col-12">
-                                <img class="advanced-feature-img-right wow fadeInRight" src={advancedFeature3}  alt=""/>
-                                <div class="wow fadeInLeft">
-                                <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
-                                <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                                <i class="ion-ios-albums-outline"></i>
-                                <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        </div> */}
-
+                        <FancyDisplay />
                     </section>
-                    {/* <section id="call-to-action">
-                        <div class="container">
-                        <div class="row">
-                            <div class="col-lg-9 text-center text-lg-left">
-                            <h3 class="cta-title">Call To Action</h3>
-                            <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </div>
-                            <div class="col-lg-3 cta-btn-container text-center">
-                            <a class="cta-btn align-middle" href="#">Call To Action</a>
-                            </div>
-                        </div>
 
-                        </div>
-                    </section> */}
+                    <div className="line" />
+                
                     <section id="more-features" class="section-bg">
                         <div class="container">
 
                         <div class="section-header">
-                            <h3 class="section-title">How Tekblg provides you with great value</h3>
+                            <h3 class="section-title">Tekblg's Catagories of Insights</h3>
                             <span class="section-divider"></span>
-                            <p class="section-description">Engineering is difficult but rewarding. Our products are elegantly designed so you don't have to struggle</p>
+                            <p class="section-description">Our blog covers a wide range of Computer Engineering topics in detail</p>
                         </div>
 
                         <div class="row">
 
                             <div style={{padding:'20px 20px 0 20px'}} class="col-lg-6">
-                            <div class="box wow fadeInLeft">
-                                <div class="icon"><img src={chip} /></div>
-                                <div>
-                                    <h4 class="title">Artifical Intelligence</h4>
-                                    <p class="description">Use some of our text recognition and predictive models for your company's chatbot or data driven operations</p>
-                                </div>
-                                </div>
+                                <ComingSoon classes={'box wow fadeInRight'} size={40}>
+                                    <div class="icon"><img src={chip} /></div>
+                                    <div>
+                                        <h4 class="title">Artifical Intelligence</h4>
+                                        <p class="description">Use some of our text recognition and predictive models for your company's chatbot or data driven operations</p>
+                                    </div>
+                                </ComingSoon>
                             </div>
 
                             <div style={{padding:'20px 20px 0 20px'}} class="col-lg-6">
                             <div class="box wow fadeInRight">
                                 <div class="icon"><img src={mining} /></div>
                                 <div>
-                                    <h4 class="title">Data Mining tools</h4>
-                                    <p class="description">Scrape product prices, availability, reviews, inventory, prominence, reputation from eCommerce websites.</p>
+                                    <h4 class="title">Algorithms and Data structures</h4>
+                                    <p class="description">What data structure should I use in this application? We explore common CS scenarios and give you useable knowledge adapted from the classroom</p>
                                 </div>
                                 </div>
                             </div>
@@ -277,22 +231,38 @@ The advanced dataflow contains a set of opportunities for status tracking, impor
                             <div class="box wow fadeInLeft">
                                 <div class="icon"><img src={course} /></div>
                                 <div>
-                                    <h4 class="title">Learn Computer Engineering coursework</h4>
-                                    <p class="description">Courses in engineering are seldom taught well. Learn about low level concepts in programming and hardware design.</p>
+                                    <h4 class="title">General Tutorials and Insights</h4>
+                                    <p class="description">Courses in engineering are seldom taught well. Learn the basics about coding and hardware design in an engaging way</p>
                                 </div>
                                </div>
                             </div>
-
                             <div style={{padding:'20px 20px 0 20px'}} class="col-lg-6">
-                            <div class="box wow fadeInRight">
-                                <div class="icon"><img src={led} /></div>
+                            <div class="box wow fadeInLeft">
+                                <div class="icon"><img src={database} /></div>
                                 <div>
-                                    <h4 class="title">Purchase well designed circuits</h4>
-                                    <p class="description">Powerful bluetooth speaker, home automation systems, and LED matrices which add to the authenticity of any tech space</p>
+                                    <h4 class="title">System Architecture</h4>
+                                    <p class="description">What are the best practices for building out my database? How should I structure my application to make it maintainable and scabable? We've got you covered</p>
                                 </div>
-                              </div>
+                               </div>
                             </div>
-
+                            <div style={{padding:'20px 20px 0 20px'}} class="col-lg-6">
+                            <div class="box wow fadeInLeft">
+                                <div class="icon"><img src={integration} /></div>
+                                <div>
+                                    <h4 class="title">Integration Engineering</h4>
+                                    <p class="description">How should I connect to seperate systems? What about mapping incomptabile formats? Learn best practices here</p>
+                                </div>
+                               </div>
+                            </div>
+                            <div style={{padding:'20px 20px 0 20px'}} class="col-lg-6">
+                                <ComingSoon classes={'box wow fadeInRight'} size={40}>
+                                    <div class="icon"><img src={led} /></div>
+                                    <div>
+                                        <h4 class="title">How to design Hardware</h4>
+                                        <p class="description">Learn how the products around you work. Build out a speaker system, a cool LED matrix, or a complex hardware system to aid your everyday life</p>
+                                    </div>
+                                </ComingSoon>
+                            </div>
                         </div>
                         </div>
                     </section>
@@ -538,4 +508,4 @@ const mapStateToProps = state => (
     { state: state.AppReducer }
 )
 
-export default connect(mapStateToProps, { toggleLoader })(LandingPage);
+export default connect(mapStateToProps, { toggleLoader, toggleSubscriptionState })(LandingPage);

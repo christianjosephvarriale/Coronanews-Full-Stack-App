@@ -1356,6 +1356,7 @@ body.search-is-visible {
   font-weight: 400;
   font-size: 14px;
   line-height: 78px;
+  display: block;
 }
 
 .header__nav li {
@@ -1378,8 +1379,8 @@ body.search-is-visible {
 }
 
 .header__nav li.has-children > a::after {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #871f78;
+  border-right: 1px solid #871f78;
   content: '';
   display: block;
   height: 5px;
@@ -1417,11 +1418,12 @@ body.search-is-visible {
   position: absolute;
   top: 100%;
   left: 0;
+  padding: 10px 0px;
   font-size: 15px;
   font-weight: 400;
   margin: 0;
-  padding: 1.8rem 0;
-  background: #151515;
+  color: #871f78;
+  background-color: white;
   border-radius: 0 0 3px 3px;
   z-index: 500;
   -webkit-transform: translate3d(0, 15px, 0);
@@ -1455,11 +1457,9 @@ body.search-is-visible {
   display: block;
   white-space: nowrap;
   padding: 7.5px 3rem 7.5px 2rem;
-  font-family: "Nunito Sans", sans-serif;
   text-transform: none;
   letter-spacing: 0;
   line-height: 18px;
-  color: rgba(255, 255, 255, 0.6);
 }
 
 .header__nav li ul li a:hover,
@@ -1479,20 +1479,18 @@ body.search-is-visible {
  * responsive:
  * header
  * ------------------------------------------------------------------- */
- 
+ @media only screen and (max-width:1200px) {
+  .header__search-trigger {
+      display: none;
+  }
+}
+
  /* future facing search bar in the page */
  @media only screen and (max-width:1200px) {
     .header__search-trigger {
         display: none;
     }
  }
-
- .header__nav {
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-}
-
 
 @media only screen and (max-width:1200px) {
   .header__logo {
@@ -1502,11 +1500,6 @@ body.search-is-visible {
   .header__logo img {
     width: 150px;
     height: 23px;
-  }
-
-  .header__nav {
-    display: flex;
-    align-items: center;
   }
 
   .header__search-trigger {
@@ -1726,6 +1719,7 @@ body.search-is-visible {
 
   .header__nav li ul {
     display: block !important;
+    box-shadow: rgba(73, 78, 92, 0.15) 0px 0px 30px
   }
 
 }

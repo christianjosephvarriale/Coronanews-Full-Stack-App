@@ -1,0 +1,7 @@
+.grow {
+    transform: scale(1.5);
+}
+
+a:hover > div[id*="dot"] {
+    transform: scale(1.5);
+}
