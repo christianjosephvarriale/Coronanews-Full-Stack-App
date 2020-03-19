@@ -1,94 +1,64 @@
 import { POST_ACTIONS, COMMENT_ACTIONS } from './types';
-import { BLOCKS, MARKS } from '@contentful/rich-text-types';
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import axios from 'axios';
-import React from 'react';
-import ReactDOM from 'react-dom';
-const contentful = require('contentful');
+const uuid = require('uuid')
 
-const client = contentful.createClient({
-    space: '5zy76n4olg5p',
-    accessToken: 'yln9S1YCj8AIS5nH2VqxkQHma2xYmn4n7qRwVviHT2s'
-});
+const url = 'http://newsapi.org/v2/top-headlines?' +
+          'country=us&' +
+          'apiKey=764acb82041f45f7a8bc847b05da23cc';
 
+        //   export const fetchAllPosts = () => dispatch => {
+
+        //     axios.get('/posts')
+        //         .then((p   //             const posts = [];
+        
+        //             // update the state of the app with the news entries
+        //             for (let i=0; i < posts; i++) {
+        //                 let entry = {
+        //                     'id': uuid(),
+        //                     'author':post.author,
+        //                     'body':post.content,
+        //                     'date':post.publishedAt,
+        //                     'headerImg':post.urlToImage,
+        //                     'title':post.title,
+        //                 }
+        
+        //             }
+        
+        //             dispatch({
+        //                 type: POST_ACTIONS.FETCH_ALL,
+        //                 payload: { posts }
+        //             })
+        //         })
+        //         .catch(console.error)
+        // }
+
+/**
+ * Description:
+ *  1. Queries the database to retreive all posts
+ */
 export const fetchAllPosts = () => dispatch => {
 
-    client.getEntries({
-        content_type: 'blogPost'
-    })
-        .then((res) => {
-
-            var prevPosts = res.items;
-
-            var featPosts = [];    
-            var posts = [];
-
-            // update the state of the app with the blog entries
-            for (let i=0; i < prevPosts.length; i++) {
-                let entry = {
-                    'id': prevPosts[i].fields.id,
-                    'author':prevPosts[i].fields.author,
-                    'body':prevPosts[i].fields.body,
-                    'date':prevPosts[i].fields.date,
-                    'headerImg':prevPosts[i].fields.headerImage.fields.file.url,
-                    'catagory': prevPosts[i].fields.catagory,
-                    'title':prevPosts[i].fields.title,
-                    'id':prevPosts[i].fields.id,
-                    'tags':prevPosts[i].fields.tags,
-                }
-
-                 // this is a featured post
-                 if ( prevPosts[i].fields.featured ) { featPosts.push(entry); } 
-                 else { posts.push(entry); }
-            }
-
+    axios.get('/posts')
+        .then((posts) => {
             dispatch({
                 type: POST_ACTIONS.FETCH_ALL,
-                payload: { posts, featPosts }
+                payload: { posts }
             })
         })
         .catch(console.error)
 }
 
+/**
+ * Description:
+ *  1. Queries the database to retreive based on Id
+ */
 export const fetchPost = id => dispatch => {
-    client.getEntry(id)
+
+    axios.get(`/post?id=${id}`)
         .then((post) => {
-
-            const rawRichTextField = post.fields.body;
-
-            let options = {
-                renderNode: {
-                  'embedded-asset-block': (node) =>
-                    `<img style="width:100%" src="${node.data.target.fields.file.url}"/>`,
-                   [BLOCKS.PARAGRAPH]: (node, next) => {
-                       if ( ( node.content[0].marks.length > 0 ) && ( node.content[0].marks[0].type === 'code' ) ) {
-                            return ( `<pre class="prettyprint">${next(node.content)}</pre>` )
-                       } else {
-                           return ( `<p>${next(node.content)}</p>` )
-                       }
-                   },
-                   [BLOCKS.HEADING_3]: (node, _) => 
-                    `<h3 class="blog-heading" id="${node.content[0].value.trim()}">${node.content[0].value}</h3>`,
-                   [BLOCKS.HEADING_1]: (node, _) => 
-                    `<h1 class="blog-heading" id="${node.content[0].value.trim()}">${node.content[0].value}</h1>`,
-                }
-            }
-
-            const body = documentToHtmlString(rawRichTextField, options);
-            let entry = {
-                'author':post.fields.author,
-                'body':body,
-                'date':post.fields.date,
-                'headerImg':post.fields.headerImage.fields.file.url,
-                'catagory': post.fields.catagory,
-                'title':post.fields.title,
-                'id':post.fields.id,
-                'tags':post.fields.tags,
-                'meta':post.fields.meta
-            }
             dispatch({
                 type: POST_ACTIONS.FETCH,
-                payload: entry
+                payload: post
             })
         });
 } 
