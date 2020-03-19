@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 import styles from '../css/blog.module.css';
 import '../css/slick-slider.css';
 
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import corona from '../img/coronavirus.jpg'
+
 import FeaturedBlogPost from './featuredBlogPost';
 import BlogPost from './blogPost';
 import { connect } from 'react-redux';
@@ -16,16 +20,6 @@ class Blog extends Component {
     componentDidMount() {
 
         this.props.fetchAllPosts() 
-
-        // wait until state is changed before loading javascript
-        setTimeout(() => {
-
-            console.log(document.getElementById("metaDes"));
-            // change the title and meta
-            document.getElementById("metaDes").setAttribute("content", "Here you'll find blog posts ranging from general tutorials to algorithms to insights. Enjoy");
-            document.querySelector('title').text = "Blog Posts - In Depth Design";
-        }, 500);
-
         this.props.toggleLoader('ON');
         setTimeout(() => {
             this.props.toggleLoader('OFF');
@@ -63,7 +57,7 @@ class Blog extends Component {
 
             posts = slcdPostLst.map((post) =>  
                 <BlogPost title={post.title} headerImg={post.headerImg} id={post.id} 
-                          date={post.date} 
+                          date={post.date} url={post.url}
                 /> 
             );
         }
@@ -90,6 +84,15 @@ class Blog extends Component {
                             </div>
                         </section>  */}
 
+                        <section style={{width:'80%',margin:'auto',marginTop:150,marginBottom:100}}>
+                            <Card>
+                                <CardContent>
+                                    <img src={corona} />
+                                    <h2>Real time news from around the globe</h2>
+                                    <p>Select a Country and monitor updates to keep track of loved ones, and get new developments from overseas</p>
+                                </CardContent>
+                            </Card>
+                        </section>
 
                         <section className={styles.sContent}>
                             

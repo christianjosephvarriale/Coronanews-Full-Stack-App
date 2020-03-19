@@ -1,8 +1,13 @@
 class Post < ApplicationRecord
     require 'open-uri'
 
+     
+
      # upsert records
-     def upsert_database
+     def self.upsert_database
+
+        # delete all Posts currently in the table
+        Post.delete_all
 
         # request API
         url = 'http://newsapi.org/v2/top-headlines?'\
@@ -25,7 +30,5 @@ class Post < ApplicationRecord
                 :url => post['url']
             )
         end
-
-        render json: :OK
     end
 end

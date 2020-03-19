@@ -1,12 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 
-import logo from '../img/logo/companyLogoV2.png';
+import logo from '../img/logo/virus.png';
 
 import '../css/main.css';
 import Button from './button';
 import { NavLink, Link, BrowserRouter as Router } from "react-router-dom"; 
-// import { createBrowserHistory } from "history";
 
 import Subscription from './subscription';
 import { connect } from 'react-redux';
@@ -28,15 +27,6 @@ class NavBar extends Component {
     }
 
     componentDidMount() {
-
-        // const history = createBrowserHistory();
-
-        // this.buttonsListener = history.listen(location => {
-        //     console.log(history)
-        //     if (history.action === 'POP') {
-        //         // window.location.reload();
-        //     }
-        // });
 
         setTimeout(() => {
             // wait for loader to finish
@@ -66,9 +56,17 @@ class NavBar extends Component {
 
     render(){
         const { loading } = this.props.state.AppReducer;
+        const { mobile } = this.props.state.AppReducer
 
         console.log(`Here's the props ${JSON.stringify(this.props)}`)
         console.log(`Here's the loader ${loading}`)
+
+        // conditionally render header text
+        let headerText;
+        if (!mobile) {
+            headerText = <h1>Corona News</h1>
+        }
+
         if (loading) {
             return (
                 <LegoLoader />
@@ -86,7 +84,7 @@ class NavBar extends Component {
                         <Link to="/">
                             <img style={{ height: '40px' }} src={logo} alt="Varritech logo" title="Varritech" />
                         </Link>    
-                        <h1>Tekblg</h1>
+                        {headerText}
                 </div>
 
                 <nav class="header__nav-wrap">
@@ -96,13 +94,17 @@ class NavBar extends Component {
                 <ul class="header__nav">
                 
                 <li role="menuitem"><a href="#" onClick={(e) => this.props.toggleSubscriptionState()}>Subscribe</a></li>
-                <li role="menuitem"><NavLink to="/blog/page/1" role="menuitem">Blog</NavLink></li>
                 
                 <li class="has-children">
-                    <a href="#0" title="">Products</a>
-                    <ul class="sub-menu">       
-                        <ComingSoon size={13}><li role="menuitem"><a style={{pointerEvents: 'none'}} href="">Tools</a></li></ComingSoon>    
-                        <ComingSoon size={13}><li role="menuitem"><a style={{pointerEvents: 'none'}} href="">Code Gallery</a></li></ComingSoon>
+                    <a href="#0" title="">Countries</a>
+                    <ul class="sub-menu">  
+                        <li role="menuitem"><NavLink to="/ca/1" role="menuitem">Canada</NavLink></li>     
+                        <li role="menuitem"><NavLink to="/us/1" role="menuitem">US</NavLink></li>
+                        <li role="menuitem"><NavLink to="/de/1" role="menuitem">Germany</NavLink></li>
+                        <li role="menuitem"><NavLink to="/it/1" role="menuitem">Italy</NavLink></li>
+                        <li role="menuitem"><NavLink to="/sp/1" role="menuitem">Spain</NavLink></li>
+                        <li role="menuitem"><NavLink to="/cn/1" role="menuitem">China</NavLink></li>
+                        <li role="menuitem"><NavLink to="/kr/1" role="menuitem">South Korea</NavLink></li>
                     </ul>
                 </li>
                 <li role="menuitem">

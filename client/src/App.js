@@ -43,14 +43,13 @@ class App extends Component {
   }
 
   render() {
-
           return (
             <main>
               <NavBar />
               <Router forceRefresh="true">
                 <Switch>
                   <Route exact path='/' component={Blog} />
-                  <Route path="/post/:blogId" component={BlogPage} />
+                  <Route path="/:blogId" component={Blog} />
                 </Switch>
               </Router>
             </main>

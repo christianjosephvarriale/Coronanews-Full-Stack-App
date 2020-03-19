@@ -10,26 +10,31 @@ class BlogPost extends Component {
 
     render() {
         const props = this.props;
-        return (
-            <article className={styles.colBlock}>  
+        debugger;
+        if (!props.url) {
+            return null
+        } else {
+            return (
+                <article className={styles.colBlock}>  
                 <div className={styles.itemEntry} data-aos="zoom-in">
                     <div className={styles.itemEntryThumb}>
-                        <NavLink to={'/post/' + props.id} className={styles.itemEntryThumbLink}>
+                        <a href={props.url} className={styles.itemEntryThumbLink}>
                             <img src={props.headerImg} alt=""/>
-                        </NavLink>
+                        </a>
                     </div> 
                     <div className={styles.itemEntryText}>
                         <div className={styles.itemEntryCat}>
-                            <NavLink to={'/post/' + props.id}>{props.catagory}</NavLink>
+                            <a href={props.url}>{props.catagory}</a>
                         </div>
-                        <h1 className={styles.itemEntryTitle}><NavLink to={'/post/' + props.id}>{props.title}</NavLink></h1>
+                        <h1 className={styles.itemEntryTitle}><a href={props.url}>{props.title}</a></h1>
                         <div className={styles.itemEntryDate}>
-                            <NavLink to={'/post/' + props.id} role="menuitem">{props.date}</NavLink>
+                            <a href={props.url} role="menuitem">{props.date}</a>
                         </div>
                     </div>
                 </div> 
             </article> 
-        )
+            )
+        }
     }
 }
 
