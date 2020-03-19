@@ -7,7 +7,12 @@ class Pagination extends React.Component {
   render() {
     const props = this.props;
     const url = window.location.href;
-    const currentPage = url.slice(url.lastIndexOf('/')+1);
+    let currentPage = url.slice(url.lastIndexOf('/')+1);
+
+    if (currentPage === '') { /* root */
+        currentPage = 1;
+    }
+
     let backDisabled = false;
     let forwardDisabled = false;
 

@@ -25,3 +25,5 @@ yarn-error.log*
 
 .bundle/
 /vscode
+/vendor
+/tmp/

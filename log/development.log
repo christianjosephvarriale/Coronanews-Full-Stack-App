@@ -9340,3 +9340,2005 @@ Processing by CommentsController#index as HTML
 Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreatePosts (20200314123526)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20200314123526_create_posts.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "author" varchar, "body" varchar, "date" varchar, "headerImg" varchar, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200314123526_create_posts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200314123526"]]
+  ↳ bin/rails:4
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 14:28:41 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"posts"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 14:30:39 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (uninitialized constant PostsController):
+  
+vendor/cache/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+vendor/cache/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+vendor/cache/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+vendor/cache/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/inflector/methods.rb:283:in `const_get'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/inflector/methods.rb:283:in `block in constantize'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/inflector/methods.rb:281:in `each'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/inflector/methods.rb:281:in `inject'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/inflector/methods.rb:281:in `constantize'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/http/request.rb:81:in `controller_class'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/routing/route_set.rb:46:in `controller'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/session/abstract/id.rb:259:in `context'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/session/abstract/id.rb:253:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/method_override.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+vendor/cache/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+vendor/cache/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/etag.rb:25:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/conditional_get.rb:25:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/head.rb:12:in `call'
+vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/migration.rb:559:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-cors-1.1.0/lib/rack/cors.rb:100:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 14:31:53 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:8
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 14:41:44 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:8
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 14:43:46 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#upsert_database as HTML
+Completed 500 Internal Server Error in 2262ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `articles' for #<String:0x00007f2dfc605a50>):
+  
+app/controllers/post_controller.rb:18:in `upsert_database'
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 14:44:28 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#upsert_database as HTML
+Completed 500 Internal Server Error in 1757ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `articles' for #<String:0x00007f52d845d198>):
+  
+app/controllers/post_controller.rb:18:in `upsert_database'
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 14:44:53 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#upsert_database as HTML
+Completed 500 Internal Server Error in 2084ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `articles' for #<String:0x00007f405845fe08>):
+  
+app/controllers/post_controller.rb:18:in `upsert_database'
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 14:45:25 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#upsert_database as HTML
+Completed 500 Internal Server Error in 1481ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `articles' for #<String:0x00007f4928503ac0>):
+  
+app/controllers/post_controller.rb:18:in `upsert_database'
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 14:46:22 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#upsert_database as HTML
+Completed 406 Not Acceptable in 2309ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (PostController#upsert_database is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/abstract_controller/base.rb:194:in `process_action'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_controller/metal/rendering.rb:30:in `process_action'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:132:in `run_callbacks'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/abstract_controller/callbacks.rb:41:in `process_action'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_controller/metal/rescue.rb:22:in `process_action'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `block in instrument'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `instrument'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/abstract_controller/base.rb:134:in `process'
+vendor/cache/ruby/2.6.0/gems/actionview-5.2.4.1/lib/action_view/rendering.rb:32:in `process'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/session/abstract/id.rb:259:in `context'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/session/abstract/id.rb:253:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/method_override.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+vendor/cache/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+vendor/cache/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/etag.rb:25:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/conditional_get.rb:25:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/head.rb:12:in `call'
+vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/migration.rb:559:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-cors-1.1.0/lib/rack/cors.rb:100:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 14:49:02 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#upsert_database as HTML
+Completed 500 Internal Server Error in 1453ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `articles' for #<Hash:0x00007f03985013e0>):
+  
+app/controllers/post_controller.rb:18:in `upsert_database'
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 14:50:19 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/cjv/Documenti/varritech/app/controllers/post_controller.rb:23: syntax error, unexpected '['
+                :date => post.[:publishedAt],
+                              ^):
+  
+app/controllers/post_controller.rb:23: syntax error, unexpected '['
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 14:50:43 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#upsert_database as HTML
+Completed 500 Internal Server Error in 2284ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/post_controller.rb:18:in `upsert_database'
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 14:54:55 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#upsert_database as HTML
+Completed 500 Internal Server Error in 1152ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/post_controller.rb:20:in `upsert_database'
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 14:55:27 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#upsert_database as HTML
+Completed 200 OK in 855ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 14:56:16 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#upsert_database as HTML
+Completed 200 OK in 961ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 14:59:04 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#upsert_database as HTML
+Completed 200 OK in 2757ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:04:10 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#upsert_database as HTML
+Completed 200 OK in 1228ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:05:28 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#upsert_database as HTML
+Completed 500 Internal Server Error in 818ms (ActiveRecord: 0.8ms)
+
+
+  
+ArgumentError (Unsupported argument type: #<Post:0x00007fbdf88ab408> (Post)):
+  
+app/controllers/post_controller.rb:28:in `block in upsert_database'
+app/controllers/post_controller.rb:19:in `each'
+app/controllers/post_controller.rb:19:in `upsert_database'
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:06:51 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#upsert_database as HTML
+Completed 500 Internal Server Error in 1701ms (ActiveRecord: 0.6ms)
+
+
+  
+ArgumentError (Unsupported argument type: #<Post:0x00007febdc552628> (Post)):
+  
+app/controllers/post_controller.rb:29:in `block in upsert_database'
+app/controllers/post_controller.rb:19:in `each'
+app/controllers/post_controller.rb:19:in `upsert_database'
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:07:16 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#upsert_database as HTML
+Completed 500 Internal Server Error in 929ms (ActiveRecord: 0.9ms)
+
+
+  
+ArgumentError (Unsupported argument type: #<Post:0x00007f8d60571828> (Post)):
+  
+app/controllers/post_controller.rb:29:in `block in upsert_database'
+app/controllers/post_controller.rb:19:in `each'
+app/controllers/post_controller.rb:19:in `upsert_database'
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:07:44 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#upsert_database as HTML
+Completed 200 OK in 1591ms (Views: 0.3ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:09:23 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#upsert_database as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "Coronavirus: habló el médico responsable de la clínica donde está el paciente"], ["author", "Redacción LA NACION"], ["body", "Tras confirmarse ayer el primer caso de\r\n coronavirus en la Argentina, el director corporativo de la \r\nSwiss Medical Center,\r\n Gabriel Novick, destacó que el estado general del paciente de 43 años es \"muy bueno\" y que no presenta, al momento, \"mayores síntoma… [+1980 chars]"], ["date", "2020-04-03T01:49:00Z"], ["headerImg", "//bucket3.glanacion.com/anexos/fotos/08/3206408.jpg"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Redacción LA NACION"], ["body", "Tras confirmarse ayer el primer caso de\r\n coronavirus en la Argentina, el director corporativo de la \r\nSwiss Medical Center,\r\n Gabriel Novick, destacó que el estado general del paciente de 43 años es \"muy bueno\" y que no presenta, al momento, \"mayores síntoma… [+1980 chars]"], ["date", "2020-04-03T01:49:00Z"], ["headerImg", "//bucket3.glanacion.com/anexos/fotos/08/3206408.jpg"], ["title", "Coronavirus: habló el médico responsable de la clínica donde está el paciente"], ["created_at", "2020-03-14 14:09:24.530370"], ["updated_at", "2020-03-14 14:09:24.530370"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (35.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "Coronavirus: en la terminal de Ezeiza el clima entre los pasajeros era de tranquilidad"], ["author", "Federico Acosta Rainis"], ["body", "Crédito: Rodrigo Néspolo\r\nEl primer caso positivo de\r\n coronavirus detectado en el país no modificó demasiado el clima del \r\naeropuerto internacional de Ezeiza. La tranquilidad primaba ayer a la tarde entre la gran mayoría de pasajeros que circulaban por la t… [+2540 chars]"], ["date", "2020-04-03T00:00:00Z"], ["headerImg", "//bucket2.glanacion.com/anexos/fotos/95/3206395.jpg"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Federico Acosta Rainis"], ["body", "Crédito: Rodrigo Néspolo\r\nEl primer caso positivo de\r\n coronavirus detectado en el país no modificó demasiado el clima del \r\naeropuerto internacional de Ezeiza. La tranquilidad primaba ayer a la tarde entre la gran mayoría de pasajeros que circulaban por la t… [+2540 chars]"], ["date", "2020-04-03T00:00:00Z"], ["headerImg", "//bucket2.glanacion.com/anexos/fotos/95/3206395.jpg"], ["title", "Coronavirus: en la terminal de Ezeiza el clima entre los pasajeros era de tranquilidad"], ["created_at", "2020-03-14 14:09:24.569822"], ["updated_at", "2020-03-14 14:09:24.569822"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" IS NULL AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "Economia e sistema financeiro têm bases mais sólidas do que 2008, diz BlackRock"], ["body", "A escalada dos movimentos dos últimos dias no mercado financeiro levou a crescentes comparações com a crise de 2008. Mas a gestora de recursos BlackRock, a maior do mundo, com US$ 7 trilhões em ativos, não vê muitos paralelos com aquele momento e destaca, em … [+2018 chars]"], ["date", "2020-03-14T15:22:04Z"], ["headerImg", "https://www.infomoney.com.br/wp-content/uploads/2019/06/fachada-do-escritorio-da-blackrock-em-ny.jpg?fit=900%2C617&quality=75&strip=all"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("body", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "A escalada dos movimentos dos últimos dias no mercado financeiro levou a crescentes comparações com a crise de 2008. Mas a gestora de recursos BlackRock, a maior do mundo, com US$ 7 trilhões em ativos, não vê muitos paralelos com aquele momento e destaca, em … [+2018 chars]"], ["date", "2020-03-14T15:22:04Z"], ["headerImg", "https://www.infomoney.com.br/wp-content/uploads/2019/06/fachada-do-escritorio-da-blackrock-em-ny.jpg?fit=900%2C617&quality=75&strip=all"], ["title", "Economia e sistema financeiro têm bases mais sólidas do que 2008, diz BlackRock"], ["created_at", "2020-03-14 14:09:24.584706"], ["updated_at", "2020-03-14 14:09:24.584706"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" IS NULL AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "Orlando Magic co-founder Pat Williams on COVID-19 prompting professional sports suspensions"], ["author", "Fox News"], ["date", "2020-03-14T13:52:56.7087168Z"], ["headerImg", "https://cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/daeaee45-dd37-4891-87d3-14b5b3929286/fa77b267-58cc-482d-a814-f6977d802a1e/1280x720/match/image.jpg"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Fox News"], ["date", "2020-03-14T13:52:56.7087168Z"], ["headerImg", "https://cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/daeaee45-dd37-4891-87d3-14b5b3929286/fa77b267-58cc-482d-a814-f6977d802a1e/1280x720/match/image.jpg"], ["title", "Orlando Magic co-founder Pat Williams on COVID-19 prompting professional sports suspensions"], ["created_at", "2020-03-14 14:09:24.600045"], ["updated_at", "2020-03-14 14:09:24.600045"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" IS NULL AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "Doctor who traveled to China shares his experience: People practice social distancing to control outbreak"], ["author", "Fox News"], ["date", "2020-03-14T13:52:54.85694Z"], ["headerImg", "https://cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/1e501456-3877-4767-9782-775bf6543119/27eebef1-e6f5-4c69-8c68-b9db968cc8bb/1280x720/match/image.jpg"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("author", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Fox News"], ["date", "2020-03-14T13:52:54.85694Z"], ["headerImg", "https://cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/1e501456-3877-4767-9782-775bf6543119/27eebef1-e6f5-4c69-8c68-b9db968cc8bb/1280x720/match/image.jpg"], ["title", "Doctor who traveled to China shares his experience: People practice social distancing to control outbreak"], ["created_at", "2020-03-14 14:09:24.613042"], ["updated_at", "2020-03-14 14:09:24.613042"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (15.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "If coronavirus hits your family you'll need to have these documents and this information ready"], ["author", "Fox News"], ["body", "The uncertainty surrounding the coronavirus has people making unusual preparations including hoarding everything from hand sanitizer to toilet paper! But what you really need to be doing for yourself and your loved ones, particularly if you or a loved one is … [+2659 chars]"], ["date", "2020-03-14T13:52:52.6658381Z"], ["headerImg", "https://a57.foxnews.com/media.foxbusiness.com/BrightCove/854081161001/202003/2588/0/0/854081161001_6141543287001_6141542770001-vs.jpg?ve=1&tl=1"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Fox News"], ["body", "The uncertainty surrounding the coronavirus has people making unusual preparations including hoarding everything from hand sanitizer to toilet paper! But what you really need to be doing for yourself and your loved ones, particularly if you or a loved one is … [+2659 chars]"], ["date", "2020-03-14T13:52:52.6658381Z"], ["headerImg", "https://a57.foxnews.com/media.foxbusiness.com/BrightCove/854081161001/202003/2588/0/0/854081161001_6141543287001_6141542770001-vs.jpg?ve=1&tl=1"], ["title", "If coronavirus hits your family you'll need to have these documents and this information ready"], ["created_at", "2020-03-14 14:09:24.634241"], ["updated_at", "2020-03-14 14:09:24.634241"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "Apple closes all stores outside China over coronavirus"], ["author", "Audrey McNamara"], ["body", "Apple CEO Tim Cook announced Monday that the company is closing all of its stores outside China for two weeks amid the coronavirus pandemic. Stores in China will now reopen. \r\n\"In our workplaces and communities, we must do all we can to prevent the spread of … [+1423 chars]"], ["date", "2020-03-14T13:47:40+00:00"], ["headerImg", "https://cbsnews2.cbsistatic.com/hub/i/r/2017/11/06/12003fb7-8c58-43fb-92e7-b9ba486f1f17/thumbnail/1200x630/7a027116d109a89737aa052a3b27580b/apple.jpg"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Audrey McNamara"], ["body", "Apple CEO Tim Cook announced Monday that the company is closing all of its stores outside China for two weeks amid the coronavirus pandemic. Stores in China will now reopen. \r\n\"In our workplaces and communities, we must do all we can to prevent the spread of … [+1423 chars]"], ["date", "2020-03-14T13:47:40+00:00"], ["headerImg", "https://cbsnews2.cbsistatic.com/hub/i/r/2017/11/06/12003fb7-8c58-43fb-92e7-b9ba486f1f17/thumbnail/1200x630/7a027116d109a89737aa052a3b27580b/apple.jpg"], ["title", "Apple closes all stores outside China over coronavirus"], ["created_at", "2020-03-14 14:09:24.642793"], ["updated_at", "2020-03-14 14:09:24.642793"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "Spain To Go On Lockdown As Coronavirus Cases Spike: Reports"], ["author", "AP"], ["body", "MADRID (AP) Spanish media reported Saturday that Spains government will announce that it is placing tight restrictions on movement for the nation of 46 million people while declaring a two-week state of emergency to fight the sharp rise in coronavirus infecti… [+1056 chars]"], ["date", "2020-03-14T13:44:41Z"], ["headerImg", "https://img.huffingtonpost.com/asset/5e6cdf79230000321ade45d3.jpeg?cache=vq9hbn6aoq&ops=1778_1000"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "AP"], ["body", "MADRID (AP) Spanish media reported Saturday that Spains government will announce that it is placing tight restrictions on movement for the nation of 46 million people while declaring a two-week state of emergency to fight the sharp rise in coronavirus infecti… [+1056 chars]"], ["date", "2020-03-14T13:44:41Z"], ["headerImg", "https://img.huffingtonpost.com/asset/5e6cdf79230000321ade45d3.jpeg?cache=vq9hbn6aoq&ops=1778_1000"], ["title", "Spain To Go On Lockdown As Coronavirus Cases Spike: Reports"], ["created_at", "2020-03-14 14:09:24.655152"], ["updated_at", "2020-03-14 14:09:24.655152"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "Where Australia is running out of coronavirus test"], ["author", "Sue Dunlevy, Annika Smethurst, Sarah Blake and Mathew Murphy"], ["body", "Less than two months after the coronavirus became a public health emergency in Australia we are dangerously short of the reagent needed to carry out tests for the killer virus.\r\nNews Corp understands that stocks of this reagent are under pressure in Western A… [+22438 chars]"], ["date", "2020-03-14T13:41:15+00:00"], ["headerImg", "https://cdn.newsapi.com.au/image/v1/9a4666ceb65cc580f2e0a4c20cfaead3"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Sue Dunlevy, Annika Smethurst, Sarah Blake and Mathew Murphy"], ["body", "Less than two months after the coronavirus became a public health emergency in Australia we are dangerously short of the reagent needed to carry out tests for the killer virus.\r\nNews Corp understands that stocks of this reagent are under pressure in Western A… [+22438 chars]"], ["date", "2020-03-14T13:41:15+00:00"], ["headerImg", "https://cdn.newsapi.com.au/image/v1/9a4666ceb65cc580f2e0a4c20cfaead3"], ["title", "Where Australia is running out of coronavirus test"], ["created_at", "2020-03-14 14:09:24.666869"], ["updated_at", "2020-03-14 14:09:24.666869"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "B.C. couple confronted at Costco for buying bulk Lysol wipes to re-sell for profit | CBC Radio"], ["author", "CBC News"], ["body", "Douglas Quan was at a Costco in Vancouver this week when he saw something that made him stop in his tracks.\r\nQuan, a reporter with the Toronto Star's B.C. bureau, was there on Wednesday to cover the phenomenon of \"panic buying\" during the coronavirus pandemic… [+5876 chars]"], ["date", "2020-03-14T13:37:48.2666364Z"], ["headerImg", "https://i.cbc.ca/1.5497174.1584125139!/fileImage/httpImage/image.JPG_gen/derivatives/16x9_620/covid-19-hoarding.JPG"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "CBC News"], ["body", "Douglas Quan was at a Costco in Vancouver this week when he saw something that made him stop in his tracks.\r\nQuan, a reporter with the Toronto Star's B.C. bureau, was there on Wednesday to cover the phenomenon of \"panic buying\" during the coronavirus pandemic… [+5876 chars]"], ["date", "2020-03-14T13:37:48.2666364Z"], ["headerImg", "https://i.cbc.ca/1.5497174.1584125139!/fileImage/httpImage/image.JPG_gen/derivatives/16x9_620/covid-19-hoarding.JPG"], ["title", "B.C. couple confronted at Costco for buying bulk Lysol wipes to re-sell for profit | CBC Radio"], ["created_at", "2020-03-14 14:09:24.678400"], ["updated_at", "2020-03-14 14:09:24.678400"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "Coronavirus updates: House passes aid package after Trump declares national emergency"], ["author", "CBS News"], ["body", "Every aspect of modern life is being hit as sweeping measures are rolled out in an effort to stem the coronavirus pandemic. President Trump declared a national emergency Friday \"to unleash the full power of the federal government.\"\r\n\"No resource will be spare… [+2339 chars]"], ["date", "2020-03-14T13:37:48+00:00"], ["headerImg", "https://cbsnews1.cbsistatic.com/hub/i/r/2020/03/14/cf76c1af-53ae-4fb1-90a8-373749b715e1/thumbnail/1200x630g1/73651c1040706e2537676f2737b9978f/gettyimages-1212276805.jpg"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "CBS News"], ["body", "Every aspect of modern life is being hit as sweeping measures are rolled out in an effort to stem the coronavirus pandemic. President Trump declared a national emergency Friday \"to unleash the full power of the federal government.\"\r\n\"No resource will be spare… [+2339 chars]"], ["date", "2020-03-14T13:37:48+00:00"], ["headerImg", "https://cbsnews1.cbsistatic.com/hub/i/r/2020/03/14/cf76c1af-53ae-4fb1-90a8-373749b715e1/thumbnail/1200x630g1/73651c1040706e2537676f2737b9978f/gettyimages-1212276805.jpg"], ["title", "Coronavirus updates: House passes aid package after Trump declares national emergency"], ["created_at", "2020-03-14 14:09:24.691548"], ["updated_at", "2020-03-14 14:09:24.691548"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "Trump touts coronavirus response bill: 'Good teamwork' | TheHill"], ["author", "Tal Axelrod"], ["body", "President TrumpDonald John TrumpTrump faces toughest crisis of presidency in coronavirusHouse passes bill to help prop up economy from coronavirusWhite House physician: Trump doesn't require test after exposure to 2 people with coronavirusMORE on Saturday tou… [+3746 chars]"], ["date", "2020-03-14T13:36:35Z"], ["headerImg", "https://thehill.com/sites/default/files/trumpdonald_031320getty_0.jpg"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Tal Axelrod"], ["body", "President TrumpDonald John TrumpTrump faces toughest crisis of presidency in coronavirusHouse passes bill to help prop up economy from coronavirusWhite House physician: Trump doesn't require test after exposure to 2 people with coronavirusMORE on Saturday tou… [+3746 chars]"], ["date", "2020-03-14T13:36:35Z"], ["headerImg", "https://thehill.com/sites/default/files/trumpdonald_031320getty_0.jpg"], ["title", "Trump touts coronavirus response bill: 'Good teamwork' | TheHill"], ["created_at", "2020-03-14 14:09:24.708735"], ["updated_at", "2020-03-14 14:09:24.708735"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "Coronavirus: PM Modi shares health ministry's guidelines on home quarantine"], ["author", "PTI"], ["body", "Some important information here. Do read. https://t.co/sZrLgHFTH8\r\n— Narendra Modi (@narendramodi) 1584175198000"], ["date", "2020-03-14T13:34:42+00:00"], ["headerImg", "https://static.toiimg.com/thumb/msid-74626025,width-1070,height-580,imgsize-134702,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "PTI"], ["body", "Some important information here. Do read. https://t.co/sZrLgHFTH8\r\n— Narendra Modi (@narendramodi) 1584175198000"], ["date", "2020-03-14T13:34:42+00:00"], ["headerImg", "https://static.toiimg.com/thumb/msid-74626025,width-1070,height-580,imgsize-134702,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"], ["title", "Coronavirus: PM Modi shares health ministry's guidelines on home quarantine"], ["created_at", "2020-03-14 14:09:24.722466"], ["updated_at", "2020-03-14 14:09:24.722466"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" IS NULL AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "India Declares Coronavirus A Notified Disaster"], ["body", "There are over 80 confirmed COVID-19 cases in India, with at least two deaths linked to the virus\r\nNew Delhi: The government has declared the novel coronavirus outbreak in the country a \"notified disaster\", in a move it called \"a special one-time dispensation… [+2939 chars]"], ["date", "2020-03-14T13:33:00+00:00"], ["headerImg", "https://c.ndtvimg.com/2020-03/7lhrffa_coronavirus-aluva-hospital-pti_625x300_14_March_20.jpg"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("body", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "There are over 80 confirmed COVID-19 cases in India, with at least two deaths linked to the virus\r\nNew Delhi: The government has declared the novel coronavirus outbreak in the country a \"notified disaster\", in a move it called \"a special one-time dispensation… [+2939 chars]"], ["date", "2020-03-14T13:33:00+00:00"], ["headerImg", "https://c.ndtvimg.com/2020-03/7lhrffa_coronavirus-aluva-hospital-pti_625x300_14_March_20.jpg"], ["title", "India Declares Coronavirus A Notified Disaster"], ["created_at", "2020-03-14 14:09:24.735158"], ["updated_at", "2020-03-14 14:09:24.735158"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (15.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "Alibaba co-founder Jack Ma to donate coronavirus test kits and masks to the US"], ["author", "Kim Lyons"], ["body", "The Chinese billionaire already has donated supplies to Europe\r\nPhoto by Wang HE/Getty Images\r\nAlibaba co-founder Jack Ma says he is donating 500,000 coronavirus testing kits and one million protective face masks to the United States, Reuters reports. The Chi… [+1083 chars]"], ["date", "2020-03-14T13:31:19Z"], ["headerImg", "https://cdn.vox-cdn.com/thumbor/pj_V4rKVuZtlsODKmUINmB73fZ0=/0x237:3301x1965/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/19802241/1192058124.jpg.jpg"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Kim Lyons"], ["body", "The Chinese billionaire already has donated supplies to Europe\r\nPhoto by Wang HE/Getty Images\r\nAlibaba co-founder Jack Ma says he is donating 500,000 coronavirus testing kits and one million protective face masks to the United States, Reuters reports. The Chi… [+1083 chars]"], ["date", "2020-03-14T13:31:19Z"], ["headerImg", "https://cdn.vox-cdn.com/thumbor/pj_V4rKVuZtlsODKmUINmB73fZ0=/0x237:3301x1965/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/19802241/1192058124.jpg.jpg"], ["title", "Alibaba co-founder Jack Ma to donate coronavirus test kits and masks to the US"], ["created_at", "2020-03-14 14:09:24.754468"], ["updated_at", "2020-03-14 14:09:24.754468"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "Doctor: I'm \"proud\" of how U.S. stepped up against coronavirus"], ["author", "CBS News"], ["body", "Watch CBSN Live\r\nCopyright © 2020 CBS Interactive Inc. All rights reserved."], ["date", "2020-03-14T13:29:32+00:00"], ["headerImg", "https://cbsnews3.cbsistatic.com/hub/i/r/2020/03/14/c5e62fc5-114f-4c78-9d5c-e722ce5e7c6c/thumbnail/1200x630/331119df018a7729f281f9f709b9d8d8/0314-satmo-agus-2046799-640x360.jpg"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "CBS News"], ["body", "Watch CBSN Live\r\nCopyright © 2020 CBS Interactive Inc. All rights reserved."], ["date", "2020-03-14T13:29:32+00:00"], ["headerImg", "https://cbsnews3.cbsistatic.com/hub/i/r/2020/03/14/c5e62fc5-114f-4c78-9d5c-e722ce5e7c6c/thumbnail/1200x630/331119df018a7729f281f9f709b9d8d8/0314-satmo-agus-2046799-640x360.jpg"], ["title", "Doctor: I'm \"proud\" of how U.S. stepped up against coronavirus"], ["created_at", "2020-03-14 14:09:24.774222"], ["updated_at", "2020-03-14 14:09:24.774222"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "Breaking down coronavirus' effect on financial markets"], ["author", "CBS News"], ["body", "Watch CBSN Live\r\nCopyright © 2020 CBS Interactive Inc. All rights reserved."], ["date", "2020-03-14T13:29:29+00:00"], ["headerImg", "https://cbsnews2.cbsistatic.com/hub/i/r/2020/03/14/1a60d7b7-b08a-4a56-acd9-33663dc94738/thumbnail/1200x630/c836a3ac26d000aa1b91a9960c491d34/0314-dowjones-andy-2046809-640x360.jpg"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "CBS News"], ["body", "Watch CBSN Live\r\nCopyright © 2020 CBS Interactive Inc. All rights reserved."], ["date", "2020-03-14T13:29:29+00:00"], ["headerImg", "https://cbsnews2.cbsistatic.com/hub/i/r/2020/03/14/1a60d7b7-b08a-4a56-acd9-33663dc94738/thumbnail/1200x630/c836a3ac26d000aa1b91a9960c491d34/0314-dowjones-andy-2046809-640x360.jpg"], ["title", "Breaking down coronavirus' effect on financial markets"], ["created_at", "2020-03-14 14:09:24.789979"], ["updated_at", "2020-03-14 14:09:24.789979"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "Number of coronavirus positive cases rise to 84: Health ministry"], ["author", "PTI"], ["body", "India News: The number of people who have tested positive for coronavirus in the country has risen to 84, the health ministry said on Saturday. \"Seven persons, wh"], ["date", "2020-03-14T13:28:08+00:00"], ["headerImg", "https://static.toiimg.com/thumb/msid-74627188,width-1070,height-580,imgsize-872686,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "PTI"], ["body", "India News: The number of people who have tested positive for coronavirus in the country has risen to 84, the health ministry said on Saturday. \"Seven persons, wh"], ["date", "2020-03-14T13:28:08+00:00"], ["headerImg", "https://static.toiimg.com/thumb/msid-74627188,width-1070,height-580,imgsize-872686,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"], ["title", "Number of coronavirus positive cases rise to 84: Health ministry"], ["created_at", "2020-03-14 14:09:24.806934"], ["updated_at", "2020-03-14 14:09:24.806934"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" IS NULL AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "Coronavirus – Ärztin in Italien: Meine 7 Ratschläge an deutsche Ärzte und Bürger"], ["body", "Beinah 1300 Tote, mehr als 17 500 Menschen sind infiziert  Italien hat das Coronavirus besonders hart getroffen! Seit Wochen kämpft Ärztin Francesca Mangiatordi(46) aus der Notaufnahme im Krankenhaus Maggiore in Cremona gegen das Virus, schiebt gemeinsam mit … [+443 chars]"], ["date", "2020-03-14T13:26:03Z"], ["headerImg", "https://bilder.bild.de/fotos/coronavirus-aerztin-in-italien-meine-7-ratschlaege-an-deutsche-aerzte-und-buerger-201382634-69377528/Bild/4,club=bildplus.bild.jpg"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("body", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Beinah 1300 Tote, mehr als 17 500 Menschen sind infiziert  Italien hat das Coronavirus besonders hart getroffen! Seit Wochen kämpft Ärztin Francesca Mangiatordi(46) aus der Notaufnahme im Krankenhaus Maggiore in Cremona gegen das Virus, schiebt gemeinsam mit … [+443 chars]"], ["date", "2020-03-14T13:26:03Z"], ["headerImg", "https://bilder.bild.de/fotos/coronavirus-aerztin-in-italien-meine-7-ratschlaege-an-deutsche-aerzte-und-buerger-201382634-69377528/Bild/4,club=bildplus.bild.jpg"], ["title", "Coronavirus – Ärztin in Italien: Meine 7 Ratschläge an deutsche Ärzte und Bürger"], ["created_at", "2020-03-14 14:09:24.825872"], ["updated_at", "2020-03-14 14:09:24.825872"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? LIMIT ?[0m  [["title", "A New Isolation Center Meant to Protect Residents From Coronavirus Left Them Feeling More Exposed"], ["author", "Kirk Johnson"], ["body", "Many cities are now looking at where to place isolation housing, some of them proposing to use trailers or various forms of existing housing. Seattles experience shows that the conversations will be tough, taking in fears about the virus as well as questions … [+1946 chars]"], ["date", "2020-03-14T13:25:17+00:00"], ["headerImg", "https://static01.nyt.com/images/2020/03/13/us/13virus-housing/13virus-housing-facebookJumbo.jpg"], ["LIMIT", 1]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Kirk Johnson"], ["body", "Many cities are now looking at where to place isolation housing, some of them proposing to use trailers or various forms of existing housing. Seattles experience shows that the conversations will be tough, taking in fears about the virus as well as questions … [+1946 chars]"], ["date", "2020-03-14T13:25:17+00:00"], ["headerImg", "https://static01.nyt.com/images/2020/03/13/us/13virus-housing/13virus-housing-facebookJumbo.jpg"], ["title", "A New Isolation Center Meant to Protect Residents From Coronavirus Left Them Feeling More Exposed"], ["created_at", "2020-03-14 14:09:24.839712"], ["updated_at", "2020-03-14 14:09:24.839712"]]
+  ↳ app/controllers/post_controller.rb:21
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_controller.rb:21
+Completed 200 OK in 1631ms (Views: 0.3ms | ActiveRecord: 239.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:10:28 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostController#index as HTML
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 36ms (Views: 30.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:19:37 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:19:57 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:20:41 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:36:12 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:38:15 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:38:21 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:38:50 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:39:08 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:40:05 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:40:36 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:40:46 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:42:46 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 15:48:14 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 17:14:58 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 17:15:15 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 17:15:25 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 17:16:03 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 17:16:57 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 17:17:11 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 17:17:58 +0100
+Processing by PostController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/post_controller.rb:36
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:29:41 +0100
+Processing by CommentsController#index as HTML
+Started GET "/post?id=19" for 127.0.0.1 at 2020-03-14 17:29:41 +0100
+  Parameters: {"post"=>"19"}
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"id"=>"19", "path"=>"post"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 179ms (Views: 6.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/post/%3Canonymous%3E" for 127.0.0.1 at 2020-03-14 17:29:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/post/%3Canonymous%3E"):
+  
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-cors-1.1.0/lib/rack/cors.rb:100:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:30:51 +0100
+Processing by CommentsController#index as HTML
+  Parameters: {"post"=>"19"}
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/post?id=19" for 127.0.0.1 at 2020-03-14 17:30:51 +0100
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"id"=>"19", "path"=>"post"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/post/%3Canonymous%3E" for 127.0.0.1 at 2020-03-14 17:31:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/post/%3Canonymous%3E"):
+  
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-cors-1.1.0/lib/rack/cors.rb:100:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/post?id=19" for 127.0.0.1 at 2020-03-14 17:31:15 +0100
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"id"=>"19", "path"=>"post"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:31:15 +0100
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Processing by CommentsController#index as HTML
+  Parameters: {"post"=>"19"}
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/post/%3Canonymous%3E" for 127.0.0.1 at 2020-03-14 17:31:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/post/%3Canonymous%3E"):
+  
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-cors-1.1.0/lib/rack/cors.rb:100:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:34:50 +0100
+Started GET "/post/?id=19" for 127.0.0.1 at 2020-03-14 17:34:50 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by CommentsController#index as HTML
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"post"=>"19"}
+  Parameters: {"id"=>"19", "path"=>"post"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 120ms (Views: 2.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:40:59 +0100
+Started GET "/post/?id=19" for 127.0.0.1 at 2020-03-14 17:40:59 +0100
+Processing by CommentsController#index as HTML
+  Parameters: {"post"=>"19"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.7ms)
+
+
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"id"=>"19", "path"=>"post"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:41:25 +0100
+Started GET "/post/?id=19" for 127.0.0.1 at 2020-03-14 17:41:25 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"id"=>"19", "path"=>"post"}
+Processing by CommentsController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  Parameters: {"post"=>"19"}
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 126ms (Views: 1.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:42:04 +0100
+Started GET "/post/?id=19" for 127.0.0.1 at 2020-03-14 17:42:04 +0100
+Processing by CommentsController#index as HTML
+  Parameters: {"post"=>"19"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.8ms)
+
+
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"id"=>"19", "path"=>"post"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:42:24 +0100
+Started GET "/post/?id=19" for 127.0.0.1 at 2020-03-14 17:42:24 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"id"=>"19", "path"=>"post"}
+Processing by CommentsController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  Parameters: {"post"=>"19"}
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 190ms (Views: 2.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/post/?id=19" for 127.0.0.1 at 2020-03-14 17:45:23 +0100
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:45:23 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"id"=>"19", "path"=>"post"}
+Processing by CommentsController#index as HTML
+  Parameters: {"post"=>"19"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 164ms (Views: 4.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:48:22 +0100
+Started GET "/post/?id=19" for 127.0.0.1 at 2020-03-14 17:48:22 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"id"=>"19", "path"=>"post"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+Processing by CommentsController#index as HTML
+  
+  Parameters: {"post"=>"19"}
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 120ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:49:31 +0100
+Started GET "/post/?id=19" for 127.0.0.1 at 2020-03-14 17:49:31 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by CommentsController#index as HTML
+  Parameters: {"post"=>"19"}
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 0.8ms)
+
+
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"id"=>"19", "path"=>"post"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:51:25 +0100
+Started GET "/posts/?id=19" for 127.0.0.1 at 2020-03-14 17:51:25 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (uninitialized constant PostsController):
+  
+vendor/cache/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+vendor/cache/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+vendor/cache/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+vendor/cache/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/inflector/methods.rb:283:in `const_get'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/inflector/methods.rb:283:in `block in constantize'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/inflector/methods.rb:281:in `each'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/inflector/methods.rb:281:in `inject'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/inflector/methods.rb:281:in `constantize'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/http/request.rb:81:in `controller_class'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/routing/route_set.rb:46:in `controller'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/session/abstract/id.rb:259:in `context'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/session/abstract/id.rb:253:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/method_override.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+vendor/cache/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+vendor/cache/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/etag.rb:25:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/conditional_get.rb:25:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/head.rb:12:in `call'
+vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/migration.rb:559:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-cors-1.1.0/lib/rack/cors.rb:100:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by CommentsController#index as HTML
+  Parameters: {"post"=>"19"}
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:52:45 +0100
+Started GET "/posts/?id=19" for 127.0.0.1 at 2020-03-14 17:52:45 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"id"=>"19"}
+  Parameters: {"post"=>"19"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:36
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+Completed 200 OK in 26ms (Views: 21.2ms | ActiveRecord: 1.4ms)
+
+
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 28ms (Views: 17.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:54:11 +0100
+Started GET "/posts/?id=19" for 127.0.0.1 at 2020-03-14 17:54:11 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"id"=>"19"}
+  Parameters: {"post"=>"19"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/posts_controller.rb:36
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 31ms (Views: 26.7ms | ActiveRecord: 1.3ms)
+
+
+Completed 200 OK in 31ms (Views: 24.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/?id=19" for 127.0.0.1 at 2020-03-14 17:54:49 +0100
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:54:49 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"post"=>"19"}
+  Parameters: {"id"=>"19"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/comments_controller.rb:8
+  ↳ app/controllers/posts_controller.rb:36
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 0.7ms)
+
+
+Completed 200 OK in 33ms (Views: 25.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:55:38 +0100
+Started GET "/posts/?id=19" for 127.0.0.1 at 2020-03-14 17:55:38 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"id"=>"19", "path"=>"posts"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+Processing by CommentsController#index as HTML
+  
+  Parameters: {"post"=>"19"}
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 172ms (Views: 1.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:56:29 +0100
+Started GET "/posts/?id=19" for 127.0.0.1 at 2020-03-14 17:56:29 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ApplicationController#fallback_index_html as HTML
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"post"=>"19", "path"=>"comments"}
+  Parameters: {"id"=>"19", "path"=>"posts"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:57:37 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/posts/?id=19" for 127.0.0.1 at 2020-03-14 17:57:37 +0100
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by CommentsController#index as HTML
+  Parameters: {"post"=>"19"}
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"id"=>"19", "path"=>"posts"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 165ms (Views: 3.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/id=19" for 127.0.0.1 at 2020-03-14 17:58:54 +0100
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 17:58:54 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#show as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"id"=>"id=19"}
+  Parameters: {"post"=>"19"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 18:00:23 +0100
+Started GET "/posts/19" for 127.0.0.1 at 2020-03-14 18:00:23 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by CommentsController#index as HTML
+Processing by PostsController#show as HTML
+  Parameters: {"post"=>"19"}
+  Parameters: {"id"=>"19"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 11ms (Views: 2.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/post/%3Canonymous%3E" for 127.0.0.1 at 2020-03-14 18:00:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/post/%3Canonymous%3E"):
+  
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-cors-1.1.0/lib/rack/cors.rb:100:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 18:01:20 +0100
+Started GET "/posts/19" for 127.0.0.1 at 2020-03-14 18:01:20 +0100
+Processing by CommentsController#index as HTML
+  Parameters: {"post"=>"19"}
+  [1m[36mComment Load (4.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+Processing by PostsController#show as HTML
+  ↳ app/controllers/comments_controller.rb:8
+  Parameters: {"id"=>"19"}
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 4.0ms)
+
+
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/post/%3Canonymous%3E" for 127.0.0.1 at 2020-03-14 18:02:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/post/%3Canonymous%3E"):
+  
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-cors-1.1.0/lib/rack/cors.rb:100:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/19" for 127.0.0.1 at 2020-03-14 18:02:35 +0100
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 18:02:35 +0100
+Processing by CommentsController#index as HTML
+  Parameters: {"post"=>"19"}
+  [1m[36mComment Load (7.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+Processing by PostsController#show as HTML
+  ↳ app/controllers/comments_controller.rb:8
+  Parameters: {"id"=>"19"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 15ms (Views: 6.7ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 18:03:41 +0100
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"posts"}
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 18:05:06 +0100
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"posts"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 18:05:18 +0100
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"posts"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 18:06:39 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:36
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 18:06:50 +0100
+Processing by CommentsController#index as HTML
+Started GET "/posts/19" for 127.0.0.1 at 2020-03-14 18:06:50 +0100
+  Parameters: {"post"=>"19"}
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/post/%3Canonymous%3E" for 127.0.0.1 at 2020-03-14 18:06:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/post/%3Canonymous%3E"):
+  
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-cors-1.1.0/lib/rack/cors.rb:100:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/19" for 127.0.0.1 at 2020-03-14 18:08:26 +0100
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 18:08:26 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by CommentsController#index as HTML
+  Parameters: {"post"=>"19"}
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 8ms (Views: 1.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/19" for 127.0.0.1 at 2020-03-14 18:09:38 +0100
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 18:09:38 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+Processing by CommentsController#index as HTML
+  Parameters: {"post"=>"19"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:41
+Completed 200 OK in 33ms (Views: 1.3ms | ActiveRecord: 1.7ms)
+
+
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 37ms (Views: 23.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/comments/?post=19" for 127.0.0.1 at 2020-03-14 18:10:26 +0100
+Started GET "/posts/19" for 127.0.0.1 at 2020-03-14 18:10:26 +0100
+Processing by CommentsController#index as HTML
+  Parameters: {"post"=>"19"}
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "19"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 0.8ms)
+
+
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:41
+Completed 200 OK in 17ms (Views: 0.7ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 21:33:14 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:36
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-14 21:34:02 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:36
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/comments/?post=15" for 127.0.0.1 at 2020-03-15 00:01:15 +0100
+Started GET "/posts/15" for 127.0.0.1 at 2020-03-15 00:01:15 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:41
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Processing by CommentsController#index as HTML
+  Parameters: {"post"=>"15"}
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post" = ?[0m  [["post", "15"]]
+  ↳ app/controllers/comments_controller.rb:8
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-19 03:07:59 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:36
+Completed 200 OK in 33ms (Views: 28.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-19 03:10:07 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:36
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddUrlToPosts (20200319021536)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "posts" ADD "url" varchar[0m
+  ↳ db/migrate/20200319021536_add_url_to_posts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200319021536"]]
+  ↳ bin/rails:4
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/posts" for 127.0.0.1 at 2020-03-19 03:30:34 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:37
+Completed 200 OK in 27ms (Views: 17.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/%3Canonymous%3E" for 127.0.0.1 at 2020-03-19 03:30:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/%3Canonymous%3E"):
+  
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-cors-1.1.0/lib/rack/cors.rb:100:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for 127.0.0.1 at 2020-03-19 03:31:22 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:37
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/%3Canonymous%3E" for 127.0.0.1 at 2020-03-19 03:31:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/%3Canonymous%3E"):
+  
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-cors-1.1.0/lib/rack/cors.rb:100:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for 127.0.0.1 at 2020-03-19 03:32:47 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:37
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/%3Canonymous%3E" for 127.0.0.1 at 2020-03-19 03:32:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/%3Canonymous%3E"):
+  
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-cors-1.1.0/lib/rack/cors.rb:100:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for 127.0.0.1 at 2020-03-19 15:35:23 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#upsert_database as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - http://newsapi.org/v2/top-headlines?q=Corona&q=Corona Virus&sortBy=popularity&apiKey=764acb82041f45f7a8bc847b05da23cc):
+  
+app/controllers/posts_controller.rb:15:in `initialize'
+app/controllers/posts_controller.rb:15:in `open'
+app/controllers/posts_controller.rb:15:in `upsert_database'
+Started GET "/posts" for 127.0.0.1 at 2020-03-19 15:37:24 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/cache/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#upsert_database as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "Coronavirus: habló el médico responsable de la clínica donde está el paciente"], ["author", "Redacción LA NACION"], ["body", "Tras confirmarse ayer el primer caso de\r\n coronavirus en la Argentina, el director corporativo de la \r\nSwiss Medical Center,\r\n Gabriel Novick, destacó que el estado general del paciente de 43 años es \"muy bueno\" y que no presenta, al momento, \"mayores síntoma… [+1980 chars]"], ["date", "2020-04-03T01:49:00Z"], ["headerImg", "//bucket3.glanacion.com/anexos/fotos/08/3206408.jpg"], ["url", "http://www.lanacion.com.ar/sociedad/primer-caso-coronavirus-pais-hablo-medico-responsable-nid2339708"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Redacción LA NACION"], ["body", "Tras confirmarse ayer el primer caso de\r\n coronavirus en la Argentina, el director corporativo de la \r\nSwiss Medical Center,\r\n Gabriel Novick, destacó que el estado general del paciente de 43 años es \"muy bueno\" y que no presenta, al momento, \"mayores síntoma… [+1980 chars]"], ["date", "2020-04-03T01:49:00Z"], ["headerImg", "//bucket3.glanacion.com/anexos/fotos/08/3206408.jpg"], ["title", "Coronavirus: habló el médico responsable de la clínica donde está el paciente"], ["created_at", "2020-03-19 19:37:24.405587"], ["updated_at", "2020-03-19 19:37:24.405587"], ["url", "http://www.lanacion.com.ar/sociedad/primer-caso-coronavirus-pais-hablo-medico-responsable-nid2339708"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (20.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "Coronavirus: en la terminal de Ezeiza el clima entre los pasajeros era de tranquilidad"], ["author", "Federico Acosta Rainis"], ["body", "Crédito: Rodrigo Néspolo\r\nEl primer caso positivo de\r\n coronavirus detectado en el país no modificó demasiado el clima del \r\naeropuerto internacional de Ezeiza. La tranquilidad primaba ayer a la tarde entre la gran mayoría de pasajeros que circulaban por la t… [+2540 chars]"], ["date", "2020-04-03T00:00:00Z"], ["headerImg", "//bucket2.glanacion.com/anexos/fotos/95/3206395.jpg"], ["url", "http://www.lanacion.com.ar/sociedad/coronavirus-terminal-ezeiza-clima-pasajeros-era-tranquilidad-nid2339679"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Federico Acosta Rainis"], ["body", "Crédito: Rodrigo Néspolo\r\nEl primer caso positivo de\r\n coronavirus detectado en el país no modificó demasiado el clima del \r\naeropuerto internacional de Ezeiza. La tranquilidad primaba ayer a la tarde entre la gran mayoría de pasajeros que circulaban por la t… [+2540 chars]"], ["date", "2020-04-03T00:00:00Z"], ["headerImg", "//bucket2.glanacion.com/anexos/fotos/95/3206395.jpg"], ["title", "Coronavirus: en la terminal de Ezeiza el clima entre los pasajeros era de tranquilidad"], ["created_at", "2020-03-19 19:37:24.430033"], ["updated_at", "2020-03-19 19:37:24.430033"], ["url", "http://www.lanacion.com.ar/sociedad/coronavirus-terminal-ezeiza-clima-pasajeros-era-tranquilidad-nid2339679"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (13.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "Coronavirus Australia live updates"], ["author", "Megan Palin"], ["body", "Shane Warne has announced his gin distillery will suspend operations and turn into something completely different to help combat the coronavirus pandemic.Shane Warne’s gin distillery Seven Zero Eight has halted production, and will instead produce medical gra… [+645 chars]"], ["date", "2020-03-20T01:46:41Z"], ["headerImg", "https://content.api.news/v3/images/bin/c86492a64f06db1d7fb40981a32a3c30"], ["url", "https://www.news.com.au/national/nsw-act/coronavirus-australia-live-updates/live-coverage/e434489f660d0a1ff557ba83d9e3a378"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Megan Palin"], ["body", "Shane Warne has announced his gin distillery will suspend operations and turn into something completely different to help combat the coronavirus pandemic.Shane Warne’s gin distillery Seven Zero Eight has halted production, and will instead produce medical gra… [+645 chars]"], ["date", "2020-03-20T01:46:41Z"], ["headerImg", "https://content.api.news/v3/images/bin/c86492a64f06db1d7fb40981a32a3c30"], ["title", "Coronavirus Australia live updates"], ["created_at", "2020-03-19 19:37:24.447641"], ["updated_at", "2020-03-19 19:37:24.447641"], ["url", "https://www.news.com.au/national/nsw-act/coronavirus-australia-live-updates/live-coverage/e434489f660d0a1ff557ba83d9e3a378"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "Coronavirus world live update: Italy on track to surpass China's death toll"], ["author", "Alle McMahon"], ["body", "Italy is on track to surpass China in the number of coronavirus-related deaths.\r\nThe gruesome milestone is being blamed on the countrys large elderly population, its overwhelmed health care system and the delayed imposition of complete lockdown measures acros… [+775 chars]"], ["date", "2020-03-19T22:33:34Z"], ["headerImg", "https://content.api.news/v3/images/bin/93d3a3359d8864e8ab6dd2bf30e0d198"], ["url", "https://www.news.com.au/lifestyle/health/health-problems/coronavirus-world-live-updates/live-coverage/1f86bae2d837e4991d0b7ade61060a80"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Alle McMahon"], ["body", "Italy is on track to surpass China in the number of coronavirus-related deaths.\r\nThe gruesome milestone is being blamed on the countrys large elderly population, its overwhelmed health care system and the delayed imposition of complete lockdown measures acros… [+775 chars]"], ["date", "2020-03-19T22:33:34Z"], ["headerImg", "https://content.api.news/v3/images/bin/93d3a3359d8864e8ab6dd2bf30e0d198"], ["title", "Coronavirus world live update: Italy on track to surpass China's death toll"], ["created_at", "2020-03-19 19:37:24.460088"], ["updated_at", "2020-03-19 19:37:24.460088"], ["url", "https://www.news.com.au/lifestyle/health/health-problems/coronavirus-world-live-updates/live-coverage/1f86bae2d837e4991d0b7ade61060a80"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" IS NULL AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "China e EUA anunciam avanços importantes em vacinas contra novo coronavírus"], ["body", "SÃO PAULO – Na última terça-feira (17), o Ministério da Defesa chinês confirmou por meio de um comunicado que seu primeiro protótipo da vacina contra o novo coronavírus (Covid-2019) está pronto para testes clínicos em humanos.\r\nNo comunicado, o ministério afi… [+4804 chars]"], ["date", "2020-03-19T21:12:36Z"], ["headerImg", "https://www.infomoney.com.br/wp-content/uploads/2019/06/vacina-2.jpg?fit=900%2C506&quality=75&strip=all"], ["url", "https://www.infomoney.com.br/economia/china-e-eua-anunciam-avancos-importantes-em-vacinas-contra-novo-coronavirus/"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("body", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "SÃO PAULO – Na última terça-feira (17), o Ministério da Defesa chinês confirmou por meio de um comunicado que seu primeiro protótipo da vacina contra o novo coronavírus (Covid-2019) está pronto para testes clínicos em humanos.\r\nNo comunicado, o ministério afi… [+4804 chars]"], ["date", "2020-03-19T21:12:36Z"], ["headerImg", "https://www.infomoney.com.br/wp-content/uploads/2019/06/vacina-2.jpg?fit=900%2C506&quality=75&strip=all"], ["title", "China e EUA anunciam avanços importantes em vacinas contra novo coronavírus"], ["created_at", "2020-03-19 19:37:24.469124"], ["updated_at", "2020-03-19 19:37:24.469124"], ["url", "https://www.infomoney.com.br/economia/china-e-eua-anunciam-avancos-importantes-em-vacinas-contra-novo-coronavirus/"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" IS NULL AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "Ações da Uber disparam até 43% após CEO afirmar ter dinheiro para superar coronavírus"], ["body", "(Shutterstock) \r\nSÃO PAULO – As ações da Uber dispararam no pregão desta quinta-feira em NYSE após Dara Khosrowshahi, CEO da companhia, dizer que o balanço da empresa está saudável para superar a pandemia de coronavírus.\r\nOs papéis valorizavam até 43%, para U… [+2481 chars]"], ["date", "2020-03-19T21:05:06Z"], ["headerImg", "https://www.infomoney.com.br/wp-content/uploads/2019/09/uber-1.jpg?fit=900%2C600&quality=75&strip=all"], ["url", "https://www.infomoney.com.br/negocios/acoes-da-uber-disparam-ate-43-apos-ceo-afirmar-ter-dinheiro-para-superar-coronavirus/"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("body", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "(Shutterstock) \r\nSÃO PAULO – As ações da Uber dispararam no pregão desta quinta-feira em NYSE após Dara Khosrowshahi, CEO da companhia, dizer que o balanço da empresa está saudável para superar a pandemia de coronavírus.\r\nOs papéis valorizavam até 43%, para U… [+2481 chars]"], ["date", "2020-03-19T21:05:06Z"], ["headerImg", "https://www.infomoney.com.br/wp-content/uploads/2019/09/uber-1.jpg?fit=900%2C600&quality=75&strip=all"], ["title", "Ações da Uber disparam até 43% após CEO afirmar ter dinheiro para superar coronavírus"], ["created_at", "2020-03-19 19:37:24.479859"], ["updated_at", "2020-03-19 19:37:24.479859"], ["url", "https://www.infomoney.com.br/negocios/acoes-da-uber-disparam-ate-43-apos-ceo-afirmar-ter-dinheiro-para-superar-coronavirus/"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "Direct - Coronavirus : l'Italie compte désormais plus de morts que la Chine, 372 morts en France"], ["author", "LIBERATION"], ["body", "Direct Le coronavirus a tué plus de 9 000 personnes dans le monde depuis son apparition en décembre. Plus de 200 000 cas dinfection ont été dénombrés dans 150 pays et territoires depuis le début de lépidémie. Il y a eu 264 morts en France.\r\n Depuis mardi midi… [+160203 chars]"], ["date", "2020-03-19T19:57:22Z"], ["headerImg", "https://medias.liberation.fr/photo/1300852-des-membres-du-personnel-medical-en-combinaison-de-protection-prodiguent-des-soins-a-un-patient-atte.jpg?modified_at=1584536703&amp;picto=fb&amp;ratio_x=191&amp;ratio_y=100&amp;width=1080"], ["url", "http://www.liberation.fr/planete/2020/03/16/direct-suivez-les-dernieres-informations-sur-la-pandemie-de-coronavirus-en-france-et-dans-le-monde_1781934"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["author", "LIBERATION"], ["body", "Direct Le coronavirus a tué plus de 9 000 personnes dans le monde depuis son apparition en décembre. Plus de 200 000 cas dinfection ont été dénombrés dans 150 pays et territoires depuis le début de lépidémie. Il y a eu 264 morts en France.\r\n Depuis mardi midi… [+160203 chars]"], ["date", "2020-03-19T19:57:22Z"], ["headerImg", "https://medias.liberation.fr/photo/1300852-des-membres-du-personnel-medical-en-combinaison-de-protection-prodiguent-des-soins-a-un-patient-atte.jpg?modified_at=1584536703&amp;picto=fb&amp;ratio_x=191&amp;ratio_y=100&amp;width=1080"], ["title", "Direct - Coronavirus : l'Italie compte désormais plus de morts que la Chine, 372 morts en France"], ["created_at", "2020-03-19 19:37:24.489902"], ["updated_at", "2020-03-19 19:37:24.489902"], ["url", "http://www.liberation.fr/planete/2020/03/16/direct-suivez-les-dernieres-informations-sur-la-pandemie-de-coronavirus-en-france-et-dans-le-monde_1781934"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" IS NULL AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "LIVE Coronavirus: Large spike in confirmed cases as Dáil debates emergency powers"], ["author", "The Irish Times"], ["date", "2020-03-19T19:23:39.7230701Z"], ["headerImg", "https://www.irishtimes.com/image-creator/?id=1.4206910&origw=3072"], ["url", "https://www.irishtimes.com/news/ireland/irish-news/coronavirus-large-spike-in-confirmed-cases-as-d%C3%A1il-debates-emergency-powers-1.4206695"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("author", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "The Irish Times"], ["date", "2020-03-19T19:23:39.7230701Z"], ["headerImg", "https://www.irishtimes.com/image-creator/?id=1.4206910&origw=3072"], ["title", "LIVE Coronavirus: Large spike in confirmed cases as Dáil debates emergency powers"], ["created_at", "2020-03-19 19:37:24.502165"], ["updated_at", "2020-03-19 19:37:24.502165"], ["url", "https://www.irishtimes.com/news/ireland/irish-news/coronavirus-large-spike-in-confirmed-cases-as-d%C3%A1il-debates-emergency-powers-1.4206695"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" IS NULL AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "What’s The Weirdest Thing You’ve Panic-Bought During The Coronavirus Pandemic?"], ["author", "Daniella Emanuel"], ["date", "2020-03-19T19:23:37.9964133Z"], ["headerImg", "https://img.buzzfeed.com/buzzfeed-static/static/2020-03/18/21/campaign_images/78443cbe6d28/whats-the-weirdest-thing-youve-panic-bought-durin-2-233-1584566686-0_dblbig.jpg"], ["url", "https://www.buzzfeed.com/daniellaemanuel/weirdest-thing-panic-bought-coronavirus"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Daniella Emanuel"], ["date", "2020-03-19T19:23:37.9964133Z"], ["headerImg", "https://img.buzzfeed.com/buzzfeed-static/static/2020-03/18/21/campaign_images/78443cbe6d28/whats-the-weirdest-thing-youve-panic-bought-durin-2-233-1584566686-0_dblbig.jpg"], ["title", "What’s The Weirdest Thing You’ve Panic-Bought During The Coronavirus Pandemic?"], ["created_at", "2020-03-19 19:37:24.512251"], ["updated_at", "2020-03-19 19:37:24.512251"], ["url", "https://www.buzzfeed.com/daniellaemanuel/weirdest-thing-panic-bought-coronavirus"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "¡Cuidado! No todo lo que lees en Whastapp es verdad"], ["author", "La Gaceta"], ["body", "El domingo por la mañana, un brote viral en la ciudad holandesa de Utrecht contagió a más de 60 personas en menos de una hora. Sin embargo, a diferencia del coronavirus, la infección ocurrió en WhatsApp. Ese escenario se repite en todo el mundo y Tucumán no e… [+4108 chars]"], ["date", "2020-03-19T19:23:21.3404397Z"], ["headerImg", "https://img.lagaceta.com.ar/fotos/notas/2020/03/19/virales-muchas-veces-compartimos-manera-irresponsable-contenido-dudosa-veracidad-838264-132941.jpg"], ["url", "https://www.lagaceta.com.ar/nota/838264/actualidad/cuidado-no-todo-lo-lees-whastapp-verdad.html"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["author", "La Gaceta"], ["body", "El domingo por la mañana, un brote viral en la ciudad holandesa de Utrecht contagió a más de 60 personas en menos de una hora. Sin embargo, a diferencia del coronavirus, la infección ocurrió en WhatsApp. Ese escenario se repite en todo el mundo y Tucumán no e… [+4108 chars]"], ["date", "2020-03-19T19:23:21.3404397Z"], ["headerImg", "https://img.lagaceta.com.ar/fotos/notas/2020/03/19/virales-muchas-veces-compartimos-manera-irresponsable-contenido-dudosa-veracidad-838264-132941.jpg"], ["title", "¡Cuidado! No todo lo que lees en Whastapp es verdad"], ["created_at", "2020-03-19 19:37:24.520744"], ["updated_at", "2020-03-19 19:37:24.520744"], ["url", "https://www.lagaceta.com.ar/nota/838264/actualidad/cuidado-no-todo-lo-lees-whastapp-verdad.html"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "Mapa en tiempo real con los casos de coronavirus en Argentina"], ["author", "La Gaceta"], ["body", "La pandemia de coronavirus, que mantiene restringida la libre circulación de millones de personas en el mundo, ha infectado ya a 97 personas en Argentina, desde la aparición del primer caso, el 3 de marzo. Hasta el momento, ya son 16 los pacientes que se recu… [+427 chars]"], ["date", "2020-03-19T19:23:15.6119461Z"], ["headerImg", "https://img.lagaceta.com.ar/fotos/notas/2020/03/19/en-aumento-apenas-16-dias-ya-se-contagiaron-casi-centenar-personas-pais-838273-161014.jpg"], ["url", "https://www.lagaceta.com.ar/nota/838273/actualidad/mapa-tiempo-real-casos-coronavirus-argentina.html"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["author", "La Gaceta"], ["body", "La pandemia de coronavirus, que mantiene restringida la libre circulación de millones de personas en el mundo, ha infectado ya a 97 personas en Argentina, desde la aparición del primer caso, el 3 de marzo. Hasta el momento, ya son 16 los pacientes que se recu… [+427 chars]"], ["date", "2020-03-19T19:23:15.6119461Z"], ["headerImg", "https://img.lagaceta.com.ar/fotos/notas/2020/03/19/en-aumento-apenas-16-dias-ya-se-contagiaron-casi-centenar-personas-pais-838273-161014.jpg"], ["title", "Mapa en tiempo real con los casos de coronavirus en Argentina"], ["created_at", "2020-03-19 19:37:24.533160"], ["updated_at", "2020-03-19 19:37:24.533160"], ["url", "https://www.lagaceta.com.ar/nota/838273/actualidad/mapa-tiempo-real-casos-coronavirus-argentina.html"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" IS NULL AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "LIVE: President Trump speaks to nation's governors on the coronavirus pandemic.  - CNN"], ["body", "President Trump speaks to nation's governors on the coronavirus pandemic."], ["date", "2020-03-19T19:23:15.5719081Z"], ["headerImg", "https://cdn.cnn.com/cnnnext/dam/assets/170711161429-happening-now-16x9-artwork-super-tease.jpg"], ["url", "https://www.cnn.com/specials/live-video-1"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("body", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "President Trump speaks to nation's governors on the coronavirus pandemic."], ["date", "2020-03-19T19:23:15.5719081Z"], ["headerImg", "https://cdn.cnn.com/cnnnext/dam/assets/170711161429-happening-now-16x9-artwork-super-tease.jpg"], ["title", "LIVE: President Trump speaks to nation's governors on the coronavirus pandemic.  - CNN"], ["created_at", "2020-03-19 19:37:24.550749"], ["updated_at", "2020-03-19 19:37:24.550749"], ["url", "https://www.cnn.com/specials/live-video-1"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (13.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "Aussies on cruise ship fear being ‘left to die’ in Italy"], ["author", "Nathan Vass, Tom Minear, Stephen Drill and Natalie Wolfe in London, Sarah Blake in New York, AP"], ["body", "Elderly Australians onboard a cruise ship set to dock in Italy fear they will be refused treatment if they test positive for coronavirus in the disease-ravaged country.\r\nIt is understand there are many older Australians onboard the Costa Victoria, which the o… [+28994 chars]"], ["date", "2020-03-19T19:21:28+00:00"], ["headerImg", "https://cdn.newsapi.com.au/image/v1/67650e864ab1d605f65cc8e2b56631bd"], ["url", "https://www.heraldsun.com.au/news/national/coronavirus-scott-morrison-announces-new-travel-ban-for-nonaustralians-as-china-reports-zero-new-cases/news-story/7d3af1bb06d7c97f0dabd2eec381b2d8"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Nathan Vass, Tom Minear, Stephen Drill and Natalie Wolfe in London, Sarah Blake in New York, AP"], ["body", "Elderly Australians onboard a cruise ship set to dock in Italy fear they will be refused treatment if they test positive for coronavirus in the disease-ravaged country.\r\nIt is understand there are many older Australians onboard the Costa Victoria, which the o… [+28994 chars]"], ["date", "2020-03-19T19:21:28+00:00"], ["headerImg", "https://cdn.newsapi.com.au/image/v1/67650e864ab1d605f65cc8e2b56631bd"], ["title", "Aussies on cruise ship fear being ‘left to die’ in Italy"], ["created_at", "2020-03-19 19:37:24.567946"], ["updated_at", "2020-03-19 19:37:24.567946"], ["url", "https://www.heraldsun.com.au/news/national/coronavirus-scott-morrison-announces-new-travel-ban-for-nonaustralians-as-china-reports-zero-new-cases/news-story/7d3af1bb06d7c97f0dabd2eec381b2d8"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "Almost 33% of Canadian households rent their homes. Who is going to help them in the coronavirus crisis?"], ["author", "Haider-Moranis Bulletin"], ["body", "Governments and businesses all over are adapting fast to the restrictions imposed to cope with COVID-19. The ensuing economic slowdown is going to affect cashflows of workers whose jobs are, or will soon be, interrupted. Businesses, such as restaurants, also … [+5525 chars]"], ["date", "2020-03-19T19:20:02Z"], ["headerImg", "https://financialpostcom.files.wordpress.com/2020/03/lock.jpg"], ["url", "https://business.financialpost.com/real-estate/almost-33-of-canadian-households-rent-their-homes-who-is-going-to-help-them-in-the-coronavirus-crisis"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Haider-Moranis Bulletin"], ["body", "Governments and businesses all over are adapting fast to the restrictions imposed to cope with COVID-19. The ensuing economic slowdown is going to affect cashflows of workers whose jobs are, or will soon be, interrupted. Businesses, such as restaurants, also … [+5525 chars]"], ["date", "2020-03-19T19:20:02Z"], ["headerImg", "https://financialpostcom.files.wordpress.com/2020/03/lock.jpg"], ["title", "Almost 33% of Canadian households rent their homes. Who is going to help them in the coronavirus crisis?"], ["created_at", "2020-03-19 19:37:24.581503"], ["updated_at", "2020-03-19 19:37:24.581503"], ["url", "https://business.financialpost.com/real-estate/almost-33-of-canadian-households-rent-their-homes-who-is-going-to-help-them-in-the-coronavirus-crisis"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "Restaurangen rycker ut för att hjälpa sjukvården"], ["author", "Fredrik Lindblom"], ["body", "Haider Aljadiri öppnar bagageluckan och tillsammans med en kollega lastar han in pappkassarna fyllda med nylagade portioner. \r\n Igår hade jag med mig sextio stycken, men det räckte inte. Så det blir nästan nittio idag, säger han och tar ett steg tillbaka och … [+4242 chars]"], ["date", "2020-03-19T19:16:27Z"], ["headerImg", "http://www.gp.se/polopoly_fs/3.200.1584520648!/images/se.gp/fallback-og-image.png"], ["url", "http://www.gp.se/nyheter/g%C3%B6teborg/restaurangen-rycker-ut-f%C3%B6r-att-hj%C3%A4lpa-sjukv%C3%A5rden-1.25673616"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Fredrik Lindblom"], ["body", "Haider Aljadiri öppnar bagageluckan och tillsammans med en kollega lastar han in pappkassarna fyllda med nylagade portioner. \r\n Igår hade jag med mig sextio stycken, men det räckte inte. Så det blir nästan nittio idag, säger han och tar ett steg tillbaka och … [+4242 chars]"], ["date", "2020-03-19T19:16:27Z"], ["headerImg", "http://www.gp.se/polopoly_fs/3.200.1584520648!/images/se.gp/fallback-og-image.png"], ["title", "Restaurangen rycker ut för att hjälpa sjukvården"], ["created_at", "2020-03-19 19:37:24.596654"], ["updated_at", "2020-03-19 19:37:24.596654"], ["url", "http://www.gp.se/nyheter/g%C3%B6teborg/restaurangen-rycker-ut-f%C3%B6r-att-hj%C3%A4lpa-sjukv%C3%A5rden-1.25673616"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (13.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "Spring breakers in Miami say coronavirus won't stop them from partying"], ["author", "Christopher Brito"], ["body", "Some college students say they will continue to party despite measures being taken in light of the coronavirus pandemic. Spring breakers seen in a viral video posted by CBS News have been so defiant while vacationing in Miami –– they're downplaying catching t… [+3478 chars]"], ["date", "2020-03-19T19:15:11+00:00"], ["headerImg", "https://cbsnews1.cbsistatic.com/hub/i/r/2020/03/19/81ab4f7a-ed4b-4d6a-9da3-08ae2ec96831/thumbnail/1200x630/1d548d9c540aa1f9269afd82b58a3df0/gettyimages-1212612052.jpg"], ["url", "https://www.cbsnews.com/news/spring-break-party-coronavirus-pandemic-miami-beaches/"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Christopher Brito"], ["body", "Some college students say they will continue to party despite measures being taken in light of the coronavirus pandemic. Spring breakers seen in a viral video posted by CBS News have been so defiant while vacationing in Miami –– they're downplaying catching t… [+3478 chars]"], ["date", "2020-03-19T19:15:11+00:00"], ["headerImg", "https://cbsnews1.cbsistatic.com/hub/i/r/2020/03/19/81ab4f7a-ed4b-4d6a-9da3-08ae2ec96831/thumbnail/1200x630/1d548d9c540aa1f9269afd82b58a3df0/gettyimages-1212612052.jpg"], ["title", "Spring breakers in Miami say coronavirus won't stop them from partying"], ["created_at", "2020-03-19 19:37:24.613941"], ["updated_at", "2020-03-19 19:37:24.613941"], ["url", "https://www.cbsnews.com/news/spring-break-party-coronavirus-pandemic-miami-beaches/"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "Italy surpasses China in number of coronavirus deaths"], ["author", "Mia Alberti, Nicola Ruotolo, Valentina Di Donato and Tara John, CNN"], ["body", "Italy has just surpassed China for the most number of deaths related to coronavirus."], ["date", "2020-03-19T19:12:55+00:00"], ["headerImg", "https://cdn.cnn.com/cnnnext/dam/assets/200318052820-coronavirus-italy-0317-super-tease.jpg"], ["url", "https://www.cnn.com/2020/03/19/europe/italy-death-toll-intl/index.html"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Mia Alberti, Nicola Ruotolo, Valentina Di Donato and Tara John, CNN"], ["body", "Italy has just surpassed China for the most number of deaths related to coronavirus."], ["date", "2020-03-19T19:12:55+00:00"], ["headerImg", "https://cdn.cnn.com/cnnnext/dam/assets/200318052820-coronavirus-italy-0317-super-tease.jpg"], ["title", "Italy surpasses China in number of coronavirus deaths"], ["created_at", "2020-03-19 19:37:24.627981"], ["updated_at", "2020-03-19 19:37:24.627981"], ["url", "https://www.cnn.com/2020/03/19/europe/italy-death-toll-intl/index.html"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (9.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "Netflix will reduce its European network traffic by 25 percent to manage surge"], ["author", "Julia Alexander"], ["body", "Netflix has taken some initiatives already\r\nNetflix will take new actions to reduce bit rates of streams in Europe following a conversation between the European Union Commissioner Thierry Breton and CEO Reed Hastings, the company announced on Thursday.\r\nNetfl… [+4078 chars]"], ["date", "2020-03-19T19:11:30Z"], ["headerImg", "https://cdn.vox-cdn.com/thumbor/9zdJlctBBMvXOOzbBWCdEdaCmbs=/0x0:1925x1008/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/6877669/66.0.0.jpg"], ["url", "https://www.theverge.com/2020/3/19/21187078/netflix-europe-streaming-european-union-bit-rate-broadband-coronavirus"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Julia Alexander"], ["body", "Netflix has taken some initiatives already\r\nNetflix will take new actions to reduce bit rates of streams in Europe following a conversation between the European Union Commissioner Thierry Breton and CEO Reed Hastings, the company announced on Thursday.\r\nNetfl… [+4078 chars]"], ["date", "2020-03-19T19:11:30Z"], ["headerImg", "https://cdn.vox-cdn.com/thumbor/9zdJlctBBMvXOOzbBWCdEdaCmbs=/0x0:1925x1008/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/6877669/66.0.0.jpg"], ["title", "Netflix will reduce its European network traffic by 25 percent to manage surge"], ["created_at", "2020-03-19 19:37:24.641702"], ["updated_at", "2020-03-19 19:37:24.641702"], ["url", "https://www.theverge.com/2020/3/19/21187078/netflix-europe-streaming-european-union-bit-rate-broadband-coronavirus"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" = ? AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "Coronavirus im Alltag: Was möglich wäre"], ["author", "Bernadette Conrad"], ["body", "Inhalt\r\nAuf einer Seite lesen\r\n Inhalt\r\n<ol><li></li><li>Seite 2Wir können wirklich auch ganz anders</li></ol>\r\nMontagmorgen. Eigentlich säße ich jetzt im Zug Richtung\r\nKassel. Würde am Nachmittag abgeholt von der netten Frau in der Stadtbücherei\r\nder nahen K… [+5654 chars]"], ["date", "2020-03-19T19:10:04+00:00"], ["headerImg", "https://img.zeit.de/kultur/film/2020-03/alltag-deutschland-coronavirus/wide__1300x731"], ["url", "https://www.zeit.de/kultur/2020-03/coronavirus-alltag-kultur-einkaufen-miteinander-10vor8"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "body", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Bernadette Conrad"], ["body", "Inhalt\r\nAuf einer Seite lesen\r\n Inhalt\r\n<ol><li></li><li>Seite 2Wir können wirklich auch ganz anders</li></ol>\r\nMontagmorgen. Eigentlich säße ich jetzt im Zug Richtung\r\nKassel. Würde am Nachmittag abgeholt von der netten Frau in der Stadtbücherei\r\nder nahen K… [+5654 chars]"], ["date", "2020-03-19T19:10:04+00:00"], ["headerImg", "https://img.zeit.de/kultur/film/2020-03/alltag-deutschland-coronavirus/wide__1300x731"], ["title", "Coronavirus im Alltag: Was möglich wäre"], ["created_at", "2020-03-19 19:37:24.650780"], ["updated_at", "2020-03-19 19:37:24.650780"], ["url", "https://www.zeit.de/kultur/2020-03/coronavirus-alltag-kultur-einkaufen-miteinander-10vor8"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."author" IS NULL AND "posts"."body" = ? AND "posts"."date" = ? AND "posts"."headerImg" = ? AND "posts"."url" = ? LIMIT ?[0m  [["title", "The shocking coronavirus study that rocked the UK and US"], ["body", "An Imperial College coronavirus model has had a profound impact on public policy since its results were shared with British and American officials last week. \r\nNo study has so exhaustively detailed the transmission of the virus through the UK and US populatio… [+4402 chars]"], ["date", "2020-03-19T19:08:51.864927Z"], ["headerImg", "https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F01c57dc8-69de-11ea-800d-da70cff6e4d3?source=next-opengraph&fit=scale-down&width=900"], ["url", "https://www.ft.com/content/16764a22-69ca-11ea-a3c9-1fe6fedcca75"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("body", "date", "headerImg", "title", "created_at", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "An Imperial College coronavirus model has had a profound impact on public policy since its results were shared with British and American officials last week. \r\nNo study has so exhaustively detailed the transmission of the virus through the UK and US populatio… [+4402 chars]"], ["date", "2020-03-19T19:08:51.864927Z"], ["headerImg", "https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F01c57dc8-69de-11ea-800d-da70cff6e4d3?source=next-opengraph&fit=scale-down&width=900"], ["title", "The shocking coronavirus study that rocked the UK and US"], ["created_at", "2020-03-19 19:37:24.662241"], ["updated_at", "2020-03-19 19:37:24.662241"], ["url", "https://www.ft.com/content/16764a22-69ca-11ea-a3c9-1fe6fedcca75"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+Completed 200 OK in 487ms (Views: 0.3ms | ActiveRecord: 197.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-19 15:40:36 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:38
+Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/%3Canonymous%3E" for 127.0.0.1 at 2020-03-19 15:40:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/%3Canonymous%3E"):
+  
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-cors-1.1.0/lib/rack/cors.rb:100:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for 127.0.0.1 at 2020-03-19 15:40:54 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:38
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/%3Canonymous%3E" for 127.0.0.1 at 2020-03-19 15:40:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/%3Canonymous%3E"):
+  
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-cors-1.1.0/lib/rack/cors.rb:100:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for 127.0.0.1 at 2020-03-19 15:42:01 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:38
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/%3Canonymous%3E" for 127.0.0.1 at 2020-03-19 15:42:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/%3Canonymous%3E"):
+  
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-cors-1.1.0/lib/rack/cors.rb:100:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for 127.0.0.1 at 2020-03-19 15:43:17 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:38
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/%3Canonymous%3E" for 127.0.0.1 at 2020-03-19 15:43:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/%3Canonymous%3E"):
+  
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/cache/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-2.0.8/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.6.0/gems/rack-cors-1.1.0/lib/rack/cors.rb:100:in `call'
+vendor/cache/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/cache/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for 127.0.0.1 at 2020-03-19 15:43:35 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:38
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-19 15:45:21 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:38
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.4ms)
+
+

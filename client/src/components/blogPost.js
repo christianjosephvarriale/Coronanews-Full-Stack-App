@@ -14,17 +14,17 @@ class BlogPost extends Component {
             <article className={styles.colBlock}>  
                 <div className={styles.itemEntry} data-aos="zoom-in">
                     <div className={styles.itemEntryThumb}>
-                        <NavLink to={'/blog/post/' + props.id} className={styles.itemEntryThumbLink}>
+                        <NavLink to={'/post/' + props.id} className={styles.itemEntryThumbLink}>
                             <img src={props.headerImg} alt=""/>
                         </NavLink>
                     </div> 
                     <div className={styles.itemEntryText}>
                         <div className={styles.itemEntryCat}>
-                            <NavLink to={'/blog/post/' + props.id}>{props.catagory}</NavLink>
+                            <NavLink to={'/post/' + props.id}>{props.catagory}</NavLink>
                         </div>
-                        <h1 className={styles.itemEntryTitle}><NavLink to={'/blog/post/' + props.id}>{props.title}</NavLink></h1>
+                        <h1 className={styles.itemEntryTitle}><NavLink to={'/post/' + props.id}>{props.title}</NavLink></h1>
                         <div className={styles.itemEntryDate}>
-                            <NavLink to={'/blog/post/' + props.id} role="menuitem">{props.date}</NavLink>
+                            <NavLink to={'/post/' + props.id} role="menuitem">{props.date}</NavLink>
                         </div>
                     </div>
                 </div> 

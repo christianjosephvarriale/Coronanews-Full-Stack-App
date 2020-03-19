@@ -35,13 +35,8 @@ class Blog extends Component {
 
     render(){
         const props = this.props;
-        var featPosts = props.state.featPosts
         var posts = props.state.posts;
         let loading = props.loading;
-
-        console.log(`Here are the posts: ${JSON.stringify(posts)}`)
-
-        posts = posts.concat(featPosts);
 
         // sort the posts by datetime
         posts.sort(function(a, b) {
@@ -52,15 +47,14 @@ class Blog extends Component {
 
         console.log(`Here are the posts: ${JSON.stringify(posts)}`)
 
-        if (posts && featPosts) {
-            
-            featPosts = featPosts.map((post) => 
-                <FeaturedBlogPost title={post.title} headerImg={post.headerImg} id={post.id} 
-                catagory={post.catagory} date={post.date} author={post.author}  />
-            );
+        if (length > 0) {
 
             const url = props.location.pathname;
-            const page = url.slice(url.lastIndexOf('/')+1);
+            let page = url.slice(url.lastIndexOf('/')+1);
+
+            if (page === '') { /* root */ 
+                page = 1 
+            }
 
             // load only up to 12 posts
             const slcdPostLst = posts.slice( (page-1) * 12, page * 12 );
@@ -69,7 +63,7 @@ class Blog extends Component {
 
             posts = slcdPostLst.map((post) =>  
                 <BlogPost title={post.title} headerImg={post.headerImg} id={post.id} 
-                            catagory={post.catagory} date={post.date} 
+                          date={post.date} 
                 /> 
             );
         }
@@ -85,7 +79,7 @@ class Blog extends Component {
                             </div>
                         </div> */}
 
-                        <section className={'s-featured'}>
+                        {/* <section className={'s-featured'}>
                             <div className={styles.row}>
                                 <div className={styles.colFull}>
 
@@ -94,7 +88,7 @@ class Blog extends Component {
                                     </div>
                                 </div>
                             </div>
-                        </section> 
+                        </section>  */}
 
 
                         <section className={styles.sContent}>

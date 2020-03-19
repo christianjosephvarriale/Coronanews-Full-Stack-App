@@ -1,6 +1,5 @@
 import { POST_ACTIONS, COMMENT_ACTIONS } from './types';
 import axios from 'axios';
-const uuid = require('uuid')
 
 const url = 'http://newsapi.org/v2/top-headlines?' +
           'country=us&' +
@@ -39,7 +38,8 @@ const url = 'http://newsapi.org/v2/top-headlines?' +
 export const fetchAllPosts = () => dispatch => {
 
     axios.get('/posts')
-        .then((posts) => {
+        .then((res) => {
+            const posts = res.data
             dispatch({
                 type: POST_ACTIONS.FETCH_ALL,
                 payload: { posts }
@@ -54,8 +54,9 @@ export const fetchAllPosts = () => dispatch => {
  */
 export const fetchPost = id => dispatch => {
 
-    axios.get(`/post?id=${id}`)
-        .then((post) => {
+    axios.get(`/posts/${id}`)
+        .then((res) => {
+            const post = res.data
             dispatch({
                 type: POST_ACTIONS.FETCH,
                 payload: post

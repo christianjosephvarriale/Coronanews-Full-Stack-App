@@ -88,18 +88,6 @@ class BlogPage extends Component {
         }, 500);
     }
 
-    formatCodeSnippets = () => {
-        // apply custom styles to all code blocks
-
-        setTimeout(() => {
-
-            var addScript = document.createElement('script');
-            addScript.setAttribute('src', 'https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js');
-            document.body.appendChild(addScript);
-
-        }, 100);
-    }
-
     handleSubmit = e => {
         e.preventDefault();
 
@@ -190,6 +178,7 @@ class BlogPage extends Component {
     render() {
         var commentsLst = this.props.state.comments;
         var post = this.props.state.currPost;
+        console.log(`Here is the post ${post}`)
         const loading = this.props.loading;
         const { mobile } = this.props;
 
@@ -203,14 +192,14 @@ class BlogPage extends Component {
         } else {
 
             // change the title and the meta on the page
-            const { meta } = post;
-            const { title } = post;
-            document.getElementById("metaDes").setAttribute("content", meta);
-            document.querySelector('title').text = title;
-
-            var tags = post.tags.map((tag) => {
-                return <a>{tag}</a>
-            });
+            try {
+                const { meta } = post;
+                const { title } = post;
+                document.getElementById("metaDes").setAttribute("content", meta);
+                document.querySelector('title').text = title;
+            } catch (error) {
+                console.log(error)
+            }
 
             const generateInitials = (author) => {
                 let names = author.split(" ");
@@ -286,7 +275,6 @@ class BlogPage extends Component {
     
                         <div id="body" className={[styles.colFull,styles.entryMain].join(" ")}>
                             {this.insertBody(post)}
-                            {this.formatCodeSnippets()}
                         </div>
     
                         <div className={styles.entryTaxonomies}>
@@ -294,13 +282,6 @@ class BlogPage extends Component {
                                     <h5>Posted In: </h5>
                                     <span className={styles.entryTaxList}>
                                         <span>{post.catagory}</span>
-                                    </span>
-                                </div> 
-    
-                                <div className={styles.entryTags}>
-                                    <h5>Tags: </h5>
-                                    <span className={[styles.entryTaxList,styles.entryTaxListPill].join(" ")}>
-                                        {tags}
                                     </span>
                                 </div> 
                             </div> 

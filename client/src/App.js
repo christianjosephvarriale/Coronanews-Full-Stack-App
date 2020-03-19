@@ -49,11 +49,10 @@ class App extends Component {
               <NavBar />
               <Router forceRefresh="true">
                 <Switch>
-                  <Route path='/blog/page/:pageId' component={Blog} />
-                  <Route path="/blog/post/:blogId" component={BlogPage} />
+                  <Route exact path='/' component={Blog} />
+                  <Route path="/post/:blogId" component={BlogPage} />
                 </Switch>
               </Router>
-              <Footer />
             </main>
           );
 
