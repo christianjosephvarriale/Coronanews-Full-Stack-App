@@ -15461,3 +15461,34 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/posts/ca" for 127.0.0.1 at 2020-03-19 23:13:11 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"ca"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "ca"]]
+  ↳ app/controllers/posts_controller.rb:15
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/at" for 127.0.0.1 at 2020-03-19 23:13:28 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"at"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "at"]]
+  ↳ app/controllers/posts_controller.rb:15
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/fr" for 127.0.0.1 at 2020-03-19 23:13:49 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"fr"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "fr"]]
+  ↳ app/controllers/posts_controller.rb:15
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-19 23:43:04 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:9
+Completed 200 OK in 77ms (Views: 74.8ms | ActiveRecord: 1.6ms)
+
+

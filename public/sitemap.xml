@@ -6,33 +6,53 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://tekblg.com/</loc>
+  <loc>https://coronavirus.ca/</loc>
   <lastmod>2020-02-13T15:41:47+00:00</lastmod>
 </url>
 
 <url>
-  <loc>https://tekblg.com/blog/page/1</loc>
+  <loc>https://coronavirus.ca/ca/</loc>
   <lastmod>2020-02-15T13:37:54+00:00</lastmod>
 </url>
 
 <url>
-  <loc>https://tekblg.com/blog/post/XCkXFEZ5ubF8mOuev3aJ2</loc>
-  <lastmod>2020-02-13T15:41:47+00:00</lastmod>
+  <loc>https://coronavirus.ca/us/</loc>
+  <lastmod>2020-02-15T13:37:54+00:00</lastmod>
 </url>
 
 <url>
-  <loc>https://tekblg.com/blog/post/4qNeWVG2g2inCmAkwdo6WS</loc>
-  <lastmod>2020-01-22T06:31-05:00</lastmod>
+  <loc>https://coronavirus.ca/nl/</loc>
+  <lastmod>2020-02-15T13:37:54+00:00</lastmod>
 </url>
 
 <url>
-  <loc>https://tekblg.com/blog/post/5gi9YliuQUYHwhZRm6Opej</loc>
-  <lastmod>2020-01-28T16:09+02:00</lastmod>
+  <loc>https://coronavirus.ca/ch/</loc>
+  <lastmod>2020-02-15T13:37:54+00:00</lastmod>
 </url>
 
 <url>
-  <loc>https://tekblg.com/blog/post/6nbZg2cT2zrtemxhYGrldn</loc>
-  <lastmod>2020-01-28T16:09+02:00</lastmod>
+  <loc>https://coronavirus.ca/at/</loc>
+  <lastmod>2020-02-15T13:37:54+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://coronavirus.ca/fr/</loc>
+  <lastmod>2020-02-15T13:37:54+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://coronavirus.ca/it/</loc>
+  <lastmod>2020-02-15T13:37:54+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://coronavirus.ca/gb/</loc>
+  <lastmod>2020-02-15T13:37:54+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://coronavirus.ca/de/</loc>
+  <lastmod>2020-02-15T13:37:54+00:00</lastmod>
 </url>
 
 </urlset>

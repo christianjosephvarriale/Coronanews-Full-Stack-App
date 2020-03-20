@@ -1,3 +1,5 @@
 User-Agent: *
+Crawl-delay: 6000
+User-agent: * Disallow:
 
-Sitemap: https://tekblg.com/sitemap.xml
+Sitemap: https://coronavirus.ca/sitemap.xml
