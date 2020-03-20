@@ -41,7 +41,7 @@ class Blog extends Component {
         setTimeout(() => {
             this.props.toggleLoader('OFF');
             require("../js/blog.js");
-        }, 1000)
+        }, 3000)
     }
 
     render(){

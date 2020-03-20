@@ -31,7 +31,7 @@ class NavBar extends Component {
         setTimeout(() => {
             // wait for loader to finish
             require("../js/navbar.js");
-        }, 1500);
+        }, 4000);
         
         
         // if the proper cookie tag is not set then show subscribe modal
