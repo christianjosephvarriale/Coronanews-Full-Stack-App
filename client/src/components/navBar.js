@@ -102,9 +102,11 @@ class NavBar extends Component {
                         <li role="menuitem"><NavLink to="/us/1" role="menuitem">US</NavLink></li>
                         <li role="menuitem"><NavLink to="/de/1" role="menuitem">Germany</NavLink></li>
                         <li role="menuitem"><NavLink to="/it/1" role="menuitem">Italy</NavLink></li>
-                        <li role="menuitem"><NavLink to="/sp/1" role="menuitem">Spain</NavLink></li>
-                        <li role="menuitem"><NavLink to="/cn/1" role="menuitem">China</NavLink></li>
-                        <li role="menuitem"><NavLink to="/kr/1" role="menuitem">South Korea</NavLink></li>
+                        <li role="menuitem"><NavLink to="/at/1" role="menuitem">Austria</NavLink></li>
+                        <li role="menuitem"><NavLink to="/fr/1" role="menuitem">France</NavLink></li>
+                        <li role="menuitem"><NavLink to="/nl/1" role="menuitem">Netherlands</NavLink></li>
+                        <li role="menuitem"><NavLink to="/ch/1" role="menuitem">Switzerland</NavLink></li>
+                        <li role="menuitem"><NavLink to="/gb/1" role="menuitem">United Kingdom</NavLink></li>
                     </ul>
                 </li>
                 <li role="menuitem">

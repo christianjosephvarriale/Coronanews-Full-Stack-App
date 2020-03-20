@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # post '/scripts/yahoo', to: 'scripts#yahoo'
-  get '/posts/:id', to: 'posts#show'
+  get '/posts/:region', to: 'posts#show'
   post '/scripts/amazon', to: 'scripts#amazon'
   post '/mail', to: 'mail#create' 
   get '/comments', to: 'comments#index'

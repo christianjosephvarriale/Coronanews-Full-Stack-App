@@ -19,7 +19,24 @@ class Blog extends Component {
 
     componentDidMount() {
 
-        this.props.fetchAllPosts() 
+        debugger;
+        const url = this.props.location.pathname;
+
+        // see if a country is referenced 
+        let allCountries = true;
+        const countries = ['ca','us','de','it','gb','fr','nl','at','ch']
+        for (let i=0; i < countries.length; i++) {
+            if (url.includes(countries[i])) {
+                this.props.fetchAllPosts(countries[i])
+                allCountries = false;
+                break; 
+            }
+        }
+
+        if (allCountries) {
+            this.props.fetchAllPosts() 
+        }
+
         this.props.toggleLoader('ON');
         setTimeout(() => {
             this.props.toggleLoader('OFF');
@@ -30,7 +47,11 @@ class Blog extends Component {
     render(){
         const props = this.props;
         var posts = props.state.posts;
+        var featPosts = props.state.featPosts
         let loading = props.loading;
+
+        const url = this.props.location.pathname;
+        posts = posts.concat(featPosts);
 
         // sort the posts by datetime
         posts.sort(function(a, b) {
@@ -43,7 +64,11 @@ class Blog extends Component {
 
         if (length > 0) {
 
-            const url = props.location.pathname;
+            featPosts = featPosts.map((post) => 
+                <FeaturedBlogPost title={post.title} headerImg={post.headerImg} id={post.id} 
+                region={post.region} date={post.date} author={post.author} url={post.url}  />
+            );
+
             let page = url.slice(url.lastIndexOf('/')+1);
 
             if (page === '') { /* root */ 
@@ -57,7 +82,7 @@ class Blog extends Component {
 
             posts = slcdPostLst.map((post) =>  
                 <BlogPost title={post.title} headerImg={post.headerImg} id={post.id} 
-                          date={post.date} url={post.url}
+                region={post.region} date={post.date} url={post.url}
                 /> 
             );
         }
@@ -93,6 +118,17 @@ class Blog extends Component {
                                 </CardContent>
                             </Card>
                         </section>
+
+                        <section className={'s-featured'}>
+                            <div className={styles.row}>
+                                <div className={styles.colFull}>
+
+                                    <div className={['featured-slider',styles.featured].join(" ")} data-aos="zoom-in">
+                                        {featPosts}
+                                    </div>
+                                </div>
+                            </div>
+                        </section> 
 
                         <section className={styles.sContent}>
                             

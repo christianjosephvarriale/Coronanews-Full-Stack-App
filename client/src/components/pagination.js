@@ -8,6 +8,17 @@ class Pagination extends React.Component {
     const url = window.location.href;
     let currentPage = url.slice(url.lastIndexOf('/')+1);
 
+    let countryFlag = false;
+    let country = '';
+    const countries = ['ca','us','de','it','gb','fr','nl','at','ch']
+    for (let i=0; i < countries.length; i++) {
+        if (url.includes(countries[i])) {
+            countryFlag = true;
+            country = countries[i];
+            break; 
+        }
+    }
+
     if (currentPage === '') { /* root */
         currentPage = 1;
     }
@@ -37,7 +48,7 @@ class Pagination extends React.Component {
         if (pageNumber == currentPage) {
             return  <li><span className={[styles.pgnNum,styles.current].join(" ")}>{pageNumber}</span></li>
         } else {
-            return <li><Link className={styles.pgnNum} to={'/' + pageNumber}>{pageNumber}</Link></li>
+            return <li><Link className={styles.pgnNum} to={`${countryFlag ? `/${country}` : ''}/${pageNumber}`}>{pageNumber}</Link></li>
   
         }
     })
@@ -48,9 +59,9 @@ class Pagination extends React.Component {
                 <Router forceRefresh="true">
                     <nav className={styles.pgn} data-aos="fade-up">
                         <ul>
-                            <li><Link style={{display: backDisabled ? 'none' : ''}} className={styles.pgnPrev} to={'/' + (parseInt(currentPage) - 5)}>Prev</Link></li>
+                            <li><Link style={{display: backDisabled ? 'none' : ''}} className={styles.pgnPrev} to={`${countryFlag ? `/${country}` : ''}/${(parseInt(currentPage) - 5)}`}>Prev</Link></li>
                             {pageElements}
-                             <li><Link style={{display: forwardDisabled ? 'none' : ''}} className={styles.pgnNext} to={'/' + ((totalPages - currentPage > 5) ? parseInt(currentPage) + 5 : totalPages)} >Next</Link></li>
+                             <li><Link style={{display: forwardDisabled ? 'none' : ''}} className={styles.pgnNext} to={`${countryFlag ? `/${country}` : ''}/${((totalPages - currentPage > 5) ? parseInt(currentPage) + 5 : totalPages)}`} >Next</Link></li>
                         </ul>
                         <div>showing elements {(parseInt(currentPage-1) * 12) + 1} - {(((parseInt(currentPage) * 12) + 1) > props.total) ? props.total : ((parseInt(currentPage) * 12) + 1)} out of {props.total}</div>
                     </nav>

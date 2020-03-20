@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-
-import styles from '../css/blog.module.css';
 import '../css/slick-slider.css';
-import { NavLink } from 'react-router-dom';
-
 import Avatar from '@material-ui/core/Avatar';
-
 import { connect } from 'react-redux';
 import { fetchPost } from '../actions/postActions';
 
@@ -24,13 +19,23 @@ class FeaturedBlogPost extends Component {
             return ( <Skeleton variant="rect" width={210} height={118} /> )
         } else {
             const headerImg = state.headerImg;
+            let author;
+            if (!state.author) {
+                author = 'Corona News'
+            } else {
+                author = state.author;
+            }
             const generateInitials = () => {
-                let names = state.author.split(" ");
-                let initials = ""
-                names.forEach(e => {
-                    initials += e[0].toUpperCase()
-                });
-                return initials
+                try {
+                    let names = author.split(" ");
+                    let initials = ""
+                    names.forEach(e => {
+                        initials += e[0].toUpperCase()
+                    });
+                    return initials
+                } catch (error) {
+                    console.log('yikes')
+                }
             }
             return (
                 <div className={'featured-slide'}>
@@ -38,16 +43,16 @@ class FeaturedBlogPost extends Component {
                         <div className={'entry-background'} style={{ backgroundImage: 'url(' + headerImg + ')' }}></div>
                         
                         <div className={'entry-content'}>
-                            <span className={'entry-category'}><NavLink to={'/blog/post/' + state.id}> {state.catagory} </NavLink> </span>
+                            <span className={'entry-category'}><a href={state.url}> {state.region} </a> </span>
 
-                            <h1><NavLink to={'/blog/post/' + state.id}>{state.title}</NavLink></h1>
+                            <h1><a href={state.url}>{state.title}</a></h1>
 
                             <div className={'entry-info'}>
-                                <NavLink to={'/blog/post/' + state.id} className={'entry-profile-pic'}>
+                                <a href={state.url} className={'entry-profile-pic'}>
                                     <Avatar style={{backgroundColor: generateColor() }}> {generateInitials()} </Avatar>
-                                </NavLink>
+                                </a>
                                 <ul className={'entry-meta'}>
-                                    <li><NavLink to={'/blog/post/' + state.id}>{state.author}</NavLink></li>
+                                    <li><a href={state.url}>{author}</a></li>
                                     <li>{state.date}</li>
                                 </ul>
                             </div>
