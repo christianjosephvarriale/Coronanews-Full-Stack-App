@@ -19593,3 +19593,25 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 16:30:47 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (3.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 121ms (Views: 117.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 16:30:50 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'

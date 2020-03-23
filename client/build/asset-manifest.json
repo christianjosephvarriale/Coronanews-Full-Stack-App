@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.8fc5118b.chunk.css",
-    "main.js": "/static/js/main.8191e34f.chunk.js",
-    "main.js.map": "/static/js/main.8191e34f.chunk.js.map",
+    "main.js": "/static/js/main.a298cfe5.chunk.js",
+    "main.js.map": "/static/js/main.a298cfe5.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.469930a7.js",
     "runtime~main.js.map": "/static/js/runtime~main.469930a7.js.map",
     "static/js/2.3afed717.chunk.js": "/static/js/2.3afed717.chunk.js",
     "static/js/2.3afed717.chunk.js.map": "/static/js/2.3afed717.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b6a315ae3270fb6d4e6672d7172188ef.js": "/precache-manifest.b6a315ae3270fb6d4e6672d7172188ef.js",
+    "precache-manifest.de30a2b11267ca987ed55ac5176c2bc7.js": "/precache-manifest.de30a2b11267ca987ed55ac5176c2bc7.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.8fc5118b.chunk.css.map": "/static/css/main.8fc5118b.chunk.css.map",
     "static/media/algorithm.svg": "/static/media/algorithm.df96bd62.svg",
