@@ -19282,3 +19282,314 @@ ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[
 ):
   
 app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 14:42:58 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (6.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 146ms (Views: 139.6ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 14:43:01 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 14:43:42 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 143ms (Views: 140.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 14:43:45 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 14:43:52 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (3.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 150ms (Views: 142.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 14:47:25 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (3.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 132ms (Views: 128.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 14:47:28 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts/ca" for 127.0.0.1 at 2020-03-23 14:47:42 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"ca"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "ca"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/ca" for 127.0.0.1 at 2020-03-23 14:48:28 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"ca"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "ca"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/ca" for 127.0.0.1 at 2020-03-23 14:49:17 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"ca"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "ca"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/ca" for 127.0.0.1 at 2020-03-23 14:49:25 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"ca"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "ca"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/ca" for 127.0.0.1 at 2020-03-23 14:50:22 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"ca"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "ca"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/ca" for 127.0.0.1 at 2020-03-23 14:53:09 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"ca"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "ca"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/ca" for 127.0.0.1 at 2020-03-23 14:53:29 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"ca"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "ca"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/ca" for 127.0.0.1 at 2020-03-23 14:54:13 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"ca"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "ca"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/ca" for 127.0.0.1 at 2020-03-23 14:54:23 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"ca"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "ca"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/ca" for 127.0.0.1 at 2020-03-23 14:55:41 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"ca"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "ca"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/ca" for 127.0.0.1 at 2020-03-23 14:56:49 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"ca"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "ca"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/ca" for 127.0.0.1 at 2020-03-23 14:57:50 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"ca"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "ca"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/ca" for 127.0.0.1 at 2020-03-23 14:58:14 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"ca"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "ca"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 14:58:44 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 120ms (Views: 116.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 14:58:47 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 14:59:01 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 130ms (Views: 128.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 14:59:04 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 14:59:11 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 129ms (Views: 127.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 14:59:14 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 14:59:37 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 182ms (Views: 179.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 14:59:40 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 15:00:07 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 167ms (Views: 164.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 15:00:10 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts/de" for 127.0.0.1 at 2020-03-23 15:00:14 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"de"}
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "de"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/de" for 127.0.0.1 at 2020-03-23 15:00:27 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"de"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "de"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/de" for 127.0.0.1 at 2020-03-23 15:00:34 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"de"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "de"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
