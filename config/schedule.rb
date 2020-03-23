@@ -3,8 +3,12 @@
 # It's helpful, but not entirely necessary to understand cron before proceeding.
 # http://en.wikipedia.org/wiki/Cron
 
-every 1.minute do
-    runner 'Post.upsert_database', :environment => "development"
+every 1.day, at: '10:00 pm' do
+    command 'heroku run rake update_feed' 
+end
+
+every 1.day, at: '9:00 am' do
+    command 'heroku run rake mail_subscribers' 
 end
 
 # Example:
