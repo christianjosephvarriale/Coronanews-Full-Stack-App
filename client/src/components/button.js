@@ -5,6 +5,8 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles(theme => ({
   button: {
     margin: theme.spacing(1),
+    fontSize: 13,
+    fontFamily: 'Montserrat'
   },
   input: {
     display: 'none',

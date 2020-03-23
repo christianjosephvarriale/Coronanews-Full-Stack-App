@@ -24,6 +24,9 @@ const useStyles1 = makeStyles(theme => ({
   success: {
     backgroundColor: green[600],
   },
+  root : {
+    fontSize: 13
+  },
   error: {
     backgroundColor: theme.palette.error.dark,
   },

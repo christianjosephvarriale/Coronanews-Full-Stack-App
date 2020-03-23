@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'scaffold/Subscribers'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # post '/scripts/yahoo', to: 'scripts#yahoo'
   get '/posts/:region', to: 'posts#show'
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   get '/comments', to: 'comments#index'
   post '/comments', to: 'comments#create'
   get '/posts', to: 'posts#index'
+  post '/subscribers', to: 'subscribers#subscribe'
 
   get '*path', to: "application#fallback_index_html", constraints: ->(request) do
     !request.xhr? && request.format.html?

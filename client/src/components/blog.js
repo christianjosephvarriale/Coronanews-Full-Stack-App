@@ -19,7 +19,6 @@ class Blog extends Component {
 
     componentDidMount() {
 
-        debugger;
         const url = this.props.location.pathname;
 
         // see if a country is referenced 
@@ -60,8 +59,6 @@ class Blog extends Component {
 
         var length = posts.length;
 
-        console.log(`Here are the posts: ${JSON.stringify(posts)}`)
-
         if (length > 0) {
 
             featPosts = featPosts.map((post) => 
@@ -77,8 +74,6 @@ class Blog extends Component {
 
             // load only up to 12 posts
             const slcdPostLst = posts.slice( (page-1) * 12, page * 12 );
-
-            console.log(`Here are the sliced posts: ${JSON.stringify(slcdPostLst)}`)
 
             posts = slcdPostLst.map((post) =>  
                 <BlogPost title={post.title} headerImg={post.headerImg} id={post.id} 
@@ -109,7 +104,7 @@ class Blog extends Component {
                             </div>
                         </section>  */}
 
-                        <section style={{width:'80%',margin:'auto',marginTop:150,marginBottom:100}}>
+                        {/* <section style={{width:'80%',margin:'auto',marginTop:150,marginBottom:100}}>
                             <Card>
                                 <CardContent>
                                     <img src={corona} />
@@ -117,7 +112,7 @@ class Blog extends Component {
                                     <p>Select a Country and monitor updates to keep track of loved ones, and get new developments from overseas</p>
                                 </CardContent>
                             </Card>
-                        </section>
+                        </section> */}
 
                         <section className={'s-featured'}>
                             <div className={styles.row}>

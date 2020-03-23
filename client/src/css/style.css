@@ -20,7 +20,7 @@
 
 body {
   background: #fff;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif !important;
   color: #666666;
   overflow-x: hidden;
 }

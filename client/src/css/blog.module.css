@@ -1744,9 +1744,9 @@ html {
   }
   
   label, legend {
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Montserrat", sans-serif !important;
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 1.4rem !important;
     margin-bottom: .9rem;
     line-height: 1.714;
     color: #000000;

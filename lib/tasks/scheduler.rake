@@ -4,3 +4,9 @@ task :update_feed => :environment do
   Post.upsert_database
   puts "done."
 end
+
+task :mail_subscribers => :environment do
+  puts "mailing subscribers..."
+  Subscriber.mail_subscribers
+  puts "done."
+end

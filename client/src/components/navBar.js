@@ -35,9 +35,9 @@ class NavBar extends Component {
         
         
         // if the proper cookie tag is not set then show subscribe modal
-        if (!document.cookie.includes('subscribed=true')) {
-            this.props.toggleSubscriptionState();
-        }
+        // if (!document.cookie.includes('subscribed=true')) {
+        //     this.props.toggleSubscriptionState();
+        // }
     }
     
     componentDidUpdate(prevProps) {
@@ -57,9 +57,6 @@ class NavBar extends Component {
     render(){
         const { loading } = this.props.state.AppReducer;
         const { mobile } = this.props.state.AppReducer
-
-        console.log(`Here's the props ${JSON.stringify(this.props)}`)
-        console.log(`Here's the loader ${loading}`)
 
         // conditionally render header text
         let headerText;

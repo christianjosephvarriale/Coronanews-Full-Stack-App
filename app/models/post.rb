@@ -5,7 +5,7 @@ class Post < ApplicationRecord
      def self.upsert_database
 
         # delete all Posts currently in the table
-        Post.where(:featured => true).destroy_all
+        Post.where(:featured => true).update_all(:featured => false)
 
         # create all news articles from API by countries
         regions = ['ca','us','de','it','gb','fr','nl','at','ch']
@@ -39,9 +39,9 @@ class Post < ApplicationRecord
                     :featured => false
                 )
             end
-
-            # randomly create 3 featured posts
-            Post.where(region: region).order("RANDOM()").limit(3).update_all(:featured => true)
         end
+
+        # create featured posts based on date
+        Post.where({ date: (Time.now.midnight - 1.day)..Time.now.midnight }).update_all(:featured => true)
     end
 end

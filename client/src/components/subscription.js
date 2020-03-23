@@ -6,13 +6,31 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
-
+import corona from '../img/coronavirus.jpg'
+import AutoSelect from './autoselect';
 import { toggleSubscriptionState } from '../actions/pageActions';
+import '../lib/ionicons/css/ionicons.min.css';
 
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return !re.test(String(email).toLowerCase());
 }
+
+const suggestions = [
+    { label : 'Canada', value : 'ca' },
+    { label : 'United States', value : 'us' },
+    { label : 'Germany', value : 'de' },
+    { label : 'Italy', value : 'it' },
+    { label : 'Austria', value : 'at' },
+    { label : 'France', value : 'fr' },
+    { label : 'Netherlands', value : 'nl' },
+    { label : 'Switzerland', value : 'cl' },
+    { label : 'United Kingdom', value : 'gb' },
+
+  ].map(suggestion => ({
+    value: suggestion.value,
+    label: suggestion.label,
+  }));
 
 export class Subscription extends Component {
     constructor(props) {
@@ -22,6 +40,8 @@ export class Subscription extends Component {
             openError: false,
             email: '',
             emailError: false,
+            selectedCountries: [],
+            countriesError: false
           };
     }
     /**
@@ -40,47 +60,50 @@ export class Subscription extends Component {
         document.cookie = cookie_string;
     }
 
-    handleSubmit = e => {
+    handleChangeMulti = (array) => {
+
+        if (array) {
+          var countryList = array.map(country => country.value);
+        }
+        
+         this.setState({
+            selectedCountries: countryList
+         })
+  
+    }
+
+    handleSubmit = async (e) => {
         console.log('called submit form')
         e.preventDefault();
 
         // see if the email is in error
         if (validateEmail(this.state.email)) {
-            
+
             // set the error state
             this.setState({
                 emailError: true,
                 openError: true
             });
+        } else { /* no errors are reported, sent off the contact email */
 
-        } else {
-            // no errors are reported, sent off the contact email
-            const bodyFormData = new FormData();
-            bodyFormData.set('EMAIL', this.state.email);
-            bodyFormData.set('b_02be227eb8d0b055f158fcbe1_4e44f0be3d',null);
-            bodyFormData.set('subscribe','Subscribe');
+            try {
+                const res = await axios.post('/subscribers', { address: this.state.email, countries: this.state.selectedCountries.length === 0 ? 'all' : this.state.selectedCountries });
+                console.log(res.data);
+            } catch (err) {
+                throw Error(err);
+            }
 
-            axios({
-                url: 'https://cors-anywhere.herokuapp.com/https://tekblg.us4.list-manage.com/subscribe/post?u=02be227eb8d0b055f158fcbe1&amp;id=4e44f0be3d', 
-                data: bodyFormData,
-                method: 'post'
+            this.setState({
+                email: '',
+                openSuccess: true,
+                emailError:false,
             })
-            .then(response => {
-                console.log(response.data);
-    
-                this.setState({
-                    email: '',
-                    openSuccess: true,
-                    emailError:false,
-                })
 
-                // toggle the state of the dialog
-                this.props.toggleSubscriptionState()
+            // toggle the state of the dialog
+            this.props.toggleSubscriptionState()
 
-                // add cookie
-                this.setCookie()
-            })
-            .catch(error => console.log(error))
+            // add cookie
+            this.setCookie()
         }
     }
 
@@ -114,29 +137,22 @@ export class Subscription extends Component {
                 <Snackbar handleClose={this.handleClose} open={this.state.openError} variant={'error'} message={"You've got some errors on the page"} />
 
                 <Dialog open={open} onClose={this.handleClose} aria-labelledby="form-dialog-title">    
-                    <div style={{padding:'0 40px 20px 40px'}}>
-                        <h2 id="form-dialog-title">Subscribe</h2>
-                        <p> To subscribe to this website, please enter your email address here. We will send updates
-                            occasionally. </p>
+                    <div style={{padding:'40px 40px 20px 40px'}}>
+                        <img src={corona} />
+                        <h2 style={{paddingTop:20}} id="form-dialog-title">Subscribe to Corona Virus breaking news</h2>
+                        <ul style={{margin:0}}>
+                            <li style={{display:'flex'}}> <i style={{marginRight:10}} className={"ion-android-cloud-done"}></i><p> Please enter your email address here and select countries to monitor. </p> </li>
+                            <li style={{display:'flex'}}> <i style={{marginRight:10}} className={"ion-android-cloud-done"}></i><p> We will send you breaking news over the last 24 hours from high quality news sources </p> </li>
+                        </ul>
                         <Textfield helperText={(this.state.emailError) ? 'Please fill out your email' : ''} error={this.state.emailError} name={'email'} value={this.state.email} handleChange={this.handleChange} />
-                        
+                        <AutoSelect suggestions={suggestions} label={'Countries'} placeholder={'Select countries to monitor. default: all'} handleChangeMulti={this.handleChangeMulti} multi={this.stateselectedCountries} />
+
                         <DialogActions>
                         <div class="text-center"><Button handleClick={this.handleSubmit} label={'Subscribe'}/></div>
                         <div class="text-center"><Button handleClick={this.handleClose} label={'Cancel'}/></div>
                         </DialogActions>
                     </div>
                 </Dialog>
-   
-                {/* <div id="mc_embed_signup">
-                <form action="https://webhook.site/d358d128-e7a6-49cd-bf4b-5cbdefd9eeab" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                    <div id="mc_embed_signup_scroll">
-                    <label for="mce-EMAIL">Subscribe</label>
-                    <input type="email" value="coolemail@email.com" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required />
-                    <div aria-hidden="true"><input type="text" name="b_02be227eb8d0b055f158fcbe1_4e44f0be3d" tabindex="-1" value=""/></div>
-                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" /></div>
-                    </div>
-                </form>
-                </div> */}
             </section>
         )
     };
