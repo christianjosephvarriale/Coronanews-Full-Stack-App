@@ -10,8 +10,8 @@ class SubscribersController < ApplicationController
       
       if params[:countries] == 'all'
 
-        RestClient.post("https://api:3a4318a091b6de45cc9cfec15cdf835b-9a235412-c98b79b9" \
-                    "@api.mailgun.net/v3/lists/all@coronanews.ca/members",
+        RestClient.post("https://api:%s" \
+                    "@api.mailgun.net/v3/lists/all@coronanews.ca/members" % ENV['MAILGUN_APIKEY'],
                     :subscribed => true,
                     :address => params[:address])
 
@@ -20,8 +20,8 @@ class SubscribersController < ApplicationController
       else
 
         for country in params[:countries] do
-          RestClient.post("https://api:3a4318a091b6de45cc9cfec15cdf835b-9a235412-c98b79b9" \
-                    "@api.mailgun.net/v3/lists/%s@coronanews.ca/members" % country,
+          RestClient.post("https://api:%s" \
+                    "@api.mailgun.net/v3/lists/%s@coronanews.ca/members" % [ ENV['MAILGUN_APIKEY'], country ],
                     :subscribed => true,
                     :address => params[:address])
   
