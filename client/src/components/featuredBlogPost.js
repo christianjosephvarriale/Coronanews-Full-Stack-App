@@ -19,6 +19,8 @@ class FeaturedBlogPost extends Component {
             return ( <Skeleton variant="rect" width={210} height={118} /> )
         } else {
             const headerImg = state.headerImg;
+            const date = new Date(state.date);
+
             let author;
             if (!state.author) {
                 author = 'Corona News'
@@ -53,7 +55,7 @@ class FeaturedBlogPost extends Component {
                                 </a>
                                 <ul className={'entry-meta'}>
                                     <li><a href={state.url}>{author}</a></li>
-                                    <li>{state.date}</li>
+                                    <li>{date.toDateString()}</li>
                                 </ul>
                             </div>
                         </div> 

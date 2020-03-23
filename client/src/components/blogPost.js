@@ -7,6 +7,8 @@ class BlogPost extends Component {
 
     render() {
         const props = this.props;
+        const date = new Date(props.date);
+
         if (!props.url) {
             return null
         } else {
@@ -24,7 +26,7 @@ class BlogPost extends Component {
                         </div>
                         <h1 className={styles.itemEntryTitle}><a href={props.url}>{props.title}</a></h1>
                         <div className={styles.itemEntryDate}>
-                            <a href={props.url} role="menuitem">{props.date}</a>
+                            <a href={props.url} role="menuitem">{date.toDateString()}</a>
                         </div>
                     </div>
                 </div> 

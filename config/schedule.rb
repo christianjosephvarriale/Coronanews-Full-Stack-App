@@ -4,11 +4,11 @@
 # http://en.wikipedia.org/wiki/Cron
 
 every 1.day, at: '10:00 pm' do
-    command 'heroku run rake update_feed' 
+    command 'heroku run rake update_feed --app sleepy-anchorage-08584' 
 end
 
 every 1.day, at: '9:00 am' do
-    command 'heroku run rake mail_subscribers' 
+    command 'heroku run rake mail_subscribers --app sleepy-anchorage-08584' 
 end
 
 # Example:

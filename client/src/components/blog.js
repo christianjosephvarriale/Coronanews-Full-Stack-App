@@ -52,11 +52,6 @@ class Blog extends Component {
         const url = this.props.location.pathname;
         posts = posts.concat(featPosts);
 
-        // sort the posts by datetime
-        posts.sort(function(a, b) {
-            return (a.date < b.date) ? -1 : ((a.date > b.date) ? 1 : 0);
-        });
-
         var length = posts.length;
 
         if (length > 0) {
