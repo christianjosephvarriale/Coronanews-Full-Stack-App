@@ -23,6 +23,8 @@ class Pagination extends React.Component {
         currentPage = 1;
     }
 
+    console.log(`Here's the current page ${currentPage}...`)
+
     let backDisabled = false;
     let forwardDisabled = false;
 

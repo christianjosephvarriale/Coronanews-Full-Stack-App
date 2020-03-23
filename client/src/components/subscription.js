@@ -10,6 +10,7 @@ import corona from '../img/coronavirus.jpg'
 import AutoSelect from './autoselect';
 import { toggleSubscriptionState } from '../actions/pageActions';
 import '../lib/ionicons/css/ionicons.min.css';
+import logo from '../img/logo/virus.png';
 
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -141,8 +142,8 @@ export class Subscription extends Component {
                         <img src={corona} />
                         <h2 style={{paddingTop:20}} id="form-dialog-title">Subscribe to Corona Virus breaking news</h2>
                         <ul style={{margin:0}}>
-                            <li style={{display:'flex'}}> <i style={{marginRight:10}} className={"ion-android-cloud-done"}></i><p> Please enter your email address here and select countries to monitor. </p> </li>
-                            <li style={{display:'flex'}}> <i style={{marginRight:10}} className={"ion-android-cloud-done"}></i><p> We will send you breaking news over the last 24 hours from high quality news sources </p> </li>
+                            <li style={{display:'flex'}}> <img src={logo} style={{width:20,height:20,marginTop:5,marginRight:15}} /><p> Please enter your email address here and select countries to monitor. </p> </li>
+                            <li style={{display:'flex'}}> <img src={logo} style={{width:20,height:20,marginTop:5,marginRight:15}} /><p> We will send you breaking news over the last 24 hours from high quality news sources </p> </li>
                         </ul>
                         <Textfield helperText={(this.state.emailError) ? 'Please fill out your email' : ''} error={this.state.emailError} name={'email'} value={this.state.email} handleChange={this.handleChange} />
                         <AutoSelect suggestions={suggestions} label={'Countries'} placeholder={'Select countries to monitor. default: all'} handleChangeMulti={this.handleChangeMulti} multi={this.stateselectedCountries} />

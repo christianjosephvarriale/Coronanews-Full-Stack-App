@@ -90,10 +90,10 @@ class NavBar extends Component {
 
                 <ul class="header__nav">
                 
-                <li role="menuitem"><a href="#" onClick={(e) => this.props.toggleSubscriptionState()}>Subscribe</a></li>
+                <li role="menuitem"><a href="" onClick={(e) => { e.preventDefault(); this.props.toggleSubscriptionState() }}>Subscribe</a></li>
                 
                 <li class="has-children">
-                    <a href="#0" title="">Countries</a>
+                    <a href="" title="">Countries</a>
                     <ul class="sub-menu">  
                         <li role="menuitem"><NavLink to="/ca/1" role="menuitem">Canada</NavLink></li>     
                         <li role="menuitem"><NavLink to="/us/1" role="menuitem">US</NavLink></li>
