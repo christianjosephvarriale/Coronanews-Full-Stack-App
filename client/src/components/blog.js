@@ -56,6 +56,8 @@ class Blog extends Component {
 
         if (length > 0) {
 
+            featPosts = featPosts.slice(0,12)
+
             featPosts = featPosts.map((post) => 
                 <FeaturedBlogPost title={post.title} headerImg={post.headerImg} id={post.id} 
                 region={post.region} date={post.date} author={post.author} url={post.url}  />

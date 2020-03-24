@@ -19935,3 +19935,320 @@ ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[
 ):
   
 app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 17:22:11 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 131ms (Views: 129.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 17:22:14 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 17:22:20 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 111ms (Views: 109.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 17:22:23 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 17:22:30 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 137ms (Views: 134.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 17:22:33 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 17:22:43 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 109ms (Views: 106.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 17:22:46 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 17:23:05 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 114ms (Views: 110.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 17:23:08 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts/fr" for 127.0.0.1 at 2020-03-23 17:23:23 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"fr"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "fr"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/fr" for 127.0.0.1 at 2020-03-23 17:23:42 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"fr"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "fr"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/fr" for 127.0.0.1 at 2020-03-23 17:23:53 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"region"=>"fr"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."region" = ?[0m  [["region", "fr"]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 17:24:12 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 128ms (Views: 125.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 17:24:15 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 17:24:27 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 135ms (Views: 133.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 17:24:30 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 17:24:40 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 136ms (Views: 134.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 17:24:43 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 17:24:54 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 101ms (Views: 99.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 17:24:57 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 17:25:05 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (3.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 127ms (Views: 123.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 17:25:08 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-23 17:25:18 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 143ms (Views: 140.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-23 17:25:21 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-24 00:15:33 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (7.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 148ms (Views: 140.1ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-24 00:15:36 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-24 00:23:52 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (4.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 144ms (Views: 139.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/null" for 127.0.0.1 at 2020-03-24 00:23:55 -0400
+Processing by ApplicationController#fallback_index_html as HTML
+  Parameters: {"path"=>"null"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template public/index.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/cjv/Documenti/varritech/app/views"
+  * "/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/devise-4.7.1/app/views"
+  * "/home/cjv/Documenti/varritech"
+  * "/"
+):
+  
+app/controllers/application_controller.rb:4:in `fallback_index_html'
+Started GET "/posts" for 127.0.0.1 at 2020-03-24 00:24:41 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (5.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/controllers/posts_controller.rb:8
+Completed 200 OK in 190ms (Views: 184.6ms | ActiveRecord: 5.1ms)
+
+
