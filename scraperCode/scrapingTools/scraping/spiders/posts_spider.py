@@ -21,6 +21,7 @@ class PostsSpider(scrapy.Spider):
     def extract(self, response):
         ''' extracts the page data using XPATH selectors '''
 
+        yield { 'element' : response.xpath(f"//p[contains(text(), \"{self.start_data}\")]").get() } 
         for e in response.xpath(f"//p[contains(text(), \"{self.start_data}\")]/following-sibling::p").getall():
             yield { 'element' : e }
             
