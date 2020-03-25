@@ -19,13 +19,13 @@ class Subscriber < ApplicationRecord
 
         @template_all_vars = { :countries => 'all available countries', :date => Time.zone.now.to_date, :posts => @formatted_all_posts }.to_json
 
-        RestClient.post "https://api:%s"\
-		"@api.mailgun.net/v3/coronanews.ca/messages" % ENV['MAILGUN_APIKEY'],
+        RestClient.post ("https://api:#{ENV['MAILGUN_APIKEY']}"\
+		"@api.mailgun.net/v3/coronanews.ca/messages",
 		:from => "Corona News <news@coronanews.ca>",
 		:to => "<all@coronanews.ca>",
 		:subject => "Corona Virus Breaking News",
         :template => "new_stories",
-        :"h:X-Mailgun-Variables" => @template_all_vars
+        :"h:X-Mailgun-Variables" => @template_all_vars)
 
         regions = ['ca','us','de','it','gb','fr','nl','at','ch']
 
@@ -53,13 +53,13 @@ class Subscriber < ApplicationRecord
     
             @template_vars = { :countries => regions_map[@region], :date => Time.zone.now.to_date, :posts => @formatted_posts }.to_json
 
-            RestClient.post "https://api:%s"\
-            "@api.mailgun.net/v3/coronanews.ca/messages" % ENV['MAILGUN_APIKEY'],
+            RestClient.post ("https://api:#{ENV['MAILGUN_APIKEY']}"\
+            "@api.mailgun.net/v3/coronanews.ca/messages",
             :from => "Corona News <news@coronanews.ca>",
-            :to => "<%s@coronanews.ca>" % @region,
+            :to => "<#{@region}@coronanews.ca>",
             :subject => "Corona Virus Breaking News",
             :template => "new_stories",
-            :"h:X-Mailgun-Variables" => @template_vars
+            :"h:X-Mailgun-Variables" => @template_vars)
         end
     end
 end

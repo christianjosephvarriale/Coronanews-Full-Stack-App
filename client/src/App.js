@@ -26,13 +26,6 @@ class App extends Component {
       console.log(`called update`);
       this.props.toggleMobile('OFF');
     }
-
-    try {
-      window._mNHandle.queue.push(function (){
-          window._mNDetails.loadTag("291634888", "300x250", "291634888");
-      });
-    }
-    catch (error) {}
   }
 
   componentWillUnmount() {
@@ -53,14 +46,12 @@ class App extends Component {
           return (
             <main>
               <NavBar />
-              <div id="291634888" />
               <Router forceRefresh="true">
                 <Switch>
                   <Route exact path='/' component={Blog} />
                   <Route path="/:blogId" component={Blog} />
                 </Switch>
               </Router>
-              <div id="291634888" />
             </main>
           );
 

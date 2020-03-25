@@ -41,6 +41,7 @@ class Blog extends Component {
             this.props.toggleLoader('OFF');
             require("../js/blog.js");
         }, 3000)
+
     }
 
     render(){
@@ -72,10 +73,11 @@ class Blog extends Component {
             // load only up to 12 posts
             const slcdPostLst = posts.slice( (page-1) * 12, page * 12 );
 
-            posts = slcdPostLst.map((post) =>  
-                <BlogPost title={post.title} headerImg={post.headerImg} id={post.id} 
-                region={post.region} date={post.date} url={post.url}
-                /> 
+            posts = slcdPostLst.map((post, index) =>  {
+                return (<BlogPost index={index} title={post.title} headerImg={post.headerImg} id={post.id} 
+                region={post.region} date={post.date} url={post.url} 
+                /> )
+                }
             );
         }
 
@@ -121,6 +123,8 @@ class Blog extends Component {
                                 </div>
                             </div>
                         </section> 
+
+                        <div id="container-c6a8c01de8a821e90f26d2bb7ee02fc0" />
 
                         <section className={styles.sContent}>
                             
