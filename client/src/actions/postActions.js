@@ -7,9 +7,8 @@ import axios from 'axios';
  *  2. If region is not undefined it will retreive based on region
  */
 export const fetchAllPosts = region => dispatch => {
-
     if (region) {
-        axios.get(`/posts/${region}`)
+        axios.get(`/posts/region/${region}`)
         .then((res) => {
             const rawPosts = res.data
             const posts = [];
@@ -55,27 +54,19 @@ export const fetchAllPosts = region => dispatch => {
 
 /**
  * Description:
- *  1. Queries the database to retreive based on Id
+ *  1. Queries the database to retreive based on title
  */
-export const fetchPost = id => dispatch => {
-
-    axios.get(`/posts/${id}`)
-        .then((res) => {
-            const post = res.data
-            dispatch({
-                type: POST_ACTIONS.FETCH,
-                payload: post
-            })
-        });
-} 
-
-export const fetchComments = id => dispatch => {
-    axios.get( '/comments/?post=' + id )
-    .then((response) => {
-        dispatch({
-            type: COMMENT_ACTIONS.FETCH_ALL,
-            payload: response.data
-        })
+export const fetchPost = title => dispatch => {
+    axios.post('/posts/title',
+    {
+        title: title
     })
-    .catch((error) => { throw(error) } )
-}
+    .then((res) => {
+        const post = res.data
+        debugger;
+        dispatch({
+            type: POST_ACTIONS.FETCH,
+            payload: post
+        })
+    });
+} 

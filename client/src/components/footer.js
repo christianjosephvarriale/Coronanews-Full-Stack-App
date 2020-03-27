@@ -5,6 +5,14 @@ import Textfield from './textInput';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { toggleLoader } from '../actions/appActions';
+import logo from '../img/logo/virus.png';
+import { NavLink, Link, BrowserRouter as Router } from "react-router-dom";
+import ansa from '../img/sources/ansa.png'
+import bbc from '../img/sources/bbc-news.png'
+import morgen from '../img/sources/morgen_post.png'
+import ny from '../img/sources/new_york_times.png'
+import guardian from '../img/sources/the_guardian.png'
+import '../css/style.css';
 
 let year = new Date().getFullYear();
 
@@ -121,62 +129,91 @@ class Footer extends Component {
                 <Snackbar handleClose={this.handleClose} open={this.state.openSuccess} variant={'success'} message={"Thanks for getting in contact! We'll reach out soon"} />
                 <Snackbar handleClose={this.handleClose} open={this.state.openError} variant={'error'} message={"You've got some errors on the page"} />
 
+                <section id="clients">  
+                    <div class="section-header">
+                        <h3 style={{fontWeight:300,padding:0}}class="section-title">Our sources</h3>
+                        <span class="section-divider"></span>
+                        <p style={{padding:0}}class="section-description">
+                            We provide you with high-quality, relevant, translated articles from all over the world <br/>
+                        </p>
+                    </div>
+                    <div class="container">
+                        <div class="row wow fadeInUp">
+                            <div class="col-md-3">
+                                <img src={bbc} alt="" />
+                            </div>
+                            <div class="col-md-3">
+                                <img src={morgen} alt="" />
+                            </div>
+                            <div class="col-md-3">
+                                <img src={ny} alt="" />
+                            </div>
+                            <div class="col-md-3">
+                                <img src={guardian} alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section id="contact">
-                                <div class="container">
+                    <div class="container">
                                 <div class="row wow fadeInUp">
-
                                     <div class="col-lg-4 col-md-4">
-                                    <div class="contact-about">
-                                        <h3>Tekblg</h3>
-                                        <p>A university of Waterloo Student Initiative. For any questions regarding custom integrations and projects, please write us a message. Our service team will promptly reply. Remember, you are what makes us awesome.</p>
-                                        {/* <div class="social-links">
-                                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                                        <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-                                        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                                        </div> */}
-                                    </div>
-                                    </div>
-
-                                    <div class="col-lg-3 col-md-4">
-                                    <div class="info">
-                                        <div>
-                                        <i class="ion-ios-location-outline"></i>
-                                        <p>University of Waterloo<br/>200 University Avenue West Waterloo, Ontario, N2L 3G1</p>
+                                        <div class="contact-about">
+                                            <div style={{ display:'flex' }}>
+                                                <img style={{ height: '40px', marginRight: 20 }} src={logo} alt="Varritech logo" title="Varritech" />
+                                                <h3>Corona News</h3>
+                                            </div>
+                                            <p>A University of Waterloo student initiative. Our aim is to keep you informed during this crisis. We host high quality articles from around the world, keeping you up to date with topics surrounding latest in governmental relief, spread rates, and more.</p>
                                         </div>
-
-                                        <div>
-                                        <i class="ion-ios-email-outline"></i>
-                                        <p>Tekblg@gmail.com</p>
+                                        <div class="info">
+                                            <div>
+                                                <i class="ion-ios-location-outline"></i>
+                                                <p>University of Waterloo<br/>200 University Avenue West Waterloo, Ontario, N2L 3G1</p>
+                                            </div>
+                                            <div>
+                                                <i class="ion-ios-email-outline"></i>
+                                                <p>varritech@gmail.com</p>
+                                            </div>
                                         </div>
-
-                                        <div>
-                                        <i class="ion-ios-telephone-outline"></i>
-                                        <p>+1 647 704 8645</p>
-                                        </div>
-
+                                        <div class="social-links">
+                                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                        </div> 
                                     </div>
+                                    <div class="col-lg-3 col-md-3">
+                                        <h5 style={{margin: 0,marginBottom: 20,fontWeight: 300,color: '#871f78',fontSize: 30,textTransform: 'uppercase'}}>Navigation</h5>
+                                        <Router forceRefresh="true">
+                                            <ul style={{margin: 0}}> 
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/canada/1" role="menuitem">Canada</NavLink></li>     
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/united-states/1" role="menuitem">US</NavLink></li>
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/germany/1" role="menuitem">Germany</NavLink></li>
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/italy/1" role="menuitem">Italy</NavLink></li>
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/austria/1" role="menuitem">Austria</NavLink></li>
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/france/1" role="menuitem">France</NavLink></li>
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/netherlands/1" role="menuitem">Netherlands</NavLink></li>
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/switzerland/1" role="menuitem">Switzerland</NavLink></li>
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/united-kingdom/1" role="menuitem">United Kingdom</NavLink></li>
+                                            </ul>
+                                        </Router>
                                     </div>
-
-                                    <div class="col-lg-5 col-md-8">
+                                    <div class="col-lg-5 col-md-5">
                                     <div class="form">
                                         <form id="contactForm" role="form" class="contactForm">
                                         <div class="form-row">
-                                            <div class="form-group col-lg-6">
+                                            <div class="col-lg-6">
                                                 <Textfield helperText={(this.state.nameError) ? 'Please fill out your name' : ''} error={this.state.nameError} name={'name'} value={this.state.name} handleChange={this.handleChange} />
                                             </div>
-                                            <div class="form-group col-lg-6">
+                                            <div class="col-lg-6">
                                                 <Textfield helperText={(this.state.emailError) ? 'Please fill out your email' : ''} error={this.state.emailError} name={'email'} value={this.state.email} handleChange={this.handleChange} />
                                              </div>
                                         </div>
-                                        <div class="form-group">
+                                        <div >
                                             <Textfield helperText={(this.state.subjectError) ? 'Please fill out the subject' : ''} error={this.state.subjectError} name={'subject'} value={this.state.subject} handleChange={this.handleChange} />
                                         </div>
-                                        <div class="form-group">
-                                            <Textfield helperText={(this.state.messageError) ? 'Please have a non-empty message' : ''} error={this.state.messageError} multiline name={'message'} value={this.state.message} handleChange={this.handleChange} />
+                                        <div >
+                                            <Textfield helperText={(this.state.messageError) ? 'Please have a non-empty message' : ''} multiline error={this.state.messageError} name={'message'} value={this.state.message} handleChange={this.handleChange} />
                                         </div>
-                                            <div class="text-center"><Button handleClick={this.handleSubmit} label={'Contact Tekblg'}/></div>
+                                            <div class="text-center"><Button handleClick={this.handleSubmit} label={'Contact Corona News'}/></div>
                                         </form>
                                     </div>
                                     </div>
@@ -189,8 +226,8 @@ class Footer extends Component {
                                 <div class="container">
                                     <div class="row">
                                     <div class="col-lg-6 text-lg-left text-center">
-                                        <div class="copyright">
-                                        &copy; Copyright <strong>Tekblg {year}</strong>. All Rights Reserved
+                                        <div style={{color:'#888'}}class="copyright">
+                                        &copy; Copyright <strong>Corona News {year}</strong>. All Rights Reserved
                                         </div>
                                     </div>
                                     <div class="col-lg-6">

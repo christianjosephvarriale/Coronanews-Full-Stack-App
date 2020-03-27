@@ -49,9 +49,10 @@ class App extends Component {
               <Router forceRefresh="true">
                 <Switch>
                   <Route exact path='/' component={Blog} />
-                  <Route path="/:blogId" component={Blog} />
+                  <Route path="/coronavirus/news/:country/articles/:title" component={BlogPage} />
                 </Switch>
               </Router>
+              <Footer />
             </main>
           );
 

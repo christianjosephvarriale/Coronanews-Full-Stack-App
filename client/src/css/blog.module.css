@@ -45,10 +45,6 @@
    -ms-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
  }
-
- p {
-   min-height: 40px;
- }
  
  body {
    margin: 0;
@@ -333,6 +329,7 @@
  a {
    text-decoration: none;
    line-height: inherit;
+   color: #888;
  }
  
  a img {
@@ -988,7 +985,6 @@ html {
    * ## links
    *  */
   a {
-    color: #1d28a1;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
@@ -1036,6 +1032,10 @@ html {
       margin-bottom: 0.9rem;
     }
   
+  }
+
+  p {
+    margin: 30px 0px;
   }
   
   h1, .h1 {
@@ -1314,7 +1314,7 @@ html {
   }
   
   ul {
-    list-style: disc;
+    list-style: none;
   }
   
   li {
@@ -3617,19 +3617,13 @@ html {
     color: rgba(255, 255, 255, 0.5);
   }
   
-  footer a {
-    color: #FFFFFF !important;
-  }
-  
   footer h4 {
-    font-family: "Nunito Sans", sans-serif;
     font-weight: 700;
     font-size: 1.4rem;
     line-height: 1.286;
     text-transform: uppercase;
     letter-spacing: .25rem;
     padding-bottom: 4.2rem;
-    color: #FFFFFF;
     margin-top: 0;
     position: relative;
   }
@@ -4101,7 +4095,7 @@ html {
   .entryAuthor {
     font-size: 1.6rem;
     margin-top: 7.2rem;
-    padding: 4.2rem 4rem 4.2rem 15rem;
+    padding: 40px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     position: relative;
   }
@@ -4181,7 +4175,6 @@ html {
   
   .sContentNav span {
     display: block;
-    font-family: "Nunito Sans", sans-serif;
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 1.5;
@@ -4192,15 +4185,13 @@ html {
   }
   
   .sContentNav a {
-    font-family: "Libre Baskerville", serif;
-    font-weight: 700;
     font-size: 3rem;
     line-height: 1.5;
     color: #000000;
   }
   
   .sContentNav a:hover, .sContentNav a:focus {
-    color: #111860;
+    color: #871f78;
   }
   
   .sContentPrev, .sContentNext {

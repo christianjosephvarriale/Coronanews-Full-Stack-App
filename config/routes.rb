@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   get 'scaffold/Subscribers'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # post '/scripts/yahoo', to: 'scripts#yahoo'
-  get '/posts/:region', to: 'posts#show'
+  get '/posts/region/:region', to: 'posts#show_region'
+  post '/posts/title', to: 'posts#show_post'
+
   post '/scripts/amazon', to: 'scripts#amazon'
   post '/mail', to: 'mail#create' 
   get '/comments', to: 'comments#index'

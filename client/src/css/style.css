@@ -1084,7 +1084,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .social-links {
-  padding: 20px;
+  padding: 20px 0;
 }
 
 #contact .social-links a {
@@ -1120,6 +1120,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .info p {
+  margin: 0px;
   padding: 0 0 10px 42px;
   line-height: 28px;
   font-size: 14px;
@@ -1196,7 +1197,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-links a {
-  color: #666;
+  color: #888;
   padding-left: 15px;
 }
 
@@ -1205,7 +1206,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-links a:hover {
-  color: #1dc8cd;
+  color: #871f78;
 }
 
 @media (min-width: 769px) {

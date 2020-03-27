@@ -2469,19 +2469,13 @@ footer {
   color: rgba(255, 255, 255, 0.5);
 }
 
-footer a {
-  color: #FFFFFF !important;
-}
-
 footer h4 {
-  font-family: "Nunito Sans", sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 1.286;
   text-transform: uppercase;
   letter-spacing: .25rem;
   padding-bottom: 4.2rem;
-  color: #FFFFFF;
   margin-top: 0;
   position: relative;
 }

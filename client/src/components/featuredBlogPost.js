@@ -3,11 +3,10 @@ import '../css/slick-slider.css';
 import Avatar from '@material-ui/core/Avatar';
 import { connect } from 'react-redux';
 import { fetchPost } from '../actions/postActions';
-
+import { NavLink, Link, BrowserRouter as Router } from "react-router-dom"; 
 import Skeleton from '@material-ui/lab/Skeleton';
 
 const colorArray = ['#283593','#c62828', '#0277BD', '#00695C', '#558B2F', '#F9A825', '#EF6C00', '#4E342E', '#37474F'];
-
 const generateColor = () => { return colorArray [ Math.round(Math.random() * (colorArray.length - 1)) ] }
 
 class FeaturedBlogPost extends Component {
@@ -20,6 +19,23 @@ class FeaturedBlogPost extends Component {
         } else {
             const headerImg = state.headerImg;
             const date = new Date(state.date);
+
+            let title = state.title
+            if ( title.length > 100 ) { /* truncate the length for readability */
+                title = title.slice(0, 100) + '...'
+            } 
+
+            const countryMap = {
+                ca : 'canada',
+                us : 'united-states',
+                de : 'germany',
+                it : 'italy',
+                gb : 'united-kingdom',
+                fr : 'france',
+                nl : 'netherlands',
+                at : 'austria',
+                ch : 'switzerland'
+            } 
 
             let author;
             if (!state.author) {
@@ -40,27 +56,29 @@ class FeaturedBlogPost extends Component {
                 }
             }
             return (
-                <div className={'featured-slide'}>
-                    <div className={'entry'}>
-                        <div className={'entry-background'} style={{ backgroundImage: 'url(' + headerImg + ')' }}></div>
-                        
-                        <div className={'entry-content'}>
-                            <span className={'entry-category'}><a href={state.url}> {state.region} </a> </span>
+                <Router forceRefresh="true">
+                    <div className={'featured-slide'}>
+                        <div className={'entry'}>
+                            <div className={'entry-background'} style={{ backgroundImage: 'url(' + headerImg + ')' }}></div>
+                            
+                            <div className={'entry-content'}>
+                                <span className={'entry-category'}><NavLink to={`/coronavirus/news/${countryMap[state.region]}/articles/${state.title}`}> {state.region} </NavLink> </span>
 
-                            <h1><a href={state.url}>{state.title}</a></h1>
+                                <h1><NavLink to={`/coronavirus/news/${countryMap[state.region]}/articles/${state.title}`}>{title}</NavLink></h1>
 
-                            <div className={'entry-info'}>
-                                <a href={state.url} className={'entry-profile-pic'}>
-                                    <Avatar style={{backgroundColor: generateColor() }}> {generateInitials()} </Avatar>
-                                </a>
-                                <ul className={'entry-meta'}>
-                                    <li><a href={state.url}>{author}</a></li>
-                                    <li>{date.toDateString()}</li>
-                                </ul>
-                            </div>
+                                <div className={'entry-info'}>
+                                    <NavLink to={`/coronavirus/news/${countryMap[state.region]}/articles/${state.title}`} className={'entry-profile-pic'}>
+                                        <Avatar style={{backgroundColor: generateColor() }}> {generateInitials()} </Avatar>
+                                    </NavLink>
+                                    <ul className={'entry-meta'}>
+                                        <li><NavLink to={`/coronavirus/news/${countryMap[state.region]}/articles/${state.title}`}>{author}</NavLink></li>
+                                        <li>{date.toDateString()}</li>
+                                    </ul>
+                                </div>
+                            </div> 
                         </div> 
                     </div> 
-            </div> 
+                </Router>
             )
         }
     }

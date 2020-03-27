@@ -12,7 +12,7 @@ class Pagination extends React.Component {
 
     let countryFlag = false;
     let country = '';
-    const countries = ['/ca','/us','/de','/it','/gb','/fr','/nl','/at','/ch']
+    const countries = ['/canada/','/united-states/','/germany/','/italy/','/united-kingdom/','/france/','/netherlands/','/austria/','/switzerland/']
     for (let i=0; i < countries.length; i++) {
         if (url.includes(countries[i])) {
             countryFlag = true;
@@ -62,7 +62,7 @@ class Pagination extends React.Component {
                 <Router forceRefresh="true">
                     <nav className={styles.pgn}>
                         <ul>
-                            <li><Link style={{display: backDisabled ? 'none' : ''}} className={styles.pgnPrev} to={`${countryFlag ? `${country}` : ''}/${(parseInt(currentPage) - 5)}`}>Prev</Link></li>
+                            <li><Link style={{display: backDisabled ? 'none' : ''}} className={styles.pgnPrev} to={`${countryFlag ? `/coronavirus/news${country}` : ''}${(parseInt(currentPage) - 5)}`}>Prev</Link></li>
                             {pageElements}
                              <li><Link style={{display: forwardDisabled ? 'none' : ''}} className={styles.pgnNext} to={`${countryFlag ? `${country}` : ''}/${((totalPages - currentPage > 5) ? parseInt(currentPage) + 5 : totalPages)}`} >Next</Link></li>
                         </ul>

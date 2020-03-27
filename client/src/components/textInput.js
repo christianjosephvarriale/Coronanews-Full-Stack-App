@@ -12,13 +12,10 @@ const useStyles = makeStyles(theme => ({
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: '100%'
+    width: '100%',
   },
   dense: {
     marginTop: theme.spacing(2),
-  },
-  menu: {
-    width: 200,
   },
 }));
 
@@ -29,7 +26,7 @@ export default function OutlinedTextFields(props) {
     return (
       <form className={classes.container} noValidate autoComplete="off">
         <TextField
-          id="outlined-name"
+          id="standard-multiline-flexible"
           error={props.error}
           helperText={props.helperText}
           label={props.name}
@@ -38,8 +35,9 @@ export default function OutlinedTextFields(props) {
           rowsMax="4"
           value={props.value}
           onChange={props.handleChange(props.name)}
-          margin="normal"
           variant="outlined"
+          size='small'
+          margin="normal"
         />
       </form>
     );
@@ -56,6 +54,7 @@ export default function OutlinedTextFields(props) {
           onChange={props.handleChange(props.name)}
           margin="normal"
           variant="outlined"
+          size='small'
         />
       </form>
     );

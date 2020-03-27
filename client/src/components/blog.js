@@ -23,7 +23,7 @@ class Blog extends Component {
 
         // see if a country is referenced 
         let allCountries = true;
-        const countries = ['ca','us','de','it','gb','fr','nl','at','ch']
+        const countries = ['/canada/','/united-states/','/germany/','/italy/','/united-kingdom/','/france/','/netherlands/','/austria/','/switzerland/']
         for (let i=0; i < countries.length; i++) {
             if (url.includes(countries[i])) {
                 this.props.fetchAllPosts(countries[i])

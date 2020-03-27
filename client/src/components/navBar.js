@@ -95,15 +95,15 @@ class NavBar extends Component {
                 <li class="has-children">
                     <a href="" title="">Countries</a>
                     <ul class="sub-menu">  
-                        <li role="menuitem"><NavLink to="/ca/1" role="menuitem">Canada</NavLink></li>     
-                        <li role="menuitem"><NavLink to="/us/1" role="menuitem">US</NavLink></li>
-                        <li role="menuitem"><NavLink to="/de/1" role="menuitem">Germany</NavLink></li>
-                        <li role="menuitem"><NavLink to="/it/1" role="menuitem">Italy</NavLink></li>
-                        <li role="menuitem"><NavLink to="/at/1" role="menuitem">Austria</NavLink></li>
-                        <li role="menuitem"><NavLink to="/fr/1" role="menuitem">France</NavLink></li>
-                        <li role="menuitem"><NavLink to="/nl/1" role="menuitem">Netherlands</NavLink></li>
-                        <li role="menuitem"><NavLink to="/ch/1" role="menuitem">Switzerland</NavLink></li>
-                        <li role="menuitem"><NavLink to="/gb/1" role="menuitem">United Kingdom</NavLink></li>
+                        <li role="menuitem"><NavLink to="/coronavirus/news/canada/1" role="menuitem">Canada</NavLink></li>     
+                        <li role="menuitem"><NavLink to="/coronavirus/news/united-states/1" role="menuitem">US</NavLink></li>
+                        <li role="menuitem"><NavLink to="/coronavirus/news/germany/1" role="menuitem">Germany</NavLink></li>
+                        <li role="menuitem"><NavLink to="/coronavirus/news/italy/1" role="menuitem">Italy</NavLink></li>
+                        <li role="menuitem"><NavLink to="/coronavirus/news/austria/1" role="menuitem">Austria</NavLink></li>
+                        <li role="menuitem"><NavLink to="/coronavirus/news/france/1" role="menuitem">France</NavLink></li>
+                        <li role="menuitem"><NavLink to="/coronavirus/news/netherlands/1" role="menuitem">Netherlands</NavLink></li>
+                        <li role="menuitem"><NavLink to="/coronavirus/news/switzerland/1" role="menuitem">Switzerland</NavLink></li>
+                        <li role="menuitem"><NavLink to="/coronavirus/news/united-kingdom/1" role="menuitem">United Kingdom</NavLink></li>
                     </ul>
                 </li>
                 <li role="menuitem">
