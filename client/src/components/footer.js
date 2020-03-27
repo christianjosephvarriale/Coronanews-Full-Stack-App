@@ -149,7 +149,7 @@ class Footer extends Component {
                 <Snackbar handleClose={this.handleClose} open={this.state.openError} variant={'error'} message={"You've got some errors on the page"} />
 
                 <section id="clients">  
-                    <div class="section-header">
+                    <div style={{padding: '0 30px'}}class="section-header">
                         <h3 style={{fontWeight:300,padding:0}}class="section-title">Some of Our Sources</h3>
                         <span class="section-divider"></span>
                         <p style={{padding:0}}class="section-description">

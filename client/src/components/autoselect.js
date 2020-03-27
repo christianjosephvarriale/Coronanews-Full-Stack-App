@@ -15,7 +15,6 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     margin: '20px 0px',
-    minWidth: 290,
     fontSize: 16
   },
   input: {

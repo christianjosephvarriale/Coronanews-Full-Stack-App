@@ -138,15 +138,15 @@ export class Subscription extends Component {
                 <Snackbar handleClose={this.handleClose} open={this.state.openError} variant={'error'} message={"You've got some errors on the page"} />
 
                 <Dialog open={open} onClose={this.handleClose} aria-labelledby="form-dialog-title">    
-                    <div style={{padding:'40px 40px 20px 40px'}}>
-                        <img src={corona} />
-                        <h2 style={{paddingTop:20}} id="form-dialog-title">Subscribe to Corona Virus breaking news</h2>
+                    <div style={{padding: '20px 20px 20px'}}>
+                        {/* <img src={corona} /> */}
+                        <h2 style={{marginTop: 0, padding: 0}} id="form-dialog-title">Corona Virus Breaking News</h2>
                         <ul style={{margin:0}}>
-                            <li style={{display:'flex'}}> <img src={logo} style={{width:20,height:20,marginTop:5,marginRight:15}} /><p> Please enter your email address here and select countries to monitor. </p> </li>
-                            <li style={{display:'flex'}}> <img src={logo} style={{width:20,height:20,marginTop:5,marginRight:15}} /><p> We will send you breaking news over the last 24 hours from high quality news sources </p> </li>
+                            <li style={{display:'flex'}}> <img src={logo} style={{width:20,height:20,marginTop:5,marginRight:15}} /><p style={{margin:0}}> Please enter email address here and select countries to monitor </p> </li>
+                            <li style={{display:'flex'}}> <img src={logo} style={{width:20,height:20,marginTop:5,marginRight:15}} /><p style={{margin:0}}> We will send you breaking news over the last 24 hours</p> </li>
                         </ul>
                         <Textfield helperText={(this.state.emailError) ? 'Please fill out your email' : ''} error={this.state.emailError} name={'email'} value={this.state.email} handleChange={this.handleChange} />
-                        <AutoSelect suggestions={suggestions} label={'Countries'} placeholder={'Select countries to monitor. default: all'} handleChangeMulti={this.handleChangeMulti} multi={this.stateselectedCountries} />
+                        <AutoSelect suggestions={suggestions} label={'Countries'} placeholder={'Default: all'} handleChangeMulti={this.handleChangeMulti} multi={this.stateselectedCountries} />
 
                         <DialogActions>
                         <div class="text-center"><Button handleClick={this.handleSubmit} label={'Subscribe'}/></div>
