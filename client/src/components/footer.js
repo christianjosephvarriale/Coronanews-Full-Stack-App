@@ -9,10 +9,27 @@ import logo from '../img/logo/virus.png';
 import { NavLink, Link, BrowserRouter as Router } from "react-router-dom";
 import ansa from '../img/sources/ansa.png'
 import bbc from '../img/sources/bbc-news.png'
+import rai from '../img/sources/rai_news.png'
+import fig from '../img/sources/lefigaro.png'
+import rep from '../img/sources/larepubblica.png'
+import del from '../img/sources/deletelgraaf1.png'
 import morgen from '../img/sources/morgen_post.png'
 import ny from '../img/sources/new_york_times.png'
 import guardian from '../img/sources/the_guardian.png'
 import '../css/style.css';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+const responsive = {
+    desktop: {
+      breakpoint: { max: 4000, min: 901 },
+      items: 4,
+    },
+    mobile: {
+      breakpoint: { max: 901, min: 0 },
+      items: 1,
+    },
+  };
 
 let year = new Date().getFullYear();
 
@@ -120,7 +137,9 @@ class Footer extends Component {
 
     render() {
         
-        const { loading } = this.props.state;
+        const { props } = this;
+        const { loading } = props.state;
+        const { mobile } = props;
         if (loading) {
             return ( null )
         } else {
@@ -131,7 +150,7 @@ class Footer extends Component {
 
                 <section id="clients">  
                     <div class="section-header">
-                        <h3 style={{fontWeight:300,padding:0}}class="section-title">Our sources</h3>
+                        <h3 style={{fontWeight:300,padding:0}}class="section-title">Some of Our Sources</h3>
                         <span class="section-divider"></span>
                         <p style={{padding:0}}class="section-description">
                             We provide you with high-quality, relevant, translated articles from all over the world <br/>
@@ -139,18 +158,34 @@ class Footer extends Component {
                     </div>
                     <div class="container">
                         <div class="row wow fadeInUp">
-                            <div class="col-md-3">
+                            <Carousel 
+                                swipeable={false}
+                                draggable={false}
+                                showDots={false}
+                                responsive={responsive}
+                                ssr={true} // means to render carousel on server-side.
+                                infinite={true}
+                                autoPlay={mobile !== "mobile" ? true : false}
+                                autoPlaySpeed={5000}
+                                keyBoardControl={false}
+                                customTransition="all ease 1"
+                                transitionDuration={500}
+                                containerClass="carousel-container"
+                                removeArrowOnDeviceType={["desktop", "mobile"]}
+                                deviceType={mobile ? 'mobile' : 'desktop'}
+                                dotListClass="custom-dot-list-style"
+                                itemClass="carousel-item-padding-40-px"
+                            >
                                 <img src={bbc} alt="" />
-                            </div>
-                            <div class="col-md-3">
+                                <img src={ansa} alt="" />
+                                <img src={del} alt="" />
+                                <img src={rai} alt="" />
+                                <img src={rep} alt="" />
+                                <img src={fig} alt="" />
                                 <img src={morgen} alt="" />
-                            </div>
-                            <div class="col-md-3">
                                 <img src={ny} alt="" />
-                            </div>
-                            <div class="col-md-3">
                                 <img src={guardian} alt="" />
-                            </div>
+                            </Carousel>
                         </div>
                     </div>
                 </section>
@@ -250,7 +285,10 @@ class Footer extends Component {
 
 
 const mapStateToProps = state => (
-    { state: state.AppReducer }
+    { 
+        state: state.AppReducer,
+        mobile: state.AppReducer.mobile
+    }
 )
 
 export default connect(mapStateToProps, { toggleLoader })(Footer);

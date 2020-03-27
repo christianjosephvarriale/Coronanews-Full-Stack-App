@@ -7,9 +7,6 @@ class Pagination extends React.Component {
     const props = this.props;
     const url = window.location.href;
     let currentPage = url.slice(url.lastIndexOf('/')+1).replace(/\D/g,'');
-
-    debugger;
-
     let countryFlag = false;
     let country = '';
     const countries = ['/canada/','/united-states/','/germany/','/italy/','/united-kingdom/','/france/','/netherlands/','/austria/','/switzerland/']

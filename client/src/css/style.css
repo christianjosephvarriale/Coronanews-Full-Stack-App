@@ -809,11 +809,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   overflow: hidden;
 }
 
+li.react-multi-carousel-item {
+  display: flex;
+  align-items: center;
+}
+
 #clients img {
   max-width: 100%;
   opacity: 0.5;
   transition: 0.3s;
-  padding: 15px 0;
+  padding: 0 15px;
+  filter: grayscale(100%);
 }
 
 #clients img:hover {
