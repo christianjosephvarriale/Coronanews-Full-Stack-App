@@ -16,8 +16,6 @@ NEWSPIDER_MODULE = 'scraping.spiders'
 AUTOTHROTTLE_ENABLED = True
 AUTOTHROTTLE_START_DELAY = 10
 
-LOG_ENABLED = False
-
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'christian_varriale-varritech-varritech@gmail.com'
 
