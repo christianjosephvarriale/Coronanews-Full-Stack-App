@@ -14,6 +14,7 @@ import { fetchAllPosts } from '../actions/postActions';
 import { toggleLoader } from '../actions/appActions';
 
 import Pagniation from './pagination';
+import { Redirect } from 'react-router-dom';
 
 class Blog extends Component {
 
@@ -23,10 +24,21 @@ class Blog extends Component {
 
         // see if a country is referenced 
         let allCountries = true;
+        const countriesMap = {
+            '/canada/' : 'ca',
+            '/united-states/' : 'us',
+            '/germany/' : 'de',
+            '/italy/' : 'it',
+            '/united-kingdom/' : 'gb',
+            '/france/' : 'fr',
+            '/netherlands/' : 'nl',
+            '/austria/' : 'at',
+            '/switzerland/' : 'ch'
+        }
         const countries = ['/canada/','/united-states/','/germany/','/italy/','/united-kingdom/','/france/','/netherlands/','/austria/','/switzerland/']
         for (let i=0; i < countries.length; i++) {
             if (url.includes(countries[i])) {
-                this.props.fetchAllPosts(countries[i])
+                this.props.fetchAllPosts(countriesMap[countries[i]])
                 allCountries = false;
                 break; 
             }
@@ -49,6 +61,7 @@ class Blog extends Component {
         var posts = props.state.posts;
         var featPosts = props.state.featPosts
         let loading = props.loading;
+        let redirect = false;
 
         const url = this.props.location.pathname;
         posts = posts.concat(featPosts);
@@ -65,9 +78,8 @@ class Blog extends Component {
             );
 
             let page = url.slice(url.lastIndexOf('/')+1);
-
-            if (page === '') { /* root */ 
-                page = 1 
+            if (page > (Math.floor(length / 12) + 1)) { /* throw 404 */ 
+                redirect = true; 
             }
 
             // load only up to 12 posts
@@ -79,9 +91,11 @@ class Blog extends Component {
                 /> )
                 }
             );
-        }
-
-        if (!loading) {
+        } if (redirect) {
+            return (
+                <Redirect to="/404" />
+            )
+        } else if (!loading) {
                 return (
                 <div id="top">
                         {/* <div id="preloader">

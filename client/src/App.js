@@ -4,11 +4,14 @@ import Blog from './components/blog.js';
 import BlogPage from './components/blogPage.js';
 import NavBar from './components/navBar.js';
 import AmazonScraper from '../src/components/amazonScraper.js';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import { Switch, Route, BrowserRouter as Router, Redirect } from 'react-router-dom';
 import Footer from '../src/components/footer'
 import './App.css';
 import { toggleMobile } from './actions/appActions.js'
 import { connect } from 'react-redux';
+import Page404 from './components/404.js';
+import PrivacyPolicy from './components/PrivacyPolicy.js';
+import TermsOfUse from './components/TermsOfUse.js';
 
 class App extends Component {
   constructor(props) {
@@ -48,8 +51,15 @@ class App extends Component {
               <NavBar />
               <Router forceRefresh="true">
                 <Switch>
-                  <Route exact path='/' component={Blog} />
                   <Route path="/coronavirus/news/:country/articles/:title" component={BlogPage} />
+                  <Route path="/coronavirus/news/:country/page/:page" component={Blog} />
+                  <Route exact path="/privacy-policy" component={PrivacyPolicy} />
+                  <Route exact path="/terms-of-use" component={TermsOfUse} />
+                  <Route exact path='/'>
+                    <Redirect to="/coronavirus/news/all-countries/page/1" />
+                  </Route>
+                  <Route path="/404" component={Page404} />
+                  <Redirect to="/404" />
                 </Switch>
               </Router>
               <Footer />

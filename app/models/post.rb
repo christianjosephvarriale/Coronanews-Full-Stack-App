@@ -92,6 +92,10 @@ class Post < ApplicationRecord
 
                     content = new_content
 
+                else 
+
+                    content = content.map { |txt| JSON.parse("\"#{txt}\"") } # remove escaped strings
+
                 end
 
                 data = content.join('')

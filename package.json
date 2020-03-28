@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.9.5",
+    "@material-ui/icons": "^4.9.1",
     "@mui-treasury/components": "^0.5.1",
     "@mui-treasury/styles": "^0.5.0",
     "@mui-treasury/styling": "^0.2.8",

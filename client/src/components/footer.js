@@ -211,23 +211,24 @@ class Footer extends Component {
                                             </div>
                                         </div>
                                         <div class="social-links">
-                                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                            <a href="https://twitter.com/coronanews_help" class="twitter"><i class="fa fa-twitter"></i></a>
+                                            <a href="https://www.instagram.com/coronanews.help" class="instagram"><i class="fa fa-instagram"></i></a>
                                         </div> 
                                     </div>
                                     <div class="col-lg-3 col-md-3">
                                         <h5 style={{margin: 0,marginBottom: 20,fontWeight: 300,color: '#871f78',fontSize: 30,textTransform: 'uppercase'}}>Navigation</h5>
                                         <Router forceRefresh="true">
                                             <ul style={{margin: 0}}> 
-                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/canada/1" role="menuitem">Canada</NavLink></li>     
-                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/united-states/1" role="menuitem">US</NavLink></li>
-                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/germany/1" role="menuitem">Germany</NavLink></li>
-                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/italy/1" role="menuitem">Italy</NavLink></li>
-                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/austria/1" role="menuitem">Austria</NavLink></li>
-                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/france/1" role="menuitem">France</NavLink></li>
-                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/netherlands/1" role="menuitem">Netherlands</NavLink></li>
-                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/switzerland/1" role="menuitem">Switzerland</NavLink></li>
-                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/united-kingdom/1" role="menuitem">United Kingdom</NavLink></li>
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/all-countries/page/1" role="menuitem">All Countries</NavLink></li> 
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/canada/page/1" role="menuitem">Canada</NavLink></li>     
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/united-states/page/1" role="menuitem">US</NavLink></li>
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/germany/page/1" role="menuitem">Germany</NavLink></li>
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/italy/page/1" role="menuitem">Italy</NavLink></li>
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/austria/page/1" role="menuitem">Austria</NavLink></li>
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/france/page/1" role="menuitem">France</NavLink></li>
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/netherlands/page/1" role="menuitem">Netherlands</NavLink></li>
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/switzerland/page/1" role="menuitem">Switzerland</NavLink></li>
+                                                <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/united-kingdom/page/1" role="menuitem">United Kingdom</NavLink></li>
                                             </ul>
                                         </Router>
                                     </div>
@@ -267,10 +268,10 @@ class Footer extends Component {
                                     </div>
                                     <div class="col-lg-6">
                                         <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
-                                        <a href="#intro" class="scrollto">Home</a>
-                                        <a href="#about" class="scrollto">About</a>
-                                        <a href="#">Privacy Policy</a>
-                                        <a href="#">Terms of Use</a>
+                                        <Router forceRefresh="true">
+                                            <NavLink to="/privacy-policy">Privacy Policy</NavLink>
+                                            <NavLink to="/terms-of-use">Terms of Use</NavLink>
+                                        </Router>
                                         </nav>
                                     </div>
                                     </div>
