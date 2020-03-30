@@ -1,7 +1,13 @@
 desc "This task is called by the Heroku scheduler add-on"
-task :update_feed => :environment do
-  puts "Updating posts..."
-  Post.upsert_database
+task :create_contentful => :environment do
+  puts "Creating entries in Contentful..."
+  Post.create_contentful
+  puts "done."
+end
+
+task :update_database => :environment do
+  puts "Syncing the database..."
+  Post.update_database
   puts "done."
 end
 

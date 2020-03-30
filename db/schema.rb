@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_27_171914) do
+ActiveRecord::Schema.define(version: 2020_03_30_072833) do
 
   create_table "comments", force: :cascade do |t|
     t.string "message"
@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 2020_03_27_171914) do
 
   create_table "posts", force: :cascade do |t|
     t.string "author"
-    t.string "body"
     t.string "date"
     t.string "headerImg"
     t.string "title"
@@ -34,6 +33,10 @@ ActiveRecord::Schema.define(version: 2020_03_27_171914) do
     t.string "region"
     t.string "source"
     t.string "description"
+    t.boolean "production"
+    t.string "original_title"
+    t.string "tags"
+    t.string "body"
   end
 
   create_table "subscribers", force: :cascade do |t|

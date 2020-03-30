@@ -15,6 +15,8 @@ class BlogPost extends Component {
             title = title.slice(0, 100) + '...'
         } 
 
+        const escaped_title = props.title.replace('.','&#46;')
+
         const countryMap = {
             ca : 'canada',
             us : 'united-states',
@@ -35,17 +37,17 @@ class BlogPost extends Component {
                     <article className={styles.colBlock}>  
                         <div className={styles.itemEntry} data-aos="zoom-in">
                             <div className={styles.itemEntryThumb}>
-                                <NavLink to={`/coronavirus/news/${countryMap[props.region]}/articles/${encodeURI(props.title)}`} className={styles.itemEntryThumbLink}>
+                                <NavLink to={`/coronavirus/news/${countryMap[props.region]}/articles/${encodeURI(escaped_title)}`} className={styles.itemEntryThumbLink}>
                                     <img src={props.headerImg} alt=""/>
                                 </NavLink>
                             </div> 
                             <div className={styles.itemEntryText}>
                                 <div className={styles.itemEntryCat}>
-                                    <NavLink to={`/coronavirus/news/${countryMap[props.region]}/articles/${encodeURI(props.title)}`}>{countryMap[props.region]}</NavLink>
+                                    <NavLink to={`/coronavirus/news/${countryMap[props.region]}/articles/${encodeURI(escaped_title)}`}>{countryMap[props.region]}</NavLink>
                                 </div>
-                                <h1 className={styles.itemEntryTitle}><NavLink to={`/coronavirus/news/${countryMap[props.region]}/articles/${encodeURI(props.title)}`}>{title}</NavLink></h1>
+                                <h1 className={styles.itemEntryTitle}><NavLink to={`/coronavirus/news/${countryMap[props.region]}/articles/${encodeURI(escaped_title)}`}>{title}</NavLink></h1>
                                 <div className={styles.itemEntryDate}>
-                                    <NavLink to={`/coronavirus/news/${countryMap[props.region]}/articles/${encodeURI(props.title)}`} role="menuitem">{date.toDateString()}</NavLink>
+                                    <NavLink to={`/coronavirus/news/${countryMap[props.region]}/articles/${encodeURI(escaped_title)}`} role="menuitem">{date.toDateString()}</NavLink>
                                 </div>
                             </div>
                         </div> 

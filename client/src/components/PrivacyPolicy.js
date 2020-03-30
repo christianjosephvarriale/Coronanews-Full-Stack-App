@@ -57,7 +57,7 @@ class PrivacyPolicy extends React.Component {
         <h2>Privacy Policy Changes</h2>
         <p>Although most changes are likely to be minor, Coronanews may change its Privacy Policy from time to time, and in Coronanews's sole discretion. Coronanews encourages visitors to frequently check this page for any changes to its Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.</p>
         <h2>Credit & Contact Information</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us via <a href="mailto:varritech@gmail.com">email</a> or <a href="tel:6477048645">phone</a>.</p>
+        <p>If you have any questions about this Privacy Policy, please contact us via <a href="mailto:legal@coronanews.ca">email</a></p>
       </div>
         );
     }

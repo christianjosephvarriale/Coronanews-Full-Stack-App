@@ -125,7 +125,7 @@ class TermsOfUse extends React.Component {
             site.</p>
 
             <p>If you are among the organizations listed in paragraph 2 above and are interested in linking to our website,
-            you must notify us by sending an e-mail to <a href="mailto:varritech@gmail.com" title="send an email to varritech@gmail.com">varritech@gmail.com</a>.
+            you must notify us by sending an e-mail to <a href="mailto:legal@coronanews.ca" title="send an email to legal@coronanews.ca">legal@coronanews.ca</a>.
             Please include your name, your organization name, contact information (such as a phone number and/or e-mail
             address) as well as the URL of your site, a list of any URLs from which you intend to link to our Web site,
             and a list of the URL(s) on our site to which you would like to link. Allow 2-3 weeks for a response.</p>

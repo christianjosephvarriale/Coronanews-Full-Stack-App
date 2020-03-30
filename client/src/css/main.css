@@ -3255,8 +3255,6 @@ footer [class*="s-footer__"] > .row [class*="col-"]:last-child {
 /* comments
  * -------------------------------------------------- */
 #comments {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
   max-width: 900px;

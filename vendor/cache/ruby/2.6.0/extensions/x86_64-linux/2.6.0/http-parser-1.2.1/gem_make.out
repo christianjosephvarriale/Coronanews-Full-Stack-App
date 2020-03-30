@@ -1,0 +1,5 @@
+current directory: /home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/http-parser-1.2.1/ext
+/usr/share/rvm/rubies/ruby-2.6.3/bin/ruby -rrubygems /home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/gems/rake-13.0.1/exe/rake RUBYARCHDIR\=/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/extensions/x86_64-linux/2.6.0/http-parser-1.2.1 RUBYLIBDIR\=/home/cjv/Documenti/varritech/vendor/cache/ruby/2.6.0/extensions/x86_64-linux/2.6.0/http-parser-1.2.1
+mkdir -p x86_64-linux/http-parser
+gcc -fexceptions -O -fno-omit-frame-pointer -fno-strict-aliasing -Wall -Wextra -O3 -fPIC   -o x86_64-linux/http-parser/http_parser.o -c ./http-parser/http_parser.c
+gcc -shared -o x86_64-linux/libhttp-parser-ext.so x86_64-linux/http-parser/http_parser.o -fexceptions 

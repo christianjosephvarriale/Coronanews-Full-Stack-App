@@ -25,6 +25,8 @@ class FeaturedBlogPost extends Component {
                 title = title.slice(0, 100) + '...'
             } 
 
+            const escaped_title = state.title.replace('.','&#46;')
+
             const countryMap = {
                 ca : 'canada',
                 us : 'united-states',
@@ -62,16 +64,16 @@ class FeaturedBlogPost extends Component {
                             <div className={'entry-background'} style={{ backgroundImage: 'url(' + headerImg + ')' }}></div>
                             
                             <div className={'entry-content'}>
-                                <span className={'entry-category'}><NavLink to={`/coronavirus/news/${countryMap[state.region]}/articles/${encodeURI(state.title)}`}> {state.region} </NavLink> </span>
+                                <span className={'entry-category'}><NavLink to={`/coronavirus/news/${countryMap[state.region]}/articles/${encodeURI(escaped_title)}`}> {state.region} </NavLink> </span>
 
-                                <h1><NavLink to={`/coronavirus/news/${countryMap[state.region]}/articles/${encodeURI(state.title)}`}>{title}</NavLink></h1>
+                                <h1><NavLink to={`/coronavirus/news/${countryMap[state.region]}/articles/${encodeURI(escaped_title)}`}>{title}</NavLink></h1>
 
                                 <div className={'entry-info'}>
-                                    <NavLink to={`/coronavirus/news/${countryMap[state.region]}/articles/${encodeURI(state.title)}`} className={'entry-profile-pic'}>
+                                    <NavLink to={`/coronavirus/news/${countryMap[state.region]}/articles/${encodeURI(escaped_title)}`} className={'entry-profile-pic'}>
                                         <Avatar style={{backgroundColor: generateColor() }}> {generateInitials()} </Avatar>
                                     </NavLink>
                                     <ul className={'entry-meta'}>
-                                        <li><NavLink to={`/coronavirus/news/${countryMap[state.region]}/articles/${encodeURI(state.title)}`}>{author}</NavLink></li>
+                                        <li><NavLink to={`/coronavirus/news/${countryMap[state.region]}/articles/${encodeURI(escaped_title)}`}>{author}</NavLink></li>
                                         <li>{date.toDateString()}</li>
                                     </ul>
                                 </div>

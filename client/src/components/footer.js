@@ -193,7 +193,7 @@ class Footer extends Component {
                     <div class="container">
                                 <div class="row wow fadeInUp">
                                     <div class="col-lg-4 col-md-4">
-                                        <div class="contact-about">
+                                        <div id="about-coronanews" class="contact-about">
                                             <div style={{ display:'flex' }}>
                                                 <img style={{ height: '40px', marginRight: 20 }} src={logo} alt="Varritech logo" title="Varritech" />
                                                 <h3>Corona News</h3>
@@ -207,12 +207,12 @@ class Footer extends Component {
                                             </div>
                                             <div>
                                                 <i class="ion-ios-email-outline"></i>
-                                                <p>varritech@gmail.com</p>
+                                                <p>support@coronanews.ca</p>
                                             </div>
                                         </div>
                                         <div class="social-links">
                                             <a href="https://twitter.com/coronanews_help" class="twitter"><i class="fa fa-twitter"></i></a>
-                                            <a href="https://www.instagram.com/coronanews.help" class="instagram"><i class="fa fa-instagram"></i></a>
+                                            <a href="https://www.instagram.com/coronanews.ca" class="instagram"><i class="fa fa-instagram"></i></a>
                                         </div> 
                                     </div>
                                     <div class="col-lg-3 col-md-3">
@@ -234,7 +234,7 @@ class Footer extends Component {
                                     </div>
                                     <div class="col-lg-5 col-md-5">
                                     <div class="form">
-                                        <form id="contactForm" role="form" class="contactForm">
+                                        <form id="contact-coronanews" role="form" class="contactForm">
                                         <div class="form-row">
                                             <div class="col-lg-6">
                                                 <Textfield helperText={(this.state.nameError) ? 'Please fill out your name' : ''} error={this.state.nameError} name={'name'} value={this.state.name} handleChange={this.handleChange} />
@@ -271,6 +271,8 @@ class Footer extends Component {
                                         <Router forceRefresh="true">
                                             <NavLink to="/privacy-policy">Privacy Policy</NavLink>
                                             <NavLink to="/terms-of-use">Terms of Use</NavLink>
+                                            <a href="#about-coronanews">About</a>
+                                            <a href="#contact-coronanews">Contact</a>
                                         </Router>
                                         </nav>
                                     </div>

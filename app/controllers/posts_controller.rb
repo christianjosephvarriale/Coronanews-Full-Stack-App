@@ -1,22 +1,39 @@
 class PostsController < ApplicationController
     require 'json'
+    require 'contentful'
+    require 'htmlentities'
+    require 'contentful'
     skip_before_action :verify_authenticity_token
 
-    # GET /posts
+    # GET all posts
     def index
-      @posts = Post.all.order(:created_at).reverse_order
-      render json: @posts
+
+      if ENV['RAILS_ENV'] == 'production'
+        posts = Post.where( :production => true ).order(:date).reverse_order
+      else 
+        posts = Post.where( :production => false ).order(:date).reverse_order
+      end
+      render json: posts
     end
 
     # GET posts where region is params[:region]
     def show_region
-      @posts = Post.where({ region: params[:region] })
-      render json: @posts
+
+      if ENV['RAILS_ENV'] == 'production'
+        posts = Post.where( region: params[:region], :production => true ).order(:date).reverse_order
+      else 
+        posts = Post.where( region: params[:region], :production => false ).order(:date).reverse_order
+      end
+        render json: posts
     end
   
     # GET post by unique title, and return the last and next post
     def show_post
-      @post = Post.find_by title: params[:title]
+
+      #decode the URI if needed
+      @title = HTMLEntities.new.decode params[:title]
+
+      @post = Post.find_by title: @title
       @prevPost = Post.find_by id: @post.id - 1
       @nextPost = Post.find_by id: @post.id + 1
       
