@@ -222,6 +222,7 @@ class BlogPage extends Component {
             const { post } = props.state.post;
             let { prevPost } = props.state.post;
             let { nextPost } = props.state.post;
+            let { video } = props.state.post.post;
             const { mobile } = props;
 
             
@@ -238,6 +239,19 @@ class BlogPage extends Component {
                 at : 'austria',
                 ch : 'switzerland'
             } 
+
+            debugger;
+
+            let media = ''
+            if (video) {
+                media = <div class="video-container">
+                    <iframe src={video} width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div> 
+            } else {
+                media = <div className={styles.entryPostThumb}>
+                    <img id={'headerImg'} src={post.headerImg} alt="" />
+                </div>
+            }
 
             // see if prevPost and nextPost are found
             if (prevPost) {
@@ -284,40 +298,6 @@ class BlogPage extends Component {
                 console.log(error)
             }
 
-            // let comments = ''
-            // if (commentsLst.length > 0) {
-
-            //     comments = commentsLst.map((comment) => { return (
-                    
-            //         <Card style={{margin:'20px 0', padding:'0px 20px'}}>
-            //             <CardContent>
-            //             <li style={{margin:'40px 0'}} className={[styles.threadAlt,styles.depth1,styles.Comment].join(" ")}>
-
-            //                 <div className={styles.commentAvatar}>
-            //                     <Avatar style={{marginRight: 20, backgroundColor: generateColor() }}> {generateInitials(comment.name)} </Avatar>
-            //                 </div>
-
-            //                 <div className={styles.commentContent}>
-
-            //                     <div className={styles.commentInfo}>
-            //                         <div className={styles.commentAuthor}>{comment.name}</div>
-
-            //                         <div className={styles.commentMeta}>
-            //                             <div className={styles.commentTime}> {timeConverter(comment.created_at)} </div>
-            //                         </div>
-            //                     </div>
-
-            //                     <div className={styles.commentText}>
-            //                         <p style={{margin:0}}>{comment.message}</p>
-            //                     </div>
-            //                 </div>
-            //                 </li>
-            //             </CardContent>
-            //         </Card>
-            //         );
-            //     })
-            // }
-
             return ( 
                 <section className={[styles.sContent,styles.sContentTopPadding,styles.sContentNarrow].join(" ")}>
 
@@ -328,9 +308,7 @@ class BlogPage extends Component {
 
                     <article className={[styles.row,styles.entry,styles.formatStandard].join(" ")}>
                         <div className={[styles.entryMedia,styles.colFull].join(" ")}>
-                            <div className={styles.entryPostThumb}>
-                                <img id={'headerImg'} src={post.headerImg} alt="" />
-                            </div>
+                            {media}
                         </div>
     
                         <div className={[styles.entryHeader,styles.colFull].join(" ")}>
@@ -397,41 +375,6 @@ class BlogPage extends Component {
                     </div> 
 
                     <div style={{padding:40}} id="disqus_thread"></div>
-
-                    {/* <div className={styles.commentsWrap}>
-                        <div id="comments" className={styles.row}>
-                            <div className={styles.colFull}>
-                                <h3 style={{padding:0}} className={styles.h2}>{(commentsLst.length > 0) ? commentsLst.length + ' Comments' : 'Be the first Comment'}</h3>
-                                <ol style={{ display: (commentsLst.length > 0) ? '' : 'none' }} className={styles.commentlist}>
-                                    {comments}
-                                </ol> 
-                            </div> 
-                        </div> 
-
-                        <div style={{padding:0}} className={[styles.row,styles.commentRespond].join(" ")}>
-                            <div id="respond" className={styles.colFull}>
-                                <h3 style={{padding:0}} className={styles.h2}>Add Comment <span>Your email address will not be published</span></h3>
-                                <Card>
-                                    <CardContent>
-                                        <form name="commentForm" id="commentForm" method="post" action="/comment" autocomplete="off">
-                                            <fieldset>
-                                                <div className={styles.formField}>
-                                                    <Textfield helperText={(this.state.nameError) ? 'Please fill out your name' : ''} error={this.state.nameError} name={'name'} value={this.state.name} handleChange={this.handleChange} />
-                                                </div>
-                                                <div className={styles.formField}>
-                                                    <Textfield helperText={(this.state.emailError) ? 'Please fill out your email' : ''} error={this.state.emailError} name={'email'} value={this.state.email} handleChange={this.handleChange} />
-                                                </div>
-                                                <div className={[styles.message,styles.formField].join(" ")}>
-                                                    <Textfield helperText={(this.state.messageError) ? 'Please have a non-empty message' : ''} error={this.state.messageError} multiline name={'message'} value={this.state.message} handleChange={this.handleChange} />
-                                                </div>
-                                                <Button handleClick={this.handleSubmit} label={'Submit Comment'}/>
-                                            </fieldset>
-                                        </form> 
-                                    </CardContent>
-                                </Card>
-                            </div> 
-                        </div>  
-                    </div> */}
                 </section> 
             )
         } 

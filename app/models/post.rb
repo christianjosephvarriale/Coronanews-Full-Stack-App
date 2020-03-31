@@ -44,6 +44,7 @@ class Post < ApplicationRecord
                 :region => article.raw['fields']['region'],
                 :date => article.raw['fields']['date'],
                 :url => article.raw['fields']['url'],
+                :video => article.raw['fields']['video']
             ) 
         end
 
