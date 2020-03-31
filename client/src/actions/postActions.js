@@ -45,6 +45,8 @@ export const fetchAllPosts = region => dispatch => {
             const posts = [];
             const featPosts = [];
 
+            debugger;
+
             for (let i=0; i<rawPosts.length; i++) { /* sort */
                 if (rawPosts[i].featured) {
                     featPosts.push(rawPosts[i])

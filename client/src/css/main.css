@@ -1885,6 +1885,7 @@ body.search-is-visible {
   top: 0;
   left: 0;
   width: 100%;
+  opacity: 0.5;
   height: 100%;
   background-size: cover;
   background-position: center;

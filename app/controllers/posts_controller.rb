@@ -8,23 +8,15 @@ class PostsController < ApplicationController
     # GET all posts
     def index
 
-      if ENV['RAILS_ENV'] == 'production'
-        posts = Post.where( :production => true ).order(:date).reverse_order
-      else 
-        posts = Post.where( :production => false ).order(:date).reverse_order
-      end
-      render json: posts
+      @posts = Post.all.order(:date).reverse_order
+      render json: @posts
     end
 
     # GET posts where region is params[:region]
     def show_region
 
-      if ENV['RAILS_ENV'] == 'production'
-        posts = Post.where( region: params[:region], :production => true ).order(:date).reverse_order
-      else 
-        posts = Post.where( region: params[:region], :production => false ).order(:date).reverse_order
-      end
-        render json: posts
+        @posts = Post.where( region: params[:region] ).order(:date).reverse_order
+        render json: @posts
     end
   
     # GET post by unique title, and return the last and next post

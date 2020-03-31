@@ -5,9 +5,9 @@ task :create_contentful => :environment do
   puts "done."
 end
 
-task :update_database => :environment do
+task :sync_database => :environment do
   puts "Syncing the database..."
-  Post.update_database
+  Post.sync_database
   puts "done."
 end
 

@@ -389,7 +389,7 @@ class BlogPage extends Component {
 
                         </article> 
 
-                    <div className={styles.sContentEntryNav}>
+                    <div style={{ display: !(prevPost || nextPost) ? 'none' : 'block' }} className={styles.sContentEntryNav}>
                         <div className={[styles.row,styles.sContentNav].join(" ")}>
                             {prevPost}
                             {nextPost}

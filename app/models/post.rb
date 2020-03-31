@@ -8,7 +8,7 @@ class Post < ApplicationRecord
     require 'contentful/management'
 
     # upsert records
-    def self.update_database
+    def self.sync_database
 
         # make all posts currently featured no longer featured
         Post.where(:featured => true).update_all(:featured => false)
@@ -20,19 +20,37 @@ class Post < ApplicationRecord
             dynamic_entries: :auto  # Enables Content Type caching.
         )
 
-        if ENV['RAILS_ENV'] == 'production'
+        if ENV['RAILS_ENV'] == 'production' # sync articles based on env
             articles = @client.entries( :content_type => 'article' ).select { |article| article.fields[:production] }
         else 
             articles = @client.entries( :content_type => 'article' ).select { |article| !(article.fields[:production] ) }
         end
 
         articles.each do |article|
-            Post.find_by(:id => article.raw['sys']['id']).update(
+
+            @found_article = Post.find_or_create_by(
+                :id => article.raw['sys']['id']
+            )
+
+            @found_article.update(
                 :title => article.raw['fields']['title'],
                 :tags => article.raw['fields']['tags'],
                 :description => article.raw['fields']['description'],
-                :headerImg => @client.asset(article.raw['fields']['headerImg']['sys']['id']).image_url
+                :headerImg => @client.asset(article.raw['fields']['headerImg']['sys']['id']).image_url,
+                :production => article.raw['fields']['production'],
+                :original_title => article.raw['fields']['originalTitle'],
+                :author => article.raw['fields']['author'],
+                :source => article.raw['fields']['source'],
+                :region => article.raw['fields']['region'],
+                :date => article.raw['fields']['date'],
+                :url => article.raw['fields']['url'],
             ) 
+        end
+
+        if ENV['RAILS_ENV'] == 'production' # cleanup articles based on env
+            Post.where( :production => false ).destroy_all
+        else 
+            Post.where( :production => true ).destroy_all
         end
 
         # create featured posts based on date
@@ -80,16 +98,23 @@ class Post < ApplicationRecord
                         :region => region,
                         :source => post['source']['name'],
                         :featured => false,
-                        :production => false,
+                        :title => post['title'],
+                        :production => false
                     )
 
                     article = env.content_types.find('article')
 
                     entry = article.entries.create(
                         :id => @upserted_post.id,
+                        :author => @upserted_post.author, 
+                        :date => @upserted_post.date,
+                        :source => @upserted_post.source,
+                        :region => @upserted_post.region,
                         :url => @upserted_post.url,
                         :title => @upserted_post.title,
-                        :description => @upserted_post.description
+                        :description => @upserted_post.description,
+                        :original_title => @upserted_post.original_title,
+                        :production => false
                     )
                 end
             end
