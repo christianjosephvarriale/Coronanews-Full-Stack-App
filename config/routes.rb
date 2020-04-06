@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   # post '/scripts/yahoo', to: 'scripts#yahoo'
   get '/posts/region/:region', to: 'posts#show_region'
   post '/posts/title', to: 'posts#show_post'
-
-  post '/scripts/amazon', to: 'scripts#amazon'
   post '/mail', to: 'mail#create' 
   get '/comments', to: 'comments#index'
   post '/comments', to: 'comments#create'

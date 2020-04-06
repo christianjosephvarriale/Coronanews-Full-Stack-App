@@ -95,67 +95,6 @@ class BlogPage extends Component {
         }, 0);
     }
 
-    handleSubmit = e => {
-        e.preventDefault();
-
-        // check all the states to see if one is in error
-        let errors = {};
-        let raiseErrors = false;
-        Object.keys(this.state).map(state => 
-            { 
-                console.log(state);
-                console.log(this.state[state])
-                if (['name','message'].includes(state)) {
-                    if (this.state[state] == '') {
-                        // non-empty error
-                        errors[state + 'Error'] = true;
-                        raiseErrors = true;
-                    } else {
-                        errors[state + 'Error'] = false;
-                    }
-                 } else if (state == 'email') {
-                    // validate email using regex
-                    if (validateEmail(this.state[state])) {
-                        errors['emailError'] = true;
-                        raiseErrors = true;
-                    } else {
-                        errors['emailError'] = false;
-                    }
-                 }
-            }  
-        )
-
-        if (raiseErrors) {
-            // set the error state
-            errors.openError = true;
-            this.setState(errors);
-        } else {
-
-        const url = this.props.location.pathname;
-        const title = url.slice(url.lastIndexOf('/')+1);
-        // call axios to create the comment 
-
-        axios.post('/comments' , {
-            post: title,
-            name: this.state.name,
-            message: this.state.message,
-            email: this.state.email
-        })
-        .then(response => {
-            console.log(response.data);
-
-            this.setState({
-                name: '',
-                email: '',
-                message: '',
-                openSuccess: true
-            })
-            window.location.reload();
-        })
-        .catch(error => console.log(error))
-        }
-    }
-
     componentDidMount() {
 
         const url = this.props.location.pathname;
@@ -163,8 +102,6 @@ class BlogPage extends Component {
 
         // fetch the post information based on location
         setTimeout(() => {
-
-            this.props.fetchComments(title);
 
             // unescape quotes and decodeURI
             this.props.fetchPost(title);
@@ -195,11 +132,6 @@ class BlogPage extends Component {
             const el = document.getElementById('disqus_thread')
             el.parentElement.appendChild(script);
 
-
-            setTimeout(() => {
-                const el = document.querySelector('div#disqus_thread > iframe').contentWindow.window;
-            }, 2000)
-
         }, 5000)
     }
 
@@ -218,13 +150,13 @@ class BlogPage extends Component {
             return ( null )
         } else {
 
-            const commentsLst = props.state.comments;
             const { post } = props.state.post;
             let { prevPost } = props.state.post;
             let { nextPost } = props.state.post;
-            let { video } = props.state.post.post;
             const { mobile } = props;
 
+            debugger;
+            console.log(JSON.stringify(post))
             
             const date = new Date(post.date);
             console.log(`Here is the post ${JSON.stringify(post)}`)
@@ -240,18 +172,9 @@ class BlogPage extends Component {
                 ch : 'switzerland'
             } 
 
-            debugger;
-
-            let media = ''
-            if (video) {
-                media = <div class="video-container">
-                    <iframe src={video} width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                </div> 
-            } else {
-                media = <div className={styles.entryPostThumb}>
+            const media = <div className={styles.entryPostThumb}>
                     <img id={'headerImg'} src={post.headerImg} alt="" />
                 </div>
-            }
 
             // see if prevPost and nextPost are found
             if (prevPost) {
@@ -283,10 +206,6 @@ class BlogPage extends Component {
                 });
                 return initials
             }
-
-            const tags = post.tags.map((tag) => {
-                return <a>{tag}</a>
-            });
 
             // change the title and the meta on the page
             try {
@@ -323,7 +242,7 @@ class BlogPage extends Component {
                             </ul>
                         </div>
     
-                        <div id="body" className={[styles.colFull,styles.entryMain].join(" ")} />
+                        <div id="body" style={{whiteSpace: 'pre-line'}}className={[styles.colFull,styles.entryMain].join(" ")} />
     
                         <div className={styles.entryTaxonomies}>
                                 <div className={styles.entryCat}>
@@ -344,7 +263,6 @@ class BlogPage extends Component {
                                     <a>{post.source}</a>
                                     <a>Corona Virus tips</a>
                                     <a>Covid-19</a>
-                                    {tags}
                                 </span>
                             </div> 
 
@@ -389,4 +307,4 @@ const mapStateToProps = state => (
     }
 )
 
-export default connect(mapStateToProps, { fetchPost, fetchComments, toggleLoader })(BlogPage);
+export default connect(mapStateToProps, { fetchPost, toggleLoader })(BlogPage);

@@ -12,8 +12,6 @@ import dataVisualization from '../img/dataVisualization.png';
 import scraping from '../img/scraping.png';
 import hardware from '../img/hardware.png';
 import tech from '../img/tech.jpg'
-import FancyDisplay from './fancyDisplay'
-
 
 import chip from '../img/chip.svg';
 import mining from '../img/mining.svg';
@@ -30,9 +28,7 @@ import scraper from '../img/realTimeScraper.png';
 import { connect } from 'react-redux';
 import { toggleLoader } from '../actions/appActions';
 import { toggleSubscriptionState } from '../actions/pageActions';
-import ComingSoon from './comingSoon.js';
 import SideNav from './sideNav';
-import CoolCard from './coolCard.js';
 import person from '../img/personCoding.png'
 
 // define jQuery as part of the window
@@ -137,7 +133,6 @@ class LandingPage extends Component {
                     </section>
 
                     <main id="main">
-                    <CoolCard image={'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2000px-Git_icon.svg.png'}/>
                     <section id="about" class="section-bg">
                         <div class="container-fluid">
                         <div class="section-header">
@@ -191,7 +186,6 @@ class LandingPage extends Component {
                                 Check out the awesome things we've built <br/>
                             </p>
                         </div>
-                        <FancyDisplay />
                     </section>
 
                     <div className="line" />
@@ -206,16 +200,6 @@ class LandingPage extends Component {
                         </div>
 
                         <div class="row">
-
-                            <div style={{padding:'20px 20px 0 20px'}} class="col-lg-6">
-                                <ComingSoon classes={'box wow fadeInRight'} size={40}>
-                                    <div class="icon"><img src={chip} /></div>
-                                    <div>
-                                        <h4 class="title">Artifical Intelligence</h4>
-                                        <p class="description">Use some of our text recognition and predictive models for your company's chatbot or data driven operations</p>
-                                    </div>
-                                </ComingSoon>
-                            </div>
 
                             <div style={{padding:'20px 20px 0 20px'}} class="col-lg-6">
                             <div class="box wow fadeInRight">
@@ -253,15 +237,6 @@ class LandingPage extends Component {
                                     <p class="description">How should I connect to seperate systems? What about mapping incomptabile formats? Learn best practices here</p>
                                 </div>
                                </div>
-                            </div>
-                            <div style={{padding:'20px 20px 0 20px'}} class="col-lg-6">
-                                <ComingSoon classes={'box wow fadeInRight'} size={40}>
-                                    <div class="icon"><img src={led} /></div>
-                                    <div>
-                                        <h4 class="title">How to design Hardware</h4>
-                                        <p class="description">Learn how the products around you work. Build out a speaker system, a cool LED matrix, or a complex hardware system to aid your everyday life</p>
-                                    </div>
-                                </ComingSoon>
                             </div>
                         </div>
                         </div>

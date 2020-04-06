@@ -3,7 +3,6 @@ import LandingPage from './components/landingPage';
 import Blog from './components/blog.js';
 import BlogPage from './components/blogPage.js';
 import NavBar from './components/navBar.js';
-import AmazonScraper from '../src/components/amazonScraper.js';
 import { Switch, Route, BrowserRouter as Router, Redirect } from 'react-router-dom';
 import Footer from '../src/components/footer'
 import './App.css';
@@ -56,7 +55,7 @@ class App extends Component {
                   <Route exact path="/privacy-policy" component={PrivacyPolicy} />
                   <Route exact path="/terms-of-use" component={TermsOfUse} />
                   <Route exact path='/'>
-                    <Redirect to="/coronavirus/news/all-countries/page/1" />
+                    <Redirect to="/coronavirus/news/canada/page/1" />
                   </Route>
                   <Route path="/404" component={Page404} />
                   <Redirect to="/404" />

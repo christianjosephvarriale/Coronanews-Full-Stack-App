@@ -7,15 +7,13 @@ class PostsController < ApplicationController
 
     # GET all posts
     def index
-
-      @posts = Post.all.order(:date).reverse_order
+      @posts = Post.all
       render json: @posts
     end
 
     # GET posts where region is params[:region]
     def show_region
-
-        @posts = Post.where( region: params[:region] ).order(:date).reverse_order
+        @posts = Post.where( region: params[:region] )
         render json: @posts
     end
   

@@ -7,15 +7,14 @@ import { connect } from 'react-redux';
 import { toggleLoader } from '../actions/appActions';
 import logo from '../img/logo/virus.png';
 import { NavLink, Link, BrowserRouter as Router } from "react-router-dom";
-import ansa from '../img/sources/ansa.png'
-import bbc from '../img/sources/bbc-news.png'
-import rai from '../img/sources/rai_news.png'
-import fig from '../img/sources/lefigaro.png'
-import rep from '../img/sources/larepubblica.png'
-import del from '../img/sources/deletelgraaf1.png'
-import morgen from '../img/sources/morgen_post.png'
-import ny from '../img/sources/new_york_times.png'
-import guardian from '../img/sources/the_guardian.png'
+import metro from '../img/sources/metro.png'
+import globe from '../img/sources/globe.png'
+import montreal from '../img/sources/montreal.png'
+import ctv from '../img/sources/ctvNews.png'
+import huff from '../img/sources/huff.png'
+import cp24 from '../img/sources/cp24.png'
+import nat from '../img/sources/nat.png'
+import cbc from '../img/sources/cbc.png'
 import '../css/style.css';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -153,7 +152,7 @@ class Footer extends Component {
                         <h3 style={{fontWeight:300,padding:0}}class="section-title">Some of Our Sources</h3>
                         <span class="section-divider"></span>
                         <p style={{padding:0}}class="section-description">
-                            We provide you with high-quality, relevant, translated articles from all over the world <br/>
+                            Our articles come from reliable media outlets <br/>
                         </p>
                     </div>
                     <div class="container">
@@ -176,15 +175,14 @@ class Footer extends Component {
                                 dotListClass="custom-dot-list-style"
                                 itemClass="carousel-item-padding-40-px"
                             >
-                                <img src={bbc} alt="" />
-                                <img src={ansa} alt="" />
-                                <img src={del} alt="" />
-                                <img src={rai} alt="" />
-                                <img src={rep} alt="" />
-                                <img src={fig} alt="" />
-                                <img src={morgen} alt="" />
-                                <img src={ny} alt="" />
-                                <img src={guardian} alt="" />
+                                <img src={metro} alt="" />
+                                <img src={ctv} alt="" />
+                                <img src={cp24} alt="" />
+                                <img src={montreal} alt="" />
+                                <img src={huff} alt="" />
+                                <img src={globe} alt="" />
+                                <img src={cbc} alt="" />
+                                <img src={nat} alt="" />
                             </Carousel>
                         </div>
                     </div>
@@ -192,13 +190,13 @@ class Footer extends Component {
                 <section id="contact">
                     <div class="container">
                                 <div class="row wow fadeInUp">
-                                    <div class="col-lg-4 col-md-4">
+                                    <div class="col-lg-6 col-md-6">
                                         <div id="about-coronanews" class="contact-about">
                                             <div style={{ display:'flex' }}>
                                                 <img style={{ height: '40px', marginRight: 20 }} src={logo} alt="Varritech logo" title="Varritech" />
                                                 <h3>Corona News</h3>
                                             </div>
-                                            <p>A University of Waterloo student initiative. Our aim is to keep you informed during this crisis. We host high quality articles from around the world, keeping you up to date with topics surrounding latest in governmental relief, spread rates, and more.</p>
+                                            <p style={{padding:20}}>A University of Waterloo student initiative. Our aim is to keep you informed during this crisis. We host high quality articles from around the world, keeping you up to date with topics surrounding latest in governmental relief, spread rates, and more.</p>
                                         </div>
                                         <div class="info">
                                             <div>
@@ -215,7 +213,7 @@ class Footer extends Component {
                                             <a href="https://www.instagram.com/coronanews.ca" class="instagram"><i class="fa fa-instagram"></i></a>
                                         </div> 
                                     </div>
-                                    <div class="col-lg-3 col-md-3">
+                                    {/* <div class="col-lg-3 col-md-3">
                                         <h5 style={{margin: 0,marginBottom: 20,fontWeight: 300,color: '#871f78',fontSize: 30,textTransform: 'uppercase'}}>Navigation</h5>
                                         <Router forceRefresh="true">
                                             <ul style={{margin: 0}}> 
@@ -231,8 +229,8 @@ class Footer extends Component {
                                                 <li style={{ cursor: 'pointer '}}role="menuitem"><NavLink to="/coronavirus/news/united-kingdom/page/1" role="menuitem">United Kingdom</NavLink></li>
                                             </ul>
                                         </Router>
-                                    </div>
-                                    <div class="col-lg-5 col-md-5">
+                                    </div> */}
+                                    <div class="col-lg-6 col-md-6">
                                     <div class="form">
                                         <form id="contact-coronanews" role="form" class="contactForm">
                                         <div class="form-row">
@@ -267,7 +265,7 @@ class Footer extends Component {
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
-                                        <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+                                        <nav class="footer-links text-lg-right text-center">
                                         <Router forceRefresh="true">
                                             <NavLink to="/privacy-policy">Privacy Policy</NavLink>
                                             <NavLink to="/terms-of-use">Terms of Use</NavLink>

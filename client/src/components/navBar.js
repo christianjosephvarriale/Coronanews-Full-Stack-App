@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 
 import logo from '../img/logo/virus.png';
-
 import '../css/main.css';
 import Button from './button';
 import { NavLink, Link, BrowserRouter as Router } from "react-router-dom"; 
@@ -11,7 +10,6 @@ import Subscription from './subscription';
 import { connect } from 'react-redux';
 import { toggleSubscriptionState } from '../actions/pageActions';
 import LegoLoader from './legoLoader';
-import ComingSoon from './comingSoon';
 
 class NavBar extends Component {
     constructor(props){
@@ -79,7 +77,7 @@ class NavBar extends Component {
 
                 <div id="logo" class="pull-left">
                         <Link to="/">
-                            <img style={{ height: '40px' }} src={logo} alt="Varritech logo" title="Varritech" />
+                            <img style={{ height: '40px' }} src={logo} alt="Varritech logo" title="Corona News" />
                         </Link>    
                         {headerText}
                 </div>
@@ -92,7 +90,7 @@ class NavBar extends Component {
                 
                 <li role="menuitem"><a href="" onClick={(e) => { e.preventDefault(); this.props.toggleSubscriptionState() }}>Subscribe</a></li>
                 
-                <li class="has-children">
+                {/* <li class="has-children">
                     <a href="" title="">Countries</a>
                     <ul class="sub-menu">  
                         <li role="menuitem"><NavLink to="/coronavirus/news/all-countries/page/1" role="menuitem">All Countries</NavLink></li> 
@@ -106,7 +104,7 @@ class NavBar extends Component {
                         <li role="menuitem"><NavLink to="/coronavirus/news/switzerland/page/1" role="menuitem">Switzerland</NavLink></li>
                         <li role="menuitem"><NavLink to="/coronavirus/news/united-kingdom/page/1" role="menuitem">United Kingdom</NavLink></li>
                     </ul>
-                </li>
+                </li> */}
                 <li role="menuitem">
                     <form id="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                         <input type="hidden" name="cmd" value="_s-xclick" />
