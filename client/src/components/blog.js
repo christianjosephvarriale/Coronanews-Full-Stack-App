@@ -117,7 +117,7 @@ class Blog extends Component {
                         <h3 style={{fontWeight:300,padding:0}}class="section-title">Global Corona Virus Statistics</h3>
                         <span class="section-divider"></span>
                         <p style={{padding:0}}class="section-description">
-                            Updated daily at 02:00 (EST)<br/>
+                            Updated daily at 00:00 (EST)<br/>
                         </p>
                     </div>
 

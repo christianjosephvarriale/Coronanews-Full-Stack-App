@@ -1,8 +1,8 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component, Fragment, ReactDOM} from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import BarChartIcon from '@material-ui/icons/BarChart';
-import classnames from 'classnames';
-import Button from '../../../components/button.js';
+import '../../../css/vendor.css'
+
 import {
     Row, Col,
     CardHeader,
@@ -12,6 +12,7 @@ import {
     TabContent,
     TabPane,
 } from 'reactstrap';
+
 
 import {
     AreaChart, Area, Line,
@@ -108,6 +109,29 @@ export default class AnalyticsDashboard1 extends Component {
         }
     }
 
+    componentDidMount() {
+    
+        const that = this;
+        const script1 = document.createElement("script")
+        script1.src = "https://ssl.gstatic.com/trends_nrtr/760_RC08/embed_loader.js"
+        script1.async = true
+
+        const script2 = document.createElement("script")
+        script2.src = "https://ssl.gstatic.com/trends_nrtr/2152_RC04/embed_loader.js"
+        script2.async = true
+    
+        this.google_trends1.appendChild(script1)
+        this.google_trends2.appendChild(script2)
+        
+        script1.onload = function () {
+          window.trends.embed.renderExploreWidgetTo(that.google_trends1, "TIMESERIES", {"comparisonItem":[{"keyword":"coronavirus","geo":"CA","time":"today 3-m"}],"category":0,"property":""}, {"exploreQuery":"geo=CA&q=coronavirus&date=today 3-m","guestPath":"https://www.google.com:443/trends/embed/"})
+        }
+
+        script2.onload = function () {
+            window.trends.embed.renderWidgetTo(that.google_trends2, "US_cu_E-aoCHEBAADKbM_en", "fe_list_7e016d51-03c6-4ca7-a148-f720abb8b4bd", {"guestPath":"https://trends.google.com:443/trends/embed/"}) 
+        }
+    }
+
     render() {
 
         const statsArr = [ 'cases', 'deaths' , 'tests', 'casesPer1M','testsPer1M', 'deathsPer1M' ]
@@ -171,15 +195,18 @@ export default class AnalyticsDashboard1 extends Component {
 
         return (
             <Fragment>
+                <Row className="mt-3">
+                    <Col md="6">
                 <ReactCSSTransitionGroup
                     component="div"
+                    data-aos="zoom-in"
                     style={{padding:20}}
                     transitionName="TabsAnimation"
                     transitionAppear={true}
                     transitionAppearTimeout={0}
                     transitionEnter={false}
                     transitionLeave={false}>
-                    <div style={{display: 'flex', padding: '40px 0px', justifyContent: 'center'}}>
+                    <div style={{display: 'flex', padding: '40px 0 0', justifyContent: 'center'}}>
                         <Card style={{width: '100%', maxWidth: 800}} className="mb-3">
                             <CardHeader style={{padding: '40px 0px'}} className="card-header-tab">
                                 <div className="card-header-title">
@@ -229,6 +256,17 @@ export default class AnalyticsDashboard1 extends Component {
                         </Card>
                     </div>
                 </ReactCSSTransitionGroup>
+                </Col>
+                <Col md="6">
+                    <div data-aos="zoom-in" style={{padding: 20, marginTop: 40, marginBottom: 30}}>
+                    <div style={{maxWidth:800, margin: 'auto'}}ref={el => (this.google_trends1 = el)} />
+                    </div>
+
+                    <div data-aos="zoom-in" style={{padding: 20, marginBottom: 30}}>
+                    <div style={{maxWidth:800, margin: 'auto'}}ref={el => (this.google_trends2 = el)} />
+                    </div>
+                </Col>
+                </Row>
             </Fragment>
         )
     }

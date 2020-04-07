@@ -29,7 +29,7 @@ class BlogPost extends Component {
             title = title.slice(0, 80) + '...'
         } 
 
-        const escaped_title = props.title.replace('.','&#46;')
+        const escaped_title = props.title.replace(/./g,'&#46;')
 
         const countryMap = {
             ca : 'canada',
