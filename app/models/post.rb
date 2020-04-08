@@ -25,7 +25,7 @@ class Post < ApplicationRecord
                 posts.each do |p|
                     xml.url {
                         xml.loc "https://coronanews.ca/coronavirus/news/canada/#{p.title.gsub(/\./,'&#46;')}"
-                        xml.lastmod  p.updated_at
+                        xml.lastmod  p.date
                         xml.changefreq 'daily'
                     }
                 end
