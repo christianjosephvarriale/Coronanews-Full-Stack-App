@@ -30,6 +30,22 @@ class Spider < ApplicationRecord
                 country['properties']['deaths'] = world_stats[0][name][2]
                 country['properties']['deathsTrend'] = world_stats[0][name][3]
             
+            elsif name == 'United States'
+
+                country['properties']['cases'] = world_stats[0]['USA'][0]
+                country['properties']['casesTrend'] = world_stats[0]['USA'][1]
+
+                country['properties']['deaths'] = world_stats[0]['USA'][2]
+                country['properties']['deathsTrend'] = world_stats[0]['USA'][3]
+
+            elsif name == 'United Kingdom'
+
+                country['properties']['cases'] = world_stats[0]['UK'][0]
+                country['properties']['casesTrend'] = world_stats[0]['UK'][1]
+
+                country['properties']['deaths'] = world_stats[0]['UK'][2]
+                country['properties']['deathsTrend'] = world_stats[0]['UK'][3]
+
             else 
               
                 country['properties']['cases'] = 'data not reported'

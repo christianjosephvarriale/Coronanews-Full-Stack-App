@@ -99,13 +99,20 @@ class VecMap extends Component {
                                         onClick={this.handleClick}
                                         onMouseEnter={() => {
                                             const { name, cases, deaths, deathsTrend, casesTrend } = geography.properties;
+                                            cases == 'data not reported' ?  
+                                             
                                             this.setTooltipContent(`
-                                            <h5 style="color:white;font-weight:400;padding:0;margin-top:10px;text-align:center">${name}</h5> 
-                                            <p>Cases: ${cases}</p> 
-                                            <p>Cases Trend: ${casesTrend}</p> 
-                                            <p>Deaths: ${deaths}</p> 
-                                            <p>Deaths Trend: ${deathsTrend}</p> 
-                                            `);
+                                                <h5 style="color:white;font-weight:400;padding:0;margin-top:10px;text-align:center">${name}</h5>
+                                                <p>Insufficient data for ${name}</p>
+                                             `)
+                                             : 
+                                             this.setTooltipContent(`
+                                                <h5 style="color:white;font-weight:400;padding:0;margin-top:10px;text-align:center">${name}</h5> 
+                                                <p>Cases: ${cases}</p> 
+                                                <p>Cases Trend: ${casesTrend}</p> 
+                                                <p>Deaths: ${deaths}</p> 
+                                                <p>Deaths Trend: ${deathsTrend}</p> 
+                                            `)
                                         }}
                                         onMouseLeave={() => {
                                             this.setTooltipContent("error in parsing");

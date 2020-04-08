@@ -97,14 +97,15 @@ class BlogPage extends Component {
 
     componentDidMount() {
 
-        const url = this.props.location.pathname;
+        const url = window.location.href;
         const title = url.slice(url.lastIndexOf('/')+1);
+
 
         // fetch the post information based on location
         setTimeout(() => {
 
             // unescape quotes and decodeURI
-            this.props.fetchPost(title);
+            this.props.fetchPost(decodeURI(title));
         }, 500);
 
         this.props.toggleLoader('ON');

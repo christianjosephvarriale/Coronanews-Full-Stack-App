@@ -3,26 +3,18 @@
 # It's helpful, but not entirely necessary to understand cron before proceeding.
 # http://en.wikipedia.org/wiki/Cron
 
-every 1.day, at: '10:00 pm' do
-    command 'heroku run rake update_feed --app sleepy-anchorage-08584' 
+every 1.day, at: '12:10 am' do
+    command 'heroku run rake crawl_stats --app coronanews-prod' 
 end
 
-every 1.day, at: '9:00 am' do
-    command 'heroku run rake mail_subscribers --app sleepy-anchorage-08584' 
+every 1.day, at: '12:20 am' do
+    command 'heroku run rake create_posts --app coronanews-prod' 
 end
 
-# Example:
-#
-# set :output, "/path/to/my/cron_log.log"
-#
-# every 2.hours do
-#   command "/usr/bin/some_great_command"
-#   runner "MyModel.some_method"
-#   rake "some:great:rake:task"
-# end
-#
-# every 4.days do
-#   runner "AnotherModel.prune_old_records"
-# end
+every 1.day, at: '12:30 am' do
+    command 'heroku run rake update_sitemap --app coronanews-prod' 
+end
 
-# Learn more: http://github.com/javan/whenever
+every 1.day, at: '11:00 am' do
+    command 'heroku run rake mail_subscribers --app coronanews-prod' 
+end

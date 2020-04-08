@@ -1,4 +1,4 @@
 User-agent: * Disallow:
-Crawl-delay: 4000
+Crawl-delay: 6000
 
 Sitemap: https://coronavirus.ca/sitemap.xml

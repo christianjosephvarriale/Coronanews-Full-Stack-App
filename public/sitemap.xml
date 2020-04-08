@@ -1,58 +1,1443 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-<url>
-  <loc>https://coronavirus.ca/</loc>
-  <lastmod>2020-02-13T15:41:47+00:00</lastmod>
-</url>
-
-<url>
-  <loc>https://coronavirus.ca/ca/</loc>
-  <lastmod>2020-02-15T13:37:54+00:00</lastmod>
-</url>
-
-<url>
-  <loc>https://coronavirus.ca/us/</loc>
-  <lastmod>2020-02-15T13:37:54+00:00</lastmod>
-</url>
-
-<url>
-  <loc>https://coronavirus.ca/nl/</loc>
-  <lastmod>2020-02-15T13:37:54+00:00</lastmod>
-</url>
-
-<url>
-  <loc>https://coronavirus.ca/ch/</loc>
-  <lastmod>2020-02-15T13:37:54+00:00</lastmod>
-</url>
-
-<url>
-  <loc>https://coronavirus.ca/at/</loc>
-  <lastmod>2020-02-15T13:37:54+00:00</lastmod>
-</url>
-
-<url>
-  <loc>https://coronavirus.ca/fr/</loc>
-  <lastmod>2020-02-15T13:37:54+00:00</lastmod>
-</url>
-
-<url>
-  <loc>https://coronavirus.ca/it/</loc>
-  <lastmod>2020-02-15T13:37:54+00:00</lastmod>
-</url>
-
-<url>
-  <loc>https://coronavirus.ca/gb/</loc>
-  <lastmod>2020-02-15T13:37:54+00:00</lastmod>
-</url>
-
-<url>
-  <loc>https://coronavirus.ca/de/</loc>
-  <lastmod>2020-02-15T13:37:54+00:00</lastmod>
-</url>
-
+<?xml version="1.0"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/REUTERS NEWS SCHEDULE AT 10 a&amp;#46;m&amp;#46; GMT/6 a&amp;#46;m&amp;#46; ET</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world on Sunday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world on April 5 | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world on Saturday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world Tuesday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Impossible to repatriate all stranded Canadians, Champagne says</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/The Latest: Brazil President mulling 3rd coronavirus test</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19: Canada now has more than 440 confirmed cases</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/The Latest: Subways, some train service reopened in Wuhan</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/A city transformed: One week of COVID-19 in Hamilton | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world on Friday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world Thursday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world Wednesday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world on Saturday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world on Monday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world on April 5 - CBC&amp;#46;ca</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world Monday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Your guide to COVID-19 and its impact on life in Canada | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world on April 5 | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/How to protect yourself and others from infection as COVID-19 cases increase</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/The Latest: Phuket closes land and sea entry and exit points</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/How to protect yourself and others from infection as COVID-19 cases increase</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world Friday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/How to protect yourself and others from infection as COVID-19 cases increase</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Your guide to COVID-19 and its impact on life in Canada | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world Wednesday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world Tuesday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening in Canada and around the world Friday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening in Canada and around the world on Tuesday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/What to do if you think you have COVID-19: A guide to each province and territory | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening in Canada and around the world | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening in the sports world | CBC Sports</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/World Health Organization says COVID-19 outbreak a pandemic | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/The Latest: Navy hospital ship arrives in Los Angeles</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening in Canada and around the world on Sunday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/The Latest: Wolf: Over 220,000 screened at U&amp;#46;S&amp;#46; airports</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening in Canada and around the world on Wednesday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/World Health Organization says COVID-19 outbreak a pandemic | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Here's what we know about Ontario's 4,347 cases of COVID-19</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/The latest developments on COVID-19 in Canada: March 28</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world on Thursday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Editorial Roundup: US</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/The latest developments on COVID-19 in Canada</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/A COVID-19 update and new provincial measures; In The News for March 16</loc>
+    <lastmod>2020-04-06 21:46:20 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world Sunday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19: The latest guidance for Canadians on travel, quarantines and what to do if you have symptoms  | CBC Radio</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/World Health Organization says COVID-19 outbreak a pandemic | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/The Latest: Putin still working remotely during pandemic</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Why Manitoba needs to be more like B&amp;#46;C&amp;#46; if it wants to keep a lid on COVID-19 | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Here's what we know about Ontario's 3,630 cases of COVID-19</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Suspected, confirmed COVID-19 cases in Ontario ICUs far higher than official figures | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/The latest developments on COVID-19 in Canada</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Matt Gurney: Why the COVID-19 herd immunity theory is dangerously flawed</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Bank of England Monetary Policy Summary</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Medical experts warn against claims by Winnipeg acupuncturist advertising 'coronavirus prevention tea' | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world Monday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Russia's coronavirus count under scrutiny as Putin government denies hiding cases | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19 federal aid and NHL player diagnosed; In The News for March 18</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening in the sports world on Tuesday | CBC Sports</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/A look at what's In The News for March 16</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Trudeau's wife gets COVID-19 and drive-thru testing; In The News for March 13</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Sask&amp;#46; health says it has contained the province's first presumptive positive COVID-19 case | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening in Canada and around the world | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/World Health Organization says COVID-19 outbreak a pandemic | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Get your top stories in one quick scan | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19: U&amp;#46;S&amp;#46; prosecutors resist calls to free inmates as coronavirus spreads</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Here's what we know about Ontario's 3,255 cases of COVID-19</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Here's what we know about Ontario's 2,793 cases of COVID-19</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/A look at what's In The News for April 2</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/The new coronavirus: key terms explained</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Get your top stories in one quick scan | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/What you need to know about COVID-19 in Ottawa on Monday, March 30 | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Young people have no 'bulletproof' protection from COVID-19  --  particularly smokers and vapers | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19 Numbers: A provincial breakdown of the confirmed coronavirus cases in Canada</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/What you need to know about COVID-19 in Ottawa on Sunday, March 29 | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/151 new COVID-19 cases in Ontario as province cracks down on price gouging, large gatherings | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/151 new COVID-19 cases in Ontario as province cracking down on price gouging, large gatherings | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/What you need to know about COVID-19 in Ottawa on Saturday, March 28 | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/How deadly is COVID-19? Why it's different in every country | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/AP News in Brief at 12:04 a&amp;#46;m&amp;#46; EDT</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/AP News in Brief at 6:04 p&amp;#46;m&amp;#46; EDT</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/What you need to know about COVID-19 in Ottawa on Friday, March 27 | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19 in Sask: Public gatherings to be capped at 10 people, province reports 14 new cases | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/1 new case of COVID-19 in Manitoba, public health officials say | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/ANALYSIS | Saskatchewan government failed to order key equipment and supplies until after COVID-19 arrived | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/How to protect yourself and others from infection as COVID-19 cases increase</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19 in Sask: Premier threatens international travellers who don't self-isolate with arrest, fines | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/States of emergency; isolation; grocery shopping: We answer your COVID-19 Facebook questions | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/A look at what's In The News for March 18</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/#ICYMI: How staying home can save lives</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19 spending package and Big Brother Canada; In The News for March 17</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/#ICYMI: Canada to close borders to most non-citizens</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening in Canada and around the world Monday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Quebec's aggressive measures to combat COVID-19 applauded by experts</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/The latest developments on COVID-19 in Canada</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/HANSON: The great coronavirus war is upon us</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Des balados pour tout savoir sur le coronavirus </loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world Saturday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/In this battle, the heroes don't wear capes</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/#ICYMI: Schools, daycares, Parliament closed due to COVID-19</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening in Canada and around the world | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Q and A: What to do if you think you have COVID-19</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Les derniers d&#xE9;veloppements de la pand&#xE9;mie</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening around the world Wednesday as Italy passes 10,000 cases | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Economic toll of virus goes global and hits close to home</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Love and coronavirus: Turns out, yes, app dating can get even worse</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Dalhousie researchers get $1&amp;#46;9M to study coronavirus | CBC News</loc>
+    <lastmod>2020-04-06 21:46:21 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening around the world Monday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Containment is futile: Is the COVID-19 coronavirus the pathogen of the century 'everyone is waiting for'?</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Should people with flu-like symptoms be tested for COVID-19?</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Local leaders voice anger with N&amp;#46;W&amp;#46;T&amp;#46; policy on identifying communities with COVID-19 | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/A look at what's In The News for April 6</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/New federal aid and COVID-19 survival instinct; In The News for April 6</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Fighting COVID-19: Supplies, testing and scams: CBC's Marketplace cheat sheet | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/As Trump administration debated travel restrictions, thousands streamed in from China</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/GOLDSTEIN: Patty Hajdu's China Syndrome</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Pressed by Trump, U&amp;#46;S&amp;#46; pushed unproven coronavirus treatment guidance</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/How to help seniors get through the COVID-19 pandemic | CBC Radio</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Lessons learned from SARS outbreak make for better response to coronavirus pandemic </loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/As COVID-19 rips through long-term care homes, families face gut-wrenching choices | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Cruise passengers to land soon and 'Jesus Christ Superstar' streamable; In The News for April 3</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/A look at what's In The News for April 3</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Canadian passengers on virus-stricken Coral Princess cruise ship worry how they'll get home | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Province extends state of emergency 2 weeks; 20 new COVID-19 cases announced | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19: Dozens of Austin student spring breakers who flouted public health advice test positive for coronavirus</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Elections, Ties with China Shaped Iran's Coronavirus Response</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Governments urged not to shirk climate action after summit delay</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Get your top stories in one quick scan | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/'This is our time to act': A timeline of coronavirus in Manitoba | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/[DIRECT Les derniers d&#xE9;veloppements de la pand&#xE9;mie</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Pandemic could block access to medically-assisted dying for some Sask&amp;#46; patients | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/PM, Scheer to donate pay raise and a goat invasion; In The News for April 1</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/A look at what's In The News for April 1</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/What you need to know about COVID-19 in Ottawa on Wednesday, April 1 | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/What is a ventilator and who gets one if COVID-19 turns catastrophic in Canada? | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Here's what we know about Ontario's 1,966 cases of COVID-19</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/'Utterly unreliable': The mystery behind the true COVID-19 death rate</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/OPINION | Opinion: Why a 9-8-8 mental health emergency number is needed now more than ever in Canada | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/AP News in Brief at 9:04 p&amp;#46;m&amp;#46; EDT</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Vancouver Convention Centre picked for off site COVID-19 treatment centre</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/B&amp;#46;C&amp;#46; prepares off site treatment centres</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Cinq choses que l'on ne sait toujours pas</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Here's what we know about Ontario's 1,706 cases of COVID-19</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Why Germany's low COVID-19 death rate might be a mirage | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Here's what we know about Ontario's 1,355 cases of COVID-19</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Age is not the only risk for severe coronavirus disease</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Mexico's choice: Amulets or science to fight COVID-19 | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Spread of coronavirus accelerates in U&amp;#46;S&amp;#46; jails and prisons</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/A provincial breakdown of COVID-19 in Canada: 5,576 cases and 61 dead as of Saturday</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19 et animaux de compagnie </loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Free Press readers share their tales of coping with COVID-19</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Here's what we know about Ontario's 1,144 cases of COVID-19</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Spread of coronavirus accelerates in U&amp;#46;S&amp;#46; jails and prisons</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Dawdling on disaster: How response to coronavirus threat, climate change differ</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/How an Edmonton curling tournament became a hotspot for the COVID-19 outbreak in Canada</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/With U&amp;#46;S&amp;#46; hit by virus, China courts Latin America with medical diplomacy</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Front-line ER doctor says health-care workers are preparing for 'hordes of people' with COVID-19 | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Get your top stories in one quick scan | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/What you need to know about COVID-19 in Ottawa on Thursday, March 26 | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19 cases could peak within 2-3 weeks in Ontario: health unit | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Beware of COVID-19 scams, like free masks from the 'Red Cross' or fake test kits</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Can you get the coronavirus from receiving parcels?</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/How a lab in Sask&amp;#46; that focuses on animals became Canada's $23M hope for a COVID-19 vaccine | CBC News</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: About half of Montrealers testing positive are under 50</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19: don't believe everything you read; coronavirus scams abound</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus March 22: Schools closed till at least May 1, Legault says</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID 19 surges and hospital donations; In The News for March 23</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Canada's top doctors a new breed of celebrity</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/A new breed of celebrity in the age of COVID-19: the chief medical officer</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Private seniors' residence in Sherbrooke has COVID-19 outbreak</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/How to protect yourself and others from infection as COVID-19 cases increase</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Manitoba has experience with pandemics</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/WYWS: Concern in C&#xF4;te-St-Luc, homeless sheltering in Royal Vic</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/The Latest: Bangkok's shopping malls shut down</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/How to protect yourself and others from infection as COVID-19 cases increase</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Montreal public health races to curb C&#xF4;te-St-Luc outbreak</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Opinion: For some people, home isn't the safest place</loc>
+    <lastmod>2020-04-06 21:46:22 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Truths and myths: What can and can't protect you against COVID-19 | CBC News</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Montreal ERs are below capacity, but it could be the calm before the storm</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening in Canada and the world Thursday | CBC News</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Border closure and talking to kids about COVID-19; In The News for March 19</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Quebec ramps up COVID-19 testing with goal to do 12,000 a day</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Uncounted among coronavirus victims, deaths sweep through Italy's nursing homes</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Fox News opinion stars adjust their tone on virus</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19: Beware 'the virus of fear,' experts say</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/How to protect yourself and others from infection as COVID-19 cases increase</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Why aren't airport customs agents taking people's temperatures?</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/How mass pilgrimage at Malaysian mosque became coronavirus hotspot</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Doctors paring down to prep for fight</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/A look at what's In The News for March 17</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Montreal public health scrambles to avoid community spread of COVID-19</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Dunlevy: It started as a cough, and led to the COVID-19 testing clinic</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/The Latest: Handover of Olympic flame behind closed doors</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/REUTERS SPORTS SCHEDULE AT 7:30 p&amp;#46;m&amp;#46; GMT/ 2:30 p&amp;#46;m&amp;#46; ET</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening in the sports world on Saturday | CBC Sports</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Stupidit&#xE9; sociale et COVID-19: le cas am&#xE9;ricain</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/A look at what's In The News for March 13</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Ce que vous devez savoir sur la COVID-19</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19 is already having an impact on how we do politics | CBC News</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Trudeau to meet with premiers, Indigenous leaders Thursday as COVID-19 spreads and oil prices tank | CBC News</loc>
+    <lastmod>2020-04-06 21:46:23 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/REUTERS NEWS SCHEDULE AT 10 a&amp;#46;m&amp;#46; GMT/6 a&amp;#46;m&amp;#46; ET</loc>
+    <lastmod>2020-04-08 00:06:00 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world on Sunday | CBC News</loc>
+    <lastmod>2020-04-08 00:06:00 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world on April 5 | CBC News</loc>
+    <lastmod>2020-04-08 00:06:00 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world on Saturday | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world Tuesday | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19: Canada now has more than 440 confirmed cases</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/The Latest: Subways, some train service reopened in Wuhan</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world Tuesday | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world Thursday | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world Wednesday | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world on Saturday | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world Monday | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world on April 5 | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/How to protect yourself and others from infection as COVID-19 cases increase</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Your guide to COVID-19 and its impact on life in Canada | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world Tuesday | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening in the sports world | CBC Sports</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/World Health Organization says COVID-19 outbreak a pandemic | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Johnson listened to his scientists about coronavirus - but they were slow to sound the alarm</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening in Canada and around the world on Sunday | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/World Health Organization says COVID-19 outbreak a pandemic | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Doctors embrace drug touted by Trump for COVID-19, without hard evidence it works</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Here's what we know about Ontario's 4,347 cases of COVID-19</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world on Thursday | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: What's happening in Canada and around the world Sunday | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/The Latest: Putin still working remotely during pandemic</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Here's what we know about Ontario's 3,630 cases of COVID-19</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/The latest developments on COVID-19 in Canada</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Bank of England Monetary Policy Summary</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Sask&amp;#46; health says it has contained the province's first presumptive positive COVID-19 case | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Toronto Zoo taking precautions with big cats after tiger in N&amp;#46;Y&amp;#46; gets COVID-19</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Toronto Zoo protecting animals from COVID-19</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Latest cases of COVID-19: Canada Post employee in Milton tests positive</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/New York sees its deadliest day yet in coronavirus crisis | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/A look at what's In The News for April 7</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Respirators on their way and Gaga joins virus fight; In The News for April 7</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Get your top stories in one quick scan | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Young people have no 'bulletproof' protection from COVID-19  --  particularly smokers and vapers | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19 Numbers: A provincial breakdown of the confirmed coronavirus cases in Canada</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/151 new COVID-19 cases in Ontario as province cracking down on price gouging, large gatherings | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/How deadly is COVID-19? Why it's different in every country | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19 in Sask: Public gatherings to be capped at 10 people, province reports 14 new cases | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/ANALYSIS | Saskatchewan government failed to order key equipment and supplies until after COVID-19 arrived | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/States of emergency; isolation; grocery shopping: We answer your COVID-19 Facebook questions | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/A look at what's In The News for March 18</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/#ICYMI: How staying home can save lives</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/The latest developments on COVID-19 in Canada</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/HANSON: The great coronavirus war is upon us</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Des balados pour tout savoir sur le coronavirus </loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/In this battle, the heroes don't wear capes</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening in Canada and around the world | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Les derniers d&#xE9;veloppements de la pand&#xE9;mie</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Flu and coronavirus: Similar symptoms, different fears</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Economic toll of virus goes global and hits close to home</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Flu and coronavirus: Similar symptoms, different fears</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening around the world Tuesday  | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Dalhousie researchers get $1&amp;#46;9M to study coronavirus | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening around the world Monday | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Coronavirus: Here's what's happening around the world Saturday | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Containment is futile: Is the COVID-19 coronavirus the pathogen of the century 'everyone is waiting for'?</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/At-home COVID-19 deaths may be significantly undercounted in New York City</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Tracking COVID-19: How Manitoba's latest data compares to the rest of Canada | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVIDIOTS-19: For Kristin Cavallari life's just beachy!</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/India asks TikTok, Facebook to remove users spreading coronavirus misinformation</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Has Alberta reacted well to COVID-19, and is what we're doing working? | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Canadian prescriptions for malaria drug with COVID-19 potential surge, some for doctors' own use</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Get your top stories in one quick scan | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/What you need to know about COVID-19 in Ottawa on Tuesday, April 7 | CBC News</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Answers to some of common COVID-19 questions</loc>
+    <lastmod>2020-04-08 00:06:01 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Le voile se l&#xE8;ve peu &#xE0; peu sur la maladie</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Got COVID-19 symptoms? Avoid snuggling with Fluffy and Fido, experts advise</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Jonathan Kay: The case for wearing face masks during COVID-19 was obvious a month ago</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/U&amp;#46;S&amp;#46; deaths from COVID-19 climb to over 10,000: Johns Hopkins | CBC News</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19 in Sask: Province reports lowest daily increase in new cases in weeks | CBC News</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Ontario has only 1 week supply of 'critical' protective equipment left, premier says | CBC News</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/A look at COVID-19 research around the globe</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/'A will of steel': Vera Etches is the face of Ottawa's fight against COVID-19 | CBC News</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/UK PM Johnson hospitalized for tests after persistent coronavirus symptoms</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Got COVID-19 symptoms? Avoid snuggling with Fluffy and Fido, experts advise</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Experts have COVID-19 advice for pet owners</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/UK PM Johnson's activities before his hospitalization with coronavirus</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/COVID-19 provincial breakdown in Canada: 15,443 cases and 277 deaths as of Sunday</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Les maladies chroniques et la COVID-19</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/'No one wants to hug me': What it's like to be an essential worker on the front lines of COVID-19</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/Fighting COVID-19: Supplies, testing and scams: CBC's Marketplace cheat sheet | CBC News</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/U&amp;#46;S&amp;#46; 'wasted' months before preparing for virus pandemic</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/As Trump administration debated travel restrictions, thousands streamed in from China</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://coronanews.ca/coronavirus/news/canada/[DIRECT] Tous les d&#xE9;veloppements de la pand&#xE9;mie</loc>
+    <lastmod>2020-04-08 00:06:02 UTC</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
 </urlset>

@@ -3,36 +3,11 @@ class Subscriber < ApplicationRecord
 
     # sends out 24 hour breaking news to mailing lists 
     def self.mail_subscribers
-        
-        # if date - date.now < 24 hrs, mail out post data      
-        @all_posts = Post.where({ date: (Time.now.midnight - 1.day)..Time.now.midnight }).where.not(headerImg: [nil, ""])
 
-        @formatted_all_posts = @all_posts.map do |post|
-
-            if post.title.length > 100
-                title = post.title[0..100] + '...'
-            else
-                title = post.title
-            end
-            { :img => post.headerImg, :title => title, :author => post.author, :url => post.url }
-        end
-
-        @template_all_vars = { :countries => 'all available countries', :date => Time.zone.now.to_date, :posts => @formatted_all_posts }.to_json
-
-        RestClient.post "https://api:#{ENV['MAILGUN_APIKEY']}"\
-		"@api.mailgun.net/v3/coronanews.ca/messages",
-		:from => "Corona News <news@coronanews.ca>",
-		:to => "<all@coronanews.ca>",
-		:subject => "Corona Virus Breaking News",
-        :template => "new_stories",
-        :"h:X-Mailgun-Variables" => @template_all_vars
-
-        regions = ['ca','us','de','it','gb','fr','nl','at','ch']
+        regions = ['ca']
 
         regions_map = { 
-            'ca' => 'Canada', 'us' => 'United States', 'de' => 'Germany',
-            'it' => 'Italy', 'gb' => 'United Kingdom', 'fr' => 'France',
-            'nl' => 'Netherlands', 'at' => 'Austria', 'ch' => 'Switzerland'
+            'ca' => 'Canada'
         }
 
         for @region in regions do 

@@ -21,6 +21,20 @@ import { Redirect } from 'react-router-dom';
 
 import Map from './map.js'
 
+function sort (a, b) {
+
+    const postA = parseInt(a.relevance);
+    const postB = parseInt(a.relevance);
+  
+    let comparison = 0;
+    if (postA > postB) {
+      comparison = 1;
+    } else if (postA < postB) {
+      comparison = -1;
+    }
+    return comparison;
+  }
+
 class Blog extends Component {
 
     componentDidMount() {
@@ -75,12 +89,14 @@ class Blog extends Component {
 
         if (length > 0) {
 
-            featPosts = featPosts.slice(0,12)
+            posts.sort(sort)
 
-            featPosts = featPosts.map((post) => 
-                <FeaturedBlogPost title={post.title} headerImg={post.headerImg} id={post.id} 
-                region={post.region} date={post.date} author={post.author} url={post.url}  />
-            );
+            // featPosts = featPosts.slice(0,12)
+
+            // featPosts = featPosts.map((post) => 
+            //     <FeaturedBlogPost title={post.title} headerImg={post.headerImg} id={post.id} 
+            //     region={post.region} date={post.date} author={post.author} url={post.url}  />
+            // );
 
             let page = url.slice(url.lastIndexOf('/')+1);
             if (page > (Math.floor(length / 12) + 1)) { /* throw 404 */ 
@@ -91,7 +107,7 @@ class Blog extends Component {
             const slcdPostLst = posts.slice( (page-1) * 12, page * 12 );
 
             posts = slcdPostLst.map((post, index) =>  {
-                return (<BlogPost relevance={post.relevance} sentiment={post.sentiment} index={index} title={post.title} headerImg={post.headerImg} id={post.id} 
+                return (<BlogPost source={post.source} relevance={post.relevance} sentiment={post.sentiment} index={index} title={post.title} headerImg={post.headerImg} id={post.id} 
                 region={post.region} date={post.date} url={post.url} 
                 /> )
                 }

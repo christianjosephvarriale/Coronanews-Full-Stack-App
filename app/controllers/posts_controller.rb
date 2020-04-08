@@ -23,6 +23,8 @@ class PostsController < ApplicationController
       #decode the URI if needed
       @title = HTMLEntities.new.decode params[:title]
 
+      puts @title
+
       @post = Post.find_by title: @title
       @prevPost = Post.find_by id: @post.id - 1
       @nextPost = Post.find_by id: @post.id + 1

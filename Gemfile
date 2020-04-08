@@ -7,6 +7,7 @@ gem 'contentful-management', '~> 2.0'
 gem 'contentful'
 gem 'rest-client'
 gem 'htmlentities'
+gem 'nokogiri'
 ruby '2.6.3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

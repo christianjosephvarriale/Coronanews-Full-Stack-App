@@ -29,7 +29,7 @@ class BlogPost extends Component {
             title = title.slice(0, 80) + '...'
         } 
 
-        const escaped_title = props.title.replace(/./g,'&#46;')
+        const escaped_title = props.title.replace(/\./g,'&#46;').replace(/\//g,'&#47;')
 
         const countryMap = {
             ca : 'canada',
@@ -57,7 +57,7 @@ class BlogPost extends Component {
                             </div> 
                             <div className={styles.itemEntryText}>
                                 <div className={styles.itemEntryCat}>
-                                    <NavLink to={`/coronavirus/news/${countryMap[props.region]}/articles/${encodeURI(escaped_title)}`}>{countryMap[props.region]}</NavLink>
+                                    <NavLink to={`/coronavirus/news/${countryMap[props.region]}/articles/${encodeURI(escaped_title)}`}>{props.source}</NavLink>
                                 </div>
                                 <h1 style={{marginBottom: 150}} className={styles.itemEntryTitle}><NavLink to={`/coronavirus/news/${countryMap[props.region]}/articles/${encodeURI(escaped_title)}`}>{title}</NavLink></h1>
                                 <div className={styles.itemEntryDate}>
