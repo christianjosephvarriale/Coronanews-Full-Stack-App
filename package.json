@@ -2,7 +2,7 @@
   "name": "list-of-ingredients",
   "license": "MIT",
   "engines": {
-    "node": "12.16.2",
+    "node": "12.14.0",
     "yarn": "1.21.1"
   },
   "scripts": {
