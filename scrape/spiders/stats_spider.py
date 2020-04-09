@@ -19,13 +19,13 @@ class StatsSpider(scrapy.Spider):
     def extract(self, response):
         ''' extracts the page data using XPATH selectors '''
 
-        data = list( map (lambda td: re.sub("<.*?>", "", td), list( map ( lambda td: td.replace("\n","") , response.xpath(f"//table[@id='main_table_countries_today']/tbody/tr/td").getall()[1:]))))
+        data = list( map (lambda td: re.sub("<.*?>", "", td), list( map ( lambda td: td.replace("\n","") , response.xpath(f"//table[@id='main_table_countries_today']/tbody/tr[not(contains(@class,'total_row_world'))]/td[not(contains(@style,'none'))]").getall()))))
         regions = response.xpath(f"//table[@id='main_table_countries_today']/tbody/tr/td/a/text()").getall()
 
-        res = { 'World' : [] }
-        region = 'World'
+        res = {  }
+        region = ''
 
-        i = 1
+        i = 0
         while regions:
             if i % 12 == 0: # it's a country title
                 region = regions.pop(0)

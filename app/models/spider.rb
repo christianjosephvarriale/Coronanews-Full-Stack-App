@@ -63,7 +63,10 @@ class Spider < ApplicationRecord
 
         ca_stats = JSON.parse File.read("client/src/ca_stats.json")
 
-        ca_stats.append( { date: Time.now.strftime("%Y/%m/%d"), cases: world_stats[0]['Canada'][0].squish.gsub(/,/, ''), deaths: world_stats[0]['Canada'][2].squish.gsub(/,/, '') } )
+        if ca_stats[ ca_stats.length() - 1 ]['date'] == Time.now.strftime("%Y/%m/%d")
+        else
+            ca_stats.append( { date: Time.now.strftime("%Y/%m/%d"), cases: world_stats[0]['Canada'][0].squish.gsub(/,/, ''), deaths: world_stats[0]['Canada'][2].squish.gsub(/,/, '') } )
+        end
 
         File.open("client/src/ca_stats.json","w") do |f|
             f.write(ca_stats.to_json)
