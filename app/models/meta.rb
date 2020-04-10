@@ -1,0 +1,2 @@
+class Meta < ApplicationRecord
+end

@@ -4,12 +4,11 @@ import React, { Component } from 'react';
 import logo from '../img/logo/virus.png';
 import '../css/main.css';
 import Button from './button';
-import { NavLink, Link, BrowserRouter as Router } from "react-router-dom"; 
+import { Link, BrowserRouter as Router } from "react-router-dom"; 
 
 import Subscription from './subscription';
 import { connect } from 'react-redux';
 import { toggleSubscriptionState } from '../actions/pageActions';
-import LegoLoader from './legoLoader';
 
 class NavBar extends Component {
     constructor(props){
@@ -53,7 +52,6 @@ class NavBar extends Component {
     }
 
     render(){
-        const { loading } = this.props.state.AppReducer;
         const { mobile } = this.props.state.AppReducer
 
         // conditionally render header text
@@ -62,11 +60,6 @@ class NavBar extends Component {
             headerText = <h1>Corona News</h1>
         }
 
-        if (loading) {
-            return (
-                <LegoLoader />
-            )
-        } else {
         return (
             <Router forceRefresh="true">
 
@@ -83,11 +76,8 @@ class NavBar extends Component {
                 </div>
 
                 <nav class="header__nav-wrap">
-
                 <h2 class="header__nav-heading h6">Navigate to</h2>
-
                 <ul class="header__nav">
-                
                 <li role="menuitem"><a href="" onClick={(e) => { e.preventDefault(); this.props.toggleSubscriptionState() }}>Subscribe</a></li>
                 
                 {/* <li class="has-children">
@@ -112,22 +102,6 @@ class NavBar extends Component {
                         <Button handleClick={this.handleSubmit} label={'Donate'}/>
                     </form>
                 </li>
-
-                {/* <li role="menuitem"><a href="#about">About</a></li>
-                <li role="menuitem"><a href="#features">Features</a></li>
-                <li role="menuitem"><a href="#pricing">Pricing</a></li>
-                <li role="menuitem"><a href="#team">Team</a></li>
-                <li role="menuitem"><a href="#gallery">Gallery</a></li>
-                <li role="menuitem"><a href="#contact">Contact</a></li>
-
-                <li role="menuitem"><NavLink to="/blog/page/1" role="menuitem">Blog</NavLink></li>
-                <li class="has-children">
-                    <a href="#0" title="">Products</a>
-                    <ul class="sub-menu">       
-                        <li><NavLink to="/amazonTool" role="menuitem">Amazon</NavLink></li>
-                        <li><NavLink to="/yahooTool" role="menuitem">Yahoo</NavLink></li>
-                    </ul>
-                </li> */}
                 </ul> 
 
                 <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
@@ -136,7 +110,6 @@ class NavBar extends Component {
                 </header>
             </Router>    
             );
-        }
     }
 }
 

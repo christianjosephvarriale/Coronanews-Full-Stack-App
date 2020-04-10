@@ -16,48 +16,25 @@ const client = contentful.createClient({
  *  1. Queries the database to retreive all posts
  *  2. If region is not undefined it will retreive based on region
  */
-export const fetchAllPosts = region => dispatch => {
+export const fetchAllPosts = (page, region) => dispatch => {
     if (region) {
-        axios.get(`/posts/region/${region}`)
+        axios.get(`/posts/region/${region}/${page}`)
         .then((res) => {
-            const rawPosts = res.data
-            const posts = [];
-            const featPosts = [];
-
-            for (let i=0; i<rawPosts.length; i++) { /* sort */
-                if (rawPosts[i].featured) {
-                    featPosts.push(rawPosts[i])
-                } else {
-                    posts.push(rawPosts[i])
-                }
-            }
-
+            const posts = res.data
+            console.log(posts)
             dispatch({
                 type: POST_ACTIONS.FETCH_ALL,
-                payload: { posts, featPosts }
+                payload: posts
             })
         })
         .catch(console.error)
     } else {
-        axios.get('/posts')
+        axios.get(`/posts/${page}`)
         .then((res) => {
-            const rawPosts = res.data
-            const posts = [];
-            const featPosts = [];
-
-            debugger;
-
-            for (let i=0; i<rawPosts.length; i++) { /* sort */
-                if (rawPosts[i].featured) {
-                    featPosts.push(rawPosts[i])
-                } else {
-                    posts.push(rawPosts[i])
-                }
-            }
-
+            const posts = res.data
             dispatch({
                 type: POST_ACTIONS.FETCH_ALL,
-                payload: { posts, featPosts }
+                payload: posts
             })
         })
         .catch(console.error)

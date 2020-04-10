@@ -7,14 +7,20 @@ class PostsController < ApplicationController
 
     # GET all posts
     def index
-      @posts = Post.all
-      render json: @posts
+      srt_pos = ( params[:page].to_i - 1 ) * 12
+      end_pos = srt_pos + 11
+      @posts = Post.all.order(created_at: :desc)[srt_pos..end_pos]
+      render json: { posts: @posts, length: Post.all.length } 
     end
 
     # GET posts where region is params[:region]
     def show_region
-        @posts = Post.where( region: params[:region] )
-        render json: @posts
+        srt_pos = ( params[:page].to_i - 1 ) * 12
+        end_pos = srt_pos + 11  
+        puts srt_pos
+        puts end_pos
+        @posts = Post.where( region: params[:region] ).order(created_at: :desc)[srt_pos..end_pos]
+        render json: { posts: @posts, length: Post.all.length }
     end
   
     # GET post by unique title, and return the last and next post
@@ -35,7 +41,7 @@ class PostsController < ApplicationController
     private
       # Only allow a trusted parameter "white list" through.
       def post_params
-        params.permit(:id, :region, :title)
+        params.permit(:id, :region, :title, :page)
       end
   end
   

@@ -1,17 +1,15 @@
 import ReactTooltip from 'react-tooltip';
-import MapChart from '../DemoPages/Components/Maps/Examples/VectorMaps/Datasets'
-import React, { Component, Fragment } from 'react';
+import React, { Component} from 'react';
 
 import {
     ComposableMap,
-    ZoomableGroup,
     Geographies,
     Geography,
 } from "react-simple-maps"
 import chroma from "chroma-js"
 import {scaleLinear} from "d3-scale"
-
-import world from '../world_map.json';
+import Loader from './loader'
+import axios from 'axios'
 
 const colorScale = chroma
     .scale([
@@ -59,7 +57,18 @@ class VecMap extends Component {
         super()
         this.state = {
             toolTip: "",
+            meta: null
         }
+    }
+
+    componentDidMount() {
+        axios.get(`/meta`)
+        .then((res) => {
+            this.setState({
+                meta: JSON.parse(res.data.world_map)
+            })
+        })
+        .catch(console.error)
     }
 
     setTooltipContent = (toolTip) => {
@@ -67,8 +76,14 @@ class VecMap extends Component {
     }
 
     render() {
+        debugger;
+        if ( this.state.meta ) {
         return (
-            <Fragment>
+            <div 
+                data-wow-duration="1s" 
+                data-wow-delay="1s"
+                className={'zoomIn wow'}>
+
                 <ComposableMap
                     projectionConfig={{
                         scale: 205,
@@ -83,7 +98,7 @@ class VecMap extends Component {
                     }}
                 >
                     <Geographies
-                            geography={world}
+                            geography={this.state.meta}
                             disableOptimization
                         >
                             {(geographies, projection) =>
@@ -143,8 +158,13 @@ class VecMap extends Component {
                         </Geographies>
                 </ComposableMap>
                 <ReactTooltip html multiline id='map'>{this.state.toolTip}</ReactTooltip>
-            </Fragment>
-        )
+            </div>
+            )
+        } else {
+            return (
+                <Loader />
+            )
+        }
     }
 }
 

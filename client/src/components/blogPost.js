@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import styles from '../css/blog.module.css';
 import '../css/slick-slider.css';
-import '../css/vendor.css'
 import { NavLink, Link, BrowserRouter as Router } from "react-router-dom"; 
-import {scaleLinear} from "d3-scale"
-import ai from '../img/ai.svg'
-
+import {scaleLinear} from "d3-scale";
+import '../css/style.css';
 
 /**
  * Make sense of the numerical values
@@ -48,25 +46,26 @@ class BlogPost extends Component {
         } else {
             return (
                 <Router forceRefresh="true">
-                    <article className={styles.colBlock}>  
-                        <div className={styles.itemEntry} data-aos="zoom-in">
+                    <article itemscope itemtype ="http://schema.org/Blog" data-wow-duration="1s" data-wow-delay="1s" className={`${styles.colBlock} fadeInUp wow`}>  
+                        <meta itemprop="position" content={props.index} />
+                        <meta itemprop="keywords" content={'coronavirus,coronanewscanada,coronavirus tips,when will coronavirus end'} />
+                        <div className={`${styles.itemEntry}`}>
                             <div className={styles.itemEntryThumb}>
                                 <NavLink to={`/coronavirus/news/${countryMap[props.region]}/articles/${encodeURI(escaped_title)}`} className={styles.itemEntryThumbLink}>
-                                    <img src={props.headerImg} alt=""/>
+                                    <img itemprop="thumbnailUrl" src={props.headerImg} alt={title}/>
                                 </NavLink>
                             </div> 
                             <div className={styles.itemEntryText}>
                                 <div className={styles.itemEntryCat}>
-                                    <NavLink to={`/coronavirus/news/${countryMap[props.region]}/articles/${encodeURI(escaped_title)}`}>{props.source}</NavLink>
+                                    <NavLink itemprop="contributor" to={`/coronavirus/news/${countryMap[props.region]}/articles/${encodeURI(escaped_title)}`}>{props.source}</NavLink>
                                 </div>
-                                <h1 style={{marginBottom: 150}} className={styles.itemEntryTitle}><NavLink to={`/coronavirus/news/${countryMap[props.region]}/articles/${encodeURI(escaped_title)}`}>{title}</NavLink></h1>
+                                <h1 itemprop="headline" style={{marginBottom: 150}} className={styles.itemEntryTitle}><NavLink to={`/coronavirus/news/${countryMap[props.region]}/articles/${encodeURI(escaped_title)}`}>{title}</NavLink></h1>
                                 <div className={styles.itemEntryDate}>
-                                    <NavLink to={`/coronavirus/news/${countryMap[props.region]}/articles/${encodeURI(escaped_title)}`} role="menuitem">{date.toDateString()}</NavLink>
+                                    <NavLink itemprop="datePublished" to={`/coronavirus/news/${countryMap[props.region]}/articles/${encodeURI(escaped_title)}`} role="menuitem">{date.toDateString()}</NavLink>
                                 </div>
                                 <div style={{position: 'absolute', bottom: '7rem', left: '0px' ,width: '100%'}}>
                                     <div style={{alignItems: 'center', justifyContent: 'center', display:'flex'}}>
                                         <h5>Powered by AI</h5>
-                                        {/* <img style={{width:50,height:50}} src={ai} />     */}
                                     </div>
                                     <div>
                                         <bold>Relevance</bold> {props.relevance} {relevanceMap(props.relevance)}

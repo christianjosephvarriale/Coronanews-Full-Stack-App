@@ -139,9 +139,6 @@ class Footer extends Component {
         const { props } = this;
         const { loading } = props.state;
         const { mobile } = props;
-        if (loading) {
-            return ( null )
-        } else {
         return (      
             <div>
                 <Snackbar handleClose={this.handleClose} open={this.state.openSuccess} variant={'success'} message={"Thanks for getting in contact! We'll reach out soon"} />
@@ -156,7 +153,6 @@ class Footer extends Component {
                         </p>
                     </div>
                     <div class="container">
-                        <div class="row wow fadeInUp">
                             <Carousel 
                                 swipeable={false}
                                 draggable={false}
@@ -184,12 +180,11 @@ class Footer extends Component {
                                 <img src={cbc} alt="" />
                                 <img src={nat} alt="" />
                             </Carousel>
-                        </div>
                     </div>
                 </section>
                 <section id="contact">
                     <div class="container">
-                                <div class="row wow fadeInUp">
+                                <div class="row wow rubberBand" data-wow-duration="1s" data-wow-delay="1s">
                                     <div class="col-lg-6 col-md-6">
                                         <div id="about-coronanews" class="contact-about">
                                             <div style={{ display:'flex' }}>
@@ -280,7 +275,6 @@ class Footer extends Component {
             </div>
            
             )
-        }
     }
 }
 

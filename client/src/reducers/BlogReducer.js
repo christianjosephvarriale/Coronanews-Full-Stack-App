@@ -1,8 +1,7 @@
 import { POST_ACTIONS, COMMENT_ACTIONS } from '../actions/types'
 
 const initalState = {
-  posts: [],
-  featPosts: [],
+  posts: {},
   post: {},
   comments: []
 }
@@ -17,8 +16,7 @@ const BlogReducer = (state = initalState, action) => {
     case POST_ACTIONS.FETCH_ALL:
       return {
         ...state,
-        posts: action.payload.posts,
-        featPosts: action.payload.featPosts
+        posts: action.payload,
       }
     case COMMENT_ACTIONS.FETCH_ALL:
       return {

@@ -1,7 +1,6 @@
 import React, {Component, Fragment, ReactDOM} from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import BarChartIcon from '@material-ui/icons/BarChart';
-import '../../../css/vendor.css'
 
 import {
     Row, Col,
@@ -37,10 +36,11 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import axios from 'axios'
 
-const graphData = require('../../../ca_stats.json');
-const statsData = require('../../../world_stats.json')[0];
 const jsonata = require("jsonata");
+let statsData = ''
+let graphData = ''
 
 /**
  * Des: determines the position of a country in statistic using jsonata
@@ -95,6 +95,16 @@ export default class AnalyticsDashboard1 extends Component {
 
     }
 
+    componentDidMount() {
+        axios.get(`/meta`)
+        .then((res) => {
+            statsData = JSON.parse(res.data.world_stats)
+            graphData = JSON.parse(res.data.ca_stats)
+            this.forceUpdate()
+        })
+        .catch(console.error)
+    }
+
     toggle() {
         this.setState(prevState => ({
             dropdownOpen: !prevState.dropdownOpen
@@ -109,26 +119,21 @@ export default class AnalyticsDashboard1 extends Component {
         }
     }
 
-    componentDidMount() {
+    embed_google = () => {
     
         const that = this;
-        const script1 = document.createElement("script")
-        script1.src = "https://ssl.gstatic.com/trends_nrtr/760_RC08/embed_loader.js"
-        script1.async = true
+        const script = document.createElement("script")
+        script.src = "https://ssl.gstatic.com/trends_nrtr/2152_RC04/embed_loader.js"
+        script.async = true
 
-        const script2 = document.createElement("script")
-        script2.src = "https://ssl.gstatic.com/trends_nrtr/2152_RC04/embed_loader.js"
-        script2.async = true
-    
-        this.google_trends1.appendChild(script1)
-        this.google_trends2.appendChild(script2)
+        setTimeout(() => {
+            this.google_trends1.appendChild(script)
+            this.google_trends2.appendChild(script)
+        }, 0)
         
-        script1.onload = function () {
-          window.trends.embed.renderExploreWidgetTo(that.google_trends1, "TIMESERIES", {"comparisonItem":[{"keyword":"coronavirus","geo":"CA","time":"today 3-m"}],"category":0,"property":""}, {"exploreQuery":"geo=CA&q=coronavirus&date=today 3-m","guestPath":"https://www.google.com:443/trends/embed/"})
-        }
-
-        script2.onload = function () {
-            window.trends.embed.renderWidgetTo(that.google_trends2, "US_cu_E-aoCHEBAADKbM_en", "fe_list_7e016d51-03c6-4ca7-a148-f720abb8b4bd", {"guestPath":"https://trends.google.com:443/trends/embed/"}) 
+        script.onload = function () {
+          window.trends.embed.renderWidgetTo(that.google_trends1, "US_cu_4Rjdh3ABAABMHM_en", "fe_line_chart_e9d325a0-e899-4215-a8bf-e1857ef601d8", {"guestPath":"https://trends.google.com:443/trends/embed/"})
+          window.trends.embed.renderWidgetTo(that.google_trends2, "US_cu_E-aoCHEBAADKbM_en", "fe_list_7e016d51-03c6-4ca7-a148-f720abb8b4bd", {"guestPath":"https://trends.google.com:443/trends/embed/"}) 
         }
     }
 
@@ -136,6 +141,12 @@ export default class AnalyticsDashboard1 extends Component {
 
         const statsArr = [ 'cases', 'deaths' , 'tests', 'casesPer1M','testsPer1M', 'deathsPer1M' ]
         
+        console.log(this.state.meta)
+
+        if ( statsData && graphData ) {
+
+        this.embed_google()
+
         let statsWidgetCols = statsArr.map((stat) => { 
 
             const { statsVal, statsRank, statsProgress } = statistics('Canada', stat)
@@ -196,10 +207,9 @@ export default class AnalyticsDashboard1 extends Component {
         return (
             <Fragment>
                 <Row className="mt-3">
-                    <Col md="6">
+                    <Col md="6" className={`fadeInLeft wow`} data-wow-duration="1s" data-wow-delay="1s"> 
                 <ReactCSSTransitionGroup
                     component="div"
-                    data-aos="zoom-in"
                     style={{padding:20}}
                     transitionName="TabsAnimation"
                     transitionAppear={true}
@@ -257,17 +267,22 @@ export default class AnalyticsDashboard1 extends Component {
                     </div>
                 </ReactCSSTransitionGroup>
                 </Col>
-                <Col md="6">
-                    <div data-aos="zoom-in" style={{padding: 20, marginTop: 40, marginBottom: 30}}>
+                <Col className={`fadeInRight wow`} data-wow-duration="1s" data-wow-delay="1s" md="6">
+                    <div style={{padding: 20, marginTop: 40, marginBottom: 30}}>
                     <div style={{maxWidth:800, margin: 'auto'}}ref={el => (this.google_trends1 = el)} />
                     </div>
 
-                    <div data-aos="zoom-in" style={{padding: 20, marginBottom: 30}}>
+                    <div style={{padding: 20, marginBottom: 30}}>
                     <div style={{maxWidth:800, margin: 'auto'}}ref={el => (this.google_trends2 = el)} />
                     </div>
                 </Col>
                 </Row>
             </Fragment>
-        )
+            )
+        } else {
+            return (
+                null
+            )
+        }
     }
 }
