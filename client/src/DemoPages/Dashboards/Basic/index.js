@@ -127,7 +127,6 @@ export default class AnalyticsDashboard1 extends Component {
         script.async = true
 
         setTimeout(() => {
-            this.google_trends1.appendChild(script)
             this.google_trends2.appendChild(script)
         }, 0)
         
