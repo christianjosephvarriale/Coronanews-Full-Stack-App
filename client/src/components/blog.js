@@ -3,7 +3,6 @@ import React, { Component, Suspense } from 'react';
 import styles from '../css/blog.module.css';
 import '../css/slick-slider.css';
 
-
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import corona from '../img/coronavirus.jpg'
@@ -18,8 +17,7 @@ import Pagniation from './pagination';
 import { Redirect } from 'react-router-dom';
 import Map from './map.js'
 import Loader from './loader';
-
-const Main = React.lazy(() => import('../DemoPages/Dashboards/Basic/index'));
+import Dashboard from './dashboard.js';
 
 function sort (a, b) {
 
@@ -120,10 +118,7 @@ class Blog extends Component {
                     </div>
 
                     <Map />
-                    
-                    <Suspense fallback={<Loader />}>
-                        <Main />
-                    </Suspense>
+                    <Dashboard />
 
                 <section className={styles.sContent}>
 

@@ -1,6 +1,7 @@
 import React, {Component, Fragment, ReactDOM} from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import BarChartIcon from '@material-ui/icons/BarChart';
+import Loader from './loader'
 
 import {
     Row, Col,
@@ -81,7 +82,7 @@ const percentageIncrease = (oldVal, newVal) => {
     return { percent, positive, sign }
 }
 
-export default class AnalyticsDashboard1 extends Component {
+export default class Dashboard extends Component {
     constructor() {
         super();
 
@@ -103,6 +104,17 @@ export default class AnalyticsDashboard1 extends Component {
             this.forceUpdate()
         })
         .catch(console.error)
+
+        const that = this;
+        const script = document.createElement("script")
+        script.src = "https://ssl.gstatic.com/trends_nrtr/2152_RC04/embed_loader.js"
+        script.async = true
+        document.body.appendChild(script)
+
+        script.onload = function () {
+          window.trends.embed.renderWidgetTo(that.google_trends1, "US_cu_4Rjdh3ABAABMHM_en", "fe_line_chart_e9d325a0-e899-4215-a8bf-e1857ef601d8", {"guestPath":"https://trends.google.com:443/trends/embed/"})
+          window.trends.embed.renderWidgetTo(that.google_trends2, "US_cu_E-aoCHEBAADKbM_en", "fe_list_7e016d51-03c6-4ca7-a148-f720abb8b4bd", {"guestPath":"https://trends.google.com:443/trends/embed/"}) 
+        }
     }
 
     toggle() {
@@ -119,23 +131,6 @@ export default class AnalyticsDashboard1 extends Component {
         }
     }
 
-    embed_google = () => {
-    
-        const that = this;
-        const script = document.createElement("script")
-        script.src = "https://ssl.gstatic.com/trends_nrtr/2152_RC04/embed_loader.js"
-        script.async = true
-
-        setTimeout(() => {
-            this.google_trends2.appendChild(script)
-        }, 0)
-        
-        script.onload = function () {
-          window.trends.embed.renderWidgetTo(that.google_trends1, "US_cu_4Rjdh3ABAABMHM_en", "fe_line_chart_e9d325a0-e899-4215-a8bf-e1857ef601d8", {"guestPath":"https://trends.google.com:443/trends/embed/"})
-          window.trends.embed.renderWidgetTo(that.google_trends2, "US_cu_E-aoCHEBAADKbM_en", "fe_list_7e016d51-03c6-4ca7-a148-f720abb8b4bd", {"guestPath":"https://trends.google.com:443/trends/embed/"}) 
-        }
-    }
-
     render() {
 
         const statsArr = [ 'cases', 'deaths' , 'tests', 'casesPer1M','testsPer1M', 'deathsPer1M' ]
@@ -143,8 +138,6 @@ export default class AnalyticsDashboard1 extends Component {
         console.log(this.state.meta)
 
         if ( statsData && graphData ) {
-
-        this.embed_google()
 
         let statsWidgetCols = statsArr.map((stat) => { 
 
@@ -277,10 +270,39 @@ export default class AnalyticsDashboard1 extends Component {
                 </Col>
                 </Row>
             </Fragment>
+
             )
         } else {
             return (
-                null
+                <Fragment>
+                <Row className="mt-3">
+                    <Col md="6" className={`fadeInLeft wow`} data-wow-duration="1s" data-wow-delay="1s"> 
+                <ReactCSSTransitionGroup
+                    component="div"
+                    style={{padding:20}}
+                    transitionName="TabsAnimation"
+                    transitionAppear={true}
+                    transitionAppearTimeout={0}
+                    transitionEnter={false}
+                    transitionLeave={false}>
+                    <div style={{display: 'flex', padding: '40px 0 0', justifyContent: 'center'}}>
+                        <Card style={{width: '100%', maxWidth: 800}} className="mb-3">            
+                            <Loader />
+                        </Card>
+                    </div>
+                </ReactCSSTransitionGroup>
+                </Col>
+                <Col className={`fadeInRight wow`} data-wow-duration="1s" data-wow-delay="1s" md="6">
+                    <div style={{padding: 20, marginTop: 40, marginBottom: 30}}>
+                    <div style={{maxWidth:800, margin: 'auto'}}ref={el => (this.google_trends1 = el)} />
+                    </div>
+
+                    <div style={{padding: 20, marginBottom: 30}}>
+                    <div style={{maxWidth:800, margin: 'auto'}}ref={el => (this.google_trends2 = el)} />
+                    </div>
+                </Col>
+                </Row>
+            </Fragment>
             )
         }
     }
