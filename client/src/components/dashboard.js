@@ -114,7 +114,24 @@ export default class Dashboard extends Component {
         script.onload = function () {
           window.trends.embed.renderWidgetTo(that.google_trends1, "US_cu_4Rjdh3ABAABMHM_en", "fe_line_chart_e9d325a0-e899-4215-a8bf-e1857ef601d8", {"guestPath":"https://trends.google.com:443/trends/embed/"})
           window.trends.embed.renderWidgetTo(that.google_trends2, "US_cu_E-aoCHEBAADKbM_en", "fe_list_7e016d51-03c6-4ca7-a148-f720abb8b4bd", {"guestPath":"https://trends.google.com:443/trends/embed/"}) 
+        
+          setTimeout(() => {
+            if ( that.google_trends1.children.length > 1 ) {
+                for (let i=1; i<that.google_trends1.children.length; i++) {
+                    that.google_trends1.children[i].style.display = 'none'
+                }
+            }
+
+            if ( that.google_trends2.children.length > 1 ) {
+                for (let i=1; i<that.google_trends2.children.length; i++) {
+                    that.google_trends2.children[i].style.display = 'none'
+                }
+            }
+
+          }, 300)
         }
+
+        
     }
 
     toggle() {

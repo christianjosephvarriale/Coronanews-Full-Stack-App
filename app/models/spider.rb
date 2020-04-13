@@ -68,5 +68,51 @@ class Spider < ApplicationRecord
         end
 
         Meta.first.update(ca_stats: ca_stats.to_json)
+
+        markers = []
+        i = 1
+        cases = []
+
+        world_stats[0].keys.each do |country|
+            cases.append(world_stats[0][country][0].squish.gsub(/,/, '').to_i)
+        end
+
+        cases = cases.sort
+        min = cases.min
+        range = cases.max - min
+
+        world_stats[0].keys.each do |country|
+
+            begin
+                sleep(0.3)
+                coordinate_info_json = JSON.parse(RestClient::Request.execute(method: :get, url: "https://us1.locationiq.com/v1/search.php?key=#{'8a092e494e1a3e'}&q=#{country.encode('utf-8')}&format=json",))
+                coordinates = [ coordinate_info_json[0]['lat'].to_f, coordinate_info_json[0]['lon'].to_f ]
+
+                color_val = ( ( cases.index( world_stats[0][country][0].squish.gsub(/,/, '').to_i ).to_f / (cases.length() - 1)) * 100 ).round
+
+                puts color_val
+
+                if color_val < 20
+                    color = "#42f545"
+                elsif color_val < 40
+                    color = "#9cf542"
+                elsif color_val < 80
+                    color = '#eff542'
+                elsif color_val < 95
+                    color = '#f59c42'
+                else 
+                    color = '#fc0303'
+                end
+
+                marker = { value: world_stats[0][country][0].squish.gsub(/,/, '').to_i , cases: world_stats[0][country][0], casesTrend: world_stats[0][country][1], deaths: world_stats[0][country][2], deathsTrend: world_stats[0][country][3], color: color, country: country.encode('utf-8'), id: i, coordinates: coordinates }
+                markers.append( marker )
+                
+                i += 1
+                rescue 
+                    puts 'whoops'
+            end
+        end
+
+        Meta.first.update(markers: markers.to_json)
     end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_10_052504) do
+ActiveRecord::Schema.define(version: 2020_04_12_190211) do
 
   create_table "comments", force: :cascade do |t|
     t.string "message"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2020_04_10_052504) do
     t.text "world_stats"
     t.text "world_map"
     t.text "ca_stats"
+    t.text "markers"
   end
 
   create_table "posts", force: :cascade do |t|
