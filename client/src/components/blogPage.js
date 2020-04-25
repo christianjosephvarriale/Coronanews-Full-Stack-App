@@ -65,15 +65,6 @@ class BlogPage extends Component {
         }, 500);
     }
 
-    insertBody = (post) => {
-
-        // parse the html string
-        setTimeout(() => {
-            var wrapper = document.getElementById('body');
-            wrapper.innerHTML= post.post.body;
-        }, 1000);
-    }
-
     componentDidMount() {
 
         const url = window.location.href;
@@ -119,7 +110,6 @@ class BlogPage extends Component {
 
         if ( post ) {
 
-        this.insertBody(this.props.state.post)
         this.getTitles();
         this.formatCodeSnippets()
 
@@ -210,7 +200,7 @@ class BlogPage extends Component {
                         </ul>
                     </div>
 
-                    <div itemprop="text" id="body" style={{whiteSpace: 'pre-line'}}className={[styles.colFull,styles.entryMain].join(" ")} />
+                    <div itemprop="text" dangerouslySetInnerHTML={{__html:  post.body}} id="body" style={{whiteSpace: 'pre-line'}}className={[styles.colFull,styles.entryMain].join(" ")} />
 
                     <div className={styles.entryTaxonomies}>
                             <div className={styles.entryCat}>

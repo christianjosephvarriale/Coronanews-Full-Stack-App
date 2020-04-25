@@ -18,7 +18,7 @@ export default function OutlinedButtons(props) {
 
   return (
     <div>
-      <Button size="large" onClick={props.handleClick} variant="outlined" style={{border: '1px solid #871f78' ,color: '#871f78'}} className={classes.button}>
+      <Button size="large" onClick={props.handleClick} variant="outlined" style={{border: '3px solid #4dac15' ,color: '#4dac15'}} className={classes.button}>
         {props.label}
       </Button>
     </div>

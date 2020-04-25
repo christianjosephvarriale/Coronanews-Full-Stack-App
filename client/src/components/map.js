@@ -52,8 +52,9 @@ class Globe extends Component {
                         markers={this.state.markers}
                         globeOptions={{
                             enableBackground: false,
+                            cloudsTexture: 'https://images.ctfassets.net/5zy76n4olg5p/2yok1e4wxMc5KlF1t4Zykp/283c3d574d2806f04dbb939b7f7e338b/clouds.png',
+                            texture: 'https://images.ctfassets.net/5zy76n4olg5p/3GSKIheJLii9o5kZ8mzwRs/885fc8e82e3f2a8912f60123b8301d58/globe.jpg' 
                         }}
-
                         markerOptions={{
                         getTooltipContent,
                         }}

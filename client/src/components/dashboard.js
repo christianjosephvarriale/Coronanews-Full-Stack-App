@@ -1,4 +1,4 @@
-import React, {Component, Fragment, ReactDOM} from 'react';
+import React, {Component, Fragment} from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import Loader from './loader'
@@ -67,7 +67,7 @@ const statistics = (country, statistic) => {
 
     const statsRank = jsonata(`$@$v#$j[$v="${statsVal}"]{"rank":$j+1}`).evaluate(statsArr).rank
     const statsProgress = (((statsArr.length - ( statsRank - 1 )) / statsArr.length).toFixed(2) * 100)
-    
+
     return { statsVal, statsRank, statsProgress };
 }
 /**
@@ -75,11 +75,10 @@ const statistics = (country, statistic) => {
  */
 const percentageIncrease = (oldVal, newVal) => {
 
-    const percent = `${Math.round( ((newVal - oldVal) / oldVal) * 100 )}`
-    const sign = Math.sign(percent) == 1 ? '+%' : Math.sign(percent) == -1 ? '-%' : '' 
-    const positive = ( sign == '+%' ? true : false ) 
+    const percent =  (((newVal - oldVal) / oldVal) * 100).toFixed(3) 
+    const positive = ( percent > 0 ? true : false ) 
     
-    return { percent, positive, sign }
+    return { percent, positive }
 }
 
 export default class Dashboard extends Component {
@@ -104,34 +103,6 @@ export default class Dashboard extends Component {
             this.forceUpdate()
         })
         .catch(console.error)
-
-        const that = this;
-        const script = document.createElement("script")
-        script.src = "https://ssl.gstatic.com/trends_nrtr/2152_RC04/embed_loader.js"
-        script.async = true
-        document.body.appendChild(script)
-
-        script.onload = function () {
-          window.trends.embed.renderWidgetTo(that.google_trends1, "US_cu_4Rjdh3ABAABMHM_en", "fe_line_chart_e9d325a0-e899-4215-a8bf-e1857ef601d8", {"guestPath":"https://trends.google.com:443/trends/embed/"})
-          window.trends.embed.renderWidgetTo(that.google_trends2, "US_cu_E-aoCHEBAADKbM_en", "fe_list_7e016d51-03c6-4ca7-a148-f720abb8b4bd", {"guestPath":"https://trends.google.com:443/trends/embed/"}) 
-        
-          setTimeout(() => {
-            if ( that.google_trends1.children.length > 1 ) {
-                for (let i=1; i<that.google_trends1.children.length; i++) {
-                    that.google_trends1.children[i].style.display = 'none'
-                }
-            }
-
-            if ( that.google_trends2.children.length > 1 ) {
-                for (let i=1; i<that.google_trends2.children.length; i++) {
-                    that.google_trends2.children[i].style.display = 'none'
-                }
-            }
-
-          }, 300)
-        }
-
-        
     }
 
     toggle() {
@@ -151,7 +122,8 @@ export default class Dashboard extends Component {
     render() {
 
         const statsArr = [ 'cases', 'deaths' , 'tests', 'casesPer1M','testsPer1M', 'deathsPer1M' ]
-        
+        const maxValCases = jsonata('$max($map($.cases , $number))').evaluate(graphData)
+        const maxValDeaths = jsonata('$max($map($.deaths , $number))').evaluate(graphData)
         console.log(this.state.meta)
 
         if ( statsData && graphData ) {
@@ -209,9 +181,13 @@ export default class Dashboard extends Component {
             )
         }
 
-        const oldVal = parseInt(graphData.slice(-2)[0].cases)
-        const newVal = parseInt(graphData.slice(-1)[0].cases)
-        const { percent, positive, sign } = percentageIncrease(oldVal,newVal);
+        const oldValCases = parseInt(graphData.slice(-2)[0].cases)
+        const newValCases = parseInt(graphData.slice(-1)[0].cases)
+        const { percent: percentCases, positive: positiveCases } = percentageIncrease(oldValCases,newValCases);
+
+        const oldValDeaths = parseInt(graphData.slice(-2)[0].deaths)
+        const newValDeaths = parseInt(graphData.slice(-1)[0].deaths)
+        const { percent: percentDeaths, positive: positiveDeaths } = percentageIncrease(oldValDeaths,newValDeaths);
 
         return (
             <Fragment>
@@ -245,16 +221,17 @@ export default class Dashboard extends Component {
                                         {statsWidgetRows}
                                     </CardBody>
                                     <div className="widget-chart p-0">
-                                        <div className="widget-chart-content">
-                                            <div className={`widget-description mt-0 ${positive ? 'text-danger' : 'text-success'}`}>
-                                                <FontAwesomeIcon icon={positive ? faArrowUp : faArrowDown}/>
-                                                <span className="pl-1"> {sign}{percent}</span>
-                                                <span className="text-muted opacity-8 pl-1"> Cases Trend</span>
+
+                                    <div className="widget-chart-content">
+                                            <div className={`widget-description mt-0 ${positiveDeaths ? 'text-danger' : 'text-success'}`}>
+                                                <FontAwesomeIcon icon={positiveDeaths ? faArrowUp : faArrowDown}/>
+                                                <span className="pl-1"> %{percentDeaths}</span>
+                                                <span className="text-muted opacity-8 pl-1"> Deaths Trend</span>
                                             </div>
-                                        </div>
+                                        </div>   
                                         <div style={{padding: 20}}>
                                         <ResponsiveContainer height={400}>
-                                            <AreaChart data={graphData}  margin={{top: 200, right: 10, left: 0, bottom: 0}}>
+                                            <AreaChart data={graphData}  margin={{right: 10, left: 0, bottom: 0}}>
                                                 <defs>
                                                     <linearGradient id="colorPv1" x1="0" y1="0" x2="0" y2="1">
                                                         <stop offset="10%" stopColor="#871f78" stopOpacity={0.7}/>
@@ -263,6 +240,32 @@ export default class Dashboard extends Component {
                                                 </defs>
                                                 <Tooltip/>
 
+                                                <YAxis type="number" domain={[0, maxValDeaths]} />
+                                                <XAxis dataKey="date" />
+                                                <Area type='monotoneX' dataKey='deaths' stroke='#871f78' strokeWidth={2} fillOpacity={1}
+                                                        fill="url(#colorPv1)"/>
+                                            </AreaChart>
+                                        </ResponsiveContainer>
+                                        </div>
+                                        <div className="widget-chart-content">
+                                            <div className={`widget-description mt-0 ${positiveCases ? 'text-danger' : 'text-success'}`}>
+                                                <FontAwesomeIcon icon={positiveCases ? faArrowUp : faArrowDown}/>
+                                                <span className="pl-1"> %{percentCases}</span>
+                                                <span className="text-muted opacity-8 pl-1"> Cases Trend</span>
+                                            </div>
+                                        </div> 
+                                        <div style={{padding: 20}}>
+                                        <ResponsiveContainer height={300}>
+                                            <AreaChart data={graphData}  margin={{right: 10, left: 0, bottom: 0}}>
+                                                <defs>
+                                                    <linearGradient id="colorPv1" x1="0" y1="0" x2="0" y2="1">
+                                                        <stop offset="10%" stopColor="#871f78" stopOpacity={0.7}/>
+                                                        <stop offset="90%" stopColor="#871f78" stopOpacity={0}/>
+                                                    </linearGradient>
+                                                </defs>
+                                                <Tooltip/>
+
+                                                <YAxis type="number" domain={[0, maxValCases]} />
                                                 <XAxis dataKey="date" />
                                                 <Area type='monotoneX' dataKey='cases' stroke='#871f78' strokeWidth={2} fillOpacity={1}
                                                         fill="url(#colorPv1)"/>
@@ -278,11 +281,16 @@ export default class Dashboard extends Component {
                 </Col>
                 <Col className={`fadeInRight wow`} data-wow-duration="1s" data-wow-delay="1s" md="6">
                     <div style={{padding: 20, marginTop: 40, marginBottom: 30}}>
-                    <div style={{maxWidth:800, margin: 'auto'}}ref={el => (this.google_trends1 = el)} />
+                    <div style={{maxWidth:800, margin: 'auto'}}>
+                        <iframe id="trends-widget-1" src="https://trends.google.com:443/trends/embed/US_cu_4Rjdh3ABAABMHM_en/fe_line_chart_e9d325a0-e899-4215-a8bf-e1857ef601d8" width="100%" frameborder="0" scrolling="0" style={{borderRadius: 2, boxShadow: 'rgba(0, 0, 0, 0.12) 0px 0px 2px 0px, rgba(0, 0, 0, 0.24) 0px 2px 2px 0px', height: 318}}></iframe>
+                    </div>
+
                     </div>
 
                     <div style={{padding: 20, marginBottom: 30}}>
-                    <div style={{maxWidth:800, margin: 'auto'}}ref={el => (this.google_trends2 = el)} />
+                    <div style={{maxWidth:800, margin: 'auto'}}>
+                        <iframe id="trends-widget-2" src="https://trends.google.com:443/trends/embed/US_cu_4Rjdh3ABAABMHM_en/fe_geo_chart_bc3cd05f-ca09-4ab5-9aeb-cdb8bbba0147" width="100%" frameborder="0" scrolling="0" style={{borderRadius: 2, boxShadow: 'rgba(0, 0, 0, 0.12) 0px 0px 2px 0px, rgba(0, 0, 0, 0.24) 0px 2px 2px 0px', height: 524}}></iframe>
+                    </div>
                     </div>
                 </Col>
                 </Row>
@@ -310,12 +318,17 @@ export default class Dashboard extends Component {
                 </ReactCSSTransitionGroup>
                 </Col>
                 <Col className={`fadeInRight wow`} data-wow-duration="1s" data-wow-delay="1s" md="6">
-                    <div style={{padding: 20, marginTop: 40, marginBottom: 30}}>
-                    <div style={{maxWidth:800, margin: 'auto'}}ref={el => (this.google_trends1 = el)} />
+                <div style={{padding: 20, marginTop: 40, marginBottom: 30}}>
+                    <div style={{maxWidth:800, margin: 'auto'}}>
+                        <iframe id="trends-widget-1" src="https://trends.google.com:443/trends/embed/US_cu_4Rjdh3ABAABMHM_en/fe_line_chart_e9d325a0-e899-4215-a8bf-e1857ef601d8" width="100%" frameborder="0" scrolling="0" style={{borderRadius: 2, boxShadow: 'rgba(0, 0, 0, 0.12) 0px 0px 2px 0px, rgba(0, 0, 0, 0.24) 0px 2px 2px 0px', height: 318}}></iframe>
+                    </div>
+
                     </div>
 
                     <div style={{padding: 20, marginBottom: 30}}>
-                    <div style={{maxWidth:800, margin: 'auto'}}ref={el => (this.google_trends2 = el)} />
+                    <div style={{maxWidth:800, margin: 'auto'}}>
+                        <iframe id="trends-widget-2" src="https://trends.google.com:443/trends/embed/US_cu_4Rjdh3ABAABMHM_en/fe_geo_chart_bc3cd05f-ca09-4ab5-9aeb-cdb8bbba0147" width="100%" frameborder="0" scrolling="0" style={{borderRadius: 2, boxShadow: 'rgba(0, 0, 0, 0.12) 0px 0px 2px 0px, rgba(0, 0, 0, 0.24) 0px 2px 2px 0px', height: 524}}></iframe>
+                    </div>
                     </div>
                 </Col>
                 </Row>
