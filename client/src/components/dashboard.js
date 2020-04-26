@@ -325,16 +325,22 @@ export default class Dashboard extends Component {
                 </ReactCSSTransitionGroup>
                 </Col>
                 <Col className={`fadeInRight wow`} data-wow-duration="1s" data-wow-delay="1s" md="6">
-                <div style={{padding: 20, marginTop: 40, marginBottom: 30}}>
+                    <div style={{padding: 20, marginTop: 40}}>
                     <div style={{maxWidth:800, margin: 'auto'}}>
-                        <iframe id="trends-widget-1" src="https://trends.google.com:443/trends/embed/US_cu_4Rjdh3ABAABMHM_en/fe_line_chart_e9d325a0-e899-4215-a8bf-e1857ef601d8" width="100%" frameborder="0" scrolling="0" style={{borderRadius: 2, boxShadow: 'rgba(0, 0, 0, 0.12) 0px 0px 2px 0px, rgba(0, 0, 0, 0.24) 0px 2px 2px 0px', height: 318}}></iframe>
+                        <iframe className={'card'} allowfullscreen id="trends-widget-1" src="https://trends.google.com:443/trends/embed/US_cu_4Rjdh3ABAABMHM_en/fe_line_chart_e9d325a0-e899-4215-a8bf-e1857ef601d8" width="100%" frameborder="0" scrolling="1" style={{borderRadius: 2, height: 370}}></iframe>
                     </div>
 
+                    </div>
+
+                    <div style={{padding: 20}}>
+                    <div style={{maxWidth:800, margin: 'auto'}}>
+                        <iframe className={'card'} allowfullscreen id="trends-widget-2" src="https://trends.google.com:443/trends/embed/US_cu_4Rjdh3ABAABMHM_en/fe_geo_chart_bc3cd05f-ca09-4ab5-9aeb-cdb8bbba0147" width="100%" frameborder="0" scrolling="1" style={{borderRadius: 2, height: 524}}></iframe>
+                    </div>
                     </div>
 
                     <div style={{padding: 20, marginBottom: 30}}>
                     <div style={{maxWidth:800, margin: 'auto'}}>
-                        <iframe id="trends-widget-2" src="https://trends.google.com:443/trends/embed/US_cu_4Rjdh3ABAABMHM_en/fe_geo_chart_bc3cd05f-ca09-4ab5-9aeb-cdb8bbba0147" width="100%" frameborder="0" scrolling="0" style={{borderRadius: 2, boxShadow: 'rgba(0, 0, 0, 0.12) 0px 0px 2px 0px, rgba(0, 0, 0, 0.24) 0px 2px 2px 0px', height: 524}}></iframe>
+                        <iframe className={'card'} allowfullscreen id="trends-widget-3" src="https://trends.google.com:443/trends/embed/US_cu_4Rjdh3ABAABMHM_en/fe_related_queries_b9864784-1203-4c1f-808b-98506e8d1281" width="100%" frameborder="0" scrolling="1" style={{borderRadius: 2, height: 314}}></iframe>
                     </div>
                     </div>
                 </Col>
