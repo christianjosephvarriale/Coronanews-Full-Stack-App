@@ -111,7 +111,7 @@
     "react-app-polyfill": "^1.0.1",
     "react-bootstrap": "^0.32.4",
     "react-chartjs-2": "^2.7.4",
-    "react-dev-utils": "^9.0.1",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.8.6",
     "react-getscreen": "^1.1.3",
     "react-globe": "^4.0.0",
