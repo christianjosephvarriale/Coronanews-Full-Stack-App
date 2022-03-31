@@ -10,7 +10,7 @@ gem 'htmlentities'
 gem 'nokogiri'
 ruby '2.6.3'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 gem 'sprockets', '~>3.0'
 gem 'whenever', require: false
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
